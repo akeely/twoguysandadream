@@ -1,0 +1,8 @@
+in_league - 2012 Football Auction
+in_lock_status - 
+in_tag_type - F
+in_player_name - Aaron Rodgers
+in_player_cost - 52
+in_player_pos - QB
+in_player_id - 111042
+NO ERRORS!

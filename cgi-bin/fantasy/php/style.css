@@ -1,0 +1,18 @@
+/* Stylesheet for Fantasy Sports site */
+
+body {background: #5599cc; color:#FFFFFF}
+
+
+h1,h2,h3,h4,h5,h6 {color:white}
+
+table {background: #EEEEEE; color:#000000;border: 2px solid #000099; padding: 5px}
+table.none {background:transparent; border: 0px}
+table.menu {background:#EEEEEE; border: 2px solid navy}
+
+td {border:1px solid #000099; padding: 2px}
+td.none {border:0px; padding: 0px}
+table.menu td {border:0px; padding:0px; padding-left:6px; padding-right:6px;}
+table.menu td a{color:blue;}
+a {color:#FFFF00}
+
+

@@ -1,0 +1,2 @@
+Contents are as follows: Auction Start Time (hours);Auction End Time (hours);Auction Length (minutes);Bid Time Extension (mins);Bid Time Buffer (mins);Time Zone Offset (hours);Login Time Extension (mins);Use IP Flag (0/1);Password File;Code File;Sessions File;Leagues File;Teams File
+10;20;90;5;10;0;180;1;./text_files/password_file.txt;./text_files/code_file.txt;./text_files/sessions.txt;./text_files/leagues.txt;./text_files/team_list.txt

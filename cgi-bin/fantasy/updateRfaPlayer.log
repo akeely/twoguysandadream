@@ -1,0 +1,4 @@
+player: 110935, league_name: 2013 Football Auction, prev_owner: Beantown Demons, override: false
+SELECT team from auction_players where name=110935 and league='2013 Football Auction'
+current owner check: 
+UPDATE auction_players set team='', rfa_override='NO' where name='110935' and league='2013 Football Auction'

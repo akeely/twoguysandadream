@@ -1,0 +1,526 @@
+Beantown Demons;03/24/2006 (7:34 AM);xft
+Beantown Demons;03/24/2006 (7:52 AM);Test again
+<b>AUCTION ALERT</b>;03/24/2006 (7:56 PM EST);<b>Sandy Alomar  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (11:33 AM EST);<b>The bidding for Sandy Alomar  has been won by Beantown Demons for a price of 1.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (11:33 AM EST);<b>Josh Bard  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (11:33 AM EST);<b>Jeff Bagwell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (11:34 AM EST);<b>Bronson Arroyo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (3:37 PM EST);<b>The bidding for Josh Bard  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (3:37 PM EST);<b>The bidding for Jeff Bagwell  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (3:37 PM EST);<b>The bidding for Bronson Arroyo  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (1:48 PM EST);<b>Angel Berroa  has been added to the player auction page.</b>
+Beantown Demons;03/27/2006 (1:49 PM);time test
+<b>AUCTION ALERT</b>;03/27/2006 (0:50 PM EST);<b>Jason Bay  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (2:38 PM EST);<b>Jason Jennings  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (5:12 PM EST);<b>The bidding for Angel Berroa  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (5:12 PM EST);<b>The bidding for Jason Bay  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/27/2006 (5:12 PM EST);<b>Adrian Beltre  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (8:38 AM EST);<b>The bidding for Jason Jennings  has been won by Beantown Demons for a price of 17.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (8:45 AM EST);<b>Joey Gathright  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (8:45 AM EST);<b>Andy Ashby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (9:00 AM EST);<b>The bidding for Joey Gathright  has been won by Beantown Demons for a price of 2.50.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (9:00 AM EST);<b>The bidding for Andy Ashby  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (9:00 AM EST);<b>Brad Ausmus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (9:43 AM EST);<b>Brad Ausmus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (9:43 AM EST);<b>Russ Adams  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (10:02 AM EST);<b>Russ Adams  has been added to the player auction page.</b>
+Beantown Demons;03/28/2006 (1:23 AM);PW DB Test
+Beantown Demons;03/28/2006 (1:24 AM);asdf
+Beantown Demons;03/29/2006 (10:00 AM);PutBoard test<br>
+Beantown Demons;03/29/2006 (10:01 AM);PutBoard test<br>
+<b>TRADE UPDATE</b>;03/29/2006 (10:48 AM);Beantown Demons has traded Josh Bard  and Jeff Bagwell  to Salt Bandits for Joey Gathright  and Andy Ashby 
+<b>AUCTION ALERT</b>;03/29/2006 (10:56 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (10:56 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (10:58 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:19 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:20 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:27 AM EST);<b>Brad Ausmus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:46 AM EST);<b>Tony Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:52 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:52 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:52 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:53 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:54 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:55 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:55 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:55 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:57 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (0:01 PM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (0:01 PM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (0:01 PM EST);<b>The bidding for  has been won by  for a price of .</b>
+<b>AUCTION ALERT</b>;03/29/2006 (2:31 PM EST);<b>Manny Alexander  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (2:35 PM EST);<b>Dennis Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (2:43 PM EST);<b>Garrett Atkins  has been added to the player auction page.</b>
+<b>TRADE UPDATE</b>;03/29/2006 (3:29 PM);Salt Bandits has traded Josh Bard to Beantown Demons for Sandy Alomar
+<b>AUCTION ALERT</b>;03/29/2006 (4:09 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 2.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:09 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 3.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:16 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 1.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:36 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:47 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:56 PM EST);<b>Tony Batista  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (4:56 PM EST);<b>Danny Ardoin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:07 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:10 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 2.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:11 PM EST);<b>Paul Bako  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:11 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:12 PM EST);<b>Angel Berroa  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:14 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:18 PM EST);<b>Jeremy Brown  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:18 PM EST);<b>Kevin Cash  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (5:21 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>TRADE UPDATE</b>;03/29/2006 (5:21 PM);Salt Bandits has traded Sandy Alomar and Brad Ausmus to Beantown Demons for Josh Bard and Tony Abreu and Manny Alexander and Dennis Anderson and Garrett Atkins and Danny Ardoin
+<b>AUCTION ALERT</b>;03/30/2006 (10:30 AM EST);<b>Bobby Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:31 AM EST);<b>Josh Beckett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:42 AM EST);<b>Bobby Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:42 AM EST);<b>Johnny Estrada  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:42 AM EST);<b>Josh Beckett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:42 AM EST);<b>Derek Jeter  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:43 AM EST);<b>Chase Utley  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:43 AM EST);<b>Morgan Ensberg  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:43 AM EST);<b>Conor Jackson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (10:48 AM EST);<b>Jonathan Papelbon  has been added to the player auction page.</b>
+dirt_dogs;03/30/2006 (11:09 AM);testies..
+<b>AUCTION ALERT</b>;03/30/2006 (11:25 AM EST);<b>Scott Podsednik  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:33 AM EST);<b>Eric Chavez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:40 AM EST);<b>Clint Barmes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:43 AM EST);<b>Yurendell DeCaster  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:47 AM EST);<b>Pat Borders  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:47 AM EST);<b>Eliezer Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:51 AM EST);<b>JD Closser  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:53 AM EST);<b>Hee-Seop Choi  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (11:54 AM EST);<b>Hank Blalock  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 2.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 1.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:06 PM EST);<b>Gary Bennett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:07 PM EST);<b>Garret Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:08 PM EST);<b>Larry Broadway  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (0:15 PM EST);<b>Omar Casillas  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:36 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:36 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:36 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:36 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 5.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:36 PM EST);<b>Russ Adams  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:37 PM EST);<b>Kyle Farnsworth  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:38 PM EST);<b>Henry Blanco  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:41 PM EST);<b>Aramis Ramirez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:42 PM EST);<b>Scott Rolen  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:43 PM EST);<b>Sean Casey  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:44 PM EST);<b>Orlando Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:44 PM EST);<b>Josh Arhart  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:45 PM EST);<b>Jeff Bagwell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:46 PM EST);<b>Jonathan Ash  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:47 PM EST);<b>Brian Barden  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:51 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:56 PM EST);<b>John Baker  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:56 PM EST);<b>Dustin Brown  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:57 PM EST);<b>Jim Buckley  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:57 PM EST);<b>Willy Aybar  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (1:58 PM EST);<b>Michael Barrett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:02 PM EST);<b>Rod Barajas  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:02 PM EST);<b>Bobby Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:03 PM EST);<b>Michael Barrett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:05 PM EST);<b>Reggie Abercrombie  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:08 PM EST);<b>Clint Barmes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:09 PM EST);<b>Andy Abad  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:15 PM EST);<b>Edwin Bellorin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:16 PM EST);<b>Gary Bennett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:16 PM EST);<b>Moises Alou  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:18 PM EST);<b>Rich Aurilia  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:19 PM EST);<b>Hank Blalock  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:20 PM EST);<b>Alfredo Amezaga  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:20 PM EST);<b>Josh Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:21 PM EST);<b>Willy Aybar  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:21 PM EST);<b>Pat Borders  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:28 PM EST);<b>Angel Berroa  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:30 PM EST);<b>Wilson Betemit  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:31 PM EST);<b>Tony Batista  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:40 PM EST);<b>John Baker  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:46 PM EST);<b>Rich Aurilia  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:46 PM EST);<b>Mark Bellhorn  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:47 PM EST);<b>Garrett Atkins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:47 PM EST);<b>Chris Ashby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:53 PM EST);<b>Robert Andino  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:53 PM EST);<b>Edwin Bellorin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (2:58 PM EST);<b>Brian Bock  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:00 PM EST);<b>Miguel Cairo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:03 PM EST);<b>Josh Arhart  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:04 PM EST);<b>Elvis Andrus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:04 PM EST);<b>Eliezer Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:20 PM EST);<b>Edgardo Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (3:20 PM EST);<b>Christopher Amador  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:02 PM EST);<b>David Bacani  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:10 PM EST);<b>Danny Ardoin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:16 PM EST);<b>Jonathan Ash  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:23 PM EST);<b>Russell Branyan  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:38 PM EST);<b>Marlon Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:43 PM EST);<b>Michael Barrett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:46 PM EST);<b>Mark Bellhorn  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:47 PM EST);<b>Kevin Appier  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:48 PM EST);<b>Brian Roberts  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Josh Arhart  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Chris Ashby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Rod Barajas  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Edwin Bellorin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Paul Bako  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Chad Allen  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:50 PM EST);<b>Rich Aurilia  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:51 PM EST);<b>Christian Acosta  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:51 PM EST);<b>Jeff Bagwell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 1.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 3.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 4.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 4.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (4:56 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (5:05 PM EST);<b>Jimmy Rollins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (5:14 PM EST);<b>Chris Ashby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (6:01 PM EST);<b>Hank Blalock  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (9:00 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;03/30/2006 (9:00 PM EST);<b>Jason Varitek  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (0:28 PM EST);<b>The bidding for  has been won by Beantown Demons for a price of 2.</b>
+oondahs_WMD;03/31/2006 (2:31 AM);I'M IN.
+<b>AUCTION ALERT</b>;03/31/2006 (2:31 PM EST);<b>Curt Schilling  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:33 PM EST);<b>Kelly Shoppach  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:34 PM EST);<b>Hee-Seop Choi  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:34 PM EST);<b>Orlando Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:34 PM EST);<b>Tony Graffanino  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:35 PM EST);<b>Pat Burrell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:35 PM EST);<b>Troy Glaus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:37 PM EST);<b>Jeremy Affeldt  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:38 PM EST);<b>Moises Alou  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:39 PM EST);<b>Ricky Gutierrez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:39 PM EST);<b>Bobby Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:41 PM EST);<b>Chip Ambres  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:44 PM EST);<b>Ronnie Belliard  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:45 PM EST);<b>Edgardo Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:45 PM EST);<b>Bronson Arroyo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:46 PM EST);<b>Garret Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:47 PM EST);<b>Rocco Baldelli  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:48 PM EST);<b>Elvis Andrus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:49 PM EST);<b>The bidding for  has been won by Dirrrty Dawgs for a price of 4.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:49 PM EST);<b>Angel Berroa  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:49 PM EST);<b>Coco Crisp  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:49 PM EST);<b>Jason Armstrong  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:50 PM EST);<b>Mike Lowell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:50 PM EST);<b>Brian Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:50 PM EST);<b>Greg Maddux  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:50 PM EST);<b>Tim Wakefield  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:52 PM EST);<b>Andruw Jones  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:53 PM EST);<b>Derek Jeter  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:53 PM EST);<b>Adrian Beltre  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:54 PM EST);<b>Aubrey Huff  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/31/2006 (2:55 PM EST);<b>David Wells  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:02 AM EST);<b>Garrett Atkins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:03 AM EST);<b>Bobby Crosby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:04 AM EST);<b>David Wright  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:05 AM EST);<b>Rocco Baldelli  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:06 AM EST);<b>Eliezer Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:19 AM EST);<b>Danny Ardoin  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:19 AM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:19 AM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:19 AM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:19 AM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:19 AM EST);<b>The bidding for  has been won by Beantown Demons for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:20 AM EST);<b>Mike Lowell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:22 AM EST);<b>Josh Beckett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (3:25 PM EST);<b>Jason Varitek  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (4:05 PM EST);<b>Albert Pujols  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:46 PM EST);<b>Alex Rodriguez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:47 PM EST);<b>Albert Pujols  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:48 PM EST);<b>Vladimir Guerrero  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:48 PM EST);<b>Mark Teixeira  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:48 PM EST);<b>Manny Ramirez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:49 PM EST);<b>David Ortiz  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:49 PM EST);<b>Derrek Lee  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:50 PM EST);<b>Michael Young  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:50 PM EST);<b>Carl Crawford  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:50 PM EST);<b>David Wright  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:51 PM EST);<b>Miguel Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:51 PM EST);<b>Bobby Abreu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:51 PM EST);<b>Jason Bay  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:52 PM EST);<b>Miguel Tejada  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (7:52 PM EST);<b>Johan Santana  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:01 PM EST);<b>Jason Bay  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:01 PM EST);<b>Miguel Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:02 PM EST);<b>Michael Young  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:02 PM EST);<b>Manny Ramirez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:02 PM EST);<b>Derrek Lee  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:03 PM EST);<b>Carl Crawford  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:03 PM EST);<b>David Ortiz  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:04 PM EST);<b>Johan Santana  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:20 PM EST);<b>The bidding for  has been won by LOUD NOISES for a price of 36.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:22 PM EST);<b>The bidding for  has been won by Dancin Homer for a price of 37.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:23 PM EST);<b>Hideki Matsui  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:24 PM EST);<b>Jimmy Rollins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:24 PM EST);<b>Curt Schilling  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:24 PM EST);<b>Brian Roberts  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:24 PM EST);<b>Alfonso Soriano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:26 PM EST);<b>Huston Street  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:26 PM EST);<b>Bartolo Colon  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:26 PM EST);<b>Josh Beckett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:27 PM EST);<b>Kenji Johjima  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:27 PM EST);<b>Todd Helton  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:30 PM EST);<b>Tim Wakefield  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:31 PM EST);<b>Mark Buehrle  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:40 PM EST);<b>B.J. Ryan  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:41 PM EST);<b>Dontrelle Willis  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:42 PM EST);<b>Mariano Rivera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:42 PM EST);<b>Derek Jeter  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:44 PM EST);<b>Coco Crisp  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:45 PM EST);<b>The bidding for  has been won by Team Adam for a price of 12.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:45 PM EST);<b>The bidding for  has been won by riiiiiiiight for a price of 23.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:46 PM EST);<b>Billy Wagner  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:46 PM EST);<b>Pedro Martinez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:46 PM EST);<b>Gary Sheffield  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:47 PM EST);<b>Rich Harden  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:47 PM EST);<b>Jason Varitek  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:48 PM EST);<b>Eric Chavez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:48 PM EST);<b>Paul Konerko  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:50 PM EST);<b>The bidding for  has been won by Phillies for a price of 34.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:50 PM EST);<b>Carlos Delgado  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:52 PM EST);<b>Carlos Zambrano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:53 PM EST);<b>Felix Hernandez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:54 PM EST);<b>Mike Lowell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (8:55 PM EST);<b>The bidding for  has been won by LOUD NOISES for a price of 24.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:55 PM EST);<b>Victor Martinez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:57 PM EST);<b>David Wright  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:58 PM EST);<b>Jonathan Papelbon  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (8:59 PM EST);<b>Jason Giambi  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:00 PM EST);<b>Derrick Turnbow  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:00 PM EST);<b>Juan Pierre  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:01 PM EST);<b>Jorge Cantu  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:03 PM EST);<b>Matt Clement  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:04 PM EST);<b>A.J. Pierzynski  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:06 PM EST);<b>Xavier Nady  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:06 PM EST);<b>Chase Utley  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:09 PM EST);<b>Francisco Rodriguez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:09 PM EST);<b>Chris Carpenter  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:09 PM EST);<b>Jake Peavy  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:10 PM EST);<b>Jhonny Peralta  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:10 PM EST);<b>Matt Holliday  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:12 PM EST);<b>Randy Johnson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:14 PM EST);<b>Ichiro Suzuki  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:17 PM EST);<b>Marcus Giles  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:20 PM EST);<b>Bobby Jenks  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:21 PM EST);<b>Jason Isringhausen  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:22 PM EST);<b>Ken Griffey  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:22 PM EST);<b>Robinson Cano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:22 PM EST);<b>Eric Gagne  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:24 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 29.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:24 PM EST);<b>The bidding for  has been won by Dirrrty Dawgs for a price of 25.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:24 PM EST);<b>The bidding for  has been won by riiiiiiiight for a price of 30.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:24 PM EST);<b>Andruw Jones  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:24 PM EST);<b>Jose Reyes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:25 PM EST);<b>Luis Castillo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:26 PM EST);<b>Chad Cordero  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:26 PM EST);<b>Roy Oswalt  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:29 PM EST);<b>Andy Pettitte  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:30 PM EST);<b>Carlos Lee  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:30 PM EST);<b>Tim Hudson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:30 PM EST);<b>Roy Halladay  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:31 PM EST);<b>A.J. Burnett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:34 PM EST);<b>Johnny Damon  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:35 PM EST);<b>The bidding for  has been won by Team Adam for a price of 8.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:36 PM EST);<b>Lance Berkman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:37 PM EST);<b>Grady Sizemore  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:39 PM EST);<b>Jonny Gomes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:40 PM EST);<b>Bronson Arroyo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:41 PM EST);<b>Orlando Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:41 PM EST);<b>Jeremy Bonderman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:43 PM EST);<b>Ervin Santana  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:43 PM EST);<b>Scott Kazmir  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:44 PM EST);<b>Ivan Rodriguez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:44 PM EST);<b>Jeff Kent  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:44 PM EST);<b>Tom Gordon  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:45 PM EST);<b>Octavio Dotel  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:46 PM EST);<b>Brad Lidge  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:47 PM EST);<b>The bidding for  has been won by riiiiiiiight for a price of 28.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:47 PM EST);<b>Barry Bonds  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:48 PM EST);<b>Cliff Lee  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:49 PM EST);<b>Mark Loretta  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:50 PM EST);<b>Travis Hafner  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:51 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 20.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:51 PM EST);<b>Rafael Betancourt  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:52 PM EST);<b>Ryan Howard  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:53 PM EST);<b>Oliver Perez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (9:54 PM EST);<b>The bidding for  has been won by Cupcake Crusaders for a price of 4.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:54 PM EST);<b>Jorge Posada  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:55 PM EST);<b>Jason Schmidt  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (9:57 PM EST);<b>Scott Podsednik  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:01 PM EST);<b>Ryan Wagner  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:01 PM EST);<b>Torii Hunter  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:01 PM EST);<b>Esteban Loaiza  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:01 PM EST);<b>Ryan Zimmerman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:02 PM EST);<b>Ben Sheets  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:02 PM EST);<b>Adam Dunn  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:02 PM EST);<b>Carlos Beltran  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:03 PM EST);<b>Chone Figgins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:03 PM EST);<b>Aubrey Huff  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:04 PM EST);<b>The bidding for  has been won by 12 Monkeys for a price of 5.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:05 PM EST);<b>Wily Mo Pena  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:05 PM EST);<b>Hanley Ramirez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:05 PM EST);<b>John Smoltz  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:06 PM EST);<b>The bidding for  has been won by Cupcake Crusaders for a price of 2.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:06 PM EST);<b>Troy Glaus  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:07 PM EST);<b>Kyle Davies  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:07 PM EST);<b>Mike Gonzalez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:08 PM EST);<b>Trot Nixon  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:09 PM EST);<b>Joe Nathan  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:13 PM EST);<b>Joe Crede  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:16 PM EST);<b>Aramis Ramirez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:16 PM EST);<b>Bob Wickman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:16 PM EST);<b>Hank Blalock  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:17 PM EST);<b>Trevor Hoffman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:19 PM EST);<b>Vernon Wells  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:20 PM EST);<b>Edgar Renteria  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:20 PM EST);<b>Richie Sexson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:21 PM EST);<b>Joe Mauer  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:21 PM EST);<b>Andy Marte  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:22 PM EST);<b>Felipe Lopez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:22 PM EST);<b>Clint Barmes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:23 PM EST);<b>Juan Uribe  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:23 PM EST);<b>Melvin Mora  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:25 PM EST);<b>John Lackey  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:25 PM EST);<b>Brian Giles  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:26 PM EST);<b>Keith Foulke  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:27 PM EST);<b>The bidding for  has been won by Dancin Homer for a price of 5.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:27 PM EST);<b>Kevin Youkilis  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:28 PM EST);<b>Josh Willingham  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:29 PM EST);<b>Barry Zito  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:30 PM EST);<b>Scott Rolen  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:30 PM EST);<b>Ryan Dempster  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:30 PM EST);<b>Michael Barrett  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:31 PM EST);<b>Pat Burrell  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:31 PM EST);<b>Tadahito Iguchi  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:31 PM EST);<b>Garrett Atkins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Randy Winn  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Morgan Ensberg  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Brad Radke  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Jim Thome  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Prince Fielder  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:32 PM EST);<b>Craig Biggio  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:33 PM EST);<b>Cliff Floyd  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:33 PM EST);<b>Doug Davis  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:34 PM EST);<b>Freddy Garcia  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:35 PM EST);<b>John Patterson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:35 PM EST);<b>J.D. Drew  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:36 PM EST);<b>Aaron Rowand  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:36 PM EST);<b>Mark Prior  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:36 PM EST);<b>Zach Duke  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:37 PM EST);<b>Jim Edmonds  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:38 PM EST);<b>Mike Piazza  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:38 PM EST);<b>Ryan Freel  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:39 PM EST);<b>The bidding for  has been won by riiiiiiiight for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:39 PM EST);<b>The bidding for  has been won by Salt Bandits for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:39 PM EST);<b>The bidding for  has been won by Team Adam for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:39 PM EST);<b>The bidding for  has been won by 12 Monkeys for a price of 1.5.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:40 PM EST);<b>Nomar Garciaparra  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:40 PM EST);<b>Magglio Ordonez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:40 PM EST);<b>Brandon Webb  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:41 PM EST);<b>Rafael Soriano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:42 PM EST);<b>Francisco Liriano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:42 PM EST);<b>Dan Haren  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:42 PM EST);<b>Rafael Furcal  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:42 PM EST);<b>Moises Alou  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:43 PM EST);<b>Brad Wilkerson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:43 PM EST);<b>Nick Swisher  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:44 PM EST);<b>Jeremy Reed  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:45 PM EST);<b>Danys Baez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:45 PM EST);<b>Garret Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:45 PM EST);<b>Bobby Crosby  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:46 PM EST);<b>Javy Lopez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:48 PM EST);<b>Frank Thomas  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:48 PM EST);<b>Chris Capuano  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:49 PM EST);<b>Rickie Weeks  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:49 PM EST);<b>Mark Ellis  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:50 PM EST);<b>Brian Anderson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:50 PM EST);<b>Joe Blanton  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:50 PM EST);<b>Chad Tracy  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:51 PM EST);<b>Francisco Cordero  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:51 PM EST);<b>Daniel Cabrera  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:51 PM EST);<b>Bengie Molina  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:52 PM EST);<b>Armando Benitez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:52 PM EST);<b>Eddie Guardado  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:53 PM EST);<b>The bidding for  has been won by Dancin Homer for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:53 PM EST);<b>The bidding for  has been won by 12 Monkeys for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:53 PM EST);<b>Brett Myers  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:53 PM EST);<b>Mark Mulder  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:54 PM EST);<b>Kevin Mench  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:54 PM EST);<b>B.J. Upton  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:55 PM EST);<b>Chris Ray  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:55 PM EST);<b>Adrian Beltre  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:55 PM EST);<b>Dave Roberts  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:56 PM EST);<b>The bidding for  has been won by Phillies for a price of 2.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (10:56 PM EST);<b>The bidding for  has been won by Dirrrty Dawgs for a price of 1.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:56 PM EST);<b>Mike Cameron  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:56 PM EST);<b>Jeff Francoeur  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:57 PM EST);<b>Joaquin Benoit  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:57 PM EST);<b>Matt Morris  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:58 PM EST);<b>Geoff Jenkins  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:58 PM EST);<b>Matt Cain  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:59 PM EST);<b>Jason Vargas  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:59 PM EST);<b>Jon Garland  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:59 PM EST);<b>Chipper Jones  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (10:59 PM EST);<b>Mike Mussina  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:00 PM EST);<b>Dave Bush  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:00 PM EST);<b>Lyle Overbay  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:01 PM EST);<b>Rocco Baldelli  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:01 PM EST);<b>Sean Casey  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:01 PM EST);<b>Ambiorix Burgos  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:02 PM EST);<b>Javier Vazquez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:02 PM EST);<b>Nick Johnson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:02 PM EST);<b>Delmon Young  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:02 PM EST);<b>David Weathers  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:03 PM EST);<b>C.C. Sabathia  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:03 PM EST);<b>Noah Lowry  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:03 PM EST);<b>Angel Berroa  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:04 PM EST);<b>Anthony Reyes  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:04 PM EST);<b>Scott Linebrink  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:04 PM EST);<b>Fernando Rodney  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:05 PM EST);<b>Bill Hall  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:06 PM EST);<b>Todd Jones  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:06 PM EST);<b>Placido Polanco  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:07 PM EST);<b>Kelvim Escobar  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:08 PM EST);<b>Kevin Millwood  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:09 PM EST);<b>Ronnie Belliard  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:10 PM EST);<b>The bidding for  has been won by Amos Otis for a price of 1.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:10 PM EST);<b>The bidding for  has been won by Dirrrty Dawgs for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/06/2006 (11:10 PM EST);<b>The bidding for  has been won by riiiiiiiight for a price of 0.50.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:10 PM EST);<b>Jose Contreras  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:11 PM EST);<b>Casey Kotchman  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:11 PM EST);<b>Dan Johnson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:11 PM EST);<b>Chris Young  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:12 PM EST);<b>Kerry Wood  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:12 PM EST);<b>David Wells  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:13 PM EST);<b>Erik Bedard  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:13 PM EST);<b>Jeremy Hermida  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:13 PM EST);<b>Jeff Weaver  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:16 PM EST);<b>Sergio Mitre  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:18 PM EST);<b>Livan Hernandez  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:19 PM EST);<b>Jermaine Dye  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:20 PM EST);<b>Conor Jackson  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:21 PM EST);<b>Mark Bellhorn  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:21 PM EST);<b>Joe Borowski  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:23 PM EST);<b>Milton Bradley  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:24 PM EST);<b>Jose Guillen  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:24 PM EST);<b>Greg Maddux  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/6/2006 (11:27 PM EST);<b>Paul Lo Duca  has been added to the player auction page.</b>
+Beantown Demons;08/14/2006 (10:48 AM);Totally going to remake this piece of shit with Ajax. . . could actually have an operating chat room
+Salt Bandits;03/09/2007 (1:01 AM);test that I am andrew
+<b>AUCTION ALERT</b>;03/12/2007 (7:35 PM EST);<b>Justin Morneau has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/12/2007 (7:36 PM EST);<b>J.J. Putz has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/12/2007 (7:38 PM EST);<b>Jered Weaver has been added to the player auction page.</b>

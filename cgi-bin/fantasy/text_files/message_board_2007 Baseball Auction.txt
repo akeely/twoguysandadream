@@ -1,0 +1,13 @@
+<b>TRADE UPDATE</b>;// (: );Beantown Demons has traded Aaron Harang to Salt Bandits for Jered Weaver
+<b>TRADE UPDATE</b>;// (: );Salt Bandits has traded Aaron Harang to Beantown Demons for Jered Weaver
+Beantown Demons;04/23/2007 (9:53 AM);Test on this!
+<b>TRADE UPDATE</b>;04/23/2007 (9:55 AM);Beantown Demons has traded Aaron Harang to Salt Bandits for Jered Weaver
+<b>TRADE UPDATE</b>;04/23/2007 (9:56 AM);Salt Bandits has traded Aaron Harang to Beantown Demons for Jered Weaver
+<b>AUCTION ALERT</b>;04/23/2007 (10:20 AM EST);<b>Carlos Quentin has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/25/2007 (4:05 PM EST);<b>Carlos Quentin was not claimed in the auction</b>
+<b>AUCTION ALERT</b>;04/25/2007 (4:06 PM EST);<b>Carlos Quentin has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;04/25/2007 (4:15 PM EST);<b>Orlando Hudson has been added to the player auction page.</b>
+Kevin;04/25/2007 (4:34 AM);Test
+<b>AUCTION ALERT</b>;04/25/2007 (4:34 PM EST);<b>Carlos Quentin was not claimed in the auction</b>
+<b>AUCTION ALERT</b>;04/25/2007 (4:39 PM EST);<b>Orlando Hudson was not claimed in the auction</b>
+Beantown Demons;04/25/2007 (5:03 AM);Now me?

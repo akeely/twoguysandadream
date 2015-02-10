@@ -1,0 +1,22 @@
+$VAR1 = bless( {
+                 '.parameters' => [
+                                    'user',
+                                    'league',
+                                    'ids'
+                                  ],
+                 'use_tempfile' => 1,
+                 '.charset' => 'ISO-8859-1',
+                 '.fieldnames' => {},
+                 'param' => {
+                              'ids' => [
+                                         '113595;115746;'
+                                       ],
+                              'user' => [
+                                          'Beantown Demons'
+                                        ],
+                              'league' => [
+                                            'AWS Test'
+                                          ]
+                            },
+                 'escape' => 1
+               }, 'CGI' );

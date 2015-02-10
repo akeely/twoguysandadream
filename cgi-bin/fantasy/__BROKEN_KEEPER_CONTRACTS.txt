@@ -1,0 +1,12 @@
+[League name when penalty was applied]     [Team Name (owner)]     [Player]        [Penalty Paid (years cost1[|cost2[|cost3]] ]
+2008 Football Auction                      CRACK (Dana)            Cedric Benson   $20 (3 years left; 11|13|15)
+2008 Football Auction                      HIT BUTT (Oondah)       Baltimore       $1 (1 year left; 1.5)
+2008 Football Auction                      Detroit Lions (Tarek)   Todd Heap       $2 (1 year left; 3) - Keely's Contract
+2008 Football Auction                      Detroit Lions (Tarek)   Reggie Brown    $4 (1 year left; 7) - Keely's Contract
+2008 Football Auction                      Detroit Lions (Tarek)   Matt Leinhart   $3 (1 year left; 5)
+2009 Football Auction                      CRACK (Dana)            Selvin Young    $6 (1 year left; 11) - NOT APPLIED YET
+2009 Football Auction                      Gophers (Morin)         Derek Anderson  $12 (2 years left, 10|11) - NOT APPLIED YET
+2009 Football Auction                      aut-gnome-atic          Vince Young     $7 (2 years left, 6.5|7.5) - NOT APPLIED YET
+
+
+AUTOMATE PENALTIES???

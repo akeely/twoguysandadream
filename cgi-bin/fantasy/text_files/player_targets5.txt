@@ -1,0 +1,22 @@
+Beantown Demons;Chad Tracy;5;no
+Beantown Demons;Jose Valverde;3;no
+OONDAH-HAR;Morgan Ensberg;4;no
+OONDAH-HAR;Aubrey Huff;3;no
+OONDAH-HAR;B.J. Upton;1;no
+OONDAH-HAR;Wilson Betemit;1;no
+OONDAH-HAR;Hank Blalock;2;no
+OONDAH-HAR;Scott Podsednik;6;no
+OONDAH-HAR;Jose Valverde;4;no
+OONDAH-HAR;Salomon Torres;4;no
+OONDAH-HAR;Jonathan Broxton;5;no
+OONDAH-HAR;Scot Shields;1;no
+OONDAH-HAR;Mike MacDougal;0.50;no
+OONDAH-HAR;Armando Benitez;1;no
+OONDAH-HAR;Rafael Soriano;2.50;no
+OONDAH-HAR;Omar Vizquel;1;no
+OONDAH-HAR;Kazuo Matsui;0.50;no
+OONDAH-HAR;Scott Olsen;0.50;no
+OONDAH-HAR;Cliff Lee;0.50;no
+OONDAH-HAR;Ken Griffey;1;no
+OONDAH-HAR;Eric Byrnes;1;no
+OONDAH-HAR;Chris Burke;1;no

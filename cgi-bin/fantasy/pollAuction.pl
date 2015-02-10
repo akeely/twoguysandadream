@@ -1,0 +1,85 @@
+#!/usr/bin/perl
+use DBTools;
+use Time::HiRes;
+
+# script to update auction status (wins/expirations) across all leagues. TBD on how this performs
+#
+## For special characters
+binmode(STDOUT, ":utf8");
+
+$players_won = "players_won";
+$players_auction = "auction_players";
+$players = "players";
+$log = "/var/log/fantasy/pollAuction.log";
+
+
+# DB-style
+$dbh = dbConnect();
+
+
+## Prepare SQL statements to be used in loop below
+$sth_replace = $dbh->prepare("REPLACE INTO $players_won (name,price,team,time,league,rfa_override) VALUES(?,?,?,?,?,?)")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_remove = $dbh->prepare("DELETE FROM $players_auction WHERE name=? AND league=?")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_update = $dbh->prepare("Update teams set num_adds=(num_adds+1) where name=? and league=?")
+                   or die "Cannot prepare: " . $dbh->errstr();
+
+## Check for auction players whose timeframe has expired
+while (1) {
+  $sth_while = $dbh->prepare("select p.name, p.price, p.team, p.time, p.league, p.rfa_override, l.draft_type from auction_players p, leagues l WHERE (p.time - UNIX_TIMESTAMP()) < 0 and p.league=l.name and l.draft_status='open'");
+  $sth_while->execute() or die "Cannot execute: " . $sth_while->errstr();
+  while (($id,$bid,$bidder,$ez_time,$league,$rfa_override,$draft_type) = $sth_while->fetchrow_array())
+  {
+    print "$ez_time, $league: Player $id is expired!\n";
+    # If the player goes unclaimed, flag it
+    $player_claimed = ($bidder eq '<b>UNCLAIMED</b>') ? 0 : 1;
+
+    ## RFA checking for the override - if the previous owner doesn't respond in ... 2 minutes (??), just assume he's not wanted
+    ## Time Stuff
+    $current_seconds = time();
+    if (($draft_type eq 'rfa') && ($current_seconds > ($ez_time + (60 * 2))))
+    {
+      print "Enforcing automatic override skip for RFA $id\n";
+      $rfa_override = 'NO';
+    }
+
+    ## If the time is over and this is NOT an RFA draft, just DELETE him no matter whether or not player was won
+    if (($draft_type ne 'rfa') || ($rfa_override ne 'WAIT'))
+    {
+      print localtime . ": removing $id from auction (claimed = $player_claimed)\n";
+      $sth_remove->execute($id,$league) or die "Cannot execute: " . $sth_remove->errstr();
+
+      if ($player_claimed == 1)
+      {
+        ## Label the winning time as 'RFA' here, if that is the case
+        $ez_time = 'RFA' if ($draft_type eq 'rfa');
+
+        ## RFA could allow 0 dollar bid if no one bids and previous owner accepts - just make it 50 cents
+        $bid = '0.50' if ($bid =~ /^0+\.?0*$/);
+
+        print localtime . "\tAdd players_won for $id: $bid, $bidder\n";
+
+        # update players won file
+        $sth_replace->execute($id,$bid,$bidder,$ez_time,$league,$rfa_override) or die "Cannot update players_won: ". $sth_replace->errstr();;
+
+        ## Update num_adds for winner if this is not RFA
+        if ($draft_type ne 'rfa') 
+        {
+          $sth_update->execute($bidder,$league) or die "Cannot execute: " . $sth_update->errstr();
+        }
+
+      } #end if (player_claimed)
+
+    } # end not-RFA check
+  } #end while-loop
+
+  # sleep for n seconds
+  Time::HiRes::sleep(0.3);
+}
+$sth_while->finish();
+$sth_replace->finish();
+$sth_remove->finish();
+$sth_update->finish();
+
+dbDisconnect($dbh);

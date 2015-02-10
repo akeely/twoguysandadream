@@ -1,0 +1,178 @@
+<HTML>
+   <HEAD>
+      <TITLE>Create New League</TITLE>
+      <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+      <META HTTP-EQUIV="Expires" CONTENT="-1">
+      <LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" MEDIA=screen>
+
+      <script language="JavaScript">
+      <!--
+      function check_keeper(checked)
+      {
+        // if the keeper option is checked, show the bridge-keeper options
+        if (checked == true)
+        {
+          keeper_bridge.style.display = 'table';
+          keeper_bridge.disabled = false;
+          create_form.Keeper.value = 'yes';
+        }
+      
+        // else if this will not be a keeper league, do not display the bridging options
+        else
+        {
+          keeper_bridge.style.display = 'none';
+          keeper_bridge.disabled = true;
+          create_form.Keeper.value = 'no';
+        }
+      }
+
+      -->
+      </script>
+
+      <script language="JavaScript">
+      <!--
+      function check_name(checked)
+      {
+         // if the name_persist option is checked, grey the name-input box
+        if (checked == true)
+        {
+          create_form.teamName.disabled = true;
+          create_form.teamName.value = '';
+          create_form.name_persist.value = 'yes';
+        }
+
+        // else we require a new team name to be entered
+        else
+        {
+          create_form.teamName.disabled = false;
+          create_form.name_persist.value = 'no';
+        }
+      }
+
+      -->
+      </script>
+
+      <script language="JavaScript">
+      <!--
+      function check_entries()
+      {
+        
+        if (create_form.leagueName.value == '')
+        {
+          alert("You must enter a league name!")
+          return(false);
+        }
+        if (create_form.leaguePassword.value == '')
+        {
+          alert("You must enter a league password!")
+          return(false);
+        }
+        if ((create_form.teamName.value == '') & (create_form.name_persist.checked == false))
+        {
+          alert("You must enter a team name!")
+          return(false);
+        }
+
+        if (create_form.Keeper.checked == true)
+        {
+          if (create_form.keeper_leagueName.value == '')
+          {
+            return(confirm("Do you wish to create a NEW keeper league, with no contract/setting imports?"));
+          }
+ 
+          if (create_form.keeper_leaguePassword.value == '')
+          {
+            alert("You must provide a password for league '"+create_form.keeper_leagueName.value+"'!")
+            return(false);
+          }
+
+        }
+        return (true);
+      }
+
+      -->
+      </script>
+
+   </HEAD>
+
+   <BODY>
+      <table align="center" ID="Table1" cellspacing=10 border="2" class=none>
+         <tr>
+            <td class=none><a href="/fantasy/fantasy_main_index.htm" target="_top">Fantasy Main</a></td>
+            <td class=none><a href="/fantasy/create_league_index.htm" target="_top">Create New League</a></td>
+            <td class=none><a href="/fantasy/join_league_index.htm" target="_top">Join Created League</a></td>
+            <td class=none><a href="/cgi-bin/fantasy/logout.pl" target="_top">Logout</a></td>
+         </tr>
+      </table>
+      <hr width="85%">
+
+      <br>
+
+      <p align="center">To create a new league, fill out the fields below:</p>
+      <br>
+      <form id='create_form' action="/cgi-bin/fantasy/createNewLeague1.pl" method="post" onSubmit='return check_entries()'>
+         <br>
+         <table frame="box" align="center">
+            <tr>
+               <td colspan="2" align="center">League Information</td>
+               <td align="center">Draft Type</td>
+               <td align="center">Sport</td>
+            <tr>
+               <td width="125">
+                  League Name:
+               </td>
+               <td><input type="text" id='leagueName' name="leagueName"></td>
+               <td rowspan="3">
+                  <input type="radio" name="draftType" value="Auction" checked> Auction<br>
+                  <br>
+                  <input type="radio" name="draftType" value="Snake"> Snake<br>
+                  <br>
+                  <input type="checkBox" id="Keeper" name="Keeper" value="yes" onClick="check_keeper(this.checked)"> Keeper<br>
+               </td>
+               <td rowspan="3">
+                  <input type="radio" name="sport" value="football" checked> Football<br>
+                  <br>
+                  <input type="radio" name="sport" value="baseball"> Baseball<br>
+               </td>
+            </tr>
+            <tr>
+               <td width="125">
+                  League Password:
+               </td>
+               <td><input id='leaguePassword' type="password" name="leaguePassword"></td>
+            </tr>
+            <tr>
+               <td width="125">
+                 Team Name:
+               </td>
+               <td><input id='teamName' type="text" name="teamName"></td>
+            </tr>
+         </table>
+<br>
+<br>     
+         <table id='keeper_bridge' frame="box" align="center" style="display: none">
+           <tr>
+             <td colspan=2 align=center>To import settings/contracts from a previous keeper league<br> enter the league name/password below</td>
+           </tr>
+           <tr>
+             <td>League Name</td>
+             <td><input id='keeper_leagueName' type="text" name="keeper_leagueName"></td>
+           </tr>
+           <tr>
+             <td>League Password</td>
+             <td><input id='keeper_leaguePassword' type="password" name="keeper_leaguePassword"></td>
+           </tr>
+           <tr>
+             <td colspan=2 align="middle"><input type="checkbox" name="name_persist" value="yes" onClick="check_name(this.checked)"> Carryover Previous Team Name<br>
+           </tr>
+         </table>
+
+         <br>
+         <p align=center>
+          <input type="submit" value="Continue">
+          <input type="reset" value="Clear Form">
+         </p>
+         <br>
+      </form>
+   </BODY>
+</HTML>

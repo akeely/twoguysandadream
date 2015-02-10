@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>Team Entry Page</TITLE>
+
+<script language="JavaScript">
+<!--
+function pswd_checker()
+{
+
+  if (reg_form.NAME.value == '')
+  {
+    alert("Please enter a team name")
+    return (false);
+  }
+
+  if (reg_form.PASSWORD.value == '')
+  {
+    alert("Please enter a password")
+    return (false);
+  }
+
+  if (reg_form.PASSWORD_CHECK.value == '')
+  {
+    alert("Please confirm your password")
+    return (false);
+  }
+
+  if (reg_form.PASSWORD_CHECK.value != reg_form_PASSWORD.value)
+  {
+    alert("Password and confirmation do not match!")
+    return (false);
+  }
+
+  return (true);
+}
+-->
+</script>
+
+<LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" MEDIA=screen>
+</HEAD>
+<BODY>
+
+<h2 align=center><u>Registration Page</u></h2>
+
+<br><br>
+
+<form name="reg_form" action="/cgi-bin/fantasy/register.pl" method="post" onsubmit="return pswd_checker()">
+
+Team Name:<br>
+<input type='text' name='NAME'></input><br>
+Email:<br>
+<input type='text' name='EMAIL'></input><br>
+
+Password:<br>
+<input type='password' name='PASSWORD'></input><br>
+Confirm Password:<br>
+<input type='password' name='PASSWORD_CHECK'></input><br>
+<input type='submit' value='Register Team'>
+
+</form>
+</body>
+</html>

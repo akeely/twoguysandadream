@@ -1,0 +1,1860 @@
+RANK: 1	player: Alex Rodriguez
+team: NYY	pos: 3B
+RANK: 2	player: Hanley Ramirez
+team: Fla	pos: SS
+RANK: 3	player: David Wright
+team: NYM	pos: 3B
+RANK: 4	player: Jose Reyes
+team: NYM	pos: SS
+RANK: 5	player: Chase Utley
+team: Phi	pos: 2B
+RANK: 6	player: Matt Holliday
+team: Col	pos: OF
+RANK: 7	player: Miguel Cabrera
+team: Det	pos: 3B
+RANK: 8	player: Johan Santana
+team: NYM	pos: SP
+RANK: 9	player: Carl Crawford
+team: TB	pos: OF
+RANK: 10	player: Jimmy Rollins
+team: Phi	pos: SS
+RANK: 11	player: Albert Pujols
+team: StL	pos: 1B
+RANK: 12	player: Alfonso Soriano
+team: ChC	pos: OF
+RANK: 13	player: Jake Peavy
+team: SD	pos: SP
+RANK: 14	player: Ryan Howard
+team: Phi	pos: 1B
+RANK: 15	player: Ryan Braun
+team: Mil	pos: 3B
+RANK: 16	player: Ichiro Suzuki
+team: Sea	pos: OF
+RANK: 17	player: Grady Sizemore
+team: Cle	pos: OF
+RANK: 18	player: David Ortiz
+team: Bos	pos: DH
+RANK: 19	player: Prince Fielder
+team: Mil	pos: 1B
+RANK: 20	player: Carlos Lee
+team: Hou	pos: OF
+RANK: 21	player: Vladimir Guerrero
+team: LAA	pos: OF|DH
+RANK: 22	player: Erik Bedard
+team: Sea	pos: SP
+RANK: 23	player: Brandon Phillips
+team: Cin	pos: 2B
+RANK: 24	player: Mark Teixeira
+team: Atl	pos: 1B
+RANK: 25	player: Carlos Beltran
+team: NYM	pos: OF
+RANK: 26	player: Lance Berkman
+team: Hou	pos: 1B|OF
+RANK: 27	player: Brandon Webb
+team: Ari	pos: SP
+RANK: 28	player: Chone Figgins
+team: LAA	pos: 3B
+RANK: 29	player: Magglio Ordonez
+team: Det	pos: OF
+RANK: 30	player: Derek Jeter
+team: NYY	pos: SS
+RANK: 31	player: C.C. Sabathia
+team: Cle	pos: SP
+RANK: 32	player: B.J. Upton
+team: TB	pos: 2B|OF
+RANK: 33	player: Aramis Ramirez
+team: ChC	pos: 3B
+RANK: 34	player: Eric Byrnes
+team: Ari	pos: OF
+RANK: 35	player: Justin Morneau
+team: Min	pos: 1B
+RANK: 36	player: Josh Beckett
+team: Bos	pos: SP
+RANK: 37	player: Victor Martinez
+team: Cle	pos: C|1B
+RANK: 38	player: Travis Hafner
+team: Cle	pos: DH
+RANK: 39	player: Nick Markakis
+team: Bal	pos: OF
+RANK: 40	player: Brian Roberts
+team: Bal	pos: 2B
+RANK: 41	player: Cole Hamels
+team: Phi	pos: SP
+RANK: 42	player: Carlos Guillen
+team: Det	pos: SS|1B
+RANK: 43	player: Dan Haren
+team: Ari	pos: SP
+RANK: 44	player: Curtis Granderson
+team: Det	pos: OF
+RANK: 45	player: Garrett Atkins
+team: Col	pos: 3B
+RANK: 46	player: Jonathan Papelbon
+team: Bos	pos: RP
+RANK: 47	player: Alex Rios
+team: Tor	pos: OF
+RANK: 48	player: John Lackey
+team: LAA	pos: SP
+RANK: 49	player: Robinson Cano
+team: NYY	pos: 2B
+RANK: 50	player: Bobby Abreu
+team: NYY	pos: OF
+RANK: 51	player: Troy Tulowitzki
+team: Col	pos: SS
+RANK: 52	player: Justin Verlander
+team: Det	pos: SP
+RANK: 53	player: Manny Ramirez
+team: Bos	pos: OF
+RANK: 54	player: Chipper Jones
+team: Atl	pos: 3B
+RANK: 55	player: Carlos Pena
+team: TB	pos: 1B
+RANK: 56	player: Russell Martin
+team: LAD	pos: C
+RANK: 57	player: J.J. Putz
+team: Sea	pos: RP
+RANK: 58	player: Aaron Harang
+team: Cin	pos: SP
+RANK: 59	player: Roy Oswalt
+team: Hou	pos: SP
+RANK: 60	player: Rafael Furcal
+team: LAD	pos: SS
+RANK: 61	player: Torii Hunter
+team: LAA	pos: OF
+RANK: 62	player: Derrek Lee
+team: ChC	pos: 1B
+RANK: 63	player: Joe Nathan
+team: Min	pos: RP
+RANK: 64	player: John Smoltz
+team: Atl	pos: SP
+RANK: 65	player: Gary Sheffield
+team: Det	pos: DH
+RANK: 66	player: Matt Kemp
+team: LAD	pos: OF
+RANK: 67	player: Francisco Rodriguez
+team: LAA	pos: RP
+RANK: 68	player: Hunter Pence
+team: Hou	pos: OF
+RANK: 69	player: Roy Halladay
+team: Tor	pos: SP
+RANK: 70	player: Ian Kinsler
+team: Tex	pos: 2B
+RANK: 71	player: Adrian Gonzalez
+team: SD	pos: 1B
+RANK: 72	player: Miguel Tejada
+team: Hou	pos: SS
+RANK: 73	player: Corey Hart
+team: Mil	pos: OF
+RANK: 74	player: Ryan Zimmerman
+team: Was	pos: 3B
+RANK: 75	player: Michael Young
+team: Tex	pos: SS
+RANK: 76	player: Paul Konerko
+team: CWS	pos: 1B
+RANK: 77	player: Chris Young
+team: SD	pos: SP
+RANK: 78	player: Brian McCann
+team: Atl	pos: C
+RANK: 79	player: Takashi Saito
+team: LAD	pos: RP
+RANK: 80	player: Adam Dunn
+team: Cin	pos: OF
+RANK: 81	player: Joe Mauer
+team: Min	pos: C
+RANK: 82	player: Fausto Carmona
+team: Cle	pos: SP
+RANK: 83	player: Jim Thome
+team: CWS	pos: DH
+RANK: 84	player: Vernon Wells
+team: Tor	pos: OF
+RANK: 85	player: Kelvim Escobar
+team: LAA	pos: SP
+RANK: 86	player: Daisuke Matsuzaka
+team: Bos	pos: SP
+RANK: 87	player: Billy Wagner
+team: NYM	pos: RP
+RANK: 88	player: Carlos Zambrano
+team: ChC	pos: SP
+RANK: 89	player: Adrian Beltre
+team: Sea	pos: 3B
+RANK: 90	player: Jason Bay
+team: Pit	pos: OF
+RANK: 91	player: Mariano Rivera
+team: NYY	pos: RP
+RANK: 92	player: Dan Uggla
+team: Fla	pos: 2B
+RANK: 93	player: Yovani Gallardo
+team: Mil	pos: SP
+RANK: 94	player: Chris Young
+team: Ari	pos: OF
+RANK: 95	player: Javier Vazquez
+team: CWS	pos: SP
+RANK: 96	player: Todd Helton
+team: Col	pos: 1B
+RANK: 97	player: Jermaine Dye
+team: CWS	pos: OF
+RANK: 98	player: Scott Kazmir
+team: TB	pos: SP
+RANK: 99	player: Orlando Cabrera
+team: CWS	pos: SS
+RANK: 100	player: James Shields
+team: TB	pos: SP
+RANK: 101	player: Delmon Young
+team: Min	pos: OF
+RANK: 102	player: Jose Valverde
+team: Hou	pos: RP
+RANK: 103	player: Jorge Posada
+team: NYY	pos: C
+RANK: 104	player: Howie Kendrick
+team: LAA	pos: 2B
+RANK: 105	player: Hideki Matsui
+team: NYY	pos: OF|DH
+RANK: 106	player: Felix Hernandez
+team: Sea	pos: SP
+RANK: 107	player: Francisco Cordero
+team: Cin	pos: RP
+RANK: 108	player: Edgar Renteria
+team: Det	pos: SS
+RANK: 109	player: Rich Hill
+team: ChC	pos: SP
+RANK: 110	player: Tim Lincecum
+team: SF	pos: SP
+RANK: 111	player: Jeff Francoeur
+team: Atl	pos: OF
+RANK: 112	player: Huston Street
+team: Oak	pos: RP
+RANK: 113	player: Brett Myers
+team: Phi	pos: SP
+RANK: 114	player: Josh Hamilton
+team: Tex	pos: OF
+RANK: 115	player: Tim Hudson
+team: Atl	pos: SP
+RANK: 116	player: Alex Gordon
+team: KC	pos: 3B|1B
+RANK: 117	player: Ryan Garko
+team: Cle	pos: 1B
+RANK: 118	player: Jeff Kent
+team: LAD	pos: 2B
+RANK: 119	player: Matt Cain
+team: SF	pos: SP
+RANK: 120	player: Juan Pierre
+team: LAD	pos: OF
+RANK: 121	player: Ian Snell
+team: Pit	pos: SP
+RANK: 122	player: Bobby Jenks
+team: CWS	pos: RP
+RANK: 123	player: Mike Lowell
+team: Bos	pos: 3B
+RANK: 124	player: Kenji Johjima
+team: Sea	pos: C
+RANK: 125	player: A.J. Burnett
+team: Tor	pos: SP
+RANK: 126	player: James Loney
+team: LAD	pos: 1B
+RANK: 127	player: Brad Hawpe
+team: Col	pos: OF
+RANK: 128	player: Adam Wainwright
+team: StL	pos: SP
+RANK: 129	player: Rickie Weeks
+team: Mil	pos: 2B
+RANK: 130	player: Matt Capps
+team: Pit	pos: RP
+RANK: 131	player: Manny Corpas
+team: Col	pos: RP
+RANK: 132	player: Pedro Martinez
+team: NYM	pos: SP
+RANK: 133	player: Nick Swisher
+team: CWS	pos: 1B|OF
+RANK: 134	player: Placido Polanco
+team: Det	pos: 2B
+RANK: 135	player: Adam LaRoche
+team: Pit	pos: 1B
+RANK: 136	player: Francisco Liriano
+team: Min	pos: SP
+RANK: 137	player: Andruw Jones
+team: LAD	pos: OF
+RANK: 138	player: Rafael Soriano
+team: Atl	pos: RP
+RANK: 139	player: Chad Billingsley
+team: LAD	pos: SP
+RANK: 140	player: Edwin Encarnacion
+team: Cin	pos: 3B
+RANK: 141	player: Dustin McGowan
+team: Tor	pos: SP
+RANK: 142	player: Shane Victorino
+team: Phi	pos: OF
+RANK: 143	player: Carlos Delgado
+team: NYM	pos: 1B
+RANK: 144	player: Chien-Ming Wang
+team: NYY	pos: SP
+RANK: 145	player: Jason Isringhausen
+team: StL	pos: RP
+RANK: 146	player: Pat Burrell
+team: Phi	pos: OF
+RANK: 147	player: Jhonny Peralta
+team: Cle	pos: SS
+RANK: 148	player: Ben Sheets
+team: Mil	pos: SP
+RANK: 149	player: Aaron Hill
+team: Tor	pos: 2B
+RANK: 150	player: Bengie Molina
+team: SF	pos: C
+RANK: 151	player: John Maine
+team: NYM	pos: SP
+RANK: 152	player: Johnny Damon
+team: NYY	pos: OF|DH
+RANK: 153	player: Jeremy Bonderman
+team: Det	pos: SP
+RANK: 154	player: Kevin Kouzmanoff
+team: SD	pos: 3B
+RANK: 155	player: Chad Cordero
+team: Was	pos: RP
+RANK: 156	player: Dustin Pedroia
+team: Bos	pos: 2B
+RANK: 157	player: Ken Griffey Jr.
+team: Cin	pos: OF
+RANK: 158	player: Kevin Youkilis
+team: Bos	pos: 1B
+RANK: 159	player: Brad Penny
+team: LAD	pos: SP
+RANK: 160	player: Trevor Hoffman
+team: SD	pos: RP
+RANK: 161	player: Frank Thomas
+team: Tor	pos: DH
+RANK: 162	player: Raul Ibanez
+team: Sea	pos: OF
+RANK: 163	player: Khalil Greene
+team: SD	pos: SS
+RANK: 164	player: Ivan Rodriguez
+team: Det	pos: C
+RANK: 165	player: Joba Chamberlain
+team: NYY	pos: RP
+RANK: 166	player: Jose Guillen
+team: KC	pos: OF
+RANK: 167	player: Casey Kotchman
+team: LAA	pos: 1B
+RANK: 168	player: Jeff Francis
+team: Col	pos: SP
+RANK: 169	player: Aaron Rowand
+team: SF	pos: OF
+RANK: 170	player: Joakim Soria
+team: KC	pos: RP
+RANK: 171	player: Ted Lilly
+team: ChC	pos: SP
+RANK: 172	player: Derek Lowe
+team: LAD	pos: SP
+RANK: 173	player: Troy Glaus
+team: StL	pos: 3B
+RANK: 174	player: Kazuo Matsui
+team: Hou	pos: 2B
+RANK: 175	player: Michael Bourn
+team: Hou	pos: OF
+RANK: 176	player: Julio Lugo
+team: Bos	pos: SS
+RANK: 177	player: Tom Gorzelanny
+team: Pit	pos: SP
+RANK: 178	player: Ramon Hernandez
+team: Bal	pos: C
+RANK: 179	player: Phil Hughes
+team: NYY	pos: SP
+RANK: 180	player: Michael Cuddyer
+team: Min	pos: OF
+RANK: 181	player: Bronson Arroyo
+team: Cin	pos: SP
+RANK: 182	player: Orlando Hudson
+team: Ari	pos: 2B
+RANK: 183	player: Willy Taveras
+team: Col	pos: OF
+RANK: 184	player: Todd Jones
+team: Det	pos: RP
+RANK: 185	player: Joe Blanton
+team: Oak	pos: SP
+RANK: 186	player: Brad Lidge
+team: Phi	pos: RP
+RANK: 187	player: Kosuke Fukudome
+team: ChC	pos: OF
+RANK: 188	player: Jered Weaver
+team: LAA	pos: SP
+RANK: 189	player: Akinori Iwamura
+team: TB	pos: 3B
+RANK: 190	player: Kevin Gregg
+team: Fla	pos: RP
+RANK: 191	player: Jacoby Ellsbury
+team: Bos	pos: OF
+RANK: 192	player: Curt Schilling
+team: Bos	pos: SP
+RANK: 193	player: Geovany Soto
+team: ChC	pos: C
+RANK: 194	player: Josh Willingham
+team: Fla	pos: OF
+RANK: 195	player: Mark Ellis
+team: Oak	pos: 2B
+RANK: 196	player: Zack Greinke
+team: KC	pos: SP
+RANK: 197	player: Ryan Theriot
+team: ChC	pos: 2B|SS
+RANK: 198	player: Greg Maddux
+team: SD	pos: SP
+RANK: 199	player: Joe Borowski
+team: Cle	pos: RP
+RANK: 200	player: Joey Votto
+team: Cin	pos: 1B
+RANK: 201	player: Billy Butler
+team: KC	pos: DH
+RANK: 202	player: Ty Wigginton
+team: Hou	pos: 2B|3B
+RANK: 203	player: Jason Varitek
+team: Bos	pos: C
+RANK: 204	player: Gary Matthews Jr.
+team: LAA	pos: OF
+RANK: 205	player: Andy Pettitte
+team: NYY	pos: SP
+RANK: 206	player: Jeremy Hermida
+team: Fla	pos: OF
+RANK: 207	player: Conor Jackson
+team: Ari	pos: 1B
+RANK: 208	player: Mark Buehrle
+team: CWS	pos: SP
+RANK: 209	player: J.J. Hardy
+team: Mil	pos: SS
+RANK: 210	player: Carlos Marmol
+team: ChC	pos: RP
+RANK: 211	player: Oliver Perez
+team: NYM	pos: SP
+RANK: 212	player: Randy Winn
+team: SF	pos: OF
+RANK: 213	player: Casey Blake
+team: Cle	pos: 3B
+RANK: 214	player: Freddy Sanchez
+team: Pit	pos: 2B
+RANK: 215	player: Milton Bradley
+team: Tex	pos: OF
+RANK: 216	player: Clay Buchholz
+team: Bos	pos: SP
+RANK: 217	player: Jeremy Accardo
+team: Tor	pos: RP
+RANK: 218	player: Lyle Overbay
+team: Tor	pos: 1B
+RANK: 219	player: Hank Blalock
+team: Tex	pos: 3B
+RANK: 220	player: Austin Kearns
+team: Was	pos: OF
+RANK: 221	player: Jeremy Guthrie
+team: Bal	pos: SP
+RANK: 222	player: Brian Wilson
+team: SF	pos: RP
+RANK: 223	player: Dave Bush
+team: Mil	pos: SP
+RANK: 224	player: Micah Owings
+team: Ari	pos: SP
+RANK: 225	player: Evan Longoria
+team: TB	pos: 3B
+RANK: 226	player: Stephen Drew
+team: Ari	pos: SS
+RANK: 227	player: A.J. Pierzynski
+team: CWS	pos: C
+RANK: 228	player: Coco Crisp
+team: Bos	pos: OF
+RANK: 229	player: Mike Cameron
+team: Mil	pos: OF
+RANK: 230	player: Brandon Lyon
+team: Ari	pos: RP
+RANK: 231	player: Gil Meche
+team: KC	pos: SP
+RANK: 232	player: Melky Cabrera
+team: NYY	pos: OF
+RANK: 233	player: Kelly Johnson
+team: Atl	pos: 2B
+RANK: 234	player: Moises Alou
+team: NYM	pos: OF
+RANK: 235	player: Eric Gagne
+team: Mil	pos: RP
+RANK: 236	player: Jon Garland
+team: LAA	pos: SP
+RANK: 237	player: Justin Upton
+team: Ari	pos: OF
+RANK: 238	player: Dmitri Young
+team: Was	pos: 1B
+RANK: 239	player: Jonathan Broxton
+team: LAD	pos: RP
+RANK: 240	player: Jason Giambi
+team: NYY	pos: DH
+RANK: 241	player: Dontrelle Willis
+team: Det	pos: SP
+RANK: 242	player: Rafael Betancourt
+team: Cle	pos: RP
+RANK: 243	player: Rick Ankiel
+team: StL	pos: OF
+RANK: 244	player: Luis Castillo
+team: NYM	pos: 2B
+RANK: 245	player: J.D. Drew
+team: Bos	pos: OF
+RANK: 246	player: Bob Howry
+team: ChC	pos: RP
+RANK: 247	player: Barry Zito
+team: SF	pos: SP
+RANK: 248	player: C.J. Wilson
+team: Tex	pos: RP
+RANK: 249	player: Richie Sexson
+team: Sea	pos: 1B
+RANK: 250	player: Yunel Escobar
+team: Atl	pos: 2B|3B|SS
+RANK: 251	player: Matt Garza
+team: TB	pos: SP
+RANK: 252	player: David DeJesus
+team: KC	pos: OF
+RANK: 253	player: Josh Fields
+team: CWS	pos: 3B|OF
+RANK: 254	player: Troy Percival
+team: TB	pos: RP
+RANK: 255	player: Felix Pie
+team: ChC	pos: OF
+RANK: 256	player: George Sherrill
+team: Bal	pos: RP
+RANK: 257	player: Mike Napoli
+team: LAA	pos: C
+RANK: 258	player: Asdrubal Cabrera
+team: Cle	pos: 2B
+RANK: 259	player: Mark Teahen
+team: KC	pos: OF
+RANK: 260	player: Rich Harden
+team: Oak	pos: SP
+RANK: 261	player: Hideki Okajima
+team: Bos	pos: RP
+RANK: 262	player: Shaun Marcum
+team: Tor	pos: SP
+RANK: 263	player: Scott Rolen
+team: Tor	pos: 3B
+RANK: 264	player: Mike Jacobs
+team: Fla	pos: 1B
+RANK: 265	player: Xavier Nady
+team: Pit	pos: OF
+RANK: 266	player: Felipe Lopez
+team: Was	pos: 2B|SS
+RANK: 267	player: Aubrey Huff
+team: Bal	pos: 1B|DH
+RANK: 268	player: Chris Duncan
+team: StL	pos: OF
+RANK: 269	player: Pat Neshek
+team: Min	pos: RP
+RANK: 270	player: Jon Lester
+team: Bos	pos: SP
+RANK: 271	player: Chad Tracy
+team: Ari	pos: 3B
+RANK: 272	player: Carlos Ruiz
+team: Phi	pos: C
+RANK: 273	player: Ubaldo Jimenez
+team: Col	pos: SP
+RANK: 274	player: Nate McLouth
+team: Pit	pos: OF
+RANK: 275	player: Jose Lopez
+team: Sea	pos: 2B
+RANK: 276	player: Daric Barton
+team: Oak	pos: 1B
+RANK: 277	player: Scot Shields
+team: LAA	pos: RP
+RANK: 278	player: Yuniesky Betancourt
+team: Sea	pos: SS
+RANK: 279	player: Andy LaRoche
+team: LAD	pos: 3B
+RANK: 280	player: Mike Piazza
+team: Oak	pos: DH
+RANK: 281	player: Kevin Slowey
+team: Min	pos: SP
+RANK: 282	player: Ronny Paulino
+team: Pit	pos: C
+RANK: 283	player: Bill Hall
+team: Mil	pos: OF
+RANK: 284	player: Kerry Wood
+team: ChC	pos: RP
+RANK: 285	player: Melvin Mora
+team: Bal	pos: 3B
+RANK: 286	player: Jarrod Saltalamacchia
+team: Tex	pos: C|1B
+RANK: 287	player: Homer Bailey
+team: Cin	pos: SP
+RANK: 288	player: Chad Qualls
+team: Ari	pos: RP
+RANK: 289	player: Lastings Milledge
+team: Was	pos: OF
+RANK: 290	player: Jason Bartlett
+team: TB	pos: SS
+RANK: 291	player: Eric Chavez
+team: Oak	pos: 3B
+RANK: 292	player: Dan Johnson
+team: Oak	pos: 1B
+RANK: 293	player: Randy Johnson
+team: Ari	pos: SP
+RANK: 294	player: Joaquin Benoit
+team: Tex	pos: RP
+RANK: 295	player: Garret Anderson
+team: LAA	pos: OF|DH
+RANK: 296	player: Kurt Suzuki
+team: Oak	pos: C
+RANK: 297	player: Mark Reynolds
+team: Ari	pos: 3B
+RANK: 298	player: Tadahito Iguchi
+team: SD	pos: 2B
+RANK: 299	player: David Riske
+team: Mil	pos: RP
+RANK: 300	player: Jack Cust
+team: Oak	pos: OF|DH
+RANK: 301	player: Joe Crede
+team: CWS	pos: 3B
+RANK: 302	player: Kevin Millar
+team: Bal	pos: 1B|DH
+RANK: 303	player: Paul Byrd
+team: Cle	pos: SP
+RANK: 304	player: Al Reyes
+team: TB	pos: RP
+RANK: 305	player: Kenny Lofton
+team: FA	pos: OF
+RANK: 306	player: Paul Lo Duca
+team: Was	pos: C
+RANK: 307	player: Omar Vizquel
+team: SF	pos: SS
+RANK: 308	player: B.J. Ryan
+team: Tor	pos: RP
+RANK: 309	player: Travis Buck
+team: Oak	pos: OF
+RANK: 310	player: Nomar Garciaparra
+team: LAD	pos: 3B|1B
+RANK: 311	player: Pedro Feliz
+team: Phi	pos: 3B
+RANK: 312	player: Josh Bard
+team: SD	pos: C
+RANK: 313	player: Ray Durham
+team: SF	pos: 2B
+RANK: 314	player: Jose Bautista
+team: Pit	pos: 3B
+RANK: 315	player: Carlos Quentin
+team: CWS	pos: OF
+RANK: 316	player: Alan Embree
+team: Oak	pos: RP
+RANK: 317	player: David Eckstein
+team: Tor	pos: SS
+RANK: 318	player: Geoff Jenkins
+team: Phi	pos: OF
+RANK: 319	player: Mike Lamb
+team: Min	pos: 3B|1B
+RANK: 320	player: Chris Snyder
+team: Ari	pos: C
+RANK: 321	player: Doug Davis
+team: Ari	pos: SP
+RANK: 322	player: Ben Broussard
+team: Tex	pos: 1B
+RANK: 323	player: Dave Roberts
+team: SF	pos: OF
+RANK: 324	player: Michael Barrett
+team: SD	pos: C
+RANK: 325	player: Jose Vidro
+team: Sea	pos: DH
+RANK: 326	player: Juan Cruz
+team: Ari	pos: RP
+RANK: 327	player: Mark DeRosa
+team: ChC	pos: 2B|3B|OF
+RANK: 328	player: Bobby Crosby
+team: Oak	pos: SS
+RANK: 329	player: Jake Westbrook
+team: Cle	pos: SP
+RANK: 330	player: Rich Aurilia
+team: SF	pos: 3B|1B
+RANK: 331	player: John Buck
+team: KC	pos: C
+RANK: 332	player: Nick Punto
+team: Min	pos: 2B|3B|SS
+RANK: 333	player: Derrick Turnbow
+team: Mil	pos: RP
+RANK: 334	player: Ian Stewart
+team: Col	pos: 3B
+RANK: 335	player: Brandon Inge
+team: Det	pos: 3B
+RANK: 336	player: Ryan Doumit
+team: Pit	pos: C|OF
+RANK: 337	player: Mike Sweeney
+team: FA	pos: DH
+RANK: 338	player: Brandon Wood
+team: LAA	pos: 3B
+RANK: 339	player: Maicer Izturis
+team: LAA	pos: 2B|3B
+RANK: 340	player: J.R. Towles
+team: Hou	pos: C
+RANK: 341	player: Adam Jones
+team: Bal	pos: OF
+RANK: 342	player: Tom Gordon
+team: Phi	pos: RP
+RANK: 343	player: Corey Patterson
+team: FA	pos: OF
+RANK: 344	player: Jerry Owens
+team: CWS	pos: OF
+RANK: 345	player: Jacque Jones
+team: Det	pos: OF
+RANK: 346	player: Brian Giles
+team: SD	pos: OF
+RANK: 347	player: Mark Grudzielanek
+team: KC	pos: 2B
+RANK: 348	player: Ronnie Belliard
+team: Was	pos: 2B
+RANK: 349	player: Eddie Guardado
+team: Tex	pos: RP
+RANK: 350	player: Emil Brown
+team: Oak	pos: OF
+RANK: 351	player: Andre Ethier
+team: LAD	pos: OF
+RANK: 352	player: Ryan Freel
+team: Cin	pos: OF
+RANK: 353	player: Matt Stairs
+team: Tor	pos: 1B|OF
+RANK: 354	player: Reggie Willits
+team: LAA	pos: OF
+RANK: 355	player: Brad Wilkerson
+team: Sea	pos: 1B|OF
+RANK: 356	player: Josh Barfield
+team: Cle	pos: 2B
+RANK: 357	player: Matt Diaz
+team: Atl	pos: OF
+RANK: 358	player: Ryan Church
+team: NYM	pos: OF
+RANK: 359	player: Norris Hopper
+team: Cin	pos: OF
+RANK: 360	player: Luis Gonzalez
+team: Fla	pos: OF
+RANK: 361	player: Scott Hatteberg
+team: Cin	pos: 1B
+RANK: 362	player: Jay Payton
+team: Bal	pos: OF
+RANK: 363	player: Esteban German
+team: KC	pos: 2B|3B
+RANK: 364	player: Jonny Gomes
+team: TB	pos: OF|DH
+RANK: 365	player: Cody Ross
+team: Fla	pos: OF
+RANK: 366	player: Ryan Ludwick
+team: StL	pos: OF
+RANK: 367	player: Mark Loretta
+team: Hou	pos: 2B|1B|3B|SS
+RANK: 368	player: So Taguchi
+team: Phi	pos: OF
+RANK: 369	player: Frank Catalanotto
+team: Tex	pos: OF
+RANK: 370	player: Cliff Floyd
+team: TB	pos: OF
+RANK: 371	player: Alfredo Amezaga
+team: Fla	pos: OF
+RANK: 372	player: Ryan Spilborghs
+team: Col	pos: OF
+RANK: 373	player: Joey Gathright
+team: KC	pos: OF
+RANK: 374	player: Jim Edmonds
+team: SD	pos: OF
+RANK: 375	player: Marlon Byrd
+team: Tex	pos: OF
+RANK: 376	player: Marcus Giles
+team: FA	pos: 2B
+RANK: 377	player: Johnny Estrada
+team: Was	pos: C
+RANK: 378	player: Jason Michaels
+team: Cle	pos: OF
+RANK: 379	player: Jason Kubel
+team: Min	pos: OF|DH
+RANK: 380	player: Matt Murton
+team: ChC	pos: OF
+RANK: 381	player: Craig Monroe
+team: Min	pos: OF
+RANK: 382	player: Wily Mo Pena
+team: Was	pos: OF
+RANK: 383	player: Luke Scott
+team: Bal	pos: OF
+RANK: 384	player: Justin Duchscherer
+team: Oak	pos: RP
+RANK: 385	player: Chris Duffy
+team: Pit	pos: OF
+RANK: 386	player: Willie Harris
+team: Was	pos: OF
+RANK: 387	player: Carlos Gomez
+team: Min	pos: OF
+RANK: 388	player: Cameron Maybin
+team: Fla	pos: OF
+RANK: 389	player: Wladimir Balentien
+team: Sea	pos: OF
+RANK: 390	player: Octavio Dotel
+team: CWS	pos: RP
+RANK: 391	player: Miguel Olivo
+team: KC	pos: C
+RANK: 392	player: Chris Burke
+team: Ari	pos: 2B|OF
+RANK: 393	player: Marlon Anderson
+team: NYM	pos: OF
+RANK: 394	player: Jason Kendall
+team: Mil	pos: C
+RANK: 395	player: Marcus Thames
+team: Det	pos: 1B|OF
+RANK: 396	player: Franklin Gutierrez
+team: Cle	pos: OF
+RANK: 397	player: Gerald Laird
+team: Tex	pos: C
+RANK: 398	player: Wilson Betemit
+team: NYY	pos: 3B
+RANK: 399	player: Reed Johnson
+team: Tor	pos: OF
+RANK: 400	player: Willie Bloomquist
+team: Sea	pos: 2B|3B|SS
+RANK: 401	player: Brendan Harris
+team: Min	pos: 2B|SS
+RANK: 402	player: Mike Fontenot
+team: ChC	pos: 2B
+RANK: 403	player: Gregg Zaun
+team: Tor	pos: C
+RANK: 404	player: Jon Rauch
+team: Was	pos: RP
+RANK: 405	player: Cory Sullivan
+team: Col	pos: OF
+RANK: 406	player: Ross Gload
+team: KC	pos: 1B
+RANK: 407	player: Mike Timlin
+team: Bos	pos: RP
+RANK: 408	player: Dan Wheeler
+team: TB	pos: RP
+RANK: 409	player: Jamie Walker
+team: Bal	pos: RP
+RANK: 410	player: Daryle Ward
+team: ChC	pos: 1B
+RANK: 411	player: Peter Moylan
+team: Atl	pos: RP
+RANK: 412	player: Yorvit Torrealba
+team: Col	pos: C
+RANK: 413	player: Adam Kennedy
+team: StL	pos: 2B
+RANK: 414	player: Fernando Rodney
+team: Det	pos: RP
+RANK: 415	player: Jamey Carroll
+team: Cle	pos: 2B|3B
+RANK: 416	player: Endy Chavez
+team: NYM	pos: OF
+RANK: 417	player: Scott Hairston
+team: SD	pos: OF
+RANK: 418	player: Juan Rivera
+team: LAA	pos: OF
+RANK: 419	player: Kyle Farnsworth
+team: NYY	pos: RP
+RANK: 420	player: Damion Easley
+team: NYM	pos: 2B
+RANK: 421	player: David Dellucci
+team: Cle	pos: OF
+RANK: 422	player: Craig Counsell
+team: Mil	pos: 2B|3B|SS
+RANK: 423	player: Eric Hinske
+team: FA	pos: 1B|OF
+RANK: 424	player: Jeff Baker
+team: Col	pos: 1B
+RANK: 425	player: Aaron Heilman
+team: NYM	pos: RP
+RANK: 426	player: Chris Gomez
+team: Pit	pos: 3B|1B
+RANK: 427	player: Miguel Cairo
+team: Sea	pos: 3B|1B
+RANK: 428	player: Carlos Villanueva
+team: Mil	pos: RP
+RANK: 429	player: Chris Coste
+team: Phi	pos: C
+RANK: 430	player: Javier Valentin
+team: Cin	pos: C
+RANK: 431	player: Rafael Perez
+team: Cle	pos: RP
+RANK: 432	player: Kyle Kendrick
+team: Phi	pos: SP
+RANK: 433	player: Adam Lind
+team: Tor	pos: OF
+RANK: 434	player: Freddie Bynum
+team: Bal	pos: OF
+RANK: 435	player: Rocco Baldelli
+team: TB	pos: OF
+RANK: 436	player: Brian Fuentes
+team: Col	pos: RP
+RANK: 437	player: Yadier Molina
+team: StL	pos: C
+RANK: 438	player: Jay Gibbons
+team: Bal	pos: OF|DH
+RANK: 439	player: Chuck James
+team: Atl	pos: SP
+RANK: 440	player: Pedro Feliciano
+team: NYM	pos: RP
+RANK: 441	player: Ramon Castro
+team: NYM	pos: C
+RANK: 442	player: David Weathers
+team: Cin	pos: RP
+RANK: 443	player: Omar Infante
+team: Atl	pos: 2B
+RANK: 444	player: Brandon Backe
+team: Hou	pos: SP
+RANK: 445	player: Manny Parra
+team: Mil	pos: RP
+RANK: 446	player: Santiago Casilla
+team: Oak	pos: RP
+RANK: 447	player: Orlando Hernandez
+team: NYM	pos: SP
+RANK: 448	player: Sean Casey
+team: Bos	pos: 1B
+RANK: 449	player: Tony Pena
+team: Ari	pos: RP
+RANK: 450	player: Heath Bell
+team: SD	pos: RP
+RANK: 451	player: Wes Helms
+team: Phi	pos: 3B
+RANK: 452	player: Kevin Correia
+team: SF	pos: SP
+RANK: 453	player: Casey Janssen
+team: Tor	pos: RP
+RANK: 454	player: Scott Linebrink
+team: CWS	pos: RP
+RANK: 455	player: Angel Pagan
+team: NYM	pos: OF
+RANK: 456	player: Chad Bradford
+team: Bal	pos: RP
+RANK: 457	player: Brian Schneider
+team: NYM	pos: C
+RANK: 458	player: Russ Springer
+team: StL	pos: RP
+RANK: 459	player: Chris Sampson
+team: Hou	pos: SP
+RANK: 460	player: David Ross
+team: Cin	pos: C
+RANK: 461	player: Brad Hennessey
+team: SF	pos: RP
+RANK: 462	player: Tim Wakefield
+team: Bos	pos: SP
+RANK: 463	player: Taylor Tankersley
+team: Fla	pos: RP
+RANK: 464	player: Aaron Cook
+team: Col	pos: SP
+RANK: 465	player: Darin Erstad
+team: Hou	pos: 1B|OF
+RANK: 466	player: Dioner Navarro
+team: TB	pos: C
+RANK: 467	player: Kenny Rogers
+team: Det	pos: SP
+RANK: 468	player: Braden Looper
+team: StL	pos: SP
+RANK: 469	player: Tom Glavine
+team: Atl	pos: SP
+RANK: 470	player: Scott Baker
+team: Min	pos: SP
+RANK: 471	player: Jorge Sosa
+team: NYM	pos: RP
+RANK: 472	player: Jarrod Washburn
+team: Sea	pos: SP
+RANK: 473	player: Rajai Davis
+team: SF	pos: OF
+RANK: 474	player: Robb Quinlan
+team: LAA	pos: 1B
+RANK: 475	player: Carlos Silva
+team: Sea	pos: SP
+RANK: 476	player: Luis Ayala
+team: Was	pos: RP
+RANK: 477	player: Jason Bergmann
+team: Was	pos: SP
+RANK: 478	player: Nelson Cruz
+team: Tex	pos: OF
+RANK: 479	player: Alexi Casilla
+team: Min	pos: 2B
+RANK: 480	player: Greg Dobbs
+team: Phi	pos: 3B
+RANK: 481	player: Mike Mussina
+team: NYY	pos: SP
+RANK: 482	player: Damaso Marte
+team: Pit	pos: RP
+RANK: 483	player: Tyler Yates
+team: Atl	pos: RP
+RANK: 484	player: Joel Zumaya
+team: Det	pos: RP
+RANK: 485	player: Jamie Moyer
+team: Phi	pos: SP
+RANK: 486	player: Miguel Batista
+team: Sea	pos: SP
+RANK: 487	player: Kason Gabbard
+team: Tex	pos: SP
+RANK: 488	player: Nate Robertson
+team: Det	pos: SP
+RANK: 489	player: Gabe Gross
+team: Mil	pos: OF
+RANK: 490	player: Noah Lowry
+team: SF	pos: SP
+RANK: 491	player: Justin Speier
+team: LAA	pos: RP
+RANK: 492	player: Justin Germano
+team: SD	pos: SP
+RANK: 493	player: Scott Schoeneweis
+team: NYM	pos: RP
+RANK: 494	player: Oscar Villarreal
+team: Hou	pos: RP
+RANK: 495	player: Matt Wise
+team: NYM	pos: RP
+RANK: 496	player: Jeff Suppan
+team: Mil	pos: SP
+RANK: 497	player: Manny Delcarmen
+team: Bos	pos: RP
+RANK: 498	player: Brad Ausmus
+team: Hou	pos: C
+RANK: 499	player: Jesse Litsch
+team: Tor	pos: SP
+RANK: 500	player: Edinson Volquez
+team: Cin	pos: SP
+RANK: 501	player: Barry Bonds
+team: FA	pos: OF
+RANK: 502	player: Jay Bruce
+team: Cin	pos: OF
+RANK: 503	player: Nick Johnson
+team: Was	pos: 1B
+RANK: 504	player: Alexei Ramirez
+team: CWS	pos: 2B
+RANK: 505	player: Shawn Hill
+team: Was	pos: SP
+RANK: 506	player: Rick VandenHurk
+team: Fla	pos: SP
+RANK: 507	player: Chad Durbin
+team: Phi	pos: SP
+RANK: 508	player: Ryan Dempster
+team: ChC	pos: SP
+RANK: 509	player: Paul Maholm
+team: Pit	pos: SP
+RANK: 510	player: Kevin Millwood
+team: Tex	pos: SP
+RANK: 511	player: Andy Sonnanstine
+team: TB	pos: SP
+RANK: 512	player: Woody Williams
+team: Hou	pos: SP
+RANK: 513	player: Brian Bannister
+team: KC	pos: SP
+RANK: 514	player: Matt Morris
+team: Pit	pos: SP
+RANK: 515	player: Luke Hochevar
+team: KC	pos: SP
+RANK: 516	player: Wandy Rodriguez
+team: Hou	pos: SP
+RANK: 517	player: Jason Marquis
+team: ChC	pos: SP
+RANK: 518	player: Jon Lieber
+team: ChC	pos: SP
+RANK: 519	player: Chris Carpenter
+team: StL	pos: SP
+RANK: 520	player: Brandon McCarthy
+team: Tex	pos: SP
+RANK: 521	player: Taylor Buchholz
+team: Col	pos: SP
+RANK: 522	player: Chris Capuano
+team: Mil	pos: SP
+RANK: 523	player: Jose Contreras
+team: CWS	pos: SP
+RANK: 524	player: Boof Bonser
+team: Min	pos: SP
+RANK: 525	player: Ervin Santana
+team: LAA	pos: SP
+RANK: 526	player: Adam Miller
+team: Cle	pos: SP
+RANK: 527	player: Sean Marshall
+team: ChC	pos: SP
+RANK: 528	player: Mark Hendrickson
+team: Fla	pos: SP
+RANK: 529	player: Cha Seung Baek
+team: Sea	pos: SP
+RANK: 530	player: Jason Schmidt
+team: LAD	pos: SP
+RANK: 531	player: John Patterson
+team: Was	pos: SP
+RANK: 532	player: Anthony Reyes
+team: StL	pos: SP
+RANK: 533	player: Alex Gonzalez
+team: Cin	pos: SS
+RANK: 534	player: Randy Wolf
+team: SD	pos: SP
+RANK: 535	player: Aaron Laffey
+team: Cle	pos: SP
+RANK: 536	player: Jason Hirsh
+team: Col	pos: SP
+RANK: 537	player: Joel Pineiro
+team: StL	pos: SP
+RANK: 538	player: Adam Loewen
+team: Bal	pos: SP
+RANK: 539	player: Elijah Dukes
+team: Was	pos: OF
+RANK: 540	player: Matt Chico
+team: Was	pos: SP
+RANK: 541	player: Gustavo Chacin
+team: Tor	pos: SP
+RANK: 542	player: Esteban Loaiza
+team: LAD	pos: SP
+RANK: 543	player: Cliff Lee
+team: Cle	pos: SP
+RANK: 544	player: Daniel Cabrera
+team: Bal	pos: SP
+RANK: 545	player: Joe Saunders
+team: LAA	pos: SP
+RANK: 546	player: Cristian Guzman
+team: Was	pos: SS
+RANK: 547	player: Claudio Vargas
+team: Mil	pos: SP
+RANK: 548	player: Mark Prior
+team: SD	pos: SP
+RANK: 549	player: Sergio Mitre
+team: Fla	pos: SP
+RANK: 550	player: Lenny DiNardo
+team: Oak	pos: SP
+RANK: 551	player: Scott Olsen
+team: Fla	pos: SP
+RANK: 552	player: Chan Ho Park
+team: LAD	pos: SP
+RANK: 553	player: Vicente Padilla
+team: Tex	pos: SP
+RANK: 554	player: Chad Gaudin
+team: Oak	pos: SP
+RANK: 555	player: Adam Everett
+team: Min	pos: SS
+RANK: 556	player: Bobby Livingston
+team: 	pos: 
+RANK: 557	player: Zach Duke
+team: Pit	pos: SP
+RANK: 558	player: LaTroy Hawkins
+team: NYY	pos: RP
+RANK: 559	player: John Danks
+team: CWS	pos: SP
+RANK: 560	player: Jorge Cantu
+team: Fla	pos: 1B
+RANK: 561	player: Mark Mulder
+team: StL	pos: SP
+RANK: 562	player: Matt Lindstrom
+team: Fla	pos: RP
+RANK: 563	player: Miguel Montero
+team: Ari	pos: C
+RANK: 564	player: Steve Kline
+team: SF	pos: RP
+RANK: 565	player: Yusmeiro Petit
+team: Ari	pos: SP
+RANK: 566	player: Pablo Ozuna
+team: CWS	pos: 3B
+RANK: 567	player: Mike MacDougal
+team: CWS	pos: RP
+RANK: 568	player: Jason Jennings
+team: Tex	pos: SP
+RANK: 569	player: Michael Wuertz
+team: ChC	pos: RP
+RANK: 570	player: Adam Eaton
+team: Phi	pos: SP
+RANK: 571	player: Chris Britton
+team: NYY	pos: RP
+RANK: 572	player: Ricky Nolasco
+team: Fla	pos: SP
+RANK: 573	player: Josh Wilson
+team: Pit	pos: 2B|SS
+RANK: 574	player: Cesar Izturis
+team: StL	pos: SS
+RANK: 575	player: Jeremy Sowers
+team: Cle	pos: SP
+RANK: 576	player: Kevin Frandsen
+team: SF	pos: 2B|SS
+RANK: 577	player: Jason Vargas
+team: NYM	pos: SP
+RANK: 578	player: Jeff Clement
+team: Sea	pos: DH
+RANK: 579	player: Anibal Sanchez
+team: Fla	pos: SP
+RANK: 580	player: Luis Vizcaino
+team: Col	pos: RP
+RANK: 581	player: John Grabow
+team: Pit	pos: RP
+RANK: 582	player: Jo-Jo Reyes
+team: Atl	pos: SP
+RANK: 583	player: Ryan Franklin
+team: StL	pos: RP
+RANK: 584	player: Horacio Ramirez
+team: Sea	pos: SP
+RANK: 585	player: Kei Igawa
+team: NYY	pos: SP
+RANK: 586	player: Tike Redman
+team: Bal	pos: OF
+RANK: 587	player: Geoff Blum
+team: Hou	pos: 2B
+RANK: 588	player: Mark Redman
+team: Col	pos: SP
+RANK: 589	player: Will Ohman
+team: Atl	pos: RP
+RANK: 590	player: Jack Wilson
+team: Pit	pos: SS
+RANK: 591	player: Jose Castillo
+team: Fla	pos: 2B|3B
+RANK: 592	player: Mike Gonzalez
+team: Atl	pos: RP
+RANK: 593	player: Brandon Morrow
+team: Sea	pos: RP
+RANK: 594	player: Bill Bray
+team: Cin	pos: RP
+RANK: 595	player: Brad Thompson
+team: StL	pos: RP
+RANK: 596	player: Matt Herges
+team: Col	pos: RP
+RANK: 597	player: Geoff Geary
+team: Hou	pos: RP
+RANK: 598	player: Kendry Morales
+team: LAA	pos: 1B
+RANK: 599	player: Vinnie Chulk
+team: SF	pos: RP
+RANK: 600	player: Scott Thorman
+team: Atl	pos: 1B
+RANK: 601	player: Juan Uribe
+team: CWS	pos: SS
+RANK: 602	player: Kelly Shoppach
+team: Cle	pos: C
+RANK: 603	player: Mark Kotsay
+team: Atl	pos: OF
+RANK: 604	player: Matt Belisle
+team: Cin	pos: SP
+RANK: 605	player: Mike Pelfrey
+team: NYM	pos: SP
+RANK: 606	player: Kip Wells
+team: Col	pos: SP
+RANK: 607	player: Tim Redding
+team: Was	pos: SP
+RANK: 608	player: Mike Morse
+team: Sea	pos: 1B
+RANK: 609	player: Doug Slaten
+team: Ari	pos: RP
+RANK: 610	player: Jason Hammel
+team: TB	pos: SP
+RANK: 611	player: Jack Taschner
+team: SF	pos: RP
+RANK: 612	player: Juan Rincon
+team: Min	pos: RP
+RANK: 613	player: Kyle Davies
+team: KC	pos: SP
+RANK: 614	player: J.P. Howell
+team: TB	pos: SP
+RANK: 615	player: Dallas Braden
+team: Oak	pos: SP
+RANK: 616	player: Joe Smith
+team: NYM	pos: RP
+RANK: 617	player: Ramon Santiago
+team: Det	pos: SS
+RANK: 618	player: Gavin Floyd
+team: CWS	pos: SP
+RANK: 619	player: Dana Eveland
+team: Oak	pos: SP
+RANK: 620	player: Randy Messenger
+team: SF	pos: RP
+RANK: 621	player: Jeff DaVanon
+team: SD	pos: OF
+RANK: 622	player: Scott Spiezio
+team: StL	pos: 3B
+RANK: 623	player: Sean Green
+team: Sea	pos: RP
+RANK: 624	player: Fernando Cabrera
+team: Bal	pos: RP
+RANK: 625	player: Ian Kennedy
+team: NYY	pos: SP
+RANK: 626	player: Scott Eyre
+team: ChC	pos: RP
+RANK: 627	player: Mike Hampton
+team: Atl	pos: SP
+RANK: 628	player: Juan Salas
+team: TB	pos: RP
+RANK: 629	player: Marco Scutaro
+team: Tor	pos: SS|3B
+RANK: 630	player: Carlos Gonzalez
+team: Oak	pos: OF
+RANK: 631	player: Andrew Miller
+team: Fla	pos: SP
+RANK: 632	player: Rob Bowen
+team: Oak	pos: C
+RANK: 633	player: Matt Clement
+team: StL	pos: SP
+RANK: 634	player: Ryan Speier
+team: Col	pos: RP
+RANK: 635	player: Jose Capellan
+team: Col	pos: RP
+RANK: 636	player: Morgan Ensberg
+team: FA	pos: 3B
+RANK: 637	player: Dustin Nippert
+team: Ari	pos: RP
+RANK: 638	player: Blaine Boyer
+team: Atl	pos: RP
+RANK: 639	player: Tyler Walker
+team: SF	pos: RP
+RANK: 640	player: Clint Barmes
+team: Col	pos: SS
+RANK: 641	player: Edgar Gonzalez
+team: Ari	pos: SP
+RANK: 642	player: John Van Benschoten
+team: Pit	pos: SP
+RANK: 643	player: Jason Lane
+team: FA	pos: OF
+RANK: 644	player: Travis Blackley
+team: Phi	pos: SP
+RANK: 645	player: Merkin Valdez
+team: SF	pos: RP
+RANK: 646	player: Buddy Carlyle
+team: Atl	pos: SP
+RANK: 647	player: Jose Molina
+team: NYY	pos: C
+RANK: 648	player: Jonathan Sanchez
+team: SF	pos: RP
+RANK: 649	player: Chris Denorfia
+team: Oak	pos: OF
+RANK: 650	player: Ramon Ramirez
+team: Col	pos: RP
+RANK: 651	player: Hayden Penn
+team: Bal	pos: SP
+RANK: 652	player: Elmer Dessens
+team: Pit	pos: RP
+RANK: 653	player: Chris Iannetta
+team: Col	pos: C
+RANK: 654	player: Matt Treanor
+team: Fla	pos: C
+RANK: 655	player: Bryan Bullington
+team: Pit	pos: SP
+RANK: 656	player: Glen Perkins
+team: Min	pos: SP
+RANK: 657	player: Jordan Tata
+team: Det	pos: SP
+RANK: 658	player: Eliezer Alfonzo
+team: SF	pos: C
+RANK: 659	player: Jeff Keppinger
+team: Cin	pos: SS
+RANK: 660	player: Cla Meredith
+team: SD	pos: RP
+RANK: 661	player: Justin Miller
+team: Fla	pos: RP
+RANK: 662	player: Sam Fuld
+team: ChC	pos: OF
+RANK: 663	player: Jayson Werth
+team: Phi	pos: OF
+RANK: 664	player: Erick Aybar
+team: LAA	pos: 2B|SS
+RANK: 665	player: Chase Headley
+team: SD	pos: 3B
+RANK: 666	player: Jorge De La Rosa
+team: KC	pos: RP
+RANK: 667	player: Juan Morillo
+team: Col	pos: SP
+RANK: 668	player: Garrett Olson
+team: Bal	pos: SP
+RANK: 669	player: Omar Quintanilla
+team: Col	pos: 2B
+RANK: 670	player: Donnie Murphy
+team: Oak	pos: SS
+RANK: 671	player: Eric Munson
+team: Mil	pos: C
+RANK: 672	player: Ramon Vazquez
+team: Tex	pos: 3B
+RANK: 673	player: Franklin Morales
+team: Col	pos: SP
+RANK: 674	player: Lance Broadway
+team: CWS	pos: SP
+RANK: 675	player: Josh Phelps
+team: StL	pos: 1B
+RANK: 676	player: Troy Patton
+team: Bal	pos: SP
+RANK: 677	player: Eric Hurley
+team: Tex	pos: SP
+RANK: 678	player: Jason Botts
+team: Tex	pos: OF
+RANK: 679	player: Jeff Mathis
+team: LAA	pos: C
+RANK: 680	player: Toby Hall
+team: CWS	pos: C
+RANK: 681	player: Jeremy Reed
+team: Sea	pos: OF
+RANK: 682	player: Henry Blanco
+team: ChC	pos: C
+RANK: 683	player: Andy Marte
+team: Cle	pos: 3B
+RANK: 684	player: Eugenio Velez
+team: SF	pos: 2B
+RANK: 685	player: Jonathan Meloan
+team: LAD	pos: RP
+RANK: 686	player: Ronny Cedeno
+team: ChC	pos: SS
+RANK: 687	player: Shelley Duncan
+team: NYY	pos: DH
+RANK: 688	player: Jair Jurrjens
+team: Atl	pos: SP
+RANK: 689	player: Javy Lopez
+team: Atl	pos: C
+RANK: 690	player: Billy Buckner
+team: Ari	pos: SP
+RANK: 691	player: Radhames Liz
+team: Bal	pos: SP
+RANK: 692	player: Brian Anderson
+team: CWS	pos: OF
+RANK: 693	player: Vance Wilson
+team: Det	pos: C
+RANK: 694	player: Augie Ojeda
+team: Ari	pos: 2B
+RANK: 695	player: Adam Bernero
+team: Bos	pos: RP
+RANK: 696	player: Jamie Burke
+team: Sea	pos: C
+RANK: 697	player: Duaner Sanchez
+team: NYM	pos: RP
+RANK: 698	player: Jeff Bennett
+team: Atl	pos: RP
+RANK: 699	player: Ruben Gotay
+team: NYM	pos: 2B
+RANK: 700	player: Ryan Raburn
+team: Det	pos: OF
+RANK: 701	player: Dan Meyer
+team: Oak	pos: SP
+RANK: 702	player: Shin-Soo Choo
+team: Cle	pos: OF
+RANK: 703	player: Joel Guzman
+team: TB	pos: 3B
+RANK: 704	player: Willy Aybar
+team: TB	pos: 3B
+RANK: 705	player: Dan Ortmeier
+team: SF	pos: 1B|OF
+RANK: 706	player: Anderson Hernandez
+team: NYM	pos: SS
+RANK: 707	player: Tony Pena Jr.
+team: KC	pos: SS
+RANK: 708	player: Jack Hannahan
+team: Oak	pos: 3B
+RANK: 709	player: Kevin Thompson
+team: Pit	pos: OF
+RANK: 710	player: Alberto Callaspo
+team: KC	pos: 3B
+RANK: 711	player: Henry Owens
+team: Fla	pos: RP
+RANK: 712	player: Fred Lewis
+team: SF	pos: OF
+RANK: 713	player: Jim Hoey
+team: Bal	pos: RP
+RANK: 714	player: David Murphy
+team: Tex	pos: OF
+RANK: 715	player: Scott Moore
+team: Bal	pos: 3B
+RANK: 716	player: Delwyn Young
+team: LAD	pos: OF
+RANK: 717	player: Philip Humber
+team: Min	pos: SP
+RANK: 718	player: Jeff Salazar
+team: Ari	pos: OF
+RANK: 719	player: Juan Perez
+team: Pit	pos: RP
+RANK: 720	player: Mike Rabelo
+team: Fla	pos: C
+RANK: 721	player: Juan Miranda
+team: NYY	pos: 1B
+RANK: 722	player: Eric Patterson
+team: ChC	pos: OF
+RANK: 723	player: Ben Francisco
+team: Cle	pos: OF
+RANK: 724	player: Joe Koshansky
+team: Col	pos: 1B
+RANK: 725	player: Jesus Flores
+team: Was	pos: C
+RANK: 726	player: Alejandro De Aza
+team: Fla	pos: OF
+RANK: 727	player: Tony Abreu
+team: LAD	pos: 2B|3B
+RANK: 728	player: Brendan Ryan
+team: StL	pos: SS|3B
+RANK: 729	player: Sean Gallagher
+team: ChC	pos: RP
+RANK: 730	player: Guillermo Rodriguez
+team: SF	pos: C
+RANK: 731	player: Masumi Kuwata
+team: FA	pos: RP
+RANK: 732	player: Nate Schierholtz
+team: SF	pos: OF
+RANK: 733	player: Luis Hernandez
+team: Bal	pos: SS
+RANK: 734	player: Jensen Lewis
+team: Cle	pos: RP
+RANK: 735	player: Danny Richar
+team: CWS	pos: 2B
+RANK: 736	player: Joe Thatcher
+team: SD	pos: RP
+RANK: 737	player: Edwin Bellorin
+team: Col	pos: C
+RANK: 738	player: Manny Acosta
+team: Atl	pos: RP
+RANK: 739	player: Josh Anderson
+team: Atl	pos: OF
+RANK: 740	player: Emilio Bonifacio
+team: Ari	pos: 2B
+RANK: 741	player: Felipe Paulino
+team: Hou	pos: RP
+RANK: 742	player: Nyjer Morgan
+team: Pit	pos: OF
+RANK: 743	player: Steve Pearce
+team: Pit	pos: OF
+RANK: 744	player: Chin-Lung Hu
+team: LAD	pos: SS
+RANK: 745	player: Dave Davidson
+team: Pit	pos: RP
+RANK: 746	player: Mike Edwards
+team: FA	pos: 3B
+RANK: 747	player: Erick Threets
+team: SF	pos: RP
+RANK: 748	player: Julio Franco
+team: FA	pos: 1B
+RANK: 749	player: Clint Sammons
+team: Atl	pos: C
+RANK: 750	player: Roger Clemens
+team: FA	pos: SP
+RANK: 751	player: Kevin Hart
+team: ChC	pos: RP
+RANK: 752	player: Brandon Jones
+team: Atl	pos: OF
+RANK: 753	player: David Wells
+team: FA	pos: SP
+RANK: 754	player: Seth Smith
+team: Col	pos: OF
+RANK: 755	player: Jose Mesa
+team: FA	pos: RP
+RANK: 756	player: Justin Ruggiano
+team: TB	pos: OF
+RANK: 757	player: Steve Finley
+team: Col	pos: OF
+RANK: 758	player: Sammy Sosa
+team: FA	pos: DH
+RANK: 759	player: Mike Stanton
+team: Cin	pos: RP
+RANK: 760	player: Rudy Seanez
+team: LAD	pos: RP
+RANK: 761	player: Jose Vizcaino
+team: FA	pos: SS
+RANK: 762	player: Roberto Hernandez
+team: LAD	pos: RP
+RANK: 763	player: Jose Hernandez
+team: Pit	pos: 1B
+RANK: 764	player: Arthur Rhodes
+team: FA	pos: RP
+RANK: 765	player: Reggie Sanders
+team: FA	pos: OF
+RANK: 766	player: Royce Clayton
+team: FA	pos: SS
+RANK: 767	player: Doug Brocail
+team: Hou	pos: RP
+RANK: 768	player: Jose Valentin
+team: FA	pos: 2B
+RANK: 769	player: Ryan Klesko
+team: FA	pos: 1B
+RANK: 770	player: Manny Alexander
+team: Was	pos: 2B
+RANK: 771	player: Aaron Sele
+team: FA	pos: RP
+RANK: 772	player: Brian Shouse
+team: Mil	pos: RP
+RANK: 773	player: Julian Tavarez
+team: Bos	pos: RP
+RANK: 774	player: Salomon Torres
+team: Mil	pos: RP
+RANK: 775	player: Darren Oliver
+team: LAA	pos: RP
+RANK: 776	player: Hector Carrasco
+team: Pit	pos: RP
+RANK: 777	player: Curtis Pride
+team: LAA	pos: OF
+RANK: 778	player: Steve Trachsel
+team: FA	pos: SP
+RANK: 779	player: Shawn Green
+team: FA	pos: OF
+RANK: 780	player: Rick White
+team: FA	pos: RP
+RANK: 781	player: John Mabry
+team: FA	pos: 3B
+RANK: 782	player: Jeff Cirillo
+team: FA	pos: 3B|DH
+RANK: 783	player: Olmedo Saenz
+team: FA	pos: 1B
+RANK: 784	player: Joey Eischen
+team: FA	pos: RP
+RANK: 785	player: Mike Lieberthal
+team: FA	pos: C
+RANK: 786	player: Armando Benitez
+team: FA	pos: RP
+RANK: 787	player: Todd Hollandsworth
+team: FA	pos: OF
+RANK: 788	player: Todd Williams
+team: Col	pos: RP
+RANK: 789	player: Mike Myers
+team: FA	pos: RP
+RANK: 790	player: Tomas Perez
+team: Hou	pos: SS
+RANK: 791	player: Tanyon Sturtze
+team: LAD	pos: RP
+RANK: 792	player: Ron Villone
+team: FA	pos: RP
+RANK: 793	player: Edgardo Alfonzo
+team: Tex	pos: 3B
+RANK: 794	player: Ron Mahay
+team: KC	pos: RP
+RANK: 795	player: Alberto Castillo
+team: Hou	pos: C
+RANK: 796	player: Pete Walker
+team: FA	pos: OF
+RANK: 797	player: Orlando Palmeiro
+team: FA	pos: OF
+RANK: 798	player: Mark Sweeney
+team: LAD	pos: 1B
+RANK: 799	player: John Wasdin
+team: StL	pos: SP
+RANK: 800	player: Juan Castro
+team: Cin	pos: 3B
+RANK: 801	player: Shannon Stewart
+team: Tor	pos: OF
+RANK: 802	player: Tony Clark
+team: SD	pos: 1B
+RANK: 803	player: Gary Bennett
+team: LAD	pos: C
+RANK: 804	player: Shawn Estes
+team: SD	pos: SP
+RANK: 805	player: Todd Greene
+team: FA	pos: C
+RANK: 806	player: Sal Fasano
+team: Tor	pos: C
+RANK: 807	player: Tony Graffanino
+team: FA	pos: 2B|3B
+RANK: 808	player: Raul Casanova
+team: NYM	pos: C
+RANK: 809	player: Jamey Wright
+team: FA	pos: SP
+RANK: 810	player: Jay Witasick
+team: FA	pos: RP
+RANK: 811	player: Desi Relaford
+team: Tex	pos: 2B
+RANK: 812	player: Greg Norton
+team: FA	pos: DH
+RANK: 813	player: Doug Mirabelli
+team: Bos	pos: C
+RANK: 814	player: Einar Diaz
+team: Pit	pos: C
+RANK: 815	player: Ken Huckaby
+team: LAD	pos: C
+RANK: 816	player: Raul Chavez
+team: NYY	pos: C
+RANK: 817	player: Neifi Perez
+team: FA	pos: SS
+RANK: 818	player: Trever Miller
+team: TB	pos: RP
+RANK: 819	player: Mike DiFelice
+team: TB	pos: C
+RANK: 820	player: Trot Nixon
+team: FA	pos: OF
+RANK: 821	player: Livan Hernandez
+team: Min	pos: SP
+RANK: 822	player: Brian Moehler
+team: FA	pos: SP
+RANK: 823	player: Geremi Gonzalez
+team: Tor	pos: SP
+RANK: 824	player: Tom Martin
+team: LAD	pos: RP
+RANK: 825	player: Ricardo Rincon
+team: SF	pos: RP
+RANK: 826	player: Bartolo Colon
+team: FA	pos: SP
+RANK: 827	player: Glendon Rusch
+team: FA	pos: SP
+RANK: 828	player: Scott McClain
+team: SF	pos: 1B
+RANK: 829	player: Ricky Ledee
+team: FA	pos: OF
+RANK: 830	player: John Thomson
+team: FA	pos: SP
+RANK: 831	player: Jose Cruz Jr.
+team: Hou	pos: OF
+RANK: 832	player: Mike DeJean
+team: FA	pos: RP
+RANK: 833	player: Brett Tomko
+team: KC	pos: SP
+RANK: 834	player: Mark Bellhorn
+team: FA	pos: 3B
+RANK: 835	player: Antonio Alfonseca
+team: FA	pos: RP
+RANK: 836	player: Aaron Boone
+team: Was	pos: 1B
+RANK: 837	player: Jaret Wright
+team: FA	pos: SP
+RANK: 838	player: Dennys Reyes
+team: Min	pos: RP
+RANK: 839	player: Damian Miller
+team: FA	pos: C
+RANK: 840	player: Abraham Nunez
+team: FA	pos: 3B
+RANK: 841	player: Eli Marrero
+team: FA	pos: OF
+RANK: 842	player: Juan Encarnacion
+team: StL	pos: OF
+RANK: 843	player: Eric Milton
+team: FA	pos: SP
+RANK: 844	player: Carl Pavano
+team: NYY	pos: SP
+RANK: 845	player: Cliff Politte
+team: StL	pos: RP
+RANK: 846	player: Vic Darensbourg
+team: Det	pos: RP
+RANK: 847	player: Sidney Ponson
+team: Min	pos: SP
+RANK: 848	player: Damon Hollins
+team: FA	pos: OF
+RANK: 849	player: Paul Bako
+team: FA	pos: C
+RANK: 850	player: Preston Wilson
+team: FA	pos: OF
+RANK: 851	player: Lou Merloni
+team: Oak	pos: 2B
+RANK: 852	player: Mike Redmond
+team: Min	pos: C
+RANK: 853	player: Alex Cora
+team: Bos	pos: 2B|SS
+RANK: 854	player: Scott Elarton
+team: Cle	pos: SP
+RANK: 855	player: Ramon Martinez
+team: FA	pos: 2B
+RANK: 856	player: Tim Byrdak
+team: Det	pos: RP
+RANK: 857	player: Bruce Chen
+team: Tex	pos: SP
+RANK: 858	player: Odalis Perez
+team: FA	pos: SP
+RANK: 859	player: Joe McEwing
+team: Bos	pos: 2B
+RANK: 860	player: Corey Koskie
+team: FA	pos: 3B
+RANK: 861	player: Jerry Hairston Jr.
+team: FA	pos: OF
+RANK: 862	player: Doug Mientkiewicz
+team: FA	pos: 1B
+RANK: 863	player: Robert Fick
+team: SD	pos: 1B
+RANK: 864	player: Gabe Kapler
+team: Mil	pos: OF
+RANK: 865	player: Jonathan Johnson
+team: Atl	pos: SP
+RANK: 866	player: Russell Branyan
+team: FA	pos: 3B
+RANK: 867	player: Kris Benson
+team: FA	pos: SP
+RANK: 868	player: Freddy Garcia
+team: FA	pos: SP
+RANK: 869	player: Jesse Garcia
+team: FA	pos: SS
+RANK: 870	player: Scott Williamson
+team: SF	pos: RP
+RANK: 871	player: Joe Mays
+team: FA	pos: SP
+RANK: 872	player: Jason Phillips
+team: FA	pos: C
+RANK: 873	player: Scott Sauerbeck
+team: FA	pos: RP
+RANK: 874	player: Jeff Weaver
+team: FA	pos: SP
+RANK: 875	player: Guillermo Mota
+team: Mil	pos: RP
+RANK: 876	player: Jose Macias
+team: Mil	pos: 3B
+RANK: 877	player: Ray King
+team: Was	pos: RP
+RANK: 878	player: Byung-Hyun Kim
+team: Pit	pos: SP
+RANK: 879	player: Dan Kolb
+team: FA	pos: RP
+RANK: 880	player: David Newhan
+team: FA	pos: OF
+RANK: 881	player: Chris Woodward
+team: FA	pos: 3B
+RANK: 882	player: Jason LaRue
+team: StL	pos: C
+RANK: 883	player: Chad Harville
+team: Ari	pos: RP
+RANK: 884	player: John McDonald
+team: Tor	pos: SS
+RANK: 885	player: Wade Miller
+team: FA	pos: SP
+RANK: 886	player: Yamid Haad
+team: Cle	pos: C
+RANK: 887	player: Kenny Ray
+team: FA	pos: RP
+RANK: 888	player: Dave Borkowski
+team: Hou	pos: RP
+RANK: 889	player: Tomo Ohka
+team: FA	pos: SP
+RANK: 890	player: Micah Bowie
+team: Col	pos: RP
+RANK: 891	player: Humberto Cota
+team: FA	pos: C
+RANK: 892	player: Erubiel Durazo
+team: NYY	pos: 1B
+RANK: 893	player: Trent Durrington
+team: FA	pos: 3B
+RANK: 894	player: Wiki Gonzalez
+team: CWS	pos: C
+RANK: 895	player: Tony Armas
+team: FA	pos: SP
+RANK: 896	player: Ramon Ortiz
+team: FA	pos: SP
+RANK: 897	player: Shea Hillenbrand
+team: FA	pos: DH
+RANK: 898	player: Jim Brower
+team: Cin	pos: RP
+RANK: 899	player: Frank Menechino
+team: SD	pos: 2B
+RANK: 900	player: Matt Riley
+team: FA	pos: RP
+RANK: 901	player: Josh Paul
+team: FA	pos: C
+RANK: 902	player: Michael Tejera
+team: Pit	pos: RP
+RANK: 903	player: D'Angelo Jimenez
+team: StL	pos: SS
+RANK: 904	player: J.C. Romero
+team: Phi	pos: RP
+RANK: 905	player: Lance Carter
+team: LAD	pos: RP
+RANK: 906	player: Rod Barajas
+team: Tor	pos: C
+RANK: 907	player: Gary Glover
+team: TB	pos: RP
+RANK: 908	player: John Bale
+team: KC	pos: RP
+RANK: 909	player: Brian Falkenborg
+team: LAD	pos: RP
+RANK: 910	player: Junior Spivey
+team: Bos	pos: 2B
+RANK: 911	player: Matthew LeCroy
+team: FA	pos: C
+RANK: 912	player: Danys Baez
+team: Bal	pos: RP
+RANK: 913	player: Sean Burroughs
+team: FA	pos: 3B
+RANK: 914	player: Luis Rivas
+team: FA	pos: 2B
+RANK: 915	player: Rob Bell
+team: Was	pos: SP
+RANK: 916	player: Sun-Woo Kim
+team: SF	pos: RP
+RANK: 917	player: Ben Weber
+team: Hou	pos: RP
+RANK: 918	player: Aaron Fultz
+team: Cle	pos: RP
+RANK: 919	player: Scott Downs
+team: Tor	pos: RP
+RANK: 920	player: Kevin Walker
+team: Col	pos: RP
+RANK: 921	player: Rodrigo Lopez
+team: FA	pos: SP
+RANK: 922	player: Jason Grilli
+team: Det	pos: RP
+RANK: 923	player: Adam Melhuse
+team: Tex	pos: C
+RANK: 924	player: Scott Podsednik
+team: FA	pos: OF
+RANK: 925	player: Jason Tyner
+team: FA	pos: OF|DH
+RANK: 926	player: Kane Davis
+team: FA	pos: RP
+RANK: 927	player: Chad Moeller
+team: Was	pos: C
+RANK: 928	player: Luis Matos
+team: NYM	pos: OF
+RANK: 929	player: Randy Choate
+team: Mil	pos: RP
+RANK: 930	player: John Parrish
+team: Tor	pos: RP

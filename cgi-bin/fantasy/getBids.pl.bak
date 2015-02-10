@@ -1,0 +1,423 @@
+#!/usr/bin/perl
+use CGI::Carp qw(fatalsToBrowser);
+use CGI;
+use CGI::Cookie;
+use Nav_Bar;
+use Leagues;
+use DBTools;
+use Session;
+
+my $cgi = new CGI;
+
+# files
+$bid_error_file = './error_logs/bid_errors.txt';
+$team_error_file = './error_logs/team_errors.txt';
+
+## For UTF-8 characters
+binmode(STDOUT, ":iso-8859-1");
+
+
+########################
+#
+# Header Print
+#
+########################
+
+sub Header($$$$)
+{
+  my $head_user = shift;
+  my $head_team = shift;
+  my $league_owner = shift;
+  my $draft_status = shift;
+
+print "Cache-Control: no-cache\n";
+print "Content-type: text/html\n\n";
+
+print <<HEADER;
+
+<HTML>
+<HEAD>
+<TITLE>Auction Page</TITLE>
+
+<!-- INCLUDE JAVASCRIPT FILES HERE!!! AVK 3/11/08 -->
+<script src="http://www.twoguysandadream.com/fantasy/all_js.js" language="javascript" type="text/javascript"></script>
+
+<script language="JavaScript">
+<!--
+   var http = createRequestObject()
+   
+   var rosters = new Object()
+   var current_display_team='$head_team'
+
+   var ourInterval = setInterval("table_loop('$head_user')", 1000);
+-->
+</script>
+
+<LINK REL=StyleSheet HREF="http://www.twoguysandadream.com/fantasy/style.css" TYPE="text/css" MEDIA="screen">
+
+</HEAD>
+
+<BODY onLoad="table_loop('$head_user')">
+HEADER
+
+  my $is_commish = ($league_owner eq $head_user) ? 1 : 0;
+  my $nav = Nav_Bar->new('Auction',"$head_user",$is_commish,$draft_status,"$head_team");
+  $nav->print();
+
+}
+
+
+########################
+#
+# Header2 Print
+#
+########################
+
+sub Header2($)
+{
+  my $submit_val = shift;
+
+print <<HEADER2;
+        <div class="pageWrap" id="auctionPage">
+
+          <form name="bid_form" id="bid_form" action="http://www.twoguysandadream.com/cgi-bin/fantasy/putBids.pl" onSubmit="return pswd_checker($submit_val)" method="post">
+HEADER2
+}
+
+
+
+####################
+#
+# Print Submit 
+#
+####################
+
+sub printSubmit()
+{
+print <<SUBMIT;
+            <input type="submit" value="Submit Bids" id=submit1 name=submit1 style="background:yellow;">
+            <input type="reset" value="Clear Bids" id=reset1 name=reset1 style="background:red;">
+SUBMIT
+}
+
+
+######################
+#
+# Print Owner
+#
+######################
+
+
+
+sub PrintOwner($$)
+{
+my $owner = shift;
+my $name  = shift;
+my $check = shift;
+
+print <<EOM;
+
+  <option value="$owner" $check> 
+  $name
+  </option>
+
+EOM
+
+}
+
+
+
+######################
+#
+# List Error
+#
+######################
+
+
+sub ListError($)
+{
+my $message = shift;
+
+print <<EOM;
+
+$message
+
+EOM
+
+}
+
+
+##############
+#
+# Main Function
+#
+##############
+
+# variables for players
+my @name;
+my @pos;
+my @bid;
+my @bidder;
+my @time;
+my @team;
+my @ez_time;
+my $count = 0;
+my $total_players = 0;
+
+
+my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t) = checkSession();
+
+my $dbh = dbConnect();
+
+#Get League Data
+$league = Leagues->new($league_t,$dbh);
+if (! defined $league)
+{
+  die "ERROR - league object not found!\n";
+}
+$owner = $league->owner();
+$draftStatus = $league->draft_status();
+$contractStatus = $league->keepers_locked();
+$sport = $league->sport();
+$use_IP_flag = $league->sessions_flag();
+$keeper_increase = $league->keeper_increase();
+$keeper_slots_raw = $league->keeper_slots();
+ 
+
+$players_auction_file = "auction_players";
+$players_won_file = "players_won";
+$messagefile = "./text_files/message_board_$league_t.txt";
+
+Header($user,$team_t,$owner,$draftStatus);
+
+# DB-style
+
+$sth = $dbh->prepare("SELECT COUNT(*) FROM $players_auction_file WHERE league = '$league_t'")
+      or die "Cannot prepare: " . $dbh->errstr();
+$total_players = $sth->execute() or die "Cannot execute: " . $sth->errstr();
+$sth->finish();
+
+Header2($use_IP_flag eq 'yes' ? 1 : 0);
+
+open(MESSAGES, "<$bid_error_file");
+ flock(MESSAGES,1);
+ foreach (<MESSAGES>)
+ {
+   chomp($_);
+   #print any errors
+   ($myteam, $myleague, $myline) = split(';',$_);
+
+   if ((($myleague eq $league_t) & ($myteam eq $team_t) & ($use_IP_flag eq 'yes')) | ($use_IP_flag eq 'no'))
+   {
+     ListError($myline);
+   }
+ }
+close(MESSAGES);
+
+
+
+$sth = $dbh->prepare("Select count(1) from teams where league='$league_t'");
+$sth->execute();
+$team_count = $sth->fetchrow();
+$sth->finish();
+
+$dbh->disconnect();
+
+# Display time, remaining budgets and roster spots
+print <<EOM;
+          <div id="main_div">
+            <div id="teamsBlock">
+              <table id="stat_table" width="270">
+                <tr align=center>
+                  <td colspan=4><b>Current Time</b>$time_string</td>
+                </tr>
+                <tr bgcolor="#5599cc">
+                  <td colspan=4></td>
+                </tr>
+                <tr>
+                  <td width="120"><b>Team</b></td>
+                  <td><b>Money</b></td>
+                  <td><b>Roster</b></td>
+                  <td><b>Adds</b></td>
+                </tr>
+EOM
+
+for (my $x=0; $x<$team_count; $x++)
+{
+
+print <<EOM;
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+EOM
+
+}
+
+
+
+print <<TBL;
+                <tr>
+                  <td colspan="4">
+                  <div id="teamRoster">
+                    <table id="teamRoster_table">
+                       <tr align="center">
+                         <td colspan="3"i id="roster_team_header">$team_t</td>
+                       </tr>
+                       <tr align=center>
+                        <td><b>Player</b></td>
+                        <td><b>Cost</b></td>
+                        <td><b>Pos</b></td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                      </tr>
+                    </table>
+                  </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+  <div id="playersBlock"> 
+    <div id="submitBidsTop">
+            <input type="hidden" name="TEAMS" id="TEAMS" value="$team_t">
+            <input type="hidden" name="total_players" id="total_players" value="$total_players">
+            <input type="hidden" name="league" id="league" value="$league_t">
+            <a name="BIDDING"><b>ENTER BIDS &gt; $team_t</b></a>
+TBL
+
+printSubmit();
+
+print <<TBL;
+    </div>
+    <table width="690" cellpadding="4" frame="box" id="PLAYER_TABLE_1">
+    <tr>
+      <th>Player</th>
+      <th>Pos</th>
+      <th>Team</th>
+      <th>High Bid</th>
+      <th>Bidder</th>
+      <th>Time Remaining</th>
+      <th>Target</th>
+      <th>Bid</th>
+    </tr>
+TBL
+
+  ## Prepare SQL statements to be used in loop below
+  $sth_owner_name = $dbh->prepare("SELECT * FROM teams WHERE name = ? and league='$league_t'")
+                     or die "Cannot prepare: " . $dbh->errstr();
+  $sth_replace = $dbh->prepare("REPLACE INTO $players_won_file (name,price,team,time,league) VALUES(?,?,?,?,'$league_t')")
+                     or die "Cannot prepare: " . $dbh->errstr();
+  $sth_remove = $dbh->prepare("DELETE FROM $players_auction_file WHERE name=? AND league = '$league_t'")
+                     or die "Cannot prepare: " . $dbh->errstr();
+  $sth_update = $dbh->prepare("Update teams set num_adds=? where name=? and league='$league_t'")
+                     or die "Cannot prepare: " . $dbh->errstr();
+
+  ## Trying to add players-won logic here . . .
+  $sth_while = $dbh->prepare("SELECT name,price,team,time FROM $players_auction_file WHERE league = '$league_t'")
+          or die "Cannot prepare: " . $dbh->errstr();
+  $sth_while->execute() or die "Cannot execute: " . $sth_while->errstr();
+
+  $player_print_count = 1;
+
+  while (($id,$bid,$bidder,$end_time) = $sth_while->fetchrow_array())
+  {
+      $time_over = 0;
+
+      # If the player goes unclaimed, flag it
+      $player_claimed = 1;
+      if ($bidder eq '<b>UNCLAIMED</b>')
+      {
+	  $player_claimed = 0;
+      }
+
+      ## ECW 3/11/2008 - Added draft-paused capability
+      if (
+          ($draftStatus ne 'paused')
+            &&
+          ($end_time <= time())
+         )
+      {
+      
+	 $time_over = 1;
+
+
+         ## If the time is over - no matter whether or not player was won, just DELETE him
+         $sth_remove->execute($id) or die "Cannot execute: " . $sth_remove->errstr();
+
+         if ($player_claimed == 1)
+         {
+             ## Get owner name for winning team
+             $sth_owner_name->execute($bidder) or die "Cannot execute: " . $sth_owner_name->errstr();
+             ($tf_owner, $tf_name, $tf_league, $tf_adds, $tf_sport, $tf_plusminus) = $sth_owner_name->fetchrow_array();
+
+              # DB-style     
+              # update players won file
+              $sth_replace->execute($id,$bid,$bidder,$end_time);
+
+              ## Update num_adds for winner
+              $tf_adds = $tf_adds+1;
+              $sth_update->execute($tf_adds,$bidder) or die "Cannot execute: " . $sth_update->errstr();
+
+         } #end if (player_claimed)
+
+
+     } #end if (time_over)
+
+     ########################
+     # Else if the time is not over, do nothing - leave players in the database
+     ########################
+
+} #end for-loop
+$sth_while->finish();
+$sth_owner_name->finish();
+$sth_replace->finish();
+$sth_remove->finish();
+$sth_update->finish();
+
+my $l1 = length($user);
+my $l2 = length($owner);
+
+print <<EOM;
+</table>
+      <div id="submitBidsBottom">
+EOM
+
+printSubmit();
+
+print <<EOM;
+      </div>
+    </div>
+  </div>
+</form>
+
+</div>
+</div>
+
+EOM
+
+
+if ($user eq $owner)
+{
+  print "<center>\n";
+  print "<a href='http://www.twoguysandadream.com/cgi-bin/fantasy/pause.pl?action=pause'>Pause Draft!</a>\n" if ($draftStatus eq 'open');
+  print "<a href='http://www.twoguysandadream.com/cgi-bin/fantasy/pause.pl?action=unpause'>Continue Draft!</a>\n" if ($draftStatus eq 'paused');
+  print "</center>\n";
+  #print <<EOM;
+   #<input type="button" name="pause_button" id="pause_button" onClick="pause_utility()" value="Pause Draft!">
+  #EOM
+
+}
+
+print <<EOM;
+</BODY>
+</HTML>
+EOM
+
+dbDisconnect($dbh);
+

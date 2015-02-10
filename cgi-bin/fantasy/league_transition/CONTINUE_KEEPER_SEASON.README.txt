@@ -1,0 +1,18 @@
+Follow these steps below when importing a keeper season for the Auction Website. This assumes that you have used Yahoo! Sports fantasy services.
+
+1) Grab Final Rosters from the Yahoo Site (find your league from last year, and then click on the "Final Rosters" Option)
+   - Team-by-Team  (Better ideas??), grab the players and paste (special!) into Excel
+   - Need - Team Name, Player, Position, Team
+     - Current expected format: 
+                                YAHOO - Steeler's Wheel	Ronnie Brown (Mia - RB)
+                                CBS   - Beantown Bandits,	"Favre, Brett QB NYJ "
+     - Keeping players in this format will decrease the need for alterations to the loading script(s)
+
+2) Convert any changed TeamNames to the auction names (ie, Team A drafts as "Team Awesome", but finishes Yahoo season as "Team Shitty", 
+                                                       Change team name in Excel to original Auction team name)
+
+3) Save this file as a CSV and copy it to Auction host, cgi-bin/fantasy/final_roster_loads/.
+
+4) Edit update_rosters.[cbs|yahoo].pl to point to new roster_file that you have just uploaded in step 3
+
+5) Run update_rosters.[cbs|yahoo].pl to update the final_rosters table for this league

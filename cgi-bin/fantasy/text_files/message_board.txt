@@ -1,0 +1,6 @@
+<b>AUCTION ALERT</b>;03/28/2006 (6:21 PM EST);<b>Eliezer Alfonzo  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (6:23 PM EST);<b>Sandy Alomar  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/28/2006 (6:25 PM EST);<b>John Alonso  has been added to the player auction page.</b>
+<b>AUCTION ALERT</b>;03/29/2006 (11:59 AM EST);<b>The bidding for  has been won by  for a price of .</b>
+Salt Bandits;03/08/2007 (7:13 AM);test
+Salt Bandits;03/08/2007 (7:13 AM);test again

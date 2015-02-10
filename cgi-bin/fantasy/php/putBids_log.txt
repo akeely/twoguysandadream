@@ -1,0 +1,8 @@
+total_end_min: 1030
+daymins: 1010
+bid_buffer: 8
+Day: 15
+end_day: 15
+end_minute: 10
+Minute: 50
+bid_time_extension: 5

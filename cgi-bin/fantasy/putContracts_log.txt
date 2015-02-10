@@ -1,0 +1,106 @@
+Total players - 26
+
+id - 110256
+cost - 5
+years - 
+
+id - 110246
+cost - 6.5
+years - 
+
+id - 111963
+cost - 25
+years - 
+
+id - 110104
+cost - 38
+years - 
+
+id - 114652
+cost - 5.5
+years - 
+
+id - 110014
+cost - 43
+years - 
+
+id - 111630
+cost - 41
+years - 
+
+id - 111774
+cost - 15
+years - 
+
+id - 111600
+cost - 15
+years - 
+
+id - 111549
+cost - 17
+years - 
+
+id - 110385
+cost - 13
+years - 2
+
+id - 112006
+cost - 5
+years - 4
+
+id - 114509
+cost - 1.5
+years - 
+
+id - 110919
+cost - 6.5
+years - 
+
+id - 111973
+cost - 3
+years - 
+
+id - 111678
+cost - 5
+years - 
+
+id - 112878
+cost - 1
+years - 
+
+id - 114560
+cost - 0
+years - 
+
+id - 115969
+cost - 0
+years - 
+
+id - 110272
+cost - 0
+years - 
+
+id - 111680
+cost - 0
+years - 
+
+id - 110188
+cost - 0
+years - 
+
+id - 115268
+cost - 0
+years - 
+
+id - 114544
+cost - 0
+years - 
+
+id - 114553
+cost - 0
+years - 
+
+id - 111607
+cost - 0
+years - 
+

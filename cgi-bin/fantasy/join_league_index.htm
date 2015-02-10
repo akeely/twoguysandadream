@@ -1,0 +1,53 @@
+<HTML>
+   <HEAD>
+      <TITLE>Join Existing League</TITLE>
+      <LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" MEDIA=screen>
+      <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+      <META HTTP-EQUIV="Expires" CONTENT="-1">
+   </HEAD>
+   <BODY>
+      <table align="center" ID="Table1" cellspacing=10 border="2" class=none>
+         <tr>
+            <td class=none><a href="/fantasy/fantasy_main_index.htm" target="_top">Fantasy Main</a></td>
+            <td class=none><a href="/fantasy/create_league_index.htm" target="_top">Create New League</a></td>
+            <td class=none><a href="/fantasy/join_league_index.htm" target="_top">Join Created League</a></td>
+            <td class=none><a href="/cgi-bin/fantasy/logout.pl" target="_top">Logout</a></td>
+         </tr>
+      </table>
+      <hr width="85%">
+<br><br><br><br>
+
+      <p align="center">To join a created league, fill out the fields below:</p>
+      <br>
+      <form action="/cgi-bin/fantasy/joinLeague.pl" method="post">
+         <br>
+         <table frame="box" align="center">
+            <tr>
+               <td colspan="2" align="center">League Information</td>
+            <tr>
+               <td width="125">
+                  League Name:
+               </td>
+               <td><input type="text" name="leagueName"></td>
+            </tr>
+            <tr>
+               <td width="125">
+                  League Password:
+               </td>
+               <td><input type="password" name="leaguePassword"></td>
+            </tr>
+            <tr>
+               <td>New Team Name:
+               </td>
+               <td><input type="text" name="teamName"></td>
+            </tr>
+         </table>
+         <br>
+         <p align="center">
+            <input type="submit" value="Continue">
+            <input type="reset" value="Clear Form"> 
+         </p>
+         <br>
+      </form>
+   </BODY>
+</HTML>

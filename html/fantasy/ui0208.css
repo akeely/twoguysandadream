@@ -1,0 +1,81 @@
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #5599cc;
+	color: black;
+	font: 13px/1.4 Helvetica, sans-serif;
+	text-align: center;
+}
+
+.container {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.header a:link, .header a:visited, .header a:active {
+    color: blue;
+}
+
+.header a:hover {
+    color: purple;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.header {
+	text-align: left;
+}
+
+.userInfo {
+	margin: 0 auto;
+	width: 88%;
+}
+
+.userInfo h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.userInfo h4 span {
+	padding-left: 4px;
+	font-size: 85%;
+}
+
+.headerTitle {
+	margin: 0 auto;
+	width: 88%;
+	text-align: center;
+}
+
+.headerTitle h2 {
+	margin: 0;
+	padding: 4px 0;
+}
+
+.nav {margin: 0 auto; width: 98%; overflow: hidden;}
+.navLinks {white-space:nowrap /*IE hack*/; border:none;} /*Color navigation bar normal mode*/
+.navLinks:after {content:"."; display:block; height:0; clear:both; visibility:hidden;} /*Clear floats*/
+.navLinks ul {margin: 0; padding: 0; list-style-type: none !important;}
+.navLinks ul li {float:left; z-index:auto !important /*Non-IE6*/; z-index:1000 /*IE6*/; margin: 0; padding: 0;}
+.navLinks ul li a:link, .navLinks ul li a:visited, .navLinks ul li a:hover, .navLinks ul li a:active {float:none !important /*Non-IE6*/; float:left /*IE-6*/; display:block; background-color: silver; height:1.75em; line-height:1.75em; padding:4px 27.5px; text-decoration:none;}
+.navLinks ul li.pageON a:link, .navLinks ul li.pageON a:visited, .navLinks ul li.pageON a:hover, .navLinks ul li.pageON a:active {background-color: white;}
+.navLinks ul li:hover {position:relative;} /*Sylvain IE hack*/
+.navLinks ul li:hover a:link, .navLinks ul li:hover a:visited, .navLinks ul li:hover a:hover, .navLinks ul li:hover a:active {background-color: blue; text-decoration:underline;} /*Color main cells hovering mode*/
+.navLinks ul li a:hover {position:relative /*Sylvain IE hack*/; z-index:1000 /*Sylvain IE hack*/; background-color: blue; color: #fff; text-decoration:none;} /*Color main cells hovering mode*/
+
+.pageWrap {
+	margin: 0 auto;
+	margin-top: 28px;
+	padding: 8px 0;
+	width: 88%;
+	border: 1px solid darkblue;
+	border-width: 1px 0;
+	overflow: hidden;
+}
+

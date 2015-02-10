@@ -1,0 +1,309 @@
+#!/usr/bin/perl
+# script to check current bids on the fly
+use Leagues;
+use DBTools;
+
+## For special characters
+binmode(STDOUT, ":utf8");
+
+($string1, $string2) = split('=',$ENV{'QUERY_STRING'});
+$string2 =~ s/%20/ /g;
+
+# Should modify to find the correct league here!
+($user, $league_t, $player_ids, $junk) = split(',',$string2);
+$player_ids =~ s/;/,/g;
+$player_ids =~ s/(\d+),/\'$1\',/g;
+chop($player_ids);
+$players_won = "players_won";
+$players_auction = "auction_players";
+$players = "players";
+$log = "./checkBids_log.txt";
+$return_string = "";
+
+open(LOG,">$log");
+print LOG "$user, $league_t, $player_ids\n";
+
+# DB-style
+$dbh = dbConnect();
+
+#Get League Data
+$league = Leagues->new($league_t,$dbh);
+if (! defined $league)
+{
+  die "ERROR - league object not found!\n";
+}
+
+my $sport = $league->{_SPORT};
+my $cap = $league->{_SALARY_CAP};
+my $draftStatus = $league->{_DRAFT_STATUS};
+my $draft_type = $league->draft_type();
+my $prev_league = $league->prev_league();
+
+## Time Stuff
+($Second, $Minute, $Hour, $Day, $Month, $Year, $WeekDay, $DayOfYear, $IsDST) = localtime(time);
+$current_seconds = time();
+my $RealMonth = $Month + 1;
+if($RealMonth < 10)
+{
+   $RealMonth = "0" . $RealMonth;
+}
+if($Day < 10)
+{
+   $Day = "0" . "$Day"; # add a leading zero to one-digit days
+}
+$Fixed_Year = $Year + 1900;
+$time_string = "AM";
+
+$Hour += $TZ_offset;
+if($Hour >= 12)
+{
+ $time_string = "PM";
+}
+if ($Minute < 10)
+{
+  $Minute = '0' . "$Minute";
+}
+if ($Second < 10)
+{
+  $Second = '0' . "$Second";
+}
+$auction_string_hour = $Hour%12;
+if ($auction_string_hour == 0)
+{
+  $auction_string_hour = 12;
+}
+$auction_string = "$RealMonth/$Day - $Hour:$Minute:$Second;$current_seconds";
+
+## Prepare SQL statements to be used in loop below
+$sth_owner_name = $dbh->prepare("SELECT * FROM teams WHERE name = ? and league='$league_t'")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_replace = $dbh->prepare("REPLACE INTO $players_won (name,price,team,time,league,rfa_override) VALUES(?,?,?,?,'$league_t',?)")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_remove = $dbh->prepare("DELETE FROM $players_auction WHERE name=? AND league = '$league_t'")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_update = $dbh->prepare("Update teams set num_adds=? where name=? and league='$league_t'")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_get_name = $dbh->prepare("SELECT name,position,team FROM $players WHERE playerid=?")
+                   or die "Cannot prepare: " . $dbh->errstr();
+$sth_get_target = $dbh->prepare("SELECT price FROM targets WHERE playerid=? and owner='$user' and league='$league_t'")
+                   or die "Cannot prepare: " . $dbh->errstr();
+
+## Trying to add players-won logic here . . .
+$sth_while = $dbh->prepare("SELECT name,price,team,time,rfa_override FROM $players_auction WHERE league = '$league_t' order by name")
+        or die "Cannot prepare: " . $dbh->errstr();
+$sth_while->execute() or die "Cannot execute: " . $sth_while->errstr();
+
+while (($id,$bid,$bidder,$ez_time,$rfa_override) = $sth_while->fetchrow_array())
+{
+      $sth_get_name->execute($id) or die "Cannot execute: ". $sth_get_name->errstr();
+      ($name,$pos,$team) = $sth_get_name->fetchrow_array();
+
+      # If the player goes unclaimed, flag it
+      $player_claimed = ($bidder eq '<b>UNCLAIMED</b>') ? 0 : 1;
+
+      ## ECW 3/11/2008 - Added draft-paused capability
+      if (($draftStatus ne 'paused') && ($ez_time <= $current_seconds))
+      {
+         ## RFA checking for the override - if the previous owner doesn't respond in ... 2 minutes (??), just assume he's not wanted
+         if (($draft_type eq 'rfa') && ($current_seconds > ($ez_time + (60 * 2))))
+         {
+           $rfa_override = 'NO';
+         }
+
+         ## If the time is over and this is NOT an RFA draft, just DELETE him no matter whether or not player was won
+         if (($draft_type ne 'rfa') || ($rfa_override ne 'WAIT'))
+         {
+           $sth_remove->execute($id) or die "Cannot execute: " . $sth_remove->errstr();
+
+           if ($player_claimed == 1)
+           {
+             ## Get owner name for winning team
+             $sth_owner_name->execute($bidder) or die "Cannot execute: " . $sth_owner_name->errstr();
+             ($tf_owner, $tf_name, $tf_league, $tf_adds, $tf_sport, $tf_plusminus) = $sth_owner_name->fetchrow_array();
+
+             ## Label the winning time as 'RFA' here, if that is the case
+             $ez_time = 'RFA' if ($draft_type eq 'rfa');
+
+             ## RFA could allow 0 dollar bid if no one bids and previous owner accepts - just make it 50 cents
+             $bid = '0.50' if ($bid =~ /^0+\.?0*$/);
+
+             # update players won file
+             $sth_replace->execute($id,$bid,$bidder,$ez_time,$rfa_override) or die "Cannot update players_won: ". $sth_replace->errstr();;
+
+             ## Update num_adds for winner if this is not RFA
+             if ($draft_type ne 'rfa') 
+             {
+               $tf_adds = $tf_adds+1;
+               $sth_update->execute($tf_adds,$bidder) or die "Cannot execute: " . $sth_update->errstr();
+             }
+
+           } #end if (player_claimed)
+  
+           else
+           {
+             ## Player not claimed. Big deal. Must be Rich Garces.
+              # Add a line to the return_string that will indicate that the player bidding window is over,
+              #  so that users will be able to remove his row from the auction
+             $return_string = "$name,$id,$pos,$team,$bid,$bidder,NA,0,NA;$return_string";
+           }
+         } # end not-RFA check
+     } #end if (auction over)
+
+     ########################
+     # Else if the time is not over (or we're WAITing for an RFA player), do nothing - leave player in the table
+     ########################
+
+} #end for-loop
+$sth_while->finish();
+$sth_owner_name->finish();
+$sth_replace->finish();
+$sth_remove->finish();
+$sth_update->finish();
+
+
+## Get list of auctioning players from dB
+$sth = $dbh->prepare("SELECT name,price,team,time FROM $players_auction WHERE league = '$league_t' ORDER BY name DESC")
+        or die "Cannot prepare: " . $dbh->errstr();
+$sth->execute() or die "Cannot execute: " . $sth->errstr();
+
+while (($id,$bid,$bidder,$ez_time) = $sth->fetchrow_array())
+{
+  $sth_get_name->execute($id) or die "Cannot execute: ". $sth_get_name->errstr();
+  ($name,$pos,$team) = $sth_get_name->fetchrow_array();
+
+print LOG "Live possibility: $name,$pos,$team,$bid,$bidder\n";
+
+  $sth_get_target->execute($id) or die "Cannot execute: ". $sth_get_target->errstr();
+  $target = $sth_get_target->fetchrow();
+  $target = 0 if (!defined $target);
+
+  if ($return_string !~ /$name,$id,$pos,$team,$bid/)
+  {
+    $pos =~ s/\|/\//g;
+ 
+    my $rfa_prev_owner = 'NA';
+
+    ## Check for overridable draft statii
+    if ($draftStatus eq 'paused') 
+    {
+      $ez_time = 'PAUSED';
+    }
+    elsif (($draft_type eq 'rfa') && ($ez_time <= $current_seconds))
+    {
+      ## if this is RFA and the time is up, pass in a 'WAIT' placeholder while the previous owner decides
+      $ez_time = 'WAIT';
+
+      ## get the previous owner and pass that along - DO NOT use team name in case they differ league to league
+      ## terrible field naming ... we actually use owner in the team field in contracts
+      my $sth_rfa = $dbh->prepare("SELECT team from contracts where player='$id' and league='$prev_league'") or die "Cannot prepare: " . $dbh->errstr();
+      $sth_rfa->execute() or die "Cannot execute: " . $sth->errstr();
+      $rfa_prev_owner = $sth_rfa->fetchrow();
+      $sth_rfa->finish();
+    }
+
+    $return_string = "$name,$id,$pos,$team,$bid,$bidder,$ez_time,$target,$rfa_prev_owner;$return_string";
+  }
+}
+$sth->finish();
+
+## DO NOT REMOVE THIS LOOP BELOW UNLESS YOU HAVE A WORKING FIX!
+### Get info on the players still on the auction page who have already been won
+if ($player_ids !~ /^$/)
+{
+  $sth = $dbh->prepare("SELECT name,price,team FROM players_won WHERE league = '$league_t' and name in ($player_ids) ORDER BY name DESC");
+  $sth->execute() or die "Cannot execute: " . $sth->errstr();
+  while (($id,$bid,$bidder) = $sth->fetchrow_array())
+  {
+    $sth_get_name->execute($id) or die "Cannot execute: ". $sth_get_name->errstr();
+    ($name,$pos,$team) = $sth_get_name->fetchrow_array();
+
+    $pos =~ s/\|/\//g;
+
+    $return_string = "$name,$id,$pos,$team,$bid,$bidder,NA,0,NA;$return_string";
+  }
+  $sth->finish();
+}
+
+## Remove trailing ';' for $return_string
+chop($return_string);
+
+
+# Find the max number of players that a team can have
+if ($sport eq 'baseball')
+{
+  $max_players = 8; #default ## ECW 20090328 changed from 10 => 8 ; OF2 and OF3 are in the positions table
+}
+elsif ($sport eq 'football')
+{
+  $max_players = 6; #default                                                    
+}
+
+my $sth_check_pos = $dbh->prepare("select count(1) from positions where league='$league_t'");
+$sth_check_pos->execute();
+$max_players += $sth_check_pos->fetchrow();
+
+
+## Get roster and cash data for all other teams
+$sth = $dbh->prepare("select sum(price), count(*) from $players_won where team=? and league='$league_t'");
+$sth2 = $dbh->prepare("select sum(price), count(*) from $players_auction where team=? and league='$league_t'");
+$sth_teams = $dbh->prepare("select name,num_adds,money_plusminus from teams where league='$league_t'");
+$sth_roster = $dbh->prepare("select p.name, w.price, p.position, w.rfa_override from players_won w, players p where w.name=p.playerid and w.team=? and w.league='$league_t' order by p.position,p.name");
+
+my %seen_teams;
+$stats_string = '';
+my $rfa_string = '';
+$sth_teams->execute();
+while(($this_team, $team_adds, $team_plusminus) = $sth_teams->fetchrow_array())
+{
+  ## If there are dual owners, we don't want to be sending back multiple team lines
+  next if ($seen_teams{$this_team});
+  $seen_teams{$this_team} = 1;
+
+  $sth->execute($this_team);
+  ($won_cost, $won_num) = $sth->fetchrow_array();
+
+  # Not "used" now
+  $sth2->execute($this_team);
+  ($bidding_cost, $bidding_num) = $sth->fetchrow_array();
+
+  if (!defined $won_cost)
+  {
+    $won_cost = 0;
+  }
+
+  ## Get all team rosters for getBids viewing
+  $roster_string = '';
+  $sth_roster->execute($this_team);
+  while (@team_roster = $sth_roster->fetchrow_array())
+  {
+    $roster_string .= join(':',@team_roster[0..2]) . '!';
+
+    ## while we're here ... if this is the RFA draft and this player was won in RFA, get his info
+    if (($draft_type eq 'rfa') && ($team_roster[3] ne 'NA'))
+    {
+      $rfa_string .= $team_roster[0] . ",$this_team," . $team_roster[3] . ',' . $team_roster[1] . ';';
+    }
+  }
+  $sth_roster->finish();
+
+  $spots_left = $max_players - $won_num;
+  $money_left = $cap - $won_cost + $team_plusminus; ## ECW 20080814 - added plusminus info from teams table, for altered cash
+                                                    ##   (through trades (player4cash), canceled contracts, etc) 
+  $max_bid = ($spots_left > 0) ? $money_left - (0.5 * ($spots_left - 1)) : 0;
+  $stats_string .= "$this_team,$money_left,$max_bid,$spots_left,$team_adds,$roster_string;";
+}
+$sth_teams->finish();
+$sth->finish();
+$sth2->finish();
+$sth_roster->finish();
+
+## Remove trailing ';' for stats_string, rfa_string
+chop($stats_string);
+chop($rfa_string);
+
+
+print LOG "$return_string\n$auction_string\n$stats_string\n$rfa_string\n";
+close(LOG);
+dbDisconnect($dbh);
+print "Content-type: text/html\n\n";
+print "$return_string?$auction_string?$stats_string?$rfa_string";

@@ -1,0 +1,305 @@
+Salt Bandits	Jason Bay 
+Salt Bandits	Stephen Drew 
+Salt Bandits	Chris Getz 
+Salt Bandits	Alex Gordon 
+Salt Bandits	Aaron Hill 
+Salt Bandits	Matt Holliday 
+Salt Bandits	Nick Markakis 
+Salt Bandits	Mike Napoli 
+Salt Bandits	Hunter Pence 
+Salt Bandits	Mark Reynolds 
+Salt Bandits	Denard Span 
+Salt Bandits	Ian Stewart 
+Salt Bandits	Mark Teixeira 
+Salt Bandits	Troy Tulowitzki 
+Salt Bandits	Erik Bedard 
+Salt Bandits	Chad Billingsley 
+Salt Bandits	Chris Carpenter 
+Salt Bandits	Jon Garland 
+Salt Bandits	Juan Gutiérrez 
+Salt Bandits	Brad Lidge 
+Salt Bandits	Franklin Morales 
+Salt Bandits	Joe Nathan 
+Salt Bandits	Clayton Richard 
+Salt Bandits	Edinson Vólquez 
+Salt Bandits	Jered Weaver 
+Salt Bandits	Kerry Wood
+Love Bumps	Bobby Abreu 
+Love Bumps	Chris Coghlan 
+Love Bumps	Chone Figgins 
+Love Bumps	Ryan Howard 
+Love Bumps	Raúl Ibañez 
+Love Bumps	Adam Lind 
+Love Bumps	Evan Longoria 
+Love Bumps	Andrew McCutchen 
+Love Bumps	Carlos Peña 
+Love Bumps	Juan Rivera 
+Love Bumps	Brian Roberts 
+Love Bumps	Jimmy Rollins 
+Love Bumps	Kurt Suzuki 
+Love Bumps	David Wright 
+Love Bumps	Matt Cain 
+Love Bumps	Matt Capps 
+Love Bumps	Tommy Hanson 
+Love Bumps	Trevor Hoffman 
+Love Bumps	Edwin Jackson 
+Love Bumps	John Lackey 
+Love Bumps	Tim Lincecum 
+Love Bumps	David Price 
+Love Bumps	Mariano Rivera 
+Love Bumps	Rafael Soriano 
+Love Bumps	Anibal Sánchez
+The Next Level	Julio Borbón 
+The Next Level	Ryan Braun 
+The Next Level	Rajai Davis 
+The Next Level	Edwin Encarnación 
+The Next Level	Garrett Jones 
+The Next Level	Kazuo Matsui 
+The Next Level	Cameron Maybin 
+The Next Level	Miguel Olivo 
+The Next Level	Scott Podsednik 
+The Next Level	Martín Prado 
+The Next Level	Pablo Sandoval 
+The Next Level	Marco Scutaro 
+The Next Level	Grady Sizemore 
+The Next Level	Juan Uribe 
+The Next Level	Joey Votto 
+The Next Level	Rafael Betancourt 
+The Next Level	Jonathan Broxton 
+The Next Level	Wade Davis 
+The Next Level	Ryan Dempster 
+The Next Level	Gavin Floyd 
+The Next Level	Cole Hamels 
+The Next Level	Jon Lester 
+The Next Level	Roy Oswalt 
+The Next Level	Wandy Rodríguez 
+The Next Level	Matt Thornton 
+The Next Level	José Valverde
+NY Disabled List	Carlos Beltrán 
+NY Disabled List	Lance Berkman 
+NY Disabled List	Everth Cabrera 
+NY Disabled List	Jack Cust 
+NY Disabled List	Yunel Escobar 
+NY Disabled List	Jake Fox 
+NY Disabled List	Adam Jones 
+NY Disabled List	Derrek Lee 
+NY Disabled List	Felipe López 
+NY Disabled List	Casey McGehee 
+NY Disabled List	Jorge Posada 
+NY Disabled List	Cody Ross 
+NY Disabled List	Luke Scott 
+NY Disabled List	Mark Teahen 
+NY Disabled List	Justin Upton 
+NY Disabled List	Ben Zobrist 
+NY Disabled List	Justin Duchscherer 
+NY Disabled List	Neftali Feliz 
+NY Disabled List	J.A. Happ 
+NY Disabled List	Tim Hudson 
+NY Disabled List	Mat Latos 
+NY Disabled List	Cliff Lee 
+NY Disabled List	Ryan Madson 
+NY Disabled List	Ricky Romero 
+NY Disabled List	Johan Santana 
+NY Disabled List	Joakim Soria
+Beantown Demons	Jay Bruce 
+Beantown Demons	Shin-Soo Choo 
+Beantown Demons	Ian Desmond 
+Beantown Demons	Andre Ethier 
+Beantown Demons	Adrián González 
+Beantown Demons	Matt Kemp 
+Beantown Demons	Alexei Ramírez 
+Beantown Demons	Aramis Ramírez 
+Beantown Demons	Álex Rodríguez 
+Beantown Demons	Geovany Soto 
+Beantown Demons	Shane Victorino 
+Beantown Demons	Chris Young 
+Beantown Demons	Michael Young 
+Beantown Demons	David Aardsma 
+Beantown Demons	Clay Buchholz 
+Beantown Demons	Frank Francisco 
+Beantown Demons	Jeremy Guthrie 
+Beantown Demons	Roy Halladay 
+Beantown Demons	Josh Johnson 
+Beantown Demons	Wade LeBlanc 
+Beantown Demons	Ricky Nolasco 
+Beantown Demons	Jonathan Papelbon 
+Beantown Demons	CC Sabathia 
+Beantown Demons	Jonathan Sánchez 
+Beantown Demons	Chris Young
+Steely Don	Jason Bartlett 
+Steely Don	Casey Blake 
+Steely Don	Nelson Cruz 
+Steely Don	Adam Dunn 
+Steely Don	Carlos González 
+Steely Don	Curtis Granderson 
+Steely Don	Hideki Matsui 
+Steely Don	Nate McLouth 
+Steely Don	Miguel Montero 
+Steely Don	David Ortiz 
+Steely Don	Dustin Pedroia 
+Steely Don	Chase Utley 
+Steely Don	Bronson Arroyo 
+Steely Don	Homer Bailey 
+Steely Don	Mark Buehrle 
+Steely Don	A.J. Burnett 
+Steely Don	Kevin Correia 
+Steely Don	John Danks 
+Steely Don	Phil Hughes 
+Steely Don	Derek Lowe 
+Steely Don	Leo Núñez 
+Steely Don	Andy Pettitte 
+Steely Don	Ryan Rowland-Smith 
+Steely Don	Brian Wilson
+Double Damn	Elvis Andrus 
+Double Damn	Gordon Beckham 
+Double Damn	Kyle Blanks 
+Double Damn	Marlon Byrd 
+Double Damn	Chris Davis 
+Double Damn	Carlos Guillén 
+Double Damn	Josh Hamilton 
+Double Damn	Carlos Lee 
+Double Damn	Brian McCann 
+Double Damn	Justin Morneau 
+Double Damn	Brandon Phillips 
+Double Damn	Drew Stubbs 
+Double Damn	Ryan Zimmerman 
+Double Damn	Joe Blanton 
+Double Damn	Johnny Cueto 
+Double Damn	Jorge De La Rosa 
+Double Damn	Scott Downs 
+Double Damn	Ryan Franklin 
+Double Damn	Yovani Gallardo 
+Double Damn	Félix Hernández 
+Double Damn	Clayton Kershaw 
+Double Damn	Mike MacDougal 
+Double Damn	Carlos Mármol 
+Double Damn	Fernando Rodney 
+Double Damn	Max Scherzer
+MKO	Russell Branyan 
+MKO	Billy Butler 
+MKO	Orlando Cabrera 
+MKO	Alberto Callaspo 
+MKO	Johnny Damon 
+MKO	Mike Fontenot 
+MKO	Franklin Gutiérrez 
+MKO	Corey Hart 
+MKO	Chipper Jones 
+MKO	Ian Kinsler 
+MKO	Russell Martin 
+MKO	José Reyes 
+MKO	Will Venable 
+MKO	Jayson Werth 
+MKO	Matt Wieters 
+MKO	Brett Anderson 
+MKO	Heath Bell 
+MKO	Joba Chamberlain 
+MKO	Jason Frasor 
+MKO	Brian Fuentes 
+MKO	Zack Greinke 
+MKO	Rich Harden 
+MKO	J.P. Howell 
+MKO	Jair Jurrjens 
+MKO	Rick Porcello 
+MKO	Javier Vázquez
+DrawingDead	Clint Barmes 
+DrawingDead	Michael Bourn 
+DrawingDead	Mike Cameron 
+DrawingDead	Michael Cuddyer 
+DrawingDead	Jermaine Dye 
+DrawingDead	Jacoby Ellsbury 
+DrawingDead	Brad Hawpe 
+DrawingDead	Todd Helton 
+DrawingDead	Aubrey Huff 
+DrawingDead	Brandon Inge 
+DrawingDead	Howie Kendrick 
+DrawingDead	Bengie Molina 
+DrawingDead	Kendry Morales 
+DrawingDead	Jhonny Peralta 
+DrawingDead	A.J. Pierzynski 
+DrawingDead	Albert Pujols 
+DrawingDead	Hanley Ramírez 
+DrawingDead	Dan Uggla 
+DrawingDead	Scott Feldman 
+DrawingDead	Nelson Figueroa 
+DrawingDead	Carl Pavano 
+DrawingDead	Joel Piñeiro 
+DrawingDead	Chad Qualls 
+DrawingDead	Ervin Santana 
+DrawingDead	Joe Saunders
+makeitstopopotamus	Pat Burrell 
+makeitstopopotamus	Prince Fielder 
+makeitstopopotamus	Dexter Fowler 
+makeitstopopotamus	Cristian Guzmán 
+makeitstopopotamus	Orlando Hudson 
+makeitstopopotamus	Paul Konerko 
+makeitstopopotamus	Jason Kubel 
+makeitstopopotamus	Víctor Martínez 
+makeitstopopotamus	Nyjer Morgan 
+makeitstopopotamus	Carlos Quentin 
+makeitstopopotamus	Manny Ramírez 
+makeitstopopotamus	Ryan Theriot 
+makeitstopopotamus	B.J. Upton 
+makeitstopopotamus	Kevin Youkilis 
+makeitstopopotamus	Scott Baker 
+makeitstopopotamus	Daniel Bard 
+makeitstopopotamus	Josh Beckett 
+makeitstopopotamus	Aaron Harang 
+makeitstopopotamus	LaTroy Hawkins 
+makeitstopopotamus	Bobby Jenks 
+makeitstopopotamus	Scott Kazmir 
+makeitstopopotamus	Gil Meche 
+makeitstopopotamus	Ramón Ramírez 
+makeitstopopotamus	George Sherrill 
+makeitstopopotamus	Jarrod Washburn 
+makeitstopopotamus	Jordan Zimmermann
+stugots	Jorge Cantú 
+stugots	Carl Crawford 
+stugots	Carlos Delgado 
+stugots	Rafael Furcal 
+stugots	Vladimir Guerrero 
+stugots	Travis Hafner 
+stugots	Torii Hunter 
+stugots	James Loney 
+stugots	José López 
+stugots	Joe Mauer 
+stugots	Yadier Molina 
+stugots	Nick Swisher 
+stugots	Freddy Sánchez 
+stugots	Miguel Tejada 
+stugots	Vernon Wells 
+stugots	Mark DiFelice 
+stugots	Armando Galarraga 
+stugots	Dan Haren 
+stugots	Ubaldo Jiménez 
+stugots	Jason Marquis 
+stugots	Daisuke Matsuzaka 
+stugots	Kevin Millwood 
+stugots	Francisco Rodríguez 
+stugots	Justin Verlander 
+stugots	Michael Wuertz 
+stugots	Barry Zito
+Elle Nino	Hank Blalock 
+Elle Nino	Miguel Cabrera 
+Elle Nino	Robinson Canó 
+Elle Nino	Mark DeRosa 
+Elle Nino	Ryan Doumit 
+Elle Nino	J.D. Drew 
+Elle Nino	Jeff Francoeur 
+Elle Nino	Derek Jeter 
+Elle Nino	Andruw Jones 
+Elle Nino	Adam Kennedy 
+Elle Nino	Adam LaRoche 
+Elle Nino	Mike Lowell 
+Elle Nino	Ryan Ludwick 
+Elle Nino	Alfonso Soriano 
+Elle Nino	Ichiro Suzuki 
+Elle Nino	Andrew Bailey 
+Elle Nino	Brian Bannister 
+Elle Nino	Francisco Cordero 
+Elle Nino	Ted Lilly 
+Elle Nino	Brandon Morrow 
+Elle Nino	Jake Peavy 
+Elle Nino	Brad Penny 
+Elle Nino	Huston Street 
+Elle Nino	Chris Volstad 
+Elle Nino	Adam Wainwright

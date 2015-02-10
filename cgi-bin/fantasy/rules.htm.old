@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Auction Draft Rules</title>
+</head>
+<body>
+ 
+<center>
+<a href="./rules.htm" target=rules>Rules</a>
+|
+<a href="./strat.htm" target=rules>Strategies</a>
+
+<center><h3>Auction Draft Rules</h3></center>
+Here are the basic rules for the auction draft. Any disputes will be handled by the commisioner, who will seek the approval of the league when possible. All rules are subject to change. If you have a request for a change, notify the commisioner at akeely@coe.neu.edu.</center>
+<br><br>
+<hr>
+<ol>
+<li>Each manager will have $220 dollars that may be used to bid on players. Each manager must fill his/her roster (including bench spots) with this money.
+<li>10 players will be selected by the commisioner to be eligible for bidding to begin the auction. Each manager that wins a player has the option to select a new player to be eligible, or to allow the commisioner to select a new player. 
+<li>The manager who introduces a player automatically places a bid of $0.5 on that player. Managers may then place bids greater than the current bid in $0.5 increments. If the current bid exceeds $10, bidding may only occur in $1 increments.
+<li>Managers may not have outstanding bids totalling more than their remaining money. Because the entire roster must be filled, $0.5 must remain for each roster spot that is not filled by a current bid or a won player. Thus, the following formula must be true:<br>
+<i>Remaining money >= Outstanding bids + (0.5 * empty roster spots) - (0.5 * number of outstanding bids)</i>
+<li>When a player is added to the auction, the beginning window on his bidding is 4 hours. However, whenever a bid is placed when there are less than two hours remaining in that player's auction, the auction end time is reset to 2 hours from the time of this most recent bid. The manager with the greatest bid wins a player after the auction end time has passed. The time will only be counted during hours specified by the league, though bids may be placed at any time. Bids placed outside the specified hours will count as bids placed when the specified time begins. Specified auction times are currently 8am-6pm on every day of the week. If any problems arise with the auction times, please contact the commissioner.
+<li>If a manager wishes to trade a player during the draft, he must follow the following criteria:
+<ul>
+<li>A manager may only sell a player for a price greater than or equal to the winning bid.
+<li>If a manager wishes to sell a player for less than the price of the winning bid, the manager may choose to put the player up for auction. To do so, The manager must set a minimum bid, and thus loses rights to the player. All other managers may then bid on the player. The winning manager then pays the owner of the player the value of the winning bid, and acquires the player. The manager who sold the player thus loses the difference between the original cost of the player and the new cost of the player.
+<li>Player for player trades may only occur by selling each player to other teams during the draft. After the draft has concluded, trades may be made as in a standard draft-style league.
+</ul>
+<li>If a player goes unclaimed in the draft (he would have to have been put into the auction by the commissioner, because whenever an owner adds a player he/she assumes the initial bid of $0.50) he will be sent to waivers at the start of the season.
+<li>Once the draft has concluded, a waiver order will be set based on the remaining money of each manager. The manager with the most remaining money will have the first waiver priority. In the event of a tie, the manager with the most expensive player will have lower waiver priority.
+<li>After the draft and waiver priority have been set, the teams will be loaded into a standard 5x5 roto Yahoo! league, and the season will be played out using the terms for a standard roto league.
+</ol>
+</body>
+</html>
