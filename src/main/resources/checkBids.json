@@ -1,0 +1,72 @@
+{
+  "PLAYERS": {
+    "110995": {
+      "RFA_PREV_OWNER": "NA",
+      "NAME": "Matt Forte",
+      "TIME": "1423593031",
+      "BIDDER": "Andrew",
+      "TARGET": 0,
+      "TEAM": "Chi",
+      "BID": "0.50",
+      "POS": "RB"
+    }
+  },
+  "ROSTERS": {
+    "Erik": [
+      {
+        "PRICE": "0.5",
+        "NAME": "Justin Morneau",
+        "POS": "1B"
+      },
+      {
+        "PRICE": "53",
+        "NAME": "Miguel Cabrera",
+        "POS": "1B/3B"
+      }],
+    "Andrew": [
+      {
+        "PRICE": "0.5",
+        "NAME": "Justin Morneau",
+        "POS": "1B"
+      },
+      {
+        "PRICE": "53",
+        "NAME": "Miguel Cabrera",
+        "POS": "1B/3B"
+      }]
+  },
+  "TIME": {
+    "CURRENT_SECONDS": 1423592999,
+    "MINUTE": 29,
+    "HOUR": 13,
+    "MONTH": "02",
+    "DAY": 10,
+    "SECOND": 59
+  },
+  "TEAMS": {
+    "Oondah": {
+      "SPOTS": 14,
+      "MAX_BID": 193.5,
+      "MONEY": 200,
+      "ADDS": "0"
+    },
+    "Cannons": {
+      "SPOTS": 14,
+      "MAX_BID": 193.5,
+      "MONEY": 200,
+      "ADDS": "3"
+    },
+    "Andrew": {
+      "SPOTS": 14,
+      "MAX_BID": 193.5,
+      "MONEY": 200,
+      "ADDS": "7"
+    },
+    "Erik": {
+      "SPOTS": 14,
+      "MAX_BID": 193.5,
+      "MONEY": 200,
+      "ADDS": "13"
+    }
+  }
+}
