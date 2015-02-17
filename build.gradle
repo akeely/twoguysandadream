@@ -8,17 +8,23 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
         classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
         classpath 'mysql:mysql-connector-java:5.1.34'
+        // NOTE: Due to this bug:
+        // https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/21
+        // do not use 0.3.0.
+        // Upgrade to 0.3.1 when available.
+        classpath 'io.spring.gradle:dependency-management-plugin:0.2.1.RELEASE'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
-apply plugin: 'flyway'
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 
-flyway {
-    url = 'jdbc:mysql://localhost:3306/auction'
-    user = 'root'
+dependencyManagement {
+    imports {
+        mavenBom 'io.spring.platform:platform-bom:1.1.1.RELEASE'
+    }
 }
 
 repositories {
@@ -27,11 +33,18 @@ repositories {
   jcenter()
 }
 
+configurations {
+    all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+}
+
 dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
   compile("org.springframework.boot:spring-boot-starter-data-jpa")
   compile("mysql:mysql-connector-java")
+  compile("com.mchange:c3p0")
 
-  testCompile("junit:junit")
+  testCompile "junit:junit"
   testCompile("org.springframework:spring-test")
+  testCompile("org.hsqldb:hsqldb")
+  testCompile("commons-io:commons-io")
 }

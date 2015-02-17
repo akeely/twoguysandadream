@@ -353,43 +353,52 @@
         </createTable>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-19">
-        <addPrimaryKey columnNames="name, league"  tableName="auction_players"/>
+        <addPrimaryKey constraintName="pk_auction_players" columnNames="name, league"
+                       tableName="auction_players"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-20">
-        <addPrimaryKey columnNames="league, category"  tableName="categories"/>
+        <addPrimaryKey constraintName="pk_categories" columnNames="league, category"
+                       tableName="categories"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-21">
-        <addPrimaryKey columnNames="player, league"  tableName="contracts"/>
+        <addPrimaryKey constraintName="pk_contracts" columnNames="player, league"
+                       tableName="contracts"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-22">
-        <addPrimaryKey columnNames="league, position"  tableName="fa_keepers"/>
+        <addPrimaryKey constraintName="pk_fa_keepers" columnNames="league, position"
+                       tableName="fa_keepers"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-23">
-        <addPrimaryKey columnNames="league, min, max"  tableName="keeper_slots"/>
+        <addPrimaryKey constraintName="pk_keeper_slots" columnNames="league, min, max"
+                       tableName="keeper_slots"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-24">
-        <addPrimaryKey columnNames="name"  tableName="leagues"/>
+        <addPrimaryKey constraintName="pk_leagues" columnNames="name"  tableName="leagues"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-25">
-        <addPrimaryKey columnNames="name"  tableName="passwd"/>
+        <addPrimaryKey constraintName="pk_passwd" columnNames="name"  tableName="passwd"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-26">
-        <addPrimaryKey columnNames="name, league"  tableName="players_won"/>
+        <addPrimaryKey constraintName="pk_players_won" columnNames="name, league"  tableName="players_won"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-27">
-        <addPrimaryKey columnNames="league, position"  tableName="positions"/>
+        <addPrimaryKey constraintName="pk_positions" columnNames="league, position"
+                       tableName="positions"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-28">
-        <addPrimaryKey columnNames="sess_id"  tableName="sessions"/>
+        <addPrimaryKey constraintName="pk_sessions" columnNames="sess_id"  tableName="sessions"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-29">
-        <addPrimaryKey columnNames="owner, league"  tableName="teams"/>
+        <addPrimaryKey constraintName="pk_teams" columnNames="owner, league"  tableName="teams"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-30">
-        <addUniqueConstraint columnNames="IP, owner" constraintName="IP" deferrable="false" disabled="false" initiallyDeferred="false" tableName="sessions"/>
+        <addUniqueConstraint columnNames="IP, owner" constraintName="uniq_sessions"
+                             deferrable="false" disabled="false" initiallyDeferred="false"
+                             tableName="sessions"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-31">
-        <addUniqueConstraint columnNames="player, league" constraintName="player" deferrable="false" disabled="false" initiallyDeferred="false" tableName="tags"/>
+        <addUniqueConstraint columnNames="player, league" constraintName="uniq_tags"
+                             deferrable="false" disabled="false" initiallyDeferred="false" tableName="tags"/>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-32">
         <createIndex indexName="FINAL_ROSTERS_INDEX" tableName="final_rosters" unique="false">
@@ -404,17 +413,17 @@
         </createIndex>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-34">
-        <createIndex indexName="active" tableName="players" unique="false">
+        <createIndex indexName="PLAYERS_INDEX_ACTIVE" tableName="players" unique="false">
             <column name="active"/>
         </createIndex>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-35">
-        <createIndex indexName="name" tableName="final_rosters" unique="false">
+        <createIndex indexName="FINAL_ROSTERS_INDEX_NAME" tableName="final_rosters" unique="false">
             <column name="name"/>
         </createIndex>
     </changeSet>
     <changeSet author="andrewk (generated)" id="1424127351423-36">
-        <createIndex indexName="name" tableName="players" unique="false">
+        <createIndex indexName="PLAYERS_INDEX_NAME" tableName="players" unique="false">
             <column name="name"/>
             <column name="sport"/>
         </createIndex>
