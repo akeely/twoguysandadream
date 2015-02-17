@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="andrewk (generated)" id="1424127351423-1">
+        <createTable tableName="auction_players">
+            <column defaultValue="" name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="price" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="time" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="NA" name="rfa_override" remarks="in RFA draft, 'won' players can be overriden by the previous owner" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-2">
+        <createTable tableName="categories">
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="category" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-3">
+        <createTable tableName="contracts">
+            <column defaultValue="" name="player" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="type" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="total_years" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="years_left" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="current_cost" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="N" name="broken" remarks="'Y' is contract is broken and owner paid" type="VARCHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="penalty" remarks="Should be POSITIVE; only populated if contract is broken" type="TINYINT"/>
+            <column defaultValue="" name="league" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="no" name="locked" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-4">
+        <createTable tableName="fa_keepers">
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="position" type="CHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="price" type="TINYINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-5">
+        <createTable tableName="final_rosters">
+            <column defaultValue="" name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="price" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="time" type="VARCHAR(16)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-6">
+        <createTable tableName="keeper_slots">
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="min" type="TINYINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="max" type="TINYINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="number" type="TINYINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-7">
+        <createTable tableName="leagues">
+            <column defaultValue="" name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="password" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="owner" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="auction" name="draft_type" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="open" name="draft_status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="no" name="keepers_locked" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="baseball" name="sport" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="categories" type="VARCHAR(200)"/>
+            <column name="positions" type="VARCHAR(100)"/>
+            <column defaultValue="" name="max_teams" type="CHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="salary_cap" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="auction_length" type="DOUBLE(22)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bid_time_ext" type="DOUBLE(22)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bid_time_buff" type="DOUBLE(22)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="tz_offset" remarks="Hours" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="login_ext" remarks="Minutes" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="yes" name="sessions_flag" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="contractA" remarks="# of contracts | length" type="VARCHAR(5)"/>
+            <column name="contractB" remarks="# of contracts | length" type="VARCHAR(5)"/>
+            <column name="contractC" remarks="# of contracts | length" type="VARCHAR(5)"/>
+            <column defaultValue="0" name="keeper_increase" remarks="percent" type="CHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fa_keeper_prices" remarks="QB|RB|WR|TE|K|DEF or C|1B|2B|3B|SS|OF|DH|SP|RP" type="VARCHAR(25)"/>
+            <column name="previous_league" remarks="Name of previous league if this is an inherited keeper league" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-8">
+        <createTable tableName="passwd">
+            <column defaultValue="" name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="passwd" type="VARCHAR(16)"/>
+            <column name="email" type="VARCHAR(30)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-9">
+        <createTable tableName="players">
+            <column autoIncrement="true" name="playerid" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column defaultValue="" name="name" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="baseball" name="sport" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="position" type="VARCHAR(15)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="rank" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="yahooid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-10">
+        <createTable tableName="players_won">
+            <column defaultValue="" name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0.0" name="price" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="time" type="VARCHAR(16)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="NA" name="rfa_override" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-11">
+        <createTable tableName="position_relations">
+            <column defaultValue="" name="position" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="rel_position" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-12">
+        <createTable tableName="positions">
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="position" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-13">
+        <createTable tableName="sessions">
+            <column name="IP" type="VARCHAR(20)"/>
+            <column name="owner" type="VARCHAR(20)"/>
+            <column name="password" type="VARCHAR(20)"/>
+            <column defaultValue="" name="sess_id" type="VARCHAR(15)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="team" type="VARCHAR(20)"/>
+            <column name="sport" type="VARCHAR(15)"/>
+            <column name="league" type="VARCHAR(40)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-14">
+        <createTable tableName="tags">
+            <column defaultValue="" name="player" type="VARCHAR(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="team" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="type" type="CHAR(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="cost" type="VARCHAR(5)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="no" name="locked" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="yes" name="active" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-15">
+        <createTable tableName="targets">
+            <column defaultValueNumeric="0" name="playerid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="owner" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0.0" name="price" type="DOUBLE(22)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-16">
+        <createTable tableName="teams">
+            <column defaultValue="" name="owner" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="num_adds" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="baseball" name="sport" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0.0" name="money_plusminus" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-17">
+        <createTable tableName="test">
+            <column defaultValue="" name="name" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="" name="id" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-18">
+        <createTable tableName="trading_block">
+            <column name="player" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="league" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="askingprice" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="owner" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-19">
+        <addPrimaryKey columnNames="name, league"  tableName="auction_players"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-20">
+        <addPrimaryKey columnNames="league, category"  tableName="categories"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-21">
+        <addPrimaryKey columnNames="player, league"  tableName="contracts"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-22">
+        <addPrimaryKey columnNames="league, position"  tableName="fa_keepers"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-23">
+        <addPrimaryKey columnNames="league, min, max"  tableName="keeper_slots"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-24">
+        <addPrimaryKey columnNames="name"  tableName="leagues"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-25">
+        <addPrimaryKey columnNames="name"  tableName="passwd"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-26">
+        <addPrimaryKey columnNames="name, league"  tableName="players_won"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-27">
+        <addPrimaryKey columnNames="league, position"  tableName="positions"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-28">
+        <addPrimaryKey columnNames="sess_id"  tableName="sessions"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-29">
+        <addPrimaryKey columnNames="owner, league"  tableName="teams"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-30">
+        <addUniqueConstraint columnNames="IP, owner" constraintName="IP" deferrable="false" disabled="false" initiallyDeferred="false" tableName="sessions"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-31">
+        <addUniqueConstraint columnNames="player, league" constraintName="player" deferrable="false" disabled="false" initiallyDeferred="false" tableName="tags"/>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-32">
+        <createIndex indexName="FINAL_ROSTERS_INDEX" tableName="final_rosters" unique="false">
+            <column name="team"/>
+            <column name="league"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-33">
+        <createIndex indexName="PLAYERS_WON_INDEX" tableName="players_won" unique="false">
+            <column name="team"/>
+            <column name="league"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-34">
+        <createIndex indexName="active" tableName="players" unique="false">
+            <column name="active"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-35">
+        <createIndex indexName="name" tableName="final_rosters" unique="false">
+            <column name="name"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-36">
+        <createIndex indexName="name" tableName="players" unique="false">
+            <column name="name"/>
+            <column name="sport"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andrewk (generated)" id="1424127351423-37">
+        <createIndex indexName="trade_block_index" tableName="trading_block" unique="false">
+            <column name="league"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>
