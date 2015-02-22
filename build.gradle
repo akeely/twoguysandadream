@@ -1,11 +1,10 @@
-
 buildscript {
     repositories {
         mavenLocal()
         jcenter()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE"
         classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
         classpath 'mysql:mysql-connector-java:5.1.34'
         classpath 'io.spring.gradle:dependency-management-plugin:0.3.1.RELEASE'
@@ -13,6 +12,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
@@ -25,22 +25,48 @@ dependencyManagement {
 
 repositories {
 
-  mavenLocal()
-  jcenter()
+    mavenLocal()
+    jcenter()
 }
 
 configurations {
     all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
 }
 
-dependencies {
-  compile("org.springframework.boot:spring-boot-starter-web")
-  compile("org.springframework.boot:spring-boot-starter-data-jpa")
-  compile("mysql:mysql-connector-java")
-  compile("com.mchange:c3p0")
+sourceSets {
+    ft
+    uat
+}
 
-  testCompile "junit:junit"
-  testCompile("org.springframework:spring-test")
-  testCompile("org.hsqldb:hsqldb")
-  testCompile("commons-io:commons-io")
+task ft(type: Test, group: 'Verification', description: 'Runs the Functional Tests') {
+    testClassesDir = sourceSets.ft.output.classesDir
+    classpath = sourceSets.ft.runtimeClasspath
+}
+
+task uat(type: Test, group: 'Verification', description: 'Runs the User Acceptance Tests') {
+    testClassesDir = sourceSets.uat.output.classesDir
+    classpath = sourceSets.uat.runtimeClasspath
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "mysql:mysql-connector-java"
+    compile "com.mchange:c3p0"
+
+    testCompile "junit:junit"
+    testCompile "org.springframework:spring-test"
+    testCompile "org.hsqldb:hsqldb"
+    testCompile "commons-io:commons-io"
+
+    uatCompile "org.codehaus.groovy:groovy-all"
+    uatCompile "info.cukes:cucumber-groovy:1.2.2"
+    uatCompile "info.cukes:cucumber-junit:1.2.2"
+    uatCompile "junit:junit"
+}
+
+idea {
+    module {
+        scopes.TEST.plus += [configurations.uatCompile, configurations.ftCompile]
+    }
 }
