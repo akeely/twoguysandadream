@@ -63,6 +63,8 @@ dependencies {
     uatCompile "info.cukes:cucumber-groovy:1.2.2"
     uatCompile "info.cukes:cucumber-junit:1.2.2"
     uatCompile "junit:junit"
+    uatCompile "org.flywaydb:flyway-core"
+    uatCompile "mysql:mysql-connector-java"
 }
 
 idea {

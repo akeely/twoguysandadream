@@ -2,6 +2,7 @@ package com.twoguysandadream
 
 import cucumber.api.DataTable
 import cucumber.api.PendingException
+import org.flywaydb.core.Flyway
 
 /**
  * Created by andrewk on 2/22/15.
@@ -9,6 +10,17 @@ import cucumber.api.PendingException
 
 this.metaClass.mixin(cucumber.api.groovy.Hooks)
 this.metaClass.mixin(cucumber.api.groovy.EN)
+
+Given(~/^The application is running$/) { ->
+
+    Flyway flyway = new Flyway()
+
+    flyway.setDataSource("jdbc:mysql://192.168.33.10:3306/auction", "uat", "password")
+
+    flyway.migrate()
+    // Write code here that turns the phrase above into concrete actions
+    //throw new PendingException()
+}
 
 Given(~'^a league called (.*) exists$') { league ->
 
@@ -25,11 +37,6 @@ Given(~/^(.*) has a salary cap of \$(\d+)$/) { String league, int salaryCap ->
 }
 
 Given(~/^(.*) has (\d+) roster spots per team$/) { String league, int rosterSpots ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
-}
-
-Given(~/^The application is running$/) { ->
     // Write code here that turns the phrase above into concrete actions
     //throw new PendingException()
 }
