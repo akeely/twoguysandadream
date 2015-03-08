@@ -1,8 +1,7 @@
 Feature: Retrieve the current auction board
 
 Background: Set up the test league
-  Given The application is running
-  And a league called Test League exists
+  Given a league called Test League exists
   And  The following teams are in Test League:
     | Team   |
     | Team A |
@@ -13,8 +12,7 @@ Background: Set up the test league
 
 Scenario: Retrieve an empty auction board from league with teams
   When I retrieve the current auction board for Test League
-  Then 3 empty rosters exist
-  And 3 team statistics exist
+  Then 3 team statistics exist
   And All teams have $200
   And All teams have 12 roster spots available
   And All teams have a maximum bid of $194.50

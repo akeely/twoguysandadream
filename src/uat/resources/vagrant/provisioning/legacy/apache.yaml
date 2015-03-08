@@ -23,6 +23,9 @@
     - name: apache | link cgi-bin directory
       file: src=/var/www/cgi-bin dest=/usr/lib/cgi-bin state=link force=yes
 
+    - name: apache | install perl dependency
+      apt: name=libjson-perl state=present
+
   handlers:
     - name: restart apache2
       service: name=apache2 state=restarted
