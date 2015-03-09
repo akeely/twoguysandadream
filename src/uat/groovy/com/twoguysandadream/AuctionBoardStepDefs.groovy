@@ -146,30 +146,31 @@ Given(~/^the following players have been won in (.*):$/) { String league, DataTa
 }
 
 Then(~/^the roster for (.*) has (.*)$/) { String team, String player ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    assert requestResponse.ROSTERS?.get(team)?.find { it.NAME == player }
 }
 
 Then(~/^(.*) has (\d+) roster spots available$/) { String team, int rosterSpots ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    assert requestResponse.TEAMS.get(team).SPOTS == rosterSpots
 }
 
 
-Then(~/^(.*) has \$(\d+\.?\d*)$/) { String team, String money ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+Then(~/^(.*) has \$(\d+\.?\d*)$/) { String team, BigDecimal money ->
+
+    assert requestResponse.TEAMS.get(team).MONEY == money
 }
 
 
-Then(~/^(.*) has a maximum bid of \$(\d+\.?\d*)$/) { String team, String maxBid ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+Then(~/^(.*) has a maximum bid of \$(\d+\.?\d*)$/) { String team, BigDecimal maxBid ->
+
+    assert requestResponse.TEAMS.get(team).MAX_BID == maxBid
 }
 
-Given(~/^every team has (\d+) adds$/) { int arg1 ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+Given(~/^every team has (\d+) adds$/) { int adds ->
+
+    def params = [ adds: (adds) ]
+    jdbcTemplate.update("UPDATE teams SET num_adds=:adds", params)
 }
 
 Then(~/^the following rosters are returned:$/) { DataTable rosters ->
