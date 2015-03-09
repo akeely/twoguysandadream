@@ -131,13 +131,29 @@ Then(~/^All teams have a maximum bid of \$(\d+\.?\d*)$/) { BigDecimal maxBid ->
 }
 
 Given(~/^the following bids are open in (.*):$/) { String league, DataTable bids ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    bids.raw().tail().each { bid ->
+
+        def params = [league: league, team: bid.get(0), name: bid.get(1), bid: bid.get(2)]
+        jdbcTemplate.update("INSERT INTO players (name, active, yahooid) VALUES (:name,1,1)",
+                params)
+        jdbcTemplate.update("""
+INSERT INTO auction_players (name, price, team, time, league)
+SELECT playerid, :bid, :team, :league
+FROM players
+WHERE name=:name
+""", params)
+    }
 }
 
 Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    def board = [bids.raw().head()]
+    requestResponse.PLAYERS?.each {
+        board.add([it.BIDDER, it.NAME, "\$${it.BID}"])
+    }
+
+    bids.diff(board)
 }
 
 Given(~/^the following players have been won in (.*):$/) { String league, DataTable wonPlayers ->
@@ -174,11 +190,25 @@ Given(~/^every team has (\d+) adds$/) { int adds ->
 }
 
 Then(~/^the following rosters are returned:$/) { DataTable rosters ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    def response = [rosters.raw().head()]
+    requestResponse.ROSTERS?.each { team ->
+        team.each { player ->
+            response.add([(team), (player.NAME), "\$${player.PRICE}"])
+        }
+    }
+
+    rosters.unorderedDiff(response)
 }
 
 Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
+
+    def response = [statistics.raw().head()]
+    requestResponse.TEAMS?.each { team ->
+        team.each { stats ->
+            response.add([(team), "\$${stats.MAX_BID}", "\$${stats.MONEY}", stats.SPOTS, stats.ADDS])
+        }
+    }
+
+    statistics.unorderedDiff(response)
 }
