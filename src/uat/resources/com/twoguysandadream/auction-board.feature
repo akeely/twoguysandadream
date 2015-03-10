@@ -30,7 +30,7 @@ Scenario: A single player is available for auction
   And All teams have 12 roster spots available
 
 Scenario: A single player has been won
-  Given the following players have been won in League A:
+  Given the following players have been won in Test League:
     | Team   | Player    | Amount |
     | Team A | Player A  | $5.50  |
   When I retrieve the current auction board for Test League
@@ -43,7 +43,7 @@ Scenario: A single player has been won
   And  Team B has a maximum bid of $194.50
 
 Scenario: Putting everything together
-  Given the following players have been won in League A:
+  Given the following players have been won in Test League:
     | Team   | Player    | Amount |
     | Team A | Player A  | $5.50  |
     | Team A | Player B  | $4     |
@@ -51,7 +51,7 @@ Scenario: Putting everything together
     | Team C | Player D  | $15.50 |
     | Team C | Player E  | $1     |
     | Team C | Player F  | $100   |
-  And the following bids are open in League A:
+  And the following bids are open in Test League:
     | Team   | Player    | Amount |
     | Team A | Player G  | $5.50  |
     | Team A | Player H  | $1     |
