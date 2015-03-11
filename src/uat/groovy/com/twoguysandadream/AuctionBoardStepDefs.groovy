@@ -147,16 +147,6 @@ WHERE name=:name
     }
 }
 
-Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
-
-    def board = [bids.raw().head()]
-    requestResponse.PLAYERS?.each { id, player ->
-        board.add([player.BIDDER, player.NAME, "\$${player.BID}"])
-    }
-
-    assert bids.raw() == board
-}
-
 Given(~/^the following players have been won in (.*):$/) { String league, DataTable wonPlayers ->
 
     wonPlayers.raw().tail().each { bid ->
@@ -202,6 +192,16 @@ Given(~/^every team has (\d+) adds$/) { int adds ->
     jdbcTemplate.update("UPDATE teams SET num_adds=:adds", params)
 }
 
+Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
+
+    def board = [bids.raw().head()]
+    requestResponse.PLAYERS?.each { id, player ->
+        board.add([player.BIDDER, player.NAME, "\$${player.BID}"])
+    }
+
+    compareLists(bids.raw(), board)
+}
+
 Then(~/^the following rosters are returned:$/) { DataTable rosters ->
 
     List<List<String>> response = [rosters.raw().head()]
@@ -212,7 +212,7 @@ Then(~/^the following rosters are returned:$/) { DataTable rosters ->
         }
     }
 
-    assert rosters.raw() == response
+    compareLists(rosters.raw(), response)
 }
 
 Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
@@ -224,5 +224,17 @@ Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
 
     }
 
-    assert statistics.raw() == response
+    compareLists(statistics.raw(), response)
+}
+
+def compareLists(List<List<String>> a, List<List<String>> b) {
+
+    assert a.size() == b.size()
+
+    a.eachWithIndex { List<String> entry, int i ->
+
+        entry.eachWithIndex{ String val, int j ->
+            assert "$val" == "${b.get(i).get(j)}"
+        }
+    }
 }
