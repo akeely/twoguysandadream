@@ -194,25 +194,22 @@ Given(~/^every team has (\d+) adds$/) { int adds ->
 
 Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
 
-    def board = [bids.raw().head()]
-    requestResponse.PLAYERS?.each { id, player ->
-        board.add([player.BIDDER, player.NAME, "\$${player.BID}"])
+    List<Bid> board = requestResponse.PLAYERS?.collect { id, player ->
+        new Bid(player.BIDDER, player.NAME, player.BID)
     }
 
-    compareLists(bids.raw(), board)
+    assert board == tableToBids(bids)
 }
 
 Then(~/^the following rosters are returned:$/) { DataTable rosters ->
 
-    List<List<String>> response = [rosters.raw().head()]
-    requestResponse.ROSTERS?.each { team, players ->
-        players.each { player ->
-            response.add([team, player.NAME, "\$${player.PRICE}"])
-
+    List<Bid> response = requestResponse.ROSTERS?.collect { team, players ->
+        players.collect { player ->
+            new Bid(team, player.NAME, player.PRICE)
         }
-    }
+    }.flatten()
 
-    compareLists(rosters.raw(), response)
+    assert response == tableToBids(rosters)
 }
 
 Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
@@ -225,6 +222,13 @@ Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
     }
 
     compareLists(statistics.raw(), response)
+}
+
+def tableToBids(DataTable table) {
+
+    table.raw().tail().collect {
+        new Bid(it.get(0), it.get(1), it.get(2))
+    }
 }
 
 def compareLists(List<List<String>> a, List<List<String>> b) {

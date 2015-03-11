@@ -18,7 +18,7 @@ Scenario: Retrieve an empty auction board from league with teams
   And All teams have a maximum bid of $194.50
 
 Scenario: A single player is available for auction
-  Given the following bids are open in League A:
+  Given the following bids are open in Test League:
     | Team   | Player    | Amount |
     | Team A | Player A  | $5.50  |
   When I retrieve the current auction board for Test League
