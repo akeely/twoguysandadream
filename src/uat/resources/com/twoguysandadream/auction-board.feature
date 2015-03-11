@@ -61,10 +61,10 @@ Scenario: Putting everything together
   When I retrieve the current auction board for Test League
   Then the following rosters are returned:
     | Team   | Player    | Amount |
-    | Team A | Player A  | $5.50  |
+    | Team A | Player A  | $5.5   |
     | Team A | Player B  | $4     |
     | Team B | Player C  | $2     |
-    | Team C | Player D  | $15.50 |
+    | Team C | Player D  | $15.5  |
     | Team C | Player E  | $1     |
     | Team C | Player F  | $100   |
   And the auction board contains the following bids:
@@ -75,7 +75,6 @@ Scenario: Putting everything together
     | Team C | Player J  | $14.50 |
   And the following team statistics are returned:
     | Team   | Max Bid | Money   | Roster Spots | Adds |
-    | Team A | $186    | $190.50 | 10           | 2    |
+    | Team A | $186    | $190.5  | 10           | 2    |
     | Team B | $193    | $198    | 11           | 2    |
-    | Team C | $79.50  | $83.50  | 9            | 2    |
-
+    | Team C | $79.5   | $83.5   | 9            | 2    |

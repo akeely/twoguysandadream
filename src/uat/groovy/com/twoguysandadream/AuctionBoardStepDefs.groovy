@@ -91,7 +91,6 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
 
         response.success = { resp, json ->
             requestResponse = json
-            println "RESPONSE: $requestResponse"
         }
     }
 
@@ -151,11 +150,11 @@ WHERE name=:name
 Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
 
     def board = [bids.raw().head()]
-    requestResponse.PLAYERS?.each {
-        board.add([it.BIDDER, it.NAME, "\$${it.BID}"])
+    requestResponse.PLAYERS?.each { id, player ->
+        board.add([player.BIDDER, player.NAME, "\$${player.BID}"])
     }
 
-    bids.diff(board)
+    assert bids.raw() == board
 }
 
 Given(~/^the following players have been won in (.*):$/) { String league, DataTable wonPlayers ->
@@ -208,22 +207,22 @@ Then(~/^the following rosters are returned:$/) { DataTable rosters ->
     List<List<String>> response = [rosters.raw().head()]
     requestResponse.ROSTERS?.each { team, players ->
         players.each { player ->
-            response.add([(team), (player.NAME), "\$${player.PRICE}"])
+            response.add([team, player.NAME, "\$${player.PRICE}"])
+
         }
     }
 
-    println "RESPONSE: $response"
-    rosters.unorderedDiff(response)
+    assert rosters.raw() == response
 }
 
 Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
 
     def response = [statistics.raw().head()]
-    requestResponse.TEAMS?.each { team ->
-        team.each { stats ->
+    requestResponse.TEAMS?.each { team, stats ->
+
             response.add([(team), "\$${stats.MAX_BID}", "\$${stats.MONEY}", stats.SPOTS, stats.ADDS])
-        }
+
     }
 
-    statistics.unorderedDiff(response)
+    assert statistics.raw() == response
 }
