@@ -82,12 +82,10 @@ Given(~/^(.*) has (\d+) roster spots per team$/) { String league, int rosterSpot
 
 When(~/^I retrieve the current auction board for (.*)$/) { String league ->
 
-    HTTPBuilder http = new HTTPBuilder("http://192.168.33.10")
+    HTTPBuilder http = new HTTPBuilder("http://localhost:8080")
 
-    http.request(Method.POST, JSON) {
-        uri.path = "/cgi-bin/fantasy/checkBids.pl"
-        body = [ league : league ]
-        requestContentType = ContentType.URLENC
+    http.request(Method.GET, JSON) {
+        uri.path = "/legacy/auction/league/$league"
 
         response.success = { resp, json ->
             requestResponse = json

@@ -1,7 +1,9 @@
 package com.twoguysandadream.resources.legacy;
 
+import com.twoguysandadream.config.DataSourceConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,7 @@ import java.nio.file.Paths;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/legacy/auction")
+@Import(DataSourceConfiguration.class)
 public class AuctionBoard {
 
     @RequestMapping("/league/{league}")
