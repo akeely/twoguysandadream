@@ -78,3 +78,4 @@ Scenario: Putting everything together
     | Team A | $186    | $190.5  | 10           | 2    |
     | Team B | $193    | $198    | 11           | 2    |
     | Team C | $79.5   | $83.5   | 9            | 2    |
+  And the response contains the current server time information

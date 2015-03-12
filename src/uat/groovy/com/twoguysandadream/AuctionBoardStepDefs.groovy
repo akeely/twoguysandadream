@@ -224,6 +224,18 @@ Then(~/^the following team statistics are returned:$/) { DataTable statistics ->
     compareLists(statistics.raw(), response)
 }
 
+Then(~/^the response contains the current server time information$/) { ->
+
+    assert requestResponse.TIME
+
+    def expectedKeys = ["MONTH", "DAY", "HOUR", "MINUTE", "SECOND", "CURRENT_SECONDS"]
+
+    assert expectedKeys.size() == requestResponse.TIME.keySet().size()
+    expectedKeys.each {
+        assert requestResponse.TIME.keySet().contains(it)
+    }
+}
+
 def tableToBids(DataTable table) {
 
     table.raw().tail().collect {
