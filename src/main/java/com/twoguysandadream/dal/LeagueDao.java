@@ -1,17 +1,18 @@
 package com.twoguysandadream.dal;
 
-import com.twoguysandadream.core.Bid;
-import com.twoguysandadream.core.League;
-import com.twoguysandadream.core.LeagueRepository;
-import com.twoguysandadream.core.Team;
+import com.twoguysandadream.core.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -28,6 +29,8 @@ public class LeagueDao implements LeagueRepository {
     private String findOneQuery;
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
+    @Value("${league.findBids}")
+    private String findBidsQuery;
 
     public void setFindOneQuery(String findOneQuery) {
         this.findOneQuery = findOneQuery;
@@ -63,8 +66,8 @@ public class LeagueDao implements LeagueRepository {
 
     private List<Bid> getAuctionBoard(String leagueName) {
 
-        // TODO
-        return Collections.emptyList();
+        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueName", leagueName),
+            new BidRowMapper());
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
@@ -117,6 +120,27 @@ public class LeagueDao implements LeagueRepository {
 
         public void setSport(String sport) {
             this.sport = sport;
+        }
+    }
+
+    public static class BidRowMapper implements RowMapper<Bid> {
+
+
+        @Override public Bid mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+            BigDecimal amount = rs.getBigDecimal("price");
+            long expirationTime = rs.getLong("time");
+
+            String team = rs.getString("team");
+
+            long id = rs.getLong("playerid");
+            String name = rs.getString("name");
+            Collection<Position> positions = Collections.singletonList(
+                new Position(rs.getString("position")));
+            String realTeam = rs.getString("realTeam");
+            Player player = new Player(id, name, positions, realTeam);
+
+            return new Bid(team, player, amount, expirationTime);
         }
     }
 

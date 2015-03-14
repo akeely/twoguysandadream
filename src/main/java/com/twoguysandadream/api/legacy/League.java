@@ -33,7 +33,7 @@ public class League {
                 bid.put("RFA_PREV_OWNER", "NA");
                 bid.put("NAME", b.getPlayer().getName());
                 bid.put("TIME", b.getExpirationTime());
-                bid.put("BIDDER", b.getTeam().getName());
+                bid.put("BIDDER", b.getTeam());
                 bid.put("TARGET", 0);
                 bid.put("TEAM", b.getPlayer().getRealTeam());
                 bid.put("BID", b.getAmount());

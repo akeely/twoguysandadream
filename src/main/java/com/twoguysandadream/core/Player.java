@@ -9,13 +9,13 @@ public class Player {
 
     private final long id;
     private final String name;
-    private final Collection<Position> postitions;
+    private final Collection<Position> positions;
     private final String realTeam;
 
-    public Player(long id, String name, Collection<Position> postitions, String realTeam) {
+    public Player(long id, String name, Collection<Position> positions, String realTeam) {
         this.id = id;
         this.name = name;
-        this.postitions = postitions;
+        this.positions = positions;
         this.realTeam = realTeam;
     }
 
@@ -28,7 +28,7 @@ public class Player {
     }
 
     public Collection<Position> getPositions() {
-        return postitions;
+        return positions;
     }
 
     public String getRealTeam() {
