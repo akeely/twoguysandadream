@@ -19,4 +19,20 @@ public class Bid {
         this.player = player;
         this.team = team;
     }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public long getExpirationTime() {
+        return expirationTime;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
 }

@@ -18,4 +18,20 @@ public class Player {
         this.postitions = postitions;
         this.realTeam = realTeam;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Collection<Position> getPositions() {
+        return postitions;
+    }
+
+    public String getRealTeam() {
+        return realTeam;
+    }
 }

@@ -31,4 +31,20 @@ public class TeamStatistics {
         this.maxBid = availableBudget.subtract(minimumBid.multiply(new BigDecimal
                 (openRosterSpots-1)));
     }
+
+    public BigDecimal getAvailableBudget() {
+        return availableBudget;
+    }
+
+    public BigDecimal getMaxBid() {
+        return maxBid;
+    }
+
+    public int getOpenRosterSpots() {
+        return openRosterSpots;
+    }
+
+    public int getAdds() {
+        return adds;
+    }
 }

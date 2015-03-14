@@ -2,10 +2,7 @@ package com.twoguysandadream.core;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -33,11 +30,14 @@ public class League {
         this.teams = teams;
     }
 
-    public Collection<TeamStatistics> getTeamStatistics() {
+    public Map<Team,TeamStatistics> getTeamStatistics() {
 
         return teams.stream()
-                .map((t) -> new TeamStatistics(t, budget, minimumBid, rosterSize))
-                .collect(Collectors.toList());
+                .map((t) -> {
+                    TeamStatistics stats = new TeamStatistics (t, budget, minimumBid, rosterSize);
+                    return toMapEntry(t, stats);
+                })
+            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public Map<Team, Collection<RosteredPlayer>> getRosters() {
@@ -61,5 +61,10 @@ public class League {
 
     public String getName() {
         return name;
+    }
+
+    private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {
+
+        return new AbstractMap.SimpleEntry<K,V>(key, value);
     }
 }
