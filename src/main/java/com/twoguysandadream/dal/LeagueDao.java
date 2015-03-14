@@ -1,7 +1,9 @@
 package com.twoguysandadream.dal;
 
+import com.twoguysandadream.core.Bid;
 import com.twoguysandadream.core.League;
 import com.twoguysandadream.core.LeagueRepository;
+import com.twoguysandadream.core.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -44,8 +47,24 @@ public class LeagueDao implements LeagueRepository {
 
     private League getLeagueData(LeagueMetadata metadata) {
 
+        List<Bid> auctionBoard = getAuctionBoard(metadata.getName());
+        List<Team> teams = getTeams(metadata.getName());
         return new League(-1L, metadata.getName(), getRosterSize(metadata),
-            metadata.getSalary_cap(), Collections.emptyList(), Collections.emptyList());
+            metadata.getSalary_cap(), auctionBoard, teams);
+    }
+
+    private List<Team> getTeams(String name) {
+
+        // TODO
+        return Collections.emptyList();
+    }
+
+
+
+    private List<Bid> getAuctionBoard(String leagueName) {
+
+        // TODO
+        return Collections.emptyList();
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
