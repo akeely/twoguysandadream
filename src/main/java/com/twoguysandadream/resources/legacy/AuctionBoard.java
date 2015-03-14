@@ -19,8 +19,12 @@ import java.util.Optional;
 @RequestMapping("/legacy/auction")
 public class AuctionBoard {
 
-    @Autowired
-    private LeagueRepository leagueRepository;
+    private final LeagueRepository leagueRepository;
+
+    public AuctionBoard(LeagueRepository leagueRepository) {
+
+        this.leagueRepository = leagueRepository;
+    }
 
     @RequestMapping("/league/{leagueName}")
     @ResponseBody

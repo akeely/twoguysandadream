@@ -1,0 +1,2 @@
+league:
+  findOne: SELECT name, salary_cap, sport FROM leagues WHERE name = :leagueName

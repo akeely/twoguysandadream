@@ -3,6 +3,7 @@ package com.twoguysandadream.config;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import javax.sql.DataSource;
 
@@ -22,5 +23,11 @@ public class DataSourceConfiguration {
         dataSource.setPassword("password");
 
         return dataSource;
+    }
+
+    @Bean
+    public NamedParameterJdbcTemplate jdbcTemplate() {
+
+        return new NamedParameterJdbcTemplate(dataSource());
     }
 }

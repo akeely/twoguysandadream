@@ -54,4 +54,12 @@ public class League {
 
         return auctionBoard;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
