@@ -6,14 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.Collections;
-import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -26,6 +23,8 @@ public class LeagueDao implements LeagueRepository {
 
     @Value("${league.findOne}")
     private String findOneQuery;
+    @Value("${league.rosterSpots}")
+    private String rosterSpotsQuery;
 
     public void setFindOneQuery(String findOneQuery) {
         this.findOneQuery = findOneQuery;
@@ -37,21 +36,38 @@ public class LeagueDao implements LeagueRepository {
     }
 
     @Override public Optional<League> findOneByName(String name) {
-        LeagueMetadata result;
+
+        Optional<LeagueMetadata> metadata = getMetadata(name);
+
+        return metadata.map(this::getLeagueData);
+    }
+
+    private League getLeagueData(LeagueMetadata metadata) {
+
+        return new League(-1L, metadata.getName(), getRosterSize(metadata),
+            metadata.getSalary_cap(), Collections.emptyList(), Collections.emptyList());
+    }
+
+    private int getRosterSize(LeagueMetadata metadata) {
+
+        Sport sport = Sport.valueOf(metadata.getSport().toUpperCase());
+
+        int additionalRosterSpots = jdbcTemplate.queryForObject(rosterSpotsQuery,
+            Collections.singletonMap("leagueName", metadata.getName()), Integer.class);
+
+        return sport.getBaseRosterSize() + additionalRosterSpots;
+    }
+
+    private Optional<LeagueMetadata> getMetadata(String name) {
+
         try {
-             result = jdbcTemplate
+            return Optional.of(jdbcTemplate
                 .queryForObject(findOneQuery, Collections.singletonMap("leagueName", name),
-                    new BeanPropertyRowMapper<LeagueMetadata>(LeagueMetadata.class));
+                    new BeanPropertyRowMapper<>(LeagueMetadata.class)));
         }
         catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
-
-
-        League league = new League(-1L, result.getName(), 8,
-            result.getSalary_cap(), Collections.emptyList(), Collections.emptyList());
-
-        return Optional.of(league);
     }
 
     public static class LeagueMetadata {
@@ -82,6 +98,21 @@ public class LeagueDao implements LeagueRepository {
 
         public void setSport(String sport) {
             this.sport = sport;
+        }
+    }
+
+    private enum Sport {
+
+        BASEBALL(8),
+        FOOTBALL(6);
+
+        private final int baseRosterSize;
+        private Sport(int baseRosterSize) {
+            this.baseRosterSize = baseRosterSize;
+        }
+
+        public int getBaseRosterSize() {
+            return baseRosterSize;
         }
     }
 }
