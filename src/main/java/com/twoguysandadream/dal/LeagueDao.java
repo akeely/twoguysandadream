@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -12,10 +13,8 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by andrewk on 3/13/15.
@@ -31,6 +30,10 @@ public class LeagueDao implements LeagueRepository {
     private String rosterSpotsQuery;
     @Value("${league.findBids}")
     private String findBidsQuery;
+    @Value("${league.findRosters}")
+    private String findRostersQuery;
+    @Value("${league.findTeams}")
+    private String findTeamsQuery;
 
     public void setFindOneQuery(String findOneQuery) {
         this.findOneQuery = findOneQuery;
@@ -58,11 +61,35 @@ public class LeagueDao implements LeagueRepository {
 
     private List<Team> getTeams(String name) {
 
-        // TODO
-        return Collections.emptyList();
+        Map<String,List<RosteredPlayer>> rosters = getRosters(name);
+
+        return jdbcTemplate.query(findTeamsQuery, Collections.singletonMap("leagueName", name),
+            new TeamRowMapper(rosters));
     }
 
+    private Map<String,List<RosteredPlayer>> getRosters(String leagueName) {
 
+        RosteredPlayerCallbackHandler handler = new RosteredPlayerCallbackHandler();
+        jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueName", leagueName),
+            handler);
+
+        return handler.getRosters();
+    }
+
+    private RosteredPlayer buildRosteredPlayer(Map<String, Object> r) {
+
+        long id = (Long)r.get("playerid");
+        String name = (String)r.get("name");
+        Collection<Position> positions = Collections.singletonList(
+            new Position((String)r.get("position")));
+        String realTeam = (String)r.get("realTeam");
+
+        Player player = new Player(id, name, positions, realTeam);
+
+        BigDecimal cost = (BigDecimal) r.get("price");
+
+        return new RosteredPlayer(player, cost);
+    }
 
     private List<Bid> getAuctionBoard(String leagueName) {
 
@@ -123,8 +150,7 @@ public class LeagueDao implements LeagueRepository {
         }
     }
 
-    public static class BidRowMapper implements RowMapper<Bid> {
-
+    public class BidRowMapper implements RowMapper<Bid> {
 
         @Override public Bid mapRow(ResultSet rs, int rowNum) throws SQLException {
 
@@ -141,6 +167,51 @@ public class LeagueDao implements LeagueRepository {
             Player player = new Player(id, name, positions, realTeam);
 
             return new Bid(team, player, amount, expirationTime);
+        }
+    }
+
+    public class TeamRowMapper implements RowMapper<Team> {
+
+        private final Map<String,List<RosteredPlayer>> rosters;
+
+        public TeamRowMapper(Map<String, List<RosteredPlayer>> rosters) {
+            this.rosters = rosters;
+        }
+
+        @Override public Team mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+            String name = rs.getString("name");
+            Collection<RosteredPlayer> roster = rosters.getOrDefault(name, Collections.emptyList());
+            BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
+            int adds = rs.getInt("num_adds");
+            return new Team(-1L,name,roster,budgetAdjustment,adds);
+        }
+    }
+
+    public class RosteredPlayerCallbackHandler implements RowCallbackHandler {
+
+        private final Map<String,List<RosteredPlayer>> rosters = new HashMap<>();
+
+        @Override public void processRow(ResultSet rs) throws SQLException {
+
+            String team = rs.getString("team");
+
+            long id = rs.getLong("playerid");
+            String name = rs.getString("name");
+            Collection<Position> positions = Collections.singletonList(
+                new Position(rs.getString("position")));
+            String realTeam = rs.getString("realTeam");
+            Player player = new Player(id, name, positions, realTeam);
+
+            BigDecimal cost = rs.getBigDecimal("price");
+
+            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost);
+            rosters.putIfAbsent(team, new ArrayList<>());
+            rosters.get(team).add(rosteredPlayer);
+        }
+
+        public Map<String, List<RosteredPlayer>> getRosters() {
+            return rosters;
         }
     }
 

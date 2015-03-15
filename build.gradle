@@ -67,6 +67,10 @@ dependencies {
     uatCompile "junit:junit"
     uatCompile "org.flywaydb:flyway-core"
     uatCompile "org.codehaus.groovy.modules.http-builder:http-builder:0.7"
+    uatCompile "mysql:mysql-connector-java"
+    uatCompile "com.mchange:c3p0"
+    uatCompile "org.springframework:spring-jdbc"
+    uatCompile "org.apache.commons:commons-dbcp2"
 }
 
 idea {

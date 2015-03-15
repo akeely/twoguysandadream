@@ -26,8 +26,12 @@ public class TeamStatistics {
 
         this.adds = team.getAdds();
         this.openRosterSpots = rosterSize - team.getRoster().size();
-        this.availableBudget = leagueBudget.add(team.getBudgetAdjustment()).subtract(team.getRoster()
-                .stream().map(RosteredPlayer::getCost).reduce((x,y) -> x.add(y)).get());
+        this.availableBudget = leagueBudget
+            .add(team.getBudgetAdjustment())
+            .subtract(team.getRoster().stream()
+                .map(RosteredPlayer::getCost)
+                .reduce((x,y) -> x.add(y))
+                .orElseGet(()-> BigDecimal.ZERO));
         this.maxBid = availableBudget.subtract(minimumBid.multiply(new BigDecimal
                 (openRosterSpots-1)));
     }

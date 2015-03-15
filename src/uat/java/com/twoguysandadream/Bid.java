@@ -14,7 +14,7 @@ public class Bid {
     public Bid(String team, String player, BigDecimal amount) {
         this.team = team;
         this.player = player;
-        this.amount = amount;
+        this.amount = amount.setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
     public Bid(String team, String player, String amountString) {

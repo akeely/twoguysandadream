@@ -2,13 +2,12 @@ package com.twoguysandadream.api.legacy;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.twoguysandadream.core.Position;
+import com.twoguysandadream.core.TeamStatistics;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -21,10 +20,14 @@ public class League {
     public League(com.twoguysandadream.core.League league) {
 
         this.league = league;
+        this.auctionPlayers = getAuctionPlayers();
+        this.teamStatistics = getTeamStatistics();
     }
 
     @JsonProperty("PLAYERS")
-    public Map<Long,Map<String,Object>> getAuctionPlayers() {
+    private Map<Long,Map<String,Object>> auctionPlayers;
+
+    private Map<Long,Map<String,Object>> getAuctionPlayers() {
 
         return league.getAuctionBoard().stream().collect(Collectors.toMap(
             (b)-> b.getPlayer().getId(),
@@ -37,9 +40,7 @@ public class League {
                 bid.put("TARGET", 0);
                 bid.put("TEAM", b.getPlayer().getRealTeam());
                 bid.put("BID", b.getAmount());
-                bid.put("POS", b.getPlayer().getPositions().stream()
-                    .map(Position::toString)
-                    .collect(Collectors.joining("|")));
+                bid.put("POS", getPositionString(b.getPlayer().getPositions()));
                 return bid;
             }));
     }
@@ -53,6 +54,10 @@ public class League {
                     .map((r) -> {
                         Map<String,Object> player = new HashMap<>();
 
+                        player.put("PRICE", r.getCost());
+                        player.put("NAME", r.getPlayer().getName());
+                        player.put("POSITION", getPositionString(r.getPlayer().getPositions()));
+
                         return player;
                     })
                     .collect(Collectors.toList());
@@ -63,19 +68,13 @@ public class League {
     }
 
     @JsonProperty("TEAMS")
-    public Map<String,Map<String,Object>> getTeamStatistics() {
+    private Map<String, Statistics> teamStatistics;
+
+    private Map<String,Statistics> getTeamStatistics() {
 
         return league.getTeamStatistics().entrySet().stream()
-            .map((e) -> {
-                Map<String,Object> stats = new HashMap<>();
-                stats.put("SPOTS", e.getValue().getOpenRosterSpots());
-                stats.put("MAX_BID", e.getValue().getMaxBid());
-                stats.put("MONEY", e.getValue().getAvailableBudget());
-                stats.put("ADDS", e.getValue().getAdds());
-
-                return toMapEntry(e.getKey().getName(), stats);
-            })
-            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+            .collect(Collectors.toMap((e) -> e.getKey().getName(),
+                (e) -> new Statistics(e.getValue())));
     }
 
     @JsonProperty("TIME")
@@ -98,5 +97,41 @@ public class League {
     private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {
 
         return new AbstractMap.SimpleEntry<K,V>(key, value);
+    }
+
+    private String getPositionString(Collection<Position> positions) {
+
+        return positions.stream()
+            .map(Position::toString)
+            .collect(Collectors.joining("|"));
+    }
+
+    public static class Statistics {
+
+        private final TeamStatistics statistics;
+
+        public Statistics(TeamStatistics statistics) {
+            this.statistics = statistics;
+        }
+
+        @JsonProperty("SPOTS")
+        public int getOpenRosterSpots() {
+            return statistics.getOpenRosterSpots();
+        }
+
+        @JsonProperty("MAX_BID")
+        public BigDecimal getMaxBid() {
+            return statistics.getMaxBid();
+        }
+
+        @JsonProperty("MONEY")
+        public BigDecimal getAvailableBudget() {
+            return statistics.getAvailableBudget();
+        }
+
+        @JsonProperty("ADDS")
+        public int getAdds() {
+            return statistics.getAdds();
+        }
     }
 }

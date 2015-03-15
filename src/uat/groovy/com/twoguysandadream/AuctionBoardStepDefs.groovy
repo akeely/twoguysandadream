@@ -85,6 +85,7 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
     HTTPBuilder http = new HTTPBuilder("http://localhost:8080")
 
     http.request(Method.GET, JSON) {
+        println "Request: /legacy/auction/league/$league"
         uri.path = "/legacy/auction/league/$league"
 
         response.success = { resp, json ->
@@ -192,6 +193,7 @@ Given(~/^every team has (\d+) adds$/) { int adds ->
 
 Then(~/^the auction board contains the following bids:$/) { DataTable bids ->
 
+    println "RequestResponse: $requestResponse"
     List<Bid> board = requestResponse.PLAYERS?.collect { id, player ->
         new Bid(player.BIDDER, player.NAME, player.BID)
     }
