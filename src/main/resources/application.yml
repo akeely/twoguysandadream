@@ -1,6 +1,9 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.33.10:3306/auction
+    url: jdbc:mysql://127.0.0.1:3306/auction
     username: uat
     password: password
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect

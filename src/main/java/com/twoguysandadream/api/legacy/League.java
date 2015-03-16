@@ -56,7 +56,7 @@ public class League {
 
                         player.put("PRICE", r.getCost());
                         player.put("NAME", r.getPlayer().getName());
-                        player.put("POSITION", getPositionString(r.getPlayer().getPositions()));
+                        player.put("POS", getPositionString(r.getPlayer().getPositions()));
 
                         return player;
                     })
