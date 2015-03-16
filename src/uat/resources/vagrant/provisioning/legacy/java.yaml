@@ -1,0 +1,13 @@
+---
+- hosts: default
+  sudo: yes
+  tasks:
+
+  - name: java | add repository
+    apt_repository: repo='ppa:webupd8team/java'
+
+  - name: java | accept oracle license
+    debconf: name=oracle-java8-installer question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+
+  - name: java | install
+    apt: name=oracle-java8-installer state=present

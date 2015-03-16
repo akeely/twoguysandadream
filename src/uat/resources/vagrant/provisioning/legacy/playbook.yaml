@@ -2,3 +2,4 @@
 - include: prereqs.yaml
 - include: mysql.yaml
 - include: apache.yaml
+- include: java.yaml

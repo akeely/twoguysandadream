@@ -4,7 +4,7 @@
   tasks:
 
     - name: apache | install perl
-      apt: name=libapache2-mod-perl2 state=present
+      apt: name=libapache2-mod-perl2 state=present update_cache=yes
 
     - name: apache | install apache
       apt: name=apache2 state=present
