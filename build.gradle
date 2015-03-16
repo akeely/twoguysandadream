@@ -54,7 +54,6 @@ dependencies {
     compile "mysql:mysql-connector-java"
     compile "com.mchange:c3p0"
     compile "org.springframework:spring-jdbc"
-    compile "org.apache.commons:commons-dbcp2"
 
     testCompile "junit:junit"
     testCompile "org.springframework:spring-test"
@@ -70,7 +69,6 @@ dependencies {
     uatCompile "mysql:mysql-connector-java"
     uatCompile "com.mchange:c3p0"
     uatCompile "org.springframework:spring-jdbc"
-    uatCompile "org.apache.commons:commons-dbcp2"
 }
 
 idea {

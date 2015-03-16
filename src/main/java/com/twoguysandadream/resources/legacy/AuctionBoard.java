@@ -21,6 +21,7 @@ public class AuctionBoard {
 
     private final LeagueRepository leagueRepository;
 
+    @Autowired
     public AuctionBoard(LeagueRepository leagueRepository) {
 
         this.leagueRepository = leagueRepository;
