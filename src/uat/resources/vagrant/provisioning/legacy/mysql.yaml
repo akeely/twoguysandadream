@@ -15,7 +15,7 @@
       mysql_user: name=uat password=password priv='auction.*:ALL'
 
     - name: mysql | allow remote connections
-      lineinfile: dest=/etc/mysql/my.cnf regexp="^bind-address" line="bind-address    = 192.168.33.10"
+      lineinfile: dest=/etc/mysql/my.cnf regexp="^bind-address" state=absent
       notify: restart mysql
 
   handlers:
