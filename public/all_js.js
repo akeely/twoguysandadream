@@ -248,7 +248,7 @@ function handleResponse(response)
               update_player.FOUND = 1;
 
               //If player has been won already, make his row red
-              if (update_player.TIME === "NA")
+              if (update_player.TIME === "NA" || update_player.TIME === -1)
               {
                 my_table.rows[i].style.backgroundColor = "red"
                 my_table.rows[i].cells[5].style.backgroundColor = "red"

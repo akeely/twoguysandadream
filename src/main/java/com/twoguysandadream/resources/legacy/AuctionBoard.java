@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.swing.text.html.Option;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -55,10 +56,7 @@ public class AuctionBoard {
 
         existingPlayerIds.stream()
             .filter((p) -> !auctionBoardPlayers.contains(p))
-            .map((p) -> getPlayerWon(p, league))
-            .filter(Optional::isPresent)
-            .map(Optional::get)
-            .map(this::rosteredPlayerToBid)
+            .map((p) -> getExpiredBid(league, p))
             .forEach((b) -> league.getAuctionBoard().add(b));
     }
 
@@ -71,7 +69,7 @@ public class AuctionBoard {
         String[] playerIdStrings = playerIdsString.split(";");
 
         try {
-            return Arrays.asList(playerIdsString).stream().filter((s) -> !StringUtils.isEmpty(s))
+            return Arrays.asList(playerIdStrings).stream().filter((s) -> !StringUtils.isEmpty(s))
                 .map(Long::parseLong).collect(Collectors.toList());
         }
         catch(NumberFormatException e) {
@@ -79,18 +77,25 @@ public class AuctionBoard {
         }
     }
 
-    private Optional<Map.Entry<Team,RosteredPlayer>> getPlayerWon(Long playerId, League league) {
+    private Bid getExpiredBid(League league, long playerId) {
+
+        Optional<Map.Entry<Team,RosteredPlayer>> rosteredPlayer = getPlayerWon(league, playerId);
+
+        return rosteredPlayer
+            .map((p) -> rosteredPlayerToBid(p))
+            .orElse(new Bid("NA", new Player(playerId, "", Collections.emptyList(), ""),
+                    BigDecimal.ZERO, -1L));
+    }
+
+    private Optional<Map.Entry<Team,RosteredPlayer>> getPlayerWon(League league, Long playerId) {
 
         return league.getRosters().entrySet().stream()
-            .filter((e) ->
-                e.getValue().stream()
-                    .map((p) -> p.getPlayer().getId())
-                    .anyMatch((p) -> p == playerId)
-            )
+            .filter((e) -> e.getValue().stream()
+                .map((p) -> p.getPlayer().getId())
+                .anyMatch((p) ->  p.equals(playerId)))
             .map((e) -> toMapEntry(e.getKey(),
                 e.getValue().stream()
-                .filter((p) -> p.getPlayer().getId() == playerId)
-                .findAny().get()))
+                    .filter((p) -> p.getPlayer().getId() == playerId).findAny().get()))
             .findAny();
 
     }
