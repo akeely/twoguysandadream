@@ -29,7 +29,8 @@ public class League {
 
     private Map<Long,Map<String,Object>> getAuctionPlayers() {
 
-        return league.getAuctionBoard().stream().collect(Collectors.toMap(
+        return league.getAuctionBoard().stream()
+            .collect(Collectors.toMap(
             (b)-> b.getPlayer().getId(),
             (b) -> {
                 Map<String,Object> bid = new HashMap<>();
