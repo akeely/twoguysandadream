@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -76,21 +77,6 @@ public class LeagueDao implements LeagueRepository {
         return handler.getRosters();
     }
 
-    private RosteredPlayer buildRosteredPlayer(Map<String, Object> r) {
-
-        long id = (Long)r.get("playerid");
-        String name = (String)r.get("name");
-        Collection<Position> positions = Collections.singletonList(
-            new Position((String)r.get("position")));
-        String realTeam = (String)r.get("realTeam");
-
-        Player player = new Player(id, name, positions, realTeam);
-
-        BigDecimal cost = (BigDecimal) r.get("price");
-
-        return new RosteredPlayer(player, cost);
-    }
-
     private List<Bid> getAuctionBoard(String leagueName) {
 
         return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueName", leagueName),
@@ -116,6 +102,17 @@ public class LeagueDao implements LeagueRepository {
         }
         catch (EmptyResultDataAccessException e) {
             return Optional.empty();
+        }
+    }
+
+    private String decodeString(String string) {
+
+        try {
+            return new String(string.getBytes("ISO-8859-1"), "UTF-8");
+        }
+        catch (UnsupportedEncodingException e) {
+
+            return string;
         }
     }
 
@@ -160,7 +157,7 @@ public class LeagueDao implements LeagueRepository {
             String team = rs.getString("team");
 
             long id = rs.getLong("playerid");
-            String name = rs.getString("name");
+            String name = decodeString(rs.getString("name"));
             Collection<Position> positions = Collections.singletonList(
                 new Position(rs.getString("position")));
             String realTeam = rs.getString("realTeam");
@@ -197,7 +194,7 @@ public class LeagueDao implements LeagueRepository {
             String team = rs.getString("team");
 
             long id = rs.getLong("playerid");
-            String name = rs.getString("name");
+            String name = decodeString(rs.getString("name"));
             Collection<Position> positions = Collections.singletonList(
                 new Position(rs.getString("position")));
             String realTeam = rs.getString("realTeam");
