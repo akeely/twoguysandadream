@@ -4,6 +4,8 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/auction
     username: uat
     password: password
+    test-on-borrow: true
+    validation-query: SELECT 1
 
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
