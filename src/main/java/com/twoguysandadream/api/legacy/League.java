@@ -20,30 +20,24 @@ public class League {
     public League(com.twoguysandadream.core.League league) {
 
         this.league = league;
-        this.auctionPlayers = getAuctionPlayers();
-        this.teamStatistics = getTeamStatistics();
     }
 
     @JsonProperty("PLAYERS")
-    private Map<Long,Map<String,Object>> auctionPlayers;
-
-    private Map<Long,Map<String,Object>> getAuctionPlayers() {
+    public Map<Long,Map<String,Object>> getAuctionPlayers() {
 
         return league.getAuctionBoard().stream()
-            .collect(Collectors.toMap(
-            (b)-> b.getPlayer().getId(),
-            (b) -> {
-                Map<String,Object> bid = new HashMap<>();
-                bid.put("RFA_PREV_OWNER", "NA");
-                bid.put("NAME", b.getPlayer().getName());
-                bid.put("TIME", b.getExpirationTime());
-                bid.put("BIDDER", b.getTeam());
-                bid.put("TARGET", 0);
-                bid.put("TEAM", b.getPlayer().getRealTeam());
-                bid.put("BID", b.getAmount());
-                bid.put("POS", getPositionString(b.getPlayer().getPositions()));
-                return bid;
-            }));
+            .collect(Collectors.toMap((b) -> b.getPlayer().getId(), (b) -> {
+                    Map<String, Object> bid = new HashMap<>();
+                    bid.put("RFA_PREV_OWNER", "NA");
+                    bid.put("NAME", b.getPlayer().getName());
+                    bid.put("TIME", b.getExpirationTime());
+                    bid.put("BIDDER", b.getTeam());
+                    bid.put("TARGET", 0);
+                    bid.put("TEAM", b.getPlayer().getRealTeam());
+                    bid.put("BID", b.getAmount());
+                    bid.put("POS", getPositionString(b.getPlayer().getPositions()));
+                    return bid;
+                }));
     }
 
     @JsonProperty("ROSTERS")
@@ -69,13 +63,13 @@ public class League {
     }
 
     @JsonProperty("TEAMS")
-    private Map<String, Statistics> teamStatistics;
-
-    private Map<String,Statistics> getTeamStatistics() {
+    public Map<String,Statistics> getTeamStatistics() {
 
         return league.getTeamStatistics().entrySet().stream()
             .collect(Collectors.toMap((e) -> e.getKey().getName(),
-                (e) -> new Statistics(e.getValue())));
+                (e) -> new Statistics(e.getValue()),
+                (s,a) -> s,
+                () -> new TreeMap<>()));
     }
 
     @JsonProperty("TIME")
