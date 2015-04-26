@@ -108,9 +108,6 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
             requestResponse = json
         }
     }
-
-    // Write code here that turns the phrase above into concrete actions
-    //throw new PendingException()
 }
 
 Then(~/^(\d+) empty rosters exist$/) { int count ->
