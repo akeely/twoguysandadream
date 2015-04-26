@@ -10,6 +10,8 @@ import org.apache.commons.dbcp2.BasicDataSource
 import org.apache.http.util.EntityUtils
 import org.flywaydb.core.Flyway
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+import org.springframework.web.util.UriUtils
+
 import static groovyx.net.http.ContentType.*
 import javax.sql.DataSource
 
@@ -102,7 +104,7 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
 
     http.request(Method.GET, JSON) {
         println "Request: /legacy/auction/league/$league"
-        uri.path = URLEncoder.encode("/legacy/auction/league/$league", "UTF-8")
+        uri.path = "/legacy/auction/league/$league"
         uri.query = [playerids:""]
 
         response.success = { resp, json ->
