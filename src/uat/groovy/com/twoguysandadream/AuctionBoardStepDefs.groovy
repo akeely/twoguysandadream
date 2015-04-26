@@ -28,26 +28,34 @@ def requestResponse
 
 Before() {
 
-    Flyway flyway = new Flyway()
 
+
+    String dbUrl
+    String dbUser
+    String dbPassword
     if(System.getenv("SNAP_CI")) {
-        flyway.setDataSource(System.getenv("SNAP_DB_MYSQL_JDBC_URL"),
-                System.getenv("SNAP_DB_MYSQL_USER"),
-                System.getenv("SNAP_DB_MYSQL_PASSWORD"))
+        dbUrl = System.getenv("SNAP_DB_MYSQL_JDBC_URL")
+        dbUser = System.getenv("SNAP_DB_MYSQL_USER")
+        dbPassword = System.getenv("SNAP_DB_MYSQL_PASSWORD")
     }
     else {
-        flyway.setDataSource("jdbc:mysql://192.168.33.10:3306/auction", "uat", "password")
+        dbUrl = "jdbc:mysql://192.168.33.10:3306/auction"
+        dbUser = "uat"
+        dbPassword = "password"
     }
 
+    Flyway flyway = new Flyway()
+
+    flyway.setDataSource(dbUrl, dbUser, dbPassword)
     flyway.setLocations("filesystem:src/uat/resources/db/migration")
     flyway.clean()
     flyway.migrate()
 
     BasicDataSource dataSource = new BasicDataSource()
     dataSource.setDriverClassName("com.mysql.jdbc.Driver")
-    dataSource.setUrl("jdbc:mysql://192.168.33.10:3306/auction")
-    dataSource.setUsername("uat")
-    dataSource.setPassword("password")
+    dataSource.setUrl(dbUrl)
+    dataSource.setUsername(dbUser)
+    dataSource.setPassword(dbPassword)
     jdbcTemplate = new NamedParameterJdbcTemplate(dataSource)
 }
 
