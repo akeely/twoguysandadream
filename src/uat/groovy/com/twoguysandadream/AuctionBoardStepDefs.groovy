@@ -102,7 +102,7 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
 
     http.request(Method.GET, JSON) {
         println "Request: /legacy/auction/league/$league"
-        uri.path = "/legacy/auction/league/$league"
+        uri.path = URLEncoder.encode("/legacy/auction/league/$league", "UTF-8")
 
         response.success = { resp, json ->
             requestResponse = json
