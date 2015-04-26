@@ -30,7 +30,7 @@ Before() {
 
     Flyway flyway = new Flyway()
 
-    if(System.getenv("SNAP_DB_MYSQL_JDBC_URL")) {
+    if(System.getenv("SNAP_CI")) {
         flyway.setDataSource(System.getenv("SNAP_DB_MYSQL_JDBC_URL"),
                 System.getenv("SNAP_DB_MYSQL_USER"),
                 System.getenv("SNAP_DB_MYSQL_PASSWORD"))
