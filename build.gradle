@@ -17,10 +17,6 @@ apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 
-name = 'twoguysandadream'
-group = 'com.twoguysandadream'
-
-
 dependencyManagement {
     imports {
         mavenBom 'io.spring.platform:platform-bom:1.1.1.RELEASE'
