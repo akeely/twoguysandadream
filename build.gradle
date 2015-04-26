@@ -74,6 +74,7 @@ dependencies {
     uatCompile "mysql:mysql-connector-java"
     uatCompile "com.mchange:c3p0"
     uatCompile "org.springframework:spring-jdbc"
+    uatCompile "org.springframework:spring-web"
     uatCompile "org.apache.commons:commons-dbcp2"
 }
 
