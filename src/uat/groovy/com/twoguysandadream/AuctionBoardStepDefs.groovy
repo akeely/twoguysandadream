@@ -30,7 +30,15 @@ Before() {
 
     Flyway flyway = new Flyway()
 
-    flyway.setDataSource("jdbc:mysql://192.168.33.10:3306/auction", "uat", "password")
+    if(System.getenv("SNAP_DB_MYSQL_JDBC_URL")) {
+        flyway.setDataSource(System.getenv("SNAP_DB_MYSQL_JDBC_URL"),
+                System.getenv("SNAP_DB_MYSQL_USER"),
+                System.getenv("SNAP_DB_MYSQL_PASSWORD"))
+    }
+    else {
+        flyway.setDataSource("jdbc:mysql://192.168.33.10:3306/auction", "uat", "password")
+    }
+
     flyway.setLocations("filesystem:src/uat/resources/db/migration")
     flyway.clean()
     flyway.migrate()
