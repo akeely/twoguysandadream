@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0034)http://localhost:8080/sample/login -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>TwoGuysAndADream.com : Login</title>
+    <link href="./login/bootstrap.css" rel="stylesheet">
+    <style type="text/css" xml:space="preserve">
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      .container {
+        width: auto;
+        max-width: 680px;
+      }
+      .container .credit {
+        margin: 20px 0;
+        text-align: center;
+      }
+      a {
+          color: green;
+      }
+      .navbar-form {
+        margin-left: 1em;
+      }
+    </style>
+    <link href="./login/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./login/openid.css">
+  </head>
+
+
+  <body>
+      <!-- Begin page content -->
+      <div class="container">
+        
+        <div>
+        <form name="f" method="post" id="openid_form" action="/login/openid">
+            <input type="hidden" name="action" value="verify">
+	        <fieldset>
+                <legend>Sign-in or Create New Account</legend>
+                
+                
+	            <div id="openid_choice" style="display: block;">
+                    <p>Sign in using Yahoo!</p>
+                    <div id="openid_btns"></div>
+
+                </div>
+
+                <div id="openid_input_area"></div>
+	        </fieldset>
+	    </form>
+	    
+    <script type="text/javascript" src="./login/jquery-1.2.6.min.js"><!-- --></script>
+    <script type="text/javascript" src="./login/openid-jquery.js"><!-- --></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        openid.init('openid_identifier');
+    });
+    </script>
+    </div>
+      </div>
+
+      <div id="push"><!--  --></div>
+    </div>
+
+  
+<script id="hiddenlpsubmitdiv" style="display: none;"></script></body></html>

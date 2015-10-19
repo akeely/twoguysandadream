@@ -1,6 +1,7 @@
 package com.twoguysandadream.resources.legacy;
 
 import com.twoguysandadream.core.*;
+import com.twoguysandadream.resources.ApiConfiguration;
 import com.twoguysandadream.resources.InvalidArgumentException;
 import com.twoguysandadream.resources.MissingResourceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ import java.util.stream.Collectors;
  * Created by andrew_keely on 2/10/15.
  */
 @Controller
-@RequestMapping("/legacy/auction")
+@RequestMapping(ApiConfiguration.ROOT_PATH + "/legacy/auction")
 public class AuctionBoard {
 
     private final LeagueRepository leagueRepository;
@@ -35,7 +36,7 @@ public class AuctionBoard {
     @RequestMapping("/league/{leagueName}")
     @ResponseBody
     public com.twoguysandadream.api.legacy.League checkBids(@PathVariable String leagueName,
-        @RequestParam("playerids") String playerIdsString)
+        @RequestParam(value = "playerids", required = false) String playerIdsString)
         throws IOException, MissingResourceException, InvalidArgumentException {
 
         Optional<League> league = leagueRepository.findOneByName(leagueName);
