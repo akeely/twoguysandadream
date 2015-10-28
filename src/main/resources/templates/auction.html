@@ -1,0 +1,119 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head>
+    <title tiles:fragment="title">Messages : Login</title>
+    <!-- /Simple OpenID Selector -->
+    <link rel="stylesheet" th:href="@{/css/auction.css}" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
+</head>
+<body>
+<div tiles:fragment="content">
+    <div class="pageWrap" id="auctionPage">
+
+        <form name="bid_form" id="bid_form">
+            <div id="main_div">
+                <div id="teamsBlock">
+                    <table id="stat_table" width="270">
+                        <tr align="center">
+                            <td colspan="5"><b>Current Time</b></td>
+                        </tr>
+                        <tr bgcolor="#5599cc">
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td width="120"><b>Team</b></td>
+                            <td><b>Money</b></td>
+                            <td><b>Max Bid</b></td>
+                            <td><b>Roster</b></td>
+                            <td><b>Adds</b></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div id="teamRoster">
+                                    <table id="teamRoster_table">
+                                        <tr align="center">
+                                            <td colspan="3" id="roster_team_header">Andrew</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>Player</b></td>
+                                            <td><b>Cost</b></td>
+                                            <td><b>Pos</b></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="playersBlock">
+                    <div id="submitBidsTop">
+                        <input type="hidden" name="OWNER" id="OWNER" value="Salt Bandits" />
+                        <input type="hidden" name="TEAMS" id="TEAMS" value="Andrew" />
+                        <input type="hidden" name="total_players" id="total_players" value="1" />
+                        <input type="hidden" name="league" id="league" value="Test League" />
+                        <a name="BIDDING"><b>ENTER BIDS &gt; Andrew</b></a>
+                        <input type="submit" value="Submit Bids" id="submit1" name="submit1" style="background:yellow;" onClick="sendBids(event)" />
+                        <input type="reset" value="Clear Bids" id="reset1" name="reset1" style="background:red;" />
+                    </div>
+                    <div id="global_errors"></div>
+                    <table width="690" cellpadding="4" frame="box" id="PLAYER_TABLE_1">
+                        <tr>
+                            <th>Player</th>
+                            <th>Pos</th>
+                            <th>Team</th>
+                            <th>High Bid</th>
+                            <th>Bidder</th>
+                            <th>Time Remaining</th>
+                            <th>Target</th>
+                            <th>Bid</th>
+                        </tr>
+                    </table>
+                    <div id="submitBidsBottom">
+                        <input type="submit" value="Submit Bids" id="submit1" name="submit1" style="background:yellow;" onClick="sendBids(event)" />
+                        <input type="reset" value="Clear Bids" id="reset1" name="reset1" style="background:red;" />
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
