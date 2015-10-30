@@ -30,8 +30,6 @@ def requestResponse
 
 Before() {
 
-
-
     String dbUrl
     String dbUser
     String dbPassword

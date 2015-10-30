@@ -33,6 +33,14 @@ bootRepackage {
     mainClass = "com.twoguysandadream.app.Application"
 }
 
+bootRun {
+    environment 'spring.profiles.active', 'dev'
+}
+
+bootRun.doFirst {
+    file("${project.buildDir}/logs").mkdirs()
+}
+
 configurations {
     all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
 }

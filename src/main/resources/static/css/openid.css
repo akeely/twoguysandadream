@@ -1,9 +1,4 @@
-#openid_form {
-	width: 580px;	
-}
-	#openid_form legend {
-		font-weight: bold;
-	}
+
 
 #openid_input_area {
 	clear: both;
@@ -46,9 +41,13 @@ body {
   background: url('https://upload.wikimedia.org/wikipedia/commons/1/15/Brent_Grimes-Hamburg_Sea_Devils.jpg');
 }
 
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
+.fullscreen {
+    height: 100%;
+}
