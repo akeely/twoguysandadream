@@ -1,119 +1,116 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
-<head>
-    <title tiles:fragment="title">Messages : Login</title>
-    <!-- /Simple OpenID Selector -->
+<head th:replace="default :: head">
+    <!-- Default content for prototyping. This will be replaced by Thymeleaf. -->
+    <title tiles:fragment="title">TGaaD Prototype</title>
+
     <link rel="stylesheet" th:href="@{/css/auction.css}" />
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-
-    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
-
-
-    <!-- Latest compiled and minified JavaScript -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
 </head>
 <body>
-<div tiles:fragment="content">
-    <div class="pageWrap" id="auctionPage">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Two Guys and a Dream</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Auction</a></li>
+                    <li><a href="#about">Add Player</a></li>
+                    <li><a href="#contact">Contracts</a></li>
+                    <li><a href="#contact">Draft Results</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 11px"><i class="fa fa-cog fa-2x" /></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <form name="bid_form" id="bid_form">
-            <div id="main_div">
-                <div id="teamsBlock">
-                    <table id="stat_table" width="270">
-                        <tr align="center">
-                            <td colspan="5"><b>Current Time</b></td>
-                        </tr>
-                        <tr bgcolor="#5599cc">
-                            <td colspan="5"></td>
-                        </tr>
-                        <tr>
-                            <td width="120"><b>Team</b></td>
-                            <td><b>Money</b></td>
-                            <td><b>Max Bid</b></td>
-                            <td><b>Roster</b></td>
-                            <td><b>Adds</b></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">
-                                <div id="teamRoster">
-                                    <table id="teamRoster_table">
-                                        <tr align="center">
-                                            <td colspan="3" id="roster_team_header">Andrew</td>
-                                        </tr>
-                                        <tr align="center">
-                                            <td><b>Player</b></td>
-                                            <td><b>Cost</b></td>
-                                            <td><b>Pos</b></td>
-                                        </tr>
-                                    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+        <div class="panel">
+            <div class="panel-body">
+                <table class="table table-striped table-condensed">
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Current Bid</th>
+                        <th>Bidder</th>
+                        <th>Time Remaining</th>
+                        <th>Bid</th>
+                    </tr>
+
+                    <tr th:each="bid : ${league.auctionBoard}">
+                        <td><a href="#" rel="popover" data-toggle="popover" data-placement="right"
+                               data-html="true"
+                               data-trigger="focus"
+                               data-content="${bid.player.team}"
+                                th:text="${bid.player.name}">Aaron Rodgers</a></td>
+                        <td th:text="${#strings.listJoin(bid.player.positions, ',')}">QB</td>
+                        <td th:text="${bid.amount}">$25</td>
+                        <td th:text="${bid.team}">Salt Bandits</td>
+                        <td th:text="${#calendars.format(bid.expirationTime, 'mm:ss')}">00:38</td>
+                        <td width="110">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" aria-label="Bid" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" aria-label="Bid">Bid</button>
                                 </div>
-                            </td>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="panel">
+                    <table class="table table-condensed">
+                        <tr>
+                            <th><small>Team</small></th>
+                            <th><small>Money</small></th>
+                            <th><small>Max</small></th>
+                            <th><small>Roster</small></th>
+                            <th><small>Adds</small></th>
+                        </tr>
+                        <tr th:each="team : ${league.teamStatistics}">
+                            <td><small th:text="${team.key.name}">Salt Bandits</small></td>
+                            <td><small th:text="${team.value.availableBudget}">$150</small></td>
+                            <td><small th:text="${team.value.maxBid}">$123</small></td>
+                            <td><small th:text="${team.value.openRosterSpots}">11</small></td>
+                            <td><small th:text="${team.value.adds}">2</small></td>
                         </tr>
                     </table>
                 </div>
-
-                <div id="playersBlock">
-                    <div id="submitBidsTop">
-                        <input type="hidden" name="OWNER" id="OWNER" value="Salt Bandits" />
-                        <input type="hidden" name="TEAMS" id="TEAMS" value="Andrew" />
-                        <input type="hidden" name="total_players" id="total_players" value="1" />
-                        <input type="hidden" name="league" id="league" value="Test League" />
-                        <a name="BIDDING"><b>ENTER BIDS &gt; Andrew</b></a>
-                        <input type="submit" value="Submit Bids" id="submit1" name="submit1" style="background:yellow;" onClick="sendBids(event)" />
-                        <input type="reset" value="Clear Bids" id="reset1" name="reset1" style="background:red;" />
-                    </div>
-                    <div id="global_errors"></div>
-                    <table width="690" cellpadding="4" frame="box" id="PLAYER_TABLE_1">
+                <div class="panel hidden roster" th:each="team : ${league.rosters}" th:id="|roster-${team.key.name}|">
+                    <table class="table table-condensed">
                         <tr>
-                            <th>Player</th>
-                            <th>Pos</th>
-                            <th>Team</th>
-                            <th>High Bid</th>
-                            <th>Bidder</th>
-                            <th>Time Remaining</th>
-                            <th>Target</th>
-                            <th>Bid</th>
+                            <th><small>Player</small></th>
+                            <th><small>Cost</small></th>
+                            <th><small>Position</small></th>
+                        </tr>
+                        <tr th:each="player : ${team.value}">
+                            <td><small th:text="${player.player.name}">Odell Beckham, Jr.</small></td>
+                            <td><small th:text="${player.cost}">$8</small></td>
+                            <td><small th:text="${#strings.listJoin(player.player.positions, ',')}">WR</small></td>
                         </tr>
                     </table>
-                    <div id="submitBidsBottom">
-                        <input type="submit" value="Submit Bids" id="submit1" name="submit1" style="background:yellow;" onClick="sendBids(event)" />
-                        <input type="reset" value="Clear Bids" id="reset1" name="reset1" style="background:red;" />
-                    </div>
                 </div>
             </div>
-        </form>
-
+        </div>
     </div>
-</div>
+
+<div th:include="default :: footer"></div>
 </body>
 </html>

@@ -101,8 +101,8 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
     HTTPBuilder http = new HTTPBuilder("http://localhost:8080")
 
     http.request(Method.GET, JSON) {
-        println "Request: /legacy/auction/league/$league"
-        uri.path = "/legacy/auction/league/$league"
+        println "Request: /api/legacy/auction/league/$league"
+        uri.path = "/api/legacy/auction/league/$league"
         uri.query = [playerids:""]
 
         response.success = { resp, json ->
