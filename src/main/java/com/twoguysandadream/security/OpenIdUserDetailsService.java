@@ -2,6 +2,7 @@ package com.twoguysandadream.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.security.core.userdetails.User;
@@ -19,12 +20,18 @@ public class OpenIdUserDetailsService implements AuthenticationUserDetailsServic
 
     private static final Logger LOG = LoggerFactory.getLogger(OpenIdUserDetailsService.class);
 
-    @Override public UserDetails loadUserDetails(OpenIDAuthenticationToken token)
+    private final AuctionUserRepository userRepository;
+
+    @Autowired
+    public OpenIdUserDetailsService(AuctionUserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override public AuctionUser loadUserDetails(OpenIDAuthenticationToken token)
         throws UsernameNotFoundException {
 
         LOG.debug("Loading user [{}] with token [{}]", token.getName(), token);
 
-        return new User(token.getName(), "",
-            AuthorityUtils.createAuthorityList("ROLE_USER"));
+        return userRepository.findOrCreate(token.getName());
     }
 }

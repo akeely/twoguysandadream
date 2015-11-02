@@ -3,7 +3,10 @@ package com.twoguysandadream.controller;
 
 import com.twoguysandadream.core.*;
 import com.twoguysandadream.resources.MissingResourceException;
+import com.twoguysandadream.security.AuctionUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,15 +42,15 @@ public class AuctionController {
     }
 
     @RequestMapping("/league/{leagueName}/auction")
-    public ModelAndView auctionBoard(@PathVariable String leagueName)
-        throws MissingResourceException {
+    public ModelAndView auctionBoard(@PathVariable String leagueName, @AuthenticationPrincipal
+        AuctionUser user) throws MissingResourceException {
 
         ModelAndView mav = new ModelAndView("auction");
         Optional<League> league = leagueRepository.findOneByName(leagueName);
         league.orElseThrow(() -> new MissingResourceException("league: " + leagueName));
 
         mav.addObject("league", league.get());
-
+        mav.addObject("user", user);
         return mav;
     }
 }
