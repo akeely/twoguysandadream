@@ -35,19 +35,14 @@ public class AuctionController {
         return "login";
     }
 
-    @RequestMapping("/auction")
-    public String auction() {
 
-        return "auction";
-    }
-
-    @RequestMapping("/league/{leagueName}/auction")
-    public ModelAndView auctionBoard(@PathVariable String leagueName, @AuthenticationPrincipal
+    @RequestMapping("/league/{leagueId}/auction")
+    public ModelAndView auctionBoard(@PathVariable long leagueId, @AuthenticationPrincipal
         AuctionUser user) throws MissingResourceException {
 
         ModelAndView mav = new ModelAndView("auction");
-        Optional<League> league = leagueRepository.findOneByName(leagueName);
-        league.orElseThrow(() -> new MissingResourceException("league: " + leagueName));
+        Optional<League> league = leagueRepository.findOne(leagueId);
+        league.orElseThrow(() -> new MissingResourceException("league: " + leagueId));
 
         mav.addObject("league", league.get());
         mav.addObject("user", user);

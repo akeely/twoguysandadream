@@ -38,3 +38,11 @@ SET p.leagueid=l.id;
 ALTER TABLE `players_won` DROP `league`;
 ALTER TABLE `players_won` MODIFY `leagueid` INT NOT NULL;
 
+-- Update positions to use leagueID
+ALTER TABLE `positions` ADD `leagueid` INT NULL;
+UPDATE positions AS p
+  INNER JOIN leagues AS l
+  ON p.league=l.name
+SET p.leagueid=l.id;
+ALTER TABLE `positions` DROP `league`;
+ALTER TABLE `positions` MODIFY `leagueid` INT NOT NULL;

@@ -27,6 +27,8 @@ public class LeagueDao implements LeagueRepository {
 
     @Value("${league.findOne}")
     private String findOneQuery;
+    @Value("${league.findOneByName}")
+    private String findOneByNameQuery;
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
     @Value("${league.findBids}")
@@ -36,13 +38,17 @@ public class LeagueDao implements LeagueRepository {
     @Value("${league.findTeams}")
     private String findTeamsQuery;
 
-    public void setFindOneQuery(String findOneQuery) {
-        this.findOneQuery = findOneQuery;
-    }
-
     @Autowired
     public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Override
+    public Optional<League> findOne(long id) {
+
+        Optional<LeagueMetadata> metadata = getMetadata(id);
+
+        return metadata.map(this::getLeagueData);
     }
 
     @Override public Optional<League> findOneByName(String name) {
@@ -54,32 +60,32 @@ public class LeagueDao implements LeagueRepository {
 
     private League getLeagueData(LeagueMetadata metadata) {
 
-        List<Bid> auctionBoard = getAuctionBoard(metadata.getName());
-        List<Team> teams = getTeams(metadata.getName());
-        return new League(-1L, metadata.getName(), getRosterSize(metadata),
+        List<Bid> auctionBoard = getAuctionBoard(metadata.getId());
+        List<Team> teams = getTeams(metadata.getId());
+        return new League(metadata.getId(), metadata.getName(), getRosterSize(metadata),
             metadata.getSalary_cap(), auctionBoard, teams);
     }
 
-    private List<Team> getTeams(String name) {
+    private List<Team> getTeams(long leagueId) {
 
-        Map<String,List<RosteredPlayer>> rosters = getRosters(name);
+        Map<String,List<RosteredPlayer>> rosters = getRosters(leagueId);
 
-        return jdbcTemplate.query(findTeamsQuery, Collections.singletonMap("leagueName", name),
+        return jdbcTemplate.query(findTeamsQuery, Collections.singletonMap("leagueId", leagueId),
             new TeamRowMapper(rosters));
     }
 
-    private Map<String,List<RosteredPlayer>> getRosters(String leagueName) {
+    private Map<String,List<RosteredPlayer>> getRosters(long leagueId) {
 
         RosteredPlayerCallbackHandler handler = new RosteredPlayerCallbackHandler();
-        jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueName", leagueName),
+        jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueId", leagueId),
             handler);
 
         return handler.getRosters();
     }
 
-    private List<Bid> getAuctionBoard(String leagueName) {
+    private List<Bid> getAuctionBoard(long leagueId) {
 
-        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueName", leagueName),
+        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueId", leagueId),
             new BidRowMapper());
     }
 
@@ -88,7 +94,7 @@ public class LeagueDao implements LeagueRepository {
         Sport sport = Sport.valueOf(metadata.getSport().toUpperCase());
 
         int additionalRosterSpots = jdbcTemplate.queryForObject(rosterSpotsQuery,
-            Collections.singletonMap("leagueName", metadata.getName()), Integer.class);
+            Collections.singletonMap("leagueId", metadata.getId()), Integer.class);
 
         return sport.getBaseRosterSize() + additionalRosterSpots;
     }
@@ -97,7 +103,19 @@ public class LeagueDao implements LeagueRepository {
 
         try {
             return Optional.of(jdbcTemplate
-                .queryForObject(findOneQuery, Collections.singletonMap("leagueName", name),
+                .queryForObject(findOneByNameQuery, Collections.singletonMap("leagueName", name),
+                    new BeanPropertyRowMapper<>(LeagueMetadata.class)));
+        }
+        catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    private Optional<LeagueMetadata> getMetadata(long id) {
+
+        try {
+            return Optional.of(jdbcTemplate
+                .queryForObject(findOneQuery, Collections.singletonMap("leagueId", id),
                     new BeanPropertyRowMapper<>(LeagueMetadata.class)));
         }
         catch (EmptyResultDataAccessException e) {
@@ -118,9 +136,18 @@ public class LeagueDao implements LeagueRepository {
 
     public static class LeagueMetadata {
 
+        private long id;
         private String name;
         private BigDecimal salary_cap;
         private String sport;
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
 
         public String getName() {
             return name;
@@ -177,11 +204,12 @@ public class LeagueDao implements LeagueRepository {
 
         @Override public Team mapRow(ResultSet rs, int rowNum) throws SQLException {
 
+            long id = rs.getLong("id");
             String name = rs.getString("name");
             Collection<RosteredPlayer> roster = rosters.getOrDefault(name, Collections.emptyList());
             BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
             int adds = rs.getInt("num_adds");
-            return new Team(-1L,name,roster,budgetAdjustment,adds);
+            return new Team(id,name,roster,budgetAdjustment,adds);
         }
     }
 

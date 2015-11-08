@@ -39,7 +39,6 @@
             <div class="col-md-8">
         <div class="panel">
             <div class="panel-body">
-                <h4 th:text="|Welcome ${user.username} [${user.id}]|"></h4>
                 <table class="table table-striped table-condensed">
                     <tr>
                         <th>Player</th>
@@ -50,12 +49,13 @@
                         <th>Bid</th>
                     </tr>
 
-                    <tr th:each="bid : ${league.auctionBoard}">
+                    <tr th:each="bid : ${league.auctionBoard}" th:id="|auction.${bid.player.id}|">
                         <td><a href="#" rel="popover" data-toggle="popover" data-placement="right"
                                data-html="true"
                                data-trigger="focus"
-                               data-content="${bid.player.team}"
-                                th:text="${bid.player.name}">Aaron Rodgers</a></td>
+                               data-content="Team placeholder here."
+                               th:attr="data-content=|Team: ${bid.player.realTeam}&lt;br/&gt;Bye: ???|"
+                               th:text="${bid.player.name}">Aaron Rodgers</a></td>
                         <td th:text="${#strings.listJoin(bid.player.positions, ',')}">QB</td>
                         <td th:text="${bid.amount}">$25</td>
                         <td th:text="${bid.team}">Salt Bandits</td>
@@ -94,7 +94,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="panel hidden roster" th:each="team : ${league.rosters}" th:id="|roster-${team.key.name}|">
+                <div class="panel hidden roster" th:each="team : ${league.rosters}" th:id="|roster.${team.key.id}|">
                     <table class="table table-condensed">
                         <tr>
                             <th><small>Player</small></th>
