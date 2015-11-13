@@ -20,7 +20,7 @@ var AuctionBoard = React.createClass({
             <Bid key={bid.player.id} bid={bid}/>
         );
         return (
-            <table>
+            <table className="table table-striped table-condensed">
                 <thead>
                 <tr>
                     <th>Player</th>
