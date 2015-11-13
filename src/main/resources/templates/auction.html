@@ -3,11 +3,20 @@
     <!-- Default content for prototyping. This will be replaced by Thymeleaf. -->
     <title tiles:fragment="title">TGaaD Prototype</title>
 
-    <link rel="stylesheet" th:href="@{/css/auction.css}" />
+    <!-- Bootstrap dependencies -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
     <script src="//code.jquery.com/jquery-1.11.3.min.js" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
+
+    <!-- React dependencies -->
+    <script src="https://fb.me/react-0.14.2.js" />
+    <script src="https://fb.me/react-dom-0.14.2.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" />
+
+    <!-- Custom dependencies -->
+    <link rel="stylesheet" th:href="@{/css/auction.css}" />
+    <script th:src="@{/js/auction.jsx}" type="text/babel" />
 </head>
 <body>
     <nav class="navbar navbar-default navbar-static-top">
@@ -38,7 +47,8 @@
         <div class="row">
             <div class="col-md-8">
         <div class="panel">
-            <div class="panel-body">
+            <div class="panel-body" id="example">
+                <!--
                 <table class="table table-striped table-condensed">
                     <tr>
                         <th>Player</th>
@@ -70,7 +80,7 @@
                         </td>
                     </tr>
                 </table>
-
+                -->
             </div>
         </div>
 
