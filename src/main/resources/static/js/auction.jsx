@@ -24,7 +24,10 @@ var AuctionBoard = React.createClass({
                 <thead>
                 <tr>
                     <th>Player</th>
-                    <th>Leading Bidder</th>
+                    <th>Position</th>
+                    <th>Current Bid</th>
+                    <th>Bidder</th>
+                    <th>Time Remaining</th>
                     <th>Bid</th>
                 </tr>
                 </thead>
