@@ -21,12 +21,16 @@ var AuctionBoard = React.createClass({
         );
         return (
             <table>
+                <thead>
                 <tr>
                     <th>Player</th>
                     <th>Leading Bidder</th>
                     <th>Bid</th>
                 </tr>
+                </thead>
+                <tbody>
                 {bids}
+                </tbody>
             </table>
         )
     }
