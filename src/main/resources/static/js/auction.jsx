@@ -1,16 +1,57 @@
+var EXPIRED = 'EXPIRED';
+
 var App = React.createClass({
+
+    getMatchingBid: function(playerId, bids) {
+
+        for (var i = 0; i < bids.length; i++) {
+            if (bids[i].player.id === playerId) {
+                return bids[i];
+            }
+        }
+
+        return null;
+    },
+
+    mergePlayers: function(existing, updated) {
+
+        var mergedBids = [];
+        for (var i = 0; i < existing.length; i++) {
+            var updatedBid = this.getMatchingBid(existing[i].player.id, updated);
+            if (updatedBid === null) {
+                existing[i].expirationTime = EXPIRED;
+                mergedBids.push(existing[i]);
+            }
+            else {
+                mergedBids.push(updatedBid);
+            }
+        }
+
+        for (var i = 0; i < updated.length; i++) {
+            var existingBid = this.getMatchingBid(updated[i].player.id, existing);
+            if (existingBid === null) {
+                mergedBids.push(updated[i]);
+            }
+        }
+
+        return mergedBids;
+    },
+
     loadAuctionBoard: function () {
         $.ajax('/api/league/1/bid').done(response => {
-         this.setState({auctionPlayers: response});
+
+            var merged = this.mergePlayers(this.state.auctionPlayers, response);
+            this.setState({auctionPlayers: merged});
         });
     },
+
 
     getInitialState: function () {
         return ({auctionPlayers: []});
     },
     componentDidMount: function () {
         this.loadAuctionBoard();
-        // TODO: setInterval(this.loadAuctionBoard, this.props.pollInterval);
+        setInterval(this.loadAuctionBoard, this.props.pollInterval);
     },
     render: function () {
         return (
@@ -42,10 +83,45 @@ var AuctionBoard = React.createClass({
             </table>
         )
     }
-})
+});
+
+var BidEntry = React.createClass({
+    render: function() {
+        return (
+            <div className="input-group input-group-sm">
+                <input type="text" className="form-control" aria-label="Bid" />
+                <div className="input-group-btn">
+                    <button type="button" className="btn btn-default" aria-label="Bid">Bid</button>
+                </div>
+            </div>
+        );
+    }
+});
+
+var RemoveBid = React.createClass({
+    render: function() {
+        return (
+            <p>EXPIRED</p>
+        );
+    }
+});
+
+var BidColumn = React.createClass({
+    render: function() {
+        var column;
+        if(this.props.bid.expirationTime === EXPIRED) {
+            return (<RemoveBid bid={this.props.bid} />);
+        }
+        else {
+            return (<BidEntry />);
+        }
+    }
+});
 
 var Bid = React.createClass({
     render: function () {
+
+
         return (
             <tr id="bid.{this.props.bid.player.id}">
                 <td>{this.props.bid.player.name}</td>
@@ -57,12 +133,7 @@ var Bid = React.createClass({
                 <td>{this.props.bid.team}</td>
                 <td>{this.props.bid.expirationTime}</td>
                 <td width="110">
-                    <div className="input-group input-group-sm">
-                        <input type="text" className="form-control" aria-label="Bid" />
-                        <div className="input-group-btn">
-                            <button type="button" className="btn btn-default" aria-label="Bid">Bid</button>
-                        </div>
-                    </div>
+                    <BidColumn bid={this.props.bid} />
                 </td>
             </tr>
         )
