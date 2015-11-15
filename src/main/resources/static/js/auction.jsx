@@ -101,7 +101,7 @@ var BidEntry = React.createClass({
 var RemoveBid = React.createClass({
     render: function() {
         return (
-            <p>EXPIRED</p>
+            <i className="fa fa-times-circle fa-lg"></i>
         );
     }
 });
@@ -123,7 +123,7 @@ var Bid = React.createClass({
 
 
         return (
-            <tr id="bid.{this.props.bid.player.id}">
+            <tr id={"bid." + this.props.bid.player.id}>
                 <td>{this.props.bid.player.name}</td>
                 <td>{this.props.bid.player.positions
                         .map(function(pos){return pos.name;})
