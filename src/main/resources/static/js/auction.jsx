@@ -20,6 +20,7 @@ var App = React.createClass({
             var updatedBid = this.getMatchingBid(existing[i].player.id, updated);
             if (updatedBid === null) {
                 existing[i].expirationTime = EXPIRED;
+                existing[i].removeFunction = this.removePlayer.bind(this, existing[i].player.id);
                 mergedBids.push(existing[i]);
             }
             else {
@@ -37,6 +38,18 @@ var App = React.createClass({
         return mergedBids;
     },
 
+    filterOutPlayer: function(playerId, bid) {
+        return playerId != bid.player.id;
+    },
+
+    removePlayer: function(id) {
+
+        var filterId = this.filterOutPlayer.bind(this, id);
+        var updatedState = this.state.auctionPlayers.filter(filterId);
+
+        this.setState({auctionPlayers: updatedState});
+    },
+
     loadAuctionBoard: function () {
         $.ajax('/api/league/1/bid').done(response => {
 
@@ -45,8 +58,8 @@ var App = React.createClass({
         });
     },
 
-
     getInitialState: function () {
+
         return ({auctionPlayers: []});
     },
     componentDidMount: function () {
@@ -55,7 +68,7 @@ var App = React.createClass({
     },
     render: function () {
         return (
-            <AuctionBoard auctionPlayers={this.state.auctionPlayers}/>
+            <AuctionBoard auctionPlayers={this.state.auctionPlayers} />
         )
     }
 });
@@ -63,7 +76,7 @@ var App = React.createClass({
 var AuctionBoard = React.createClass({
     render: function () {
         var bids = this.props.auctionPlayers.map(bid =>
-            <Bid key={bid.player.id} bid={bid}/>
+            <Bid key={bid.player.id} bid={bid} />
         );
         return (
             <table className="table table-striped table-condensed">
@@ -101,7 +114,7 @@ var BidEntry = React.createClass({
 var RemoveBid = React.createClass({
     render: function() {
         return (
-            <i className="fa fa-times-circle fa-lg"></i>
+            <i className="fa fa-times-circle fa-lg" onClick={this.props.bid.removeFunction}></i>
         );
     }
 });
@@ -132,7 +145,7 @@ var Bid = React.createClass({
                 <td>{this.props.bid.amount}</td>
                 <td>{this.props.bid.team}</td>
                 <td>{this.props.bid.expirationTime}</td>
-                <td width="110">
+                <td width="110" className="text-center">
                     <BidColumn bid={this.props.bid} />
                 </td>
             </tr>
