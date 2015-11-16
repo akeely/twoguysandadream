@@ -114,7 +114,9 @@ var BidEntry = React.createClass({
 var RemoveBid = React.createClass({
     render: function() {
         return (
-            <i className="fa fa-times-circle fa-lg" onClick={this.props.bid.removeFunction}></i>
+            <a href="#" onClick={this.props.bid.removeFunction}>
+                <i className="fa fa-times-circle fa-lg" />
+            </a>
         );
     }
 });
