@@ -2,6 +2,7 @@ package com.twoguysandadream.resources;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import com.twoguysandadream.core.Bid;
 import com.twoguysandadream.core.League;
@@ -30,7 +31,14 @@ public class BidResource {
         Optional<League> league = leagueRepository.findOne(leagueId);
 
         return league
-            .map(League::getAuctionBoard)
+            .map(this::getActiveBids)
             .orElseThrow(() -> new MissingResourceException("league [" + leagueId + "]"));
+    }
+
+    private List<Bid> getActiveBids(League league) {
+
+        return league.getAuctionBoard().stream()
+            .filter(b -> b.getSecondsRemaining() > 0)
+            .collect(Collectors.toList());
     }
 }

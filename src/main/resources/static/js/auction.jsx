@@ -19,7 +19,7 @@ var App = React.createClass({
         for (var i = 0; i < existing.length; i++) {
             var updatedBid = this.getMatchingBid(existing[i].player.id, updated);
             if (updatedBid === null) {
-                existing[i].expirationTime = EXPIRED;
+                existing[i].secondsRemaining = EXPIRED;
                 existing[i].removeFunction = this.removePlayer.bind(this, existing[i].player.id);
                 mergedBids.push(existing[i]);
             }
@@ -76,7 +76,7 @@ var App = React.createClass({
 var AuctionBoard = React.createClass({
     render: function () {
         var bids = this.props.auctionPlayers.map(bid =>
-            <Bid key={bid.player.id} bid={bid} />
+            <Bid key={"bid." + bid.player.id} bid={bid} />
         );
         return (
             <table className="table table-striped table-condensed">
@@ -124,7 +124,7 @@ var RemoveBid = React.createClass({
 var BidColumn = React.createClass({
     render: function() {
         var column;
-        if(this.props.bid.expirationTime === EXPIRED) {
+        if(this.props.bid.secondsRemaining === EXPIRED) {
             return (<RemoveBid bid={this.props.bid} />);
         }
         else {
@@ -138,7 +138,7 @@ var Bid = React.createClass({
 
 
         return (
-            <tr id={"bid." + this.props.bid.player.id}>
+            <tr id={"bid." + this.props.bid.player.id} className={this.props.bid.secondsRemaining === EXPIRED ? 'danger' : ''}>
                 <td>{this.props.bid.player.name}</td>
                 <td>{this.props.bid.player.positions
                         .map(function(pos){return pos.name;})
@@ -146,7 +146,7 @@ var Bid = React.createClass({
                 </td>
                 <td>{this.props.bid.amount}</td>
                 <td>{this.props.bid.team}</td>
-                <td>{this.props.bid.expirationTime}</td>
+                <td className={this.props.bid.secondsRemaining < 21 ? 'warning' : ''}>{this.props.bid.secondsRemaining}</td>
                 <td width="110" className="text-center">
                     <BidColumn bid={this.props.bid} />
                 </td>
@@ -156,7 +156,7 @@ var Bid = React.createClass({
 });
 
 ReactDOM.render(
-    <App pollInterval="2000" />,
+    <App pollInterval="500" />,
     document.getElementById('example')
   );
 

@@ -1,6 +1,7 @@
 package com.twoguysandadream.core;
 
 import java.math.BigDecimal;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by andrew_keely on 2/20/15.
@@ -34,5 +35,11 @@ public class Bid {
 
     public String getTeam() {
         return team;
+    }
+
+    public long getSecondsRemaining() {
+
+        long millisRemaining = expirationTime - System.currentTimeMillis();
+        return TimeUnit.MILLISECONDS.toSeconds(millisRemaining);
     }
 }
