@@ -4,22 +4,25 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.1.RELEASE"
         classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
         classpath 'mysql:mysql-connector-java:5.1.34'
-        classpath 'io.spring.gradle:dependency-management-plugin:0.5.3.RELEASE'
     }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "3.2"
+    id "io.spring.dependency-management" version "0.5.4.RELEASE"
 }
 
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
-apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 
 dependencyManagement {
     imports {
-        mavenBom 'io.spring.platform:platform-bom:1.1.3.RELEASE'
+        mavenBom 'io.spring.platform:platform-bom:2.0.1.RELEASE'
     }
 }
 
@@ -43,19 +46,6 @@ bootRun.doFirst {
 
 configurations {
     all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
-}
-
-/**
- * Temporary workaround to use latest Spring security. This should go away with Spring Boot 1.3
- */
-configurations.all {
-    resolutionStrategy {
-        eachDependency {
-            if (it.requested.group == 'org.springframework.security') {
-                it.useVersion '4.0.2.RELEASE'
-            }
-        }
-    }
 }
 
 sourceSets {
