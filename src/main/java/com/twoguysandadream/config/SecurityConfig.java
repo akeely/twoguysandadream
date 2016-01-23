@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    static final String LOGIN_PAGE = "/login";
+
     @Autowired
     private OpenIdUserDetailsService userDetailsService;
 
@@ -21,18 +23,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable() // TODO: Figure this out!
             .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl(LOGIN_PAGE)
                 .invalidateHttpSession(true)
                 .and()
             .authorizeRequests()
             .antMatchers("/css/**").permitAll()
             .antMatchers("/img/**").permitAll()
             .antMatchers("/js/**").permitAll()
-            .antMatchers("/api/**").permitAll() // TODO: Remove this and make it work
             .anyRequest().authenticated()
             .and()
             .openidLogin()
-            .loginPage("/login")
+            .loginPage(LOGIN_PAGE)
             .permitAll()
             .defaultSuccessUrl("/auction")
             .authenticationUserDetailsService(userDetailsService)
