@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable() // TODO: Figure this out!
+        http
             .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl(LOGIN_PAGE)
