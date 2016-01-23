@@ -170,6 +170,6 @@ var Bid = React.createClass({
 
 ReactDOM.render(
     <App pollInterval="500" />,
-    document.getElementById('example')
+    document.getElementById('auctionBoard')
   );
 
