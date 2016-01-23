@@ -134,8 +134,21 @@ var BidColumn = React.createClass({
 });
 
 var Bid = React.createClass({
+
+    toTimeString: function(time) {
+        var minutes = Math.floor(time / 60);
+        var seconds = time - (minutes * 60);
+
+        if (seconds < 10) {seconds = "0"+seconds;}
+        return minutes + ':' + seconds;
+    },
+
     render: function () {
 
+        var timeString = this.props.bid.secondsRemaining;
+        if (timeString !== EXPIRED) {
+            var timeString = this.toTimeString(this.props.bid.secondsRemaining);
+        }
 
         return (
             <tr id={"bid." + this.props.bid.player.id} className={this.props.bid.secondsRemaining === EXPIRED ? 'danger' : ''}>
@@ -146,7 +159,7 @@ var Bid = React.createClass({
                 </td>
                 <td>{this.props.bid.amount}</td>
                 <td>{this.props.bid.team}</td>
-                <td className={this.props.bid.secondsRemaining < 21 ? 'warning' : ''}>{this.props.bid.secondsRemaining}</td>
+                <td className={this.props.bid.secondsRemaining < 21 ? 'warning' : ''}>{timeString}</td>
                 <td width="110" className="text-center">
                     <BidColumn bid={this.props.bid} />
                 </td>
