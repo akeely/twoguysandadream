@@ -99,12 +99,39 @@ var AuctionBoard = React.createClass({
 });
 
 var BidEntry = React.createClass({
+
+    minBid: function() {
+        if (this.props.bid.amount < 10) {
+            return this.props.bid.amount + 0.5;
+        }
+
+        return this.props.bid.amount + 1;
+    },
+
+    stepAmount: function() {
+
+        if (this.props.bid.amount < 10) {
+            return 0.5;
+        }
+
+        return 1;
+    },
+
+    bidId: function() {
+        return this.props.bid.player.id + ".bid.amount";
+    },
+
+    bid: function() {
+        alert("Bidding on " + this.props.bid.player.name + " for $" + document.getElementById(this.bidId()).value);
+    },
+
     render: function() {
+
         return (
             <div className="input-group input-group-sm">
-                <input type="text" className="form-control" aria-label="Bid" />
+                <input type="number" className="form-control" aria-label="Bid" id={this.bidId()} min={this.minBid()} step={this.stepAmount()} />
                 <div className="input-group-btn">
-                    <button type="button" className="btn btn-default" aria-label="Bid">Bid</button>
+                    <button type="button" className="btn btn-default" aria-label="Bid" onClick={this.bid}>Bid</button>
                 </div>
             </div>
         );
@@ -128,7 +155,7 @@ var BidColumn = React.createClass({
             return (<RemoveBid bid={this.props.bid} />);
         }
         else {
-            return (<BidEntry />);
+            return (<BidEntry bid={this.props.bid} />);
         }
     }
 });
