@@ -123,6 +123,14 @@ var BidEntry = React.createClass({
 
     bid: function() {
         alert("Bidding on " + this.props.bid.player.name + " for $" + document.getElementById(this.bidId()).value);
+
+        $.ajax({
+            'url': '/api/league/1/bid/' + this.props.bid.player.id,
+            'data': JSON.stringify({ amount: document.getElementById(this.bidId()).value }),
+            'type': 'POST',
+            'processData': false,
+            'contentType': 'application/json'
+        });
     },
 
     render: function() {

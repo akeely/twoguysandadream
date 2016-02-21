@@ -69,7 +69,7 @@ public class League {
             .collect(Collectors.toMap((e) -> e.getKey().getName(),
                 (e) -> new Statistics(e.getValue()),
                 (s,a) -> s,
-                () -> new TreeMap<>()));
+                TreeMap::new));
     }
 
     @JsonProperty("TIME")

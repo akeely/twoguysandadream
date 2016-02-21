@@ -5,8 +5,15 @@ spring:
 logging:
   file: build/logs/tgaad.log
   level:
+    ROOT: INFO
     org.springframework: DEBUG
+    com.twoguysandadream: DEBUG
+
 
 server:
   tomcat:
     basedir: build/tomcat
+    accesslog:
+      enabled: true
+      directory: logs
+
