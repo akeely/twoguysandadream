@@ -22,7 +22,7 @@ apply plugin: 'idea'
 
 dependencyManagement {
     imports {
-        mavenBom 'io.spring.platform:platform-bom:2.0.1.RELEASE'
+        mavenBom 'io.spring.platform:platform-bom:2.0.2.RELEASE'
     }
 }
 
@@ -42,10 +42,6 @@ bootRun {
 
 bootRun.doFirst {
     file("${project.buildDir}/logs").mkdirs()
-}
-
-configurations {
-    all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
 }
 
 sourceSets {
