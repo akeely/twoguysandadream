@@ -69,11 +69,13 @@ dependencies {
     compile "com.mchange:c3p0"
     compile "org.springframework:spring-jdbc"
     compile "org.springframework.security:spring-security-openid"
+    compile "com.google.guava:guava"
 
     testCompile "junit:junit"
     testCompile "org.springframework:spring-test"
     testCompile "org.hsqldb:hsqldb"
     testCompile "commons-io:commons-io"
+    testCompile "org.mockito:mockito-core"
 
     uatCompile "org.codehaus.groovy:groovy-all"
     uatCompile "info.cukes:cucumber-groovy:1.2.2"

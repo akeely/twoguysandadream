@@ -21,18 +21,17 @@ public class TeamStatistics {
         this.adds = adds;
     }
 
-    public TeamStatistics(Team team, BigDecimal leagueBudget, BigDecimal minimumBid, int
-            rosterSize) {
+    public TeamStatistics(Team team, LeagueSettings settings) {
 
         this.adds = team.getAdds();
-        this.openRosterSpots = rosterSize - team.getRoster().size();
-        this.availableBudget = leagueBudget
+        this.openRosterSpots = settings.getRosterSize() - team.getRoster().size();
+        this.availableBudget = settings.getBudget()
             .add(team.getBudgetAdjustment())
             .subtract(team.getRoster().stream()
                 .map(RosteredPlayer::getCost)
                 .reduce((x,y) -> x.add(y))
-                .orElseGet(()-> BigDecimal.ZERO));
-        this.maxBid = availableBudget.subtract(minimumBid.multiply(new BigDecimal
+                .orElse(BigDecimal.ZERO));
+        this.maxBid = availableBudget.subtract(settings.getMinimumBid().multiply(new BigDecimal
                 (openRosterSpots-1)));
     }
 

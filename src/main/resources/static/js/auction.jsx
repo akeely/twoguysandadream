@@ -129,7 +129,7 @@ var BidEntry = React.createClass({
         $.ajax({
             'url': '/api/league/1/bid/' + this.props.bid.player.id,
             'data': JSON.stringify({ amount: document.getElementById(this.bidId()).value }),
-            'type': 'POST',
+            'type': 'PUT',
             'processData': false,
             'contentType': 'application/json',
             'headers': {

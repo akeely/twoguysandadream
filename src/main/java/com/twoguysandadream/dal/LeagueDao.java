@@ -15,15 +15,12 @@ import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.stream.Collectors;
 
-/**
- * Created by andrewk on 3/13/15.
- */
 @Repository
 public class LeagueDao implements LeagueRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final BidRepository bidRepository;
 
     @Value("${league.findOne}")
     private String findOneQuery;
@@ -31,16 +28,16 @@ public class LeagueDao implements LeagueRepository {
     private String findOneByNameQuery;
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
-    @Value("${league.findBids}")
-    private String findBidsQuery;
+
     @Value("${league.findRosters}")
     private String findRostersQuery;
     @Value("${league.findTeams}")
     private String findTeamsQuery;
 
     @Autowired
-    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate) {
+    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate, BidRepository bidRepository) {
         this.jdbcTemplate = jdbcTemplate;
+        this.bidRepository = bidRepository;
     }
 
     @Override
@@ -60,10 +57,16 @@ public class LeagueDao implements LeagueRepository {
 
     private League getLeagueData(LeagueMetadata metadata) {
 
-        List<Bid> auctionBoard = getAuctionBoard(metadata.getId());
+        List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
         List<Team> teams = getTeams(metadata.getId());
-        return new League(metadata.getId(), metadata.getName(), getRosterSize(metadata),
-            metadata.getSalary_cap(), auctionBoard, teams);
+        LeagueSettings settings = getSettings(metadata);
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams);
+    }
+
+    private LeagueSettings getSettings(LeagueMetadata metadata) {
+        int rosterSize = getRosterSize(metadata);
+        return new LeagueSettings(rosterSize, metadata.getSalary_cap(), metadata.getAuction_length(),
+            metadata.getBid_time_ext(), metadata.getBid_time_ext());
     }
 
     private List<Team> getTeams(long leagueId) {
@@ -81,12 +84,6 @@ public class LeagueDao implements LeagueRepository {
             handler);
 
         return handler.getRosters();
-    }
-
-    private List<Bid> getAuctionBoard(long leagueId) {
-
-        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueId", leagueId),
-            new BidRowMapper());
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
@@ -140,6 +137,7 @@ public class LeagueDao implements LeagueRepository {
         private String name;
         private BigDecimal salary_cap;
         private String sport;
+        private long auction_length, bid_time_ext, bid_time_buff;
 
         public long getId() {
             return id;
@@ -172,27 +170,33 @@ public class LeagueDao implements LeagueRepository {
         public void setSport(String sport) {
             this.sport = sport;
         }
-    }
 
-    public class BidRowMapper implements RowMapper<Bid> {
+        public long getAuction_length() {
+            return auction_length;
+        }
 
-        @Override public Bid mapRow(ResultSet rs, int rowNum) throws SQLException {
+        public void setAuction_length(long auction_length) {
+            this.auction_length = auction_length;
+        }
 
-            BigDecimal amount = rs.getBigDecimal("price");
-            long expirationTime = rs.getLong("time");
+        public long getBid_time_ext() {
+            return bid_time_ext;
+        }
 
-            String team = rs.getString("team");
+        public void setBid_time_ext(long bid_time_ext) {
+            this.bid_time_ext = bid_time_ext;
+        }
 
-            long id = rs.getLong("playerid");
-            String name = decodeString(rs.getString("name"));
-            Collection<Position> positions = Collections.singletonList(
-                new Position(rs.getString("position")));
-            String realTeam = rs.getString("realTeam");
-            Player player = new Player(id, name, positions, realTeam);
+        public long getBid_time_buff() {
+            return bid_time_buff;
+        }
 
-            return new Bid(team, player, amount, expirationTime);
+        public void setBid_time_buff(long bid_time_buff) {
+            this.bid_time_buff = bid_time_buff;
         }
     }
+
+
 
     public class TeamRowMapper implements RowMapper<Team> {
 

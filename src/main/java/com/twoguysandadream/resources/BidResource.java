@@ -8,9 +8,12 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.twoguysandadream.core.Bid;
+import com.twoguysandadream.core.BidService;
 import com.twoguysandadream.core.League;
 import com.twoguysandadream.core.LeagueRepository;
+import com.twoguysandadream.core.exception.BidException;
 import com.twoguysandadream.security.AuctionUser;
+import com.twoguysandadream.security.AuctionUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +31,15 @@ public class BidResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(BidResource.class);
 
     private final LeagueRepository leagueRepository;
+    private final AuctionUserRepository userRepository;
+    private final BidService bidService;
 
     @Autowired
-    public BidResource(LeagueRepository leagueRepository) {
+    public BidResource(LeagueRepository leagueRepository, AuctionUserRepository userRepository, BidService bidService) {
 
         this.leagueRepository = leagueRepository;
+        this.userRepository = userRepository;
+        this.bidService = bidService;
     }
 
     @RequestMapping
@@ -46,12 +53,21 @@ public class BidResource {
             .orElseThrow(() -> new MissingResourceException("league [" + leagueId + "]"));
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/{playerId}")
-    public void createBid(@PathVariable("leagueId") long leagueId, @PathVariable("playerId") long playerId,
-        @RequestBody NewBid amount, @AuthenticationPrincipal AuctionUser user) {
+    @RequestMapping(method = RequestMethod.PUT, value = "/{playerId}")
+    public void updateBid(@PathVariable("leagueId") long leagueId, @PathVariable("playerId") long playerId,
+        @RequestBody NewBid amount, @AuthenticationPrincipal AuctionUser user) throws BidException {
 
         LOGGER.info("Submitting bid of ${} for {} by {} ({}).", amount.amount, playerId, user.getUsername(),
             user.getId());
+
+        bidService.acceptBid(leagueId, user.getId(), playerId, amount.amount);
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public void addPlayer(@PathVariable("leagueId") long leagueId, @RequestBody PlayerAddition addition,
+        @AuthenticationPrincipal AuctionUser user) throws BidException {
+
+        // TODO
     }
 
     private List<Bid> getActiveBids(League league) {
@@ -61,6 +77,12 @@ public class BidResource {
             .collect(Collectors.toList());
     }
 
+    private long getTeam(AuctionUser user, long leagueId) throws MissingResourceException {
+
+        return userRepository.findTeamId(user, leagueId)
+            .orElseThrow(() -> new MissingResourceException("team [" + "-" + user.getId() + "-" +leagueId + "]"));
+    }
+
     private static class NewBid {
 
         private final BigDecimal amount;
@@ -68,6 +90,26 @@ public class BidResource {
         @JsonCreator
         NewBid(@JsonProperty("amount") BigDecimal amount) {
             this.amount = amount;
+        }
+    }
+
+    private static class PlayerAddition {
+
+        private final long playerId;
+        private final BigDecimal amount;
+
+        @JsonCreator
+        private PlayerAddition(long playerId, BigDecimal amount) {
+            this.playerId = playerId;
+            this.amount = amount;
+        }
+
+        public long getPlayerId() {
+            return playerId;
+        }
+
+        public BigDecimal getAmount() {
+            return amount;
         }
     }
 }

@@ -1,5 +1,7 @@
 package com.twoguysandadream.security;
 
+import java.util.OptionalLong;
+
 /**
  * Created by andrewk on 11/1/15.
  */
@@ -12,4 +14,13 @@ public interface AuctionUserRepository {
      * @return The user.
      */
     AuctionUser findOrCreate(String openIdToken);
+
+    /**
+     * Find the team associated with the current user in the given league.
+     *
+     * @param user The user to find the team for.
+     * @param leagueId The league that the team is in.
+     * @return The identifier of the team.
+     */
+    OptionalLong findTeamId(AuctionUser user, long leagueId);
 }

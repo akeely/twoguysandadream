@@ -18,9 +18,6 @@ import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by andrew_keely on 2/10/15.
- */
 @Controller
 @RequestMapping(ApiConfiguration.ROOT_PATH + "/legacy/auction")
 public class AuctionBoard {
@@ -84,7 +81,7 @@ public class AuctionBoard {
 
         return rosteredPlayer
             .map((p) -> rosteredPlayerToBid(p))
-            .orElse(new Bid("NA", new Player(playerId, "", Collections.emptyList(), ""),
+            .orElse(new Bid(0L, "NA", new Player(playerId, "", Collections.emptyList(), ""),
                     BigDecimal.ZERO, -1L));
     }
 
@@ -103,7 +100,7 @@ public class AuctionBoard {
 
     private Bid rosteredPlayerToBid(Map.Entry<Team,RosteredPlayer> player) {
 
-        return new Bid(player.getKey().getName(), player.getValue().getPlayer(),
+        return new Bid(player.getKey().getId(), player.getKey().getName(), player.getValue().getPlayer(),
             player.getValue().getCost(), -1L);
     }
 
