@@ -40,6 +40,14 @@
                         </tr>
 
                     </thead>
+                    <tfoot>
+                        <tr>
+                            <th><input type="text" placeholder="Search Player" /></th>
+                            <th><input type="text" placeholder="Search Team" /></th>
+                            <th><input type="text" placeholder="Search Position" /></th>
+                            <th />
+                        </tr>
+                    </tfoot>
                     <tbody>
                         <tr th:each="player : ${players}">
                             <td th:text="${player.player.player.name}">Player Name</td>
@@ -56,7 +64,21 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#results').DataTable();
+
+        var table = $('#results').DataTable();
+
+        // Apply the search
+        table.columns().every( function () {
+            var that = this;
+
+            $( 'input', this.footer() ).on( 'keyup change', function () {
+                if ( that.search() !== this.value ) {
+                    that
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
     } );
 </script>
 <div th:include="default :: footer"></div>
