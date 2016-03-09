@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource("classpath:twoguysandadream-queries.properties")
+@PropertySource("classpath:twoguysandadream-queries.xml")
 @ComponentScan("com.twoguysandadream.dal")
 public class AppConfiguration {
 
