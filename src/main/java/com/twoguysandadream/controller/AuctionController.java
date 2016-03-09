@@ -19,10 +19,12 @@ import java.util.stream.Collectors;
 public class AuctionController {
 
     private final LeagueRepository leagueRepository;
+    private final PlayerRepository playerRepository;
 
     @Autowired
-    public AuctionController(LeagueRepository leagueRepository) {
+    public AuctionController(LeagueRepository leagueRepository, PlayerRepository playerRepository) {
         this.leagueRepository = leagueRepository;
+        this.playerRepository = playerRepository;
     }
 
     @RequestMapping("/login")
@@ -56,6 +58,21 @@ public class AuctionController {
         List<WonPlayer> players = league.getRosters().entrySet().stream()
             .flatMap((e) -> e.getValue().stream().map((p) -> new WonPlayer(e.getKey(), p)))
             .collect(Collectors.toList());
+
+        mav.addObject("players", players);
+
+        return mav;
+    }
+
+    @RequestMapping("/league/{leagueId}/availableplayers")
+    public ModelAndView addPlayer(@PathVariable long leagueId, @AuthenticationPrincipal AuctionUser user)
+        throws MissingResourceException {
+
+        ModelAndView mav = new ModelAndView("addPlayer");
+        League league = leagueRepository.findOne(leagueId)
+            .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
+
+        List<Player> players = playerRepository.findAllAvailable(leagueId);
 
         mav.addObject("players", players);
 

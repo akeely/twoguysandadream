@@ -19,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -26,6 +27,8 @@ public class PlayerDao implements PlayerRepository {
 
     @Value("${player.findOne}")
     private String findOneQuery;
+    @Value("${player.findAllAvailable}")
+    private String findAllAvailableQuery;
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -44,6 +47,13 @@ public class PlayerDao implements PlayerRepository {
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
+    }
+
+    @Override
+    public List<Player> findAllAvailable(long leagueId) {
+
+        return jdbcTemplate.query(findAllAvailableQuery, new MapSqlParameterSource("leagueId", leagueId),
+            new PlayerRowMapper());
     }
 
     private static String decodeString(String string) {
@@ -66,7 +76,8 @@ public class PlayerDao implements PlayerRepository {
             Collection<Position> positions = Collections.singletonList(
                 new Position(rs.getString("position")));
             String realTeam = rs.getString("team");
-            return new Player(id, name, positions, realTeam);
+            int rank = rs.getInt("rank");
+            return new Player(id, name, positions, realTeam, rank);
         }
     }
 }

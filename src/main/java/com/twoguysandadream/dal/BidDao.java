@@ -81,7 +81,9 @@ public class BidDao implements BidRepository {
             Collection<Position> positions = Collections.singletonList(
                 new Position(rs.getString("position")));
             String realTeam = rs.getString("realTeam");
-            Player player = new Player(id, name, positions, realTeam);
+            int rank = rs.getInt("rank");
+
+            Player player = new Player(id, name, positions, realTeam, rank);
 
             return new Bid(teamId, team, player, amount, expirationTime);
         }

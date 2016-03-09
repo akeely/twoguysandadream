@@ -10,9 +10,9 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/league/1/auction">Auction</a></li>
-                <li><a href="/league/1/availableplayers">Add Player</a></li>
+                <li class="active"><a href="/league/1/availableplayers">Add Player</a></li>
                 <li><a href="#contact">Contracts</a></li>
-                <li class="active"><a href="/league/1/results">Draft Results</a></li>
+                <li><a href="/league/1/results">Draft Results</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -30,18 +30,20 @@
     <div class="row">
         <div class="col-md-8">
             <div class="panel">
-                <table class="table" id="results">
+                <table class="table" id="available">
                     <thead>
                         <tr>
+                            <th>Rank</th>
                             <th>Player</th>
                             <th>Team</th>
                             <th>Position</th>
-                            <th>Cost</th>
+                            <th />
                         </tr>
 
                     </thead>
                     <tfoot>
                         <tr>
+                            <th />
                             <th><input type="text" placeholder="Search Player" /></th>
                             <th><input type="text" placeholder="Search Team" /></th>
                             <th><input type="text" placeholder="Search Position" /></th>
@@ -50,10 +52,11 @@
                     </tfoot>
                     <tbody>
                         <tr th:each="player : ${players}">
-                            <td th:text="${player.player.player.name}">Player Name</td>
-                            <td th:text="${player.team.name}">Team Name</td>
-                            <td th:text="${#strings.listJoin(player.player.player.positions, ',')}">WR</td>
-                            <td th:text="'$' + ${player.player.cost}"></td>
+                            <td th:text="${player.rank}">Rank</td>
+                            <td th:text="${player.name}">Player Name</td>
+                            <td th:text="${player.realTeam}">Team Name</td>
+                            <td th:text="${#strings.listJoin(player.positions, ',')}">WR</td>
+                            <td><i class="fa fa-plus-circle"></i></td>
                         </tr>
                     </tbody>
                 </table>
@@ -65,7 +68,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        var table = $('#results').DataTable();
+        var table = $('#available').DataTable();
 
         // Apply the search
         table.columns().every( function () {

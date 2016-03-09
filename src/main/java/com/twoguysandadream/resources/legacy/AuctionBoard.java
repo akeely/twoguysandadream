@@ -81,7 +81,7 @@ public class AuctionBoard {
 
         return rosteredPlayer
             .map((p) -> rosteredPlayerToBid(p))
-            .orElse(new Bid(0L, "NA", new Player(playerId, "", Collections.emptyList(), ""),
+            .orElse(new Bid(0L, "NA", new Player(playerId, "", Collections.emptyList(), "", 0),
                     BigDecimal.ZERO, -1L));
     }
 

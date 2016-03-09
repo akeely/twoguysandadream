@@ -20,7 +20,7 @@
        WHERE t.leagueid = :leagueId
     ]]></entry>
     <entry key="league.findRosters"><![CDATA[
-       SELECT p.playerid,p.name,p.position,p.team AS realTeam,pw.price,t.name AS team
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.name AS team
        FROM players_won pw
        JOIN players p
          ON pw.playerid=p.playerid
@@ -38,7 +38,7 @@
        SELECT id FROM teams WHERE ownerid=:userId AND leagueid=:leagueId
     ]]></entry>
     <entry key="bid.findAll"><![CDATA[
-       SELECT p.playerid,p.name,p.position,p.team AS realTeam,t.id AS teamId,t.name AS team,ap.price,ap.time
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
        FROM auction_players ap
        JOIN players p
          ON ap.playerid=p.playerid
@@ -53,6 +53,23 @@
          AND leagueid=:leagueId
     ]]></entry>
     <entry key="player.findOne"><![CDATA[
-       SELECT playerid,name,position,team FROM player WHERE playerid=:playerId AND active=1
+       SELECT playerid,name,position,team,rank FROM player WHERE playerid=:playerId AND active=1
+    ]]></entry>
+    <entry key="player.findAllAvailable"><![CDATA[
+        SELECT p.playerid, p.name, p.position, p.team, p.rank
+        FROM players p
+        JOIN leagues l
+          ON p.sport=l.sport
+        LEFT JOIN players_won pw
+          ON l.id = pw.leagueid
+          AND p.playerid = pw.playerid
+        LEFT JOIN auction_players ap
+          ON l.id = ap.leagueid
+          AND p.playerid = ap.playerid
+        WHERE l.id=1
+          AND ap.playerid IS NULL
+          AND pw.playerid IS NULL
+          AND p.active = 1
+          ORDER BY rank
     ]]></entry>
 </properties>

@@ -2,21 +2,20 @@ package com.twoguysandadream.core;
 
 import java.util.Collection;
 
-/**
- * Created by andrew_keely on 2/20/15.
- */
 public class Player {
 
     private final long id;
     private final String name;
     private final Collection<Position> positions;
     private final String realTeam;
+    private final int rank;
 
-    public Player(long id, String name, Collection<Position> positions, String realTeam) {
+    public Player(long id, String name, Collection<Position> positions, String realTeam, int rank) {
         this.id = id;
         this.name = name;
         this.positions = positions;
         this.realTeam = realTeam;
+        this.rank = rank;
     }
 
     public long getId() {
@@ -33,5 +32,9 @@ public class Player {
 
     public String getRealTeam() {
         return realTeam;
+    }
+
+    public int getRank() {
+        return rank;
     }
 }
