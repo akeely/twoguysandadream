@@ -1,26 +1,30 @@
 package com.twoguysandadream.dal;
 
-import com.twoguysandadream.core.*;
+import com.twoguysandadream.core.Bid;
+import com.twoguysandadream.core.BidRepository;
+import com.twoguysandadream.core.League;
+import com.twoguysandadream.core.LeagueRepository;
+import com.twoguysandadream.core.LeagueSettings;
+import com.twoguysandadream.core.Team;
+import com.twoguysandadream.core.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.RowCallbackHandler;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class LeagueDao implements LeagueRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
     private final BidRepository bidRepository;
+    private final TeamRepository teamRepository;
 
     @Value("${league.findOne}")
     private String findOneQuery;
@@ -29,15 +33,12 @@ public class LeagueDao implements LeagueRepository {
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
 
-    @Value("${league.findRosters}")
-    private String findRostersQuery;
-    @Value("${league.findTeams}")
-    private String findTeamsQuery;
-
     @Autowired
-    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate, BidRepository bidRepository) {
+    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate, BidRepository bidRepository,
+        TeamRepository teamRepository) {
         this.jdbcTemplate = jdbcTemplate;
         this.bidRepository = bidRepository;
+        this.teamRepository = teamRepository;
     }
 
     @Override
@@ -71,19 +72,7 @@ public class LeagueDao implements LeagueRepository {
 
     private List<Team> getTeams(long leagueId) {
 
-        Map<String,List<RosteredPlayer>> rosters = getRosters(leagueId);
-
-        return jdbcTemplate.query(findTeamsQuery, Collections.singletonMap("leagueId", leagueId),
-            new TeamRowMapper(rosters));
-    }
-
-    private Map<String,List<RosteredPlayer>> getRosters(long leagueId) {
-
-        RosteredPlayerCallbackHandler handler = new RosteredPlayerCallbackHandler();
-        jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueId", leagueId),
-            handler);
-
-        return handler.getRosters();
+        return teamRepository.findAll(leagueId);
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
@@ -117,17 +106,6 @@ public class LeagueDao implements LeagueRepository {
         }
         catch (EmptyResultDataAccessException e) {
             return Optional.empty();
-        }
-    }
-
-    private String decodeString(String string) {
-
-        try {
-            return new String(string.getBytes("ISO-8859-1"), "UTF-8");
-        }
-        catch (UnsupportedEncodingException e) {
-
-            return string;
         }
     }
 
@@ -193,56 +171,6 @@ public class LeagueDao implements LeagueRepository {
 
         public void setBid_time_buff(long bid_time_buff) {
             this.bid_time_buff = bid_time_buff;
-        }
-    }
-
-
-
-    public class TeamRowMapper implements RowMapper<Team> {
-
-        private final Map<String,List<RosteredPlayer>> rosters;
-
-        public TeamRowMapper(Map<String, List<RosteredPlayer>> rosters) {
-            this.rosters = rosters;
-        }
-
-        @Override public Team mapRow(ResultSet rs, int rowNum) throws SQLException {
-
-            long id = rs.getLong("id");
-            String name = rs.getString("name");
-            Collection<RosteredPlayer> roster = rosters.getOrDefault(name, Collections.emptyList());
-            BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
-            int adds = rs.getInt("num_adds");
-            return new Team(id,name,roster,budgetAdjustment,adds);
-        }
-    }
-
-    public class RosteredPlayerCallbackHandler implements RowCallbackHandler {
-
-        private final Map<String,List<RosteredPlayer>> rosters = new HashMap<>();
-
-        @Override public void processRow(ResultSet rs) throws SQLException {
-
-            String team = rs.getString("team");
-
-            long id = rs.getLong("playerid");
-            String name = decodeString(rs.getString("name"));
-            Collection<Position> positions = Collections.singletonList(
-                new Position(rs.getString("position")));
-            String realTeam = rs.getString("realTeam");
-            int rank = rs.getInt("rank");
-
-            Player player = new Player(id, name, positions, realTeam, rank);
-
-            BigDecimal cost = rs.getBigDecimal("price");
-
-            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost);
-            rosters.putIfAbsent(team, new ArrayList<>());
-            rosters.get(team).add(rosteredPlayer);
-        }
-
-        public Map<String, List<RosteredPlayer>> getRosters() {
-            return rosters;
         }
     }
 

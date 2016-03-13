@@ -29,6 +29,8 @@ public class BidDao implements BidRepository {
     private String findBidsQuery;
     @Value("${bid.save}")
     private String saveBidQuery;
+    @Value("${bid.create}")
+    private String createBidQuery;
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -44,15 +46,28 @@ public class BidDao implements BidRepository {
 
     @Override public void save(long leagueId, Bid bid) {
 
-        Map<String, Object> params = ImmutableMap.<String,Object>builder()
+        Map<String, Object> params = getParams(leagueId, bid);
+
+        jdbcTemplate.update(saveBidQuery, params);
+    }
+
+
+
+    @Override public void create(long leagueId, Bid bid) {
+
+        Map<String, Object> params = getParams(leagueId, bid);
+
+        jdbcTemplate.update(createBidQuery, params);
+    }
+
+    private Map<String, Object> getParams(long leagueId, Bid bid) {
+        return ImmutableMap.<String,Object>builder()
             .put("leagueId", leagueId)
             .put("playerId", bid.getPlayer().getId())
             .put("teamId", bid.getTeamId())
             .put("amount", bid.getAmount())
             .put("expirationTime", bid.getExpirationTime())
             .build();
-
-        jdbcTemplate.update(saveBidQuery, params);
     }
 
     private static String decodeString(String string) {

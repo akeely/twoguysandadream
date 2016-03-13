@@ -14,12 +14,26 @@
     <entry key="league.rosterSpots"><![CDATA[
        SELECT COUNT(*) FROM positions WHERE leagueid = :leagueId
     ]]></entry>
-    <entry key="league.findTeams"><![CDATA[
+    <entry key="team.findAll"><![CDATA[
        SELECT t.id,t.name,t.num_adds,t.money_plusminus
        FROM teams t
        WHERE t.leagueid = :leagueId
     ]]></entry>
-    <entry key="league.findRosters"><![CDATA[
+    <entry key="team.findOne"><![CDATA[
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       FROM teams t
+       WHERE t.leagueid = :leagueId
+         AND t.id = :teamId
+    ]]></entry>
+    <entry key="team.save"><![CDATA[
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       FROM teams t
+       UPDATE teams
+       SET name = :name, num_adds = :adds, money_plusminus = :budgetAdjustment
+       WHERE leagueid = :leagueId
+         AND id = :teamId
+    ]]></entry>
+    <entry key="team.findRosters"><![CDATA[
        SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.name AS team
        FROM players_won pw
        JOIN players p
@@ -51,6 +65,12 @@
        SET time=:expirationTime, teamid=:teamId, price=:amount
        WHERE playerid=:playerId
          AND leagueid=:leagueId
+    ]]></entry>
+    <entry key="bid.create"><![CDATA[
+       INSERT INTO auction_players
+           (playerid,price,time,rfa_override,teamid,leagueid)
+       VALUES
+           (:playerId, :amount, :expirationTime,'NA', :teamId, :leagueId);
     ]]></entry>
     <entry key="player.findOne"><![CDATA[
        SELECT playerid,name,position,team,rank FROM player WHERE playerid=:playerId AND active=1

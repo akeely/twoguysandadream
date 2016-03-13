@@ -11,10 +11,10 @@ public class Bid {
     private final BigDecimal amount;
     private final long expirationTime;
     private final Player player;
-    private final long teamId;
+    private final Long teamId;
     private final String team;
 
-    public Bid(long teamId, String team, Player player, BigDecimal amount, long expirationTime) {
+    public Bid(Long teamId, String team, Player player, BigDecimal amount, long expirationTime) {
 
         this.amount = amount;
         this.expirationTime = expirationTime;
@@ -35,7 +35,7 @@ public class Bid {
         return player;
     }
 
-    public long getTeamId() {
+    public Long getTeamId() {
         return teamId;
     }
 

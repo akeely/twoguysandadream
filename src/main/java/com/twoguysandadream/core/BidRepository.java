@@ -9,4 +9,5 @@ public interface BidRepository {
 
     List<Bid> findAll(long leagueId);
     void save(long leagueId, Bid bid);
+    void create(long leagueId, Bid bid);
 }

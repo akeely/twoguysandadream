@@ -17,11 +17,13 @@ import com.twoguysandadream.security.AuctionUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -55,19 +57,28 @@ public class BidResource {
 
     @RequestMapping(method = RequestMethod.PUT, value = "/{playerId}")
     public void updateBid(@PathVariable("leagueId") long leagueId, @PathVariable("playerId") long playerId,
-        @RequestBody NewBid amount, @AuthenticationPrincipal AuctionUser user) throws BidException {
+        @RequestBody NewBid amount, @AuthenticationPrincipal AuctionUser user)
+        throws BidException, MissingResourceException {
 
         LOGGER.info("Submitting bid of ${} for {} by {} ({}).", amount.amount, playerId, user.getUsername(),
             user.getId());
 
-        bidService.acceptBid(leagueId, user.getId(), playerId, amount.amount);
+        long teamId = getTeam(user, leagueId);
+        bidService.acceptBid(leagueId, teamId, playerId, amount.amount);
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public void addPlayer(@PathVariable("leagueId") long leagueId, @RequestBody PlayerAddition addition,
-        @AuthenticationPrincipal AuctionUser user) throws BidException {
+        @RequestParam(name = "commissioner", required = false, defaultValue = "false") boolean isCommisioner,
+        @AuthenticationPrincipal AuctionUser user) throws BidException, MissingResourceException {
 
-        // TODO
+        long teamId = getTeam(user, leagueId);
+
+        if (isCommisioner) {
+            bidService.addPlayerAsCommisioner(leagueId, teamId, addition.playerId);
+        } else {
+            bidService.addPlayer(leagueId, teamId, addition.playerId);
+        }
     }
 
     private List<Bid> getActiveBids(League league) {
@@ -96,20 +107,14 @@ public class BidResource {
     private static class PlayerAddition {
 
         private final long playerId;
-        private final BigDecimal amount;
 
         @JsonCreator
-        private PlayerAddition(long playerId, BigDecimal amount) {
+        private PlayerAddition(long playerId) {
             this.playerId = playerId;
-            this.amount = amount;
         }
 
         public long getPlayerId() {
             return playerId;
-        }
-
-        public BigDecimal getAmount() {
-            return amount;
         }
     }
 }

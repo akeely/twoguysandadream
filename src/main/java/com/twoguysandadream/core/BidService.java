@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,17 +18,21 @@ public class BidService {
 
     private static final Logger LOG = LoggerFactory.getLogger(BidService.class);
 
+    private static final BigDecimal INITIAL_BID = new BigDecimal("0.5");
+
     private final LeagueRepository leagueRepository;
     private final BidRepository bidRepository;
     private final PlayerRepository playerRepository;
+    private final TeamRepository teamRepository;
 
     @Autowired
-    public BidService(LeagueRepository leagueRepository, BidRepository bidRepository,
-        PlayerRepository playerRepository) {
+    public BidService(LeagueRepository leagueRepository, BidRepository bidRepository, PlayerRepository playerRepository,
+        TeamRepository teamRepository) {
 
         this.leagueRepository = leagueRepository;
         this.bidRepository = bidRepository;
         this.playerRepository = playerRepository;
+        this.teamRepository = teamRepository;
     }
 
     public void acceptBid(long leagueId, long teamId, long playerId, BigDecimal amount) throws BidException {
@@ -55,9 +58,70 @@ public class BidService {
         bidRepository.save(leagueId, newBid);
     }
 
+    public void addPlayer(long leagueId, long teamId, long playerId) throws BidException {
+
+        League league = leagueRepository.findOne(leagueId).orElseThrow(
+            () -> new IllegalArgumentException("No league with id " + leagueId));
+
+        Team team = league.getTeamStatistics().keySet().stream().filter((t) -> t.getId() == teamId).findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("No team " + teamId + " exists in league " + leagueId));
+
+        validateAvailable(league, playerId);
+        validateRosterSpace(team, null, league);
+        validateAdds(team);
+
+        Bid bid = new Bid(teamId, team.getName(), getPlayer(playerId), INITIAL_BID,
+            league.getSettings().getExpirationTime());
+
+        bidRepository.create(leagueId, bid);
+        removeAdd(leagueId, team);
+    }
+
+    private void removeAdd(long leagueId, Team team) {
+
+        int adds = team.getAdds() - 1;
+        Team updated = new Team(team.getId(), team.getName(), team.getRoster(), team.getBudgetAdjustment(), adds);
+        teamRepository.update(leagueId, updated);
+    }
+
+    public void addPlayerAsCommisioner(long leagueId, long teamId, long playerId) throws BidException {
+        // TODO: is commissioner?
+
+        League league = leagueRepository.findOne(leagueId).orElseThrow(
+            () -> new IllegalArgumentException("No league with id " + leagueId));
+
+        validateAvailable(league, playerId);
+
+        Bid bid = new Bid(null, null, getPlayer(playerId), BigDecimal.ZERO, league.getSettings().getExpirationTime());
+
+        bidRepository.create(leagueId, bid);
+    }
+
+    private void validateAdds(Team team) {
+        if (team.getAdds() < 1) {
+            throw new IllegalStateException("Team " + team.getName() + " does not have any adds available.");
+        }
+    }
+
+    private void validateAvailable(League league, long playerId) throws AuctionExpiredException {
+
+        if (league.getAuctionBoard().stream()
+                .anyMatch((b) -> b.getPlayer().getId() == playerId)) {
+
+            throw new AuctionExpiredException(playerId);
+        }
+
+        if (league.getRosters().entrySet().stream()
+                .flatMap((e) -> e.getValue().stream())
+                .anyMatch((p) -> p.getPlayer().getId() == playerId)) {
+
+            throw new AuctionExpiredException(playerId);
+        }
+    }
+
     private void validateRosterSpace(Team team, Bid existingBid, League league) throws RosterFullException {
 
-        if (existingBid.getTeamId() == team.getId()) {
+        if (existingBid != null && existingBid.getTeamId() == team.getId()) {
             return;
         }
 
@@ -80,7 +144,7 @@ public class BidService {
         throws InsufficientFundsException {
 
         TeamStatistics statistics = league.getTeamStatistics().get(team);
-        BigDecimal adjustment = Optional.of(existingBid)
+        BigDecimal adjustment = Optional.ofNullable(existingBid)
             .filter((b) -> b.getTeamId() == team.getId())
             .map(Bid::getAmount)
             .orElse(BigDecimal.ZERO);
