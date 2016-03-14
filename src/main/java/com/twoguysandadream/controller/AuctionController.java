@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.OptionalLong;
 import java.util.stream.Collectors;
 
 @Controller
@@ -24,13 +23,15 @@ public class AuctionController {
     private final LeagueRepository leagueRepository;
     private final PlayerRepository playerRepository;
     private final AuctionUserRepository auctionUserRepository;
+    private final TeamRepository teamRepository;
 
     @Autowired
     public AuctionController(LeagueRepository leagueRepository, PlayerRepository playerRepository,
-        AuctionUserRepository auctionUserRepository) {
+        AuctionUserRepository auctionUserRepository, TeamRepository teamRepository) {
         this.leagueRepository = leagueRepository;
         this.playerRepository = playerRepository;
         this.auctionUserRepository = auctionUserRepository;
+        this.teamRepository = teamRepository;
     }
 
     @RequestMapping("/login")
@@ -48,6 +49,7 @@ public class AuctionController {
         Optional<League> league = leagueRepository.findOne(leagueId);
         league.orElseThrow(() -> new MissingResourceException("league: " + leagueId));
 
+        mav.addObject("leagueId", leagueId);
         mav.addObject("league", league.get());
         mav.addObject("user", user);
         return mav;
@@ -65,6 +67,7 @@ public class AuctionController {
             .flatMap((e) -> e.getValue().stream().map((p) -> new WonPlayer(e.getKey(), p)))
             .collect(Collectors.toList());
 
+        mav.addObject("leagueId", leagueId);
         mav.addObject("players", players);
 
         return mav;
@@ -81,14 +84,12 @@ public class AuctionController {
             .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
 
         List<Player> players = playerRepository.findAllAvailable(leagueId);
-        TeamStatistics stats = league.getTeamStatistics().entrySet().stream()
-            .filter((t) -> t.getKey().getId() == teamId)
-            .map(Map.Entry::getValue)
-            .findAny()
-            .orElseThrow(() -> new MissingResourceException("stats for team: " + teamId));
+        Team team = teamRepository.findOne(leagueId, teamId)
+            .orElseThrow(() -> new MissingResourceException("team: " + teamId));
 
+        mav.addObject("leagueId", leagueId);
         mav.addObject("players", players);
-        mav.addObject("adds", stats.getAdds());
+        mav.addObject("team", team);
 
         return mav;
     }

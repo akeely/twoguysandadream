@@ -27,10 +27,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/league/1/auction">Auction</a></li>
-                    <li><a href="/league/1/availableplayers">Add Player</a></li>
-                    <li><a href="#contact">Contracts</a></li>
-                    <li><a href="/league/1/results">Draft Results</a></li>
+                    <li class="active"><a th:href="@{/league/{leagueId}/auction(leagueId=${leagueId})}">Auction</a></li>
+                    <li><a th:href="@{/league/{leagueId}/availableplayers(leagueId=${leagueId})}">Add Player</a></li>
+                    <li><a th:href="@{/league/{leagueId}/results(leagueId=${leagueId})}">Draft Results</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
