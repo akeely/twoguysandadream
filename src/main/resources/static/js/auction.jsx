@@ -2,10 +2,16 @@ var EXPIRED = 'EXPIRED';
 
 var App = React.createClass({
 
-    getMatchingBid: function(playerId, bids) {
-
+    getMatchingBid: function(existing, bids) {
+        var playerId = existing.player.id;
+        var existingBid = existing.amount;
         for (var i = 0; i < bids.length; i++) {
             if (bids[i].player.id === playerId) {
+                if (bids[i].amount !== existingBid) {
+                    bids[i].isNew = true;
+                } else {
+                    bids[i].isNew = false;
+                }
                 return bids[i];
             }
         }
@@ -17,7 +23,7 @@ var App = React.createClass({
 
         var mergedBids = [];
         for (var i = 0; i < existing.length; i++) {
-            var updatedBid = this.getMatchingBid(existing[i].player.id, updated);
+            var updatedBid = this.getMatchingBid(existing[i], updated);
             if (updatedBid === null) {
                 existing[i].secondsRemaining = EXPIRED;
                 existing[i].removeFunction = this.removePlayer.bind(this, existing[i].player.id);
@@ -29,8 +35,9 @@ var App = React.createClass({
         }
 
         for (var i = 0; i < updated.length; i++) {
-            var existingBid = this.getMatchingBid(updated[i].player.id, existing);
+            var existingBid = this.getMatchingBid(updated[i], existing);
             if (existingBid === null) {
+                updated[i].isNew = true;
                 mergedBids.push(updated[i]);
             }
         }
@@ -190,8 +197,22 @@ var Bid = React.createClass({
             var timeString = this.toTimeString(this.props.bid.secondsRemaining);
         }
 
+        var activeTeam = $("meta[name='_team_id'").attr("content");
+        var teamId = this.props.bid.teamId;
+        var secondsRemaining = this.props.bid.secondsRemaining
+        var isNew = this.props.bid.isNew;
+
+        var highlightClass = '';
+        if (secondsRemaining === EXPIRED) {
+            highlightClass = 'danger';
+        } else if (isNew === true) {
+            highlightClass = 'warning';
+        } else if (teamId == activeTeam) {
+            highlightClass = 'success';
+        }
+
         return (
-            <tr id={"bid." + this.props.bid.player.id} className={this.props.bid.secondsRemaining === EXPIRED ? 'danger' : ''}>
+            <tr id={"bid." + this.props.bid.player.id} className={highlightClass}>
                 <td>{this.props.bid.player.name}</td>
                 <td>{this.props.bid.player.positions
                         .map(function(pos){return pos.name;})

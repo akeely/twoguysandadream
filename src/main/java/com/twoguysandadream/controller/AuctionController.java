@@ -46,11 +46,14 @@ public class AuctionController {
         AuctionUser user) throws MissingResourceException {
 
         ModelAndView mav = new ModelAndView("auction");
-        Optional<League> league = leagueRepository.findOne(leagueId);
-        league.orElseThrow(() -> new MissingResourceException("league: " + leagueId));
+        League league = leagueRepository.findOne(leagueId)
+            .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
+        long teamId = auctionUserRepository.findTeamId(user, leagueId)
+            .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
 
         mav.addObject("leagueId", leagueId);
-        mav.addObject("league", league.get());
+        mav.addObject("teamId", teamId);
+        mav.addObject("league", league);
         mav.addObject("user", user);
         return mav;
     }
@@ -62,12 +65,15 @@ public class AuctionController {
         ModelAndView mav = new ModelAndView("draftResults");
         League league = leagueRepository.findOne(leagueId)
             .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
+        long teamId = auctionUserRepository.findTeamId(user, leagueId)
+            .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
 
         List<WonPlayer> players = league.getRosters().entrySet().stream()
             .flatMap((e) -> e.getValue().stream().map((p) -> new WonPlayer(e.getKey(), p)))
             .collect(Collectors.toList());
 
         mav.addObject("leagueId", leagueId);
+        mav.addObject("teamId", teamId);
         mav.addObject("players", players);
 
         return mav;
@@ -88,6 +94,7 @@ public class AuctionController {
             .orElseThrow(() -> new MissingResourceException("team: " + teamId));
 
         mav.addObject("leagueId", leagueId);
+        mav.addObject("teamId", teamId);
         mav.addObject("players", players);
         mav.addObject("team", team);
 
