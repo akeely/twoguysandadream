@@ -44,7 +44,7 @@ public class BidResource {
         this.bidService = bidService;
     }
 
-    @RequestMapping
+    @RequestMapping(method = RequestMethod.GET)
     public List<Bid> findOpenBids(@PathVariable("leagueId") long leagueId)
         throws MissingResourceException {
 
@@ -109,7 +109,7 @@ public class BidResource {
         private final long playerId;
 
         @JsonCreator
-        private PlayerAddition(long playerId) {
+        private PlayerAddition(@JsonProperty("playerId") long playerId) {
             this.playerId = playerId;
         }
 

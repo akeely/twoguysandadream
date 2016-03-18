@@ -26,8 +26,6 @@
          AND t.id = :teamId
     ]]></entry>
     <entry key="team.save"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
-       FROM teams t
        UPDATE teams
        SET name = :name, num_adds = :adds, money_plusminus = :budgetAdjustment
        WHERE leagueid = :leagueId
@@ -73,7 +71,7 @@
            (:playerId, :amount, :expirationTime,'NA', :teamId, :leagueId);
     ]]></entry>
     <entry key="player.findOne"><![CDATA[
-       SELECT playerid,name,position,team,rank FROM player WHERE playerid=:playerId AND active=1
+       SELECT playerid,name,position,team,rank FROM players WHERE playerid=:playerId AND active=1
     ]]></entry>
     <entry key="player.findAllAvailable"><![CDATA[
         SELECT p.playerid, p.name, p.position, p.team, p.rank
