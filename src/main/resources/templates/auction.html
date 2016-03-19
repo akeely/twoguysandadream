@@ -46,43 +46,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-        <div class="panel">
-            <div class="panel-body" id="auctionBoard"></div>
-        </div>
-
+                <div class="panel">
+                    <div class="panel-body" id="auctionBoard" />
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="panel">
-                    <table class="table table-condensed">
-                        <tr>
-                            <th><small>Team</small></th>
-                            <th><small>Money</small></th>
-                            <th><small>Max</small></th>
-                            <th><small>Roster</small></th>
-                            <th><small>Adds</small></th>
-                        </tr>
-                        <tr th:each="team : ${league.teamStatistics}">
-                            <td><small th:text="${team.key.name}">Salt Bandits</small></td>
-                            <td><small th:text="${team.value.availableBudget}">$150</small></td>
-                            <td><small th:text="${team.value.maxBid}">$123</small></td>
-                            <td><small th:text="${team.value.openRosterSpots}">11</small></td>
-                            <td><small th:text="${team.value.adds}">2</small></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="panel hidden roster" th:each="team : ${league.rosters}" th:id="|roster.${team.key.id}|">
-                    <table class="table table-condensed">
-                        <tr>
-                            <th><small>Player</small></th>
-                            <th><small>Cost</small></th>
-                            <th><small>Position</small></th>
-                        </tr>
-                        <tr th:each="player : ${team.value}">
-                            <td><small th:text="${player.player.name}">Odell Beckham, Jr.</small></td>
-                            <td><small th:text="${player.cost}">$8</small></td>
-                            <td><small th:text="${#strings.listJoin(player.player.positions, ',')}">WR</small></td>
-                        </tr>
-                    </table>
+                    <div class="panel-body" id="teamSidebar" />
                 </div>
             </div>
         </div>
