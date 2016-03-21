@@ -18,9 +18,10 @@ public class League {
     private final BigDecimal minimumBid = new BigDecimal(BigInteger.valueOf(5), 1);
     private final List<Bid> auctionBoard;
     private final List<Team> teams;
+    private final boolean isPaused;
 
     public League(long id, String name, int rosterSize, BigDecimal budget, List<Bid> auctionBoard,
-            List<Team> teams) {
+            List<Team> teams, boolean isPaused) {
 
         this.id = id;
         this.name = name;
@@ -28,6 +29,7 @@ public class League {
         this.budget = budget;
         this.auctionBoard = auctionBoard;
         this.teams = teams;
+        this.isPaused = isPaused;
     }
 
     public Map<Team,TeamStatistics> getTeamStatistics() {
@@ -61,6 +63,10 @@ public class League {
 
     public String getName() {
         return name;
+    }
+
+    public boolean isPaused() {
+        return isPaused;
     }
 
     private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {
