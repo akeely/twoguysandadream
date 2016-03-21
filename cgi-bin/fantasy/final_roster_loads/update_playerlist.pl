@@ -28,14 +28,15 @@ my $enc = 'unicode';
 ##  2013 mlb auction - 39507
 ##  2014 nfl auction - 339579
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
+my $dbh = dbConnect();
 
 
 ## TODO - confirm / change below before running each time
-##my $sport = 'baseball';
-##my $game_key = 'mlb';
-my $sport = 'football';
-my $game_key = 'nfl';
-my $league_key = $game_key . ".l.339579";
+my $sport = 'baseball';
+my $game_key = 'mlb';
+#my $sport = 'football';
+#my $game_key = 'nfl';
+my $league_key = $game_key . ".l.58360";
 
 ## Translation for Yahoo team defenses to ESPN/TGaaD storage (football only)
 my %team_lut = (
