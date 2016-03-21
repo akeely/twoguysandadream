@@ -1,157 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/314.l.548917/teams" time="82.424163818359ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">
+<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/346.l.39209/teams" time="101.31192207336ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="31" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">
  <league>
-  <league_key>314.l.548917</league_key>
-  <league_id>548917</league_id>
-  <name>Auction Keeper League</name>
-  <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917</url>
+  <league_key>346.l.39209</league_key>
+  <league_id>39209</league_id>
+  <name>Auction League 2015</name>
+  <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209</url>
+  <league_chat_id>2xw7kr5ych82umhx4yx1azixtfdrxfb</league_chat_id>
   <draft_status>postdraft</draft_status>
   <num_teams>12</num_teams>
-  <edit_key>17</edit_key>
+  <edit_key>2016-03-05</edit_key>
   <weekly_deadline/>
-  <league_update_timestamp>1388396267</league_update_timestamp>
-  <scoring_type>head</scoring_type>
+  <league_update_timestamp>1444032346</league_update_timestamp>
+  <scoring_type>roto</scoring_type>
   <league_type>private</league_type>
-  <renew>273_540994</renew>
-  <renewed>331_339579</renewed>
-  <short_invitation_url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/invitation?key=fbfe08a0676583ee</short_invitation_url>
+  <renew>328_101127</renew>
+  <renewed>357_58360</renewed>
+  <short_invitation_url>https://yho.com/mlb?l=39209&amp;ikey=97278070c7dbce0a</short_invitation_url>
   <is_pro_league>0</is_pro_league>
-  <current_week>16</current_week>
-  <start_week>1</start_week>
-  <start_date>2013-09-05</start_date>
-  <end_week>16</end_week>
-  <end_date>2013-12-23</end_date>
+  <is_cash_league>0</is_cash_league>
+  <start_date>2015-04-05</start_date>
+  <end_date>2015-10-04</end_date>
   <is_finished>1</is_finished>
+  <game_code>mlb</game_code>
+  <season>2015</season>
   <teams count="12">
    <team>
-    <team_key>314.l.548917.t.1</team_key>
+    <team_key>346.l.39209.t.1</team_key>
     <team_id>1</team_id>
     <name>Salt Bandits</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/1</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>5</waiver_priority>
-    <faab_balance>65</faab_balance>
-    <number_of_moves>25</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <managers>
-     <manager>
-      <manager_id>1</manager_id>
-      <nickname>Andrew</nickname>
-      <guid>TUWQRVL4DEI2HQO6773KKSNRGM</guid>
-      <is_commissioner>1</is_commissioner>
-      <email>akeely@coe.neu.edu</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.2</team_key>
-    <team_id>2</team_id>
-    <name>D-BAGS</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/2</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>9</waiver_priority>
-    <faab_balance>0</faab_balance>
-    <number_of_moves>17</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
-    <managers>
-     <manager>
-      <manager_id>2</manager_id>
-      <nickname>Dirrrty D</nickname>
-      <guid>FWK4CFFWYI5VAKFHNVWHNT5IXM</guid>
-      <email>dana.woulfe@gmail.com</email>
-      <image_url>https://s.yimg.com/dg/users/13RjPpCG-AAECWKF3oKbqpM6MnboD.64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.3</team_key>
-    <team_id>3</team_id>
-    <name>Boston Beast</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/3</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>8</waiver_priority>
-    <faab_balance>0</faab_balance>
-    <number_of_moves>28</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
-    <managers>
-     <manager>
-      <manager_id>3</manager_id>
-      <nickname>Mike</nickname>
-      <guid>TISU3E5BQGJRR2MLYGZFF2EM4U</guid>
-      <email>moliver816@yahoo.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.4</team_key>
-    <team_id>4</team_id>
-    <name>La Flama Blanca</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/4</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/nfl/img/icon_11_100.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>2</waiver_priority>
-    <faab_balance>100</faab_balance>
-    <number_of_moves>9</number_of_moves>
-    <number_of_trades>1</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <managers>
-     <manager>
-      <manager_id>4</manager_id>
-      <nickname>Cameron</nickname>
-      <guid>VPZ4K3SQCXAYZDCXSIGS33GVNU</guid>
-      <email>camerongarrison@gmail.com</email>
-      <image_url>https://socialprofiles.zenfs.com/images/15909c33b39fd9a1489eaf357d183532_64.jpg</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.5</team_key>
-    <team_id>5</team_id>
-    <name>Woulfe Blitzer</name>
-    <is_owned_by_current_login>1</is_owned_by_current_login>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/5</url>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/1</url>
     <team_logos>
      <team_logo>
       <size>large</size>
@@ -159,172 +36,145 @@
      </team_logo>
     </team_logos>
     <waiver_priority>11</waiver_priority>
-    <faab_balance>32</faab_balance>
-    <number_of_moves>24</number_of_moves>
-    <number_of_trades>1</number_of_trades>
+    <faab_balance>97</faab_balance>
+    <number_of_moves>27</number_of_moves>
+    <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
+     <coverage_value>25</coverage_value>
+     <value>3</value>
     </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
-      <manager_id>5</manager_id>
-      <nickname>Erik</nickname>
-      <guid>5CUYBDUX66CS6UBA3XLBSWJRPI</guid>
-      <is_current_login>1</is_current_login>
-      <email>dmbtonic@aol.com</email>
+      <manager_id>1</manager_id>
+      <nickname>Andrew</nickname>
+      <guid>TUWQRVL4DEI2HQO6773KKSNRGM</guid>
+      <is_commissioner>1</is_commissioner>
+      <email>andrew.keely@gmail.com</email>
       <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>314.l.548917.t.6</team_key>
-    <team_id>6</team_id>
-    <name>\m/</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/6</url>
+    <team_key>346.l.39209.t.2</team_key>
+    <team_id>2</team_id>
+    <name>BASSLAYER</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/2</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>12</waiver_priority>
-    <faab_balance>0</faab_balance>
-    <number_of_moves>30</number_of_moves>
-    <number_of_trades>1</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
-    <managers>
-     <manager>
-      <manager_id>6</manager_id>
-      <nickname>MH</nickname>
-      <guid>QXGPDYJJXPPNFUAGWZX74ALNZM</guid>
-      <email>eye9d@eye9d.com</email>
-      <image_url>https://socialprofiles.zenfs.com/images/523534865a8f28c782d037cd66ca2a88_64.jpg</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.7</team_key>
-    <team_id>7</team_id>
-    <name>Al-Hammertime</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/7</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://i.imgur-ysports.com/26O4x4qy.jpg</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>7</waiver_priority>
-    <faab_balance>66</faab_balance>
-    <number_of_moves>20</number_of_moves>
-    <number_of_trades>1</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
-    <managers>
-     <manager>
-      <manager_id>7</manager_id>
-      <nickname>Al-Hammertime</nickname>
-      <guid>6BXYTZOKJVJ3VKZL73ZNJOQLSU</guid>
-      <email>bloggingtarek@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>314.l.548917.t.8</team_key>
-    <team_id>8</team_id>
-    <name>Boomshakalaka</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/8</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
+      <url>https://ct.yimg.com/cy/1477/24950016369_81bbbe2e38_192sq.jpg</url>
      </team_logo>
     </team_logos>
     <waiver_priority>10</waiver_priority>
-    <faab_balance>86</faab_balance>
-    <number_of_moves>6</number_of_moves>
+    <faab_balance>13</faab_balance>
+    <number_of_moves>101</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
+     <coverage_value>25</coverage_value>
+     <value>15</value>
     </roster_adds>
-    <clinched_playoffs>1</clinched_playoffs>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
-      <manager_id>8</manager_id>
-      <nickname>Chris Morin</nickname>
-      <guid>PD2DQDAOYZXI3OCN42TNBF2P7U</guid>
-      <email>cmorinster@gmail.com</email>
-      <image_url>https://socialprofiles.zenfs.com/images/bef9fca28ba1c62a5787583d92254b2_64.jpg</image_url>
+      <manager_id>2</manager_id>
+      <nickname>MH</nickname>
+      <guid>QXGPDYJJXPPNFUAGWZX74ALNZM</guid>
+      <email>eye9d@eye9d.com</email>
+      <image_url>https://s.yimg.com/wv/images/523534865a8f28c782d037cd66ca2a88_64.jpg</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>314.l.548917.t.9</team_key>
-    <team_id>9</team_id>
-    <name>troops in ironclad</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/9</url>
+    <team_key>346.l.39209.t.3</team_key>
+    <team_id>3</team_id>
+    <name>Beantown Demons</name>
+    <is_owned_by_current_login>1</is_owned_by_current_login>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/3</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
+      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
      </team_logo>
     </team_logos>
-    <waiver_priority>1</waiver_priority>
-    <faab_balance>100</faab_balance>
-    <number_of_moves>6</number_of_moves>
-    <number_of_trades>0</number_of_trades>
+    <waiver_priority>9</waiver_priority>
+    <faab_balance>88</faab_balance>
+    <number_of_moves>48</number_of_moves>
+    <number_of_trades>1</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
-     <value>0</value>
+     <coverage_value>25</coverage_value>
+     <value>12</value>
     </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
-      <manager_id>9</manager_id>
-      <nickname>erin cote</nickname>
-      <guid>VDPYDO27MVVZ4BMM23PSBAZSPE</guid>
-      <email>coteflakes@gmail.com</email>
-      <image_url>https://s.yimg.com/dg/users/1WB0x7IoiAAQB-IFDqI7bqmejOw==.64.png</image_url>
+      <manager_id>3</manager_id>
+      <nickname>Erik</nickname>
+      <guid>5CUYBDUX66CS6UBA3XLBSWJRPI</guid>
+      <is_current_login>1</is_current_login>
+      <email>erik.woulfe@gmail.com</email>
+      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>314.l.548917.t.10</team_key>
-    <team_id>10</team_id>
+    <team_key>346.l.39209.t.4</team_key>
+    <team_id>4</team_id>
+    <name>Puig Power</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/4</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://ct.yimg.com/cy/1451/25327875325_ac541d452f_192sq.jpg</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>8</waiver_priority>
+    <faab_balance>89</faab_balance>
+    <number_of_moves>58</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>4</manager_id>
+      <nickname>ACW</nickname>
+      <guid>KG6B4RYR4RQXSNNQASEI5NBI3I</guid>
+      <email>andrew@awframing.com</email>
+      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.5</team_key>
+    <team_id>5</team_id>
     <name>Steely Don</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/10</url>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/5</url>
     <team_logos>
      <team_logo>
       <size>large</size>
       <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
      </team_logo>
     </team_logos>
-    <waiver_priority>6</waiver_priority>
-    <faab_balance>58</faab_balance>
-    <number_of_moves>10</number_of_moves>
+    <waiver_priority>7</waiver_priority>
+    <faab_balance>80</faab_balance>
+    <number_of_moves>36</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
+     <coverage_value>25</coverage_value>
      <value>0</value>
     </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
-      <manager_id>10</manager_id>
+      <manager_id>5</manager_id>
       <nickname>Donald</nickname>
       <guid>TW2BUOG3YX2LRLM5ZVADSKV5DM</guid>
       <email>mistercote@gmail.com</email>
@@ -333,62 +183,219 @@
     </managers>
    </team>
    <team>
-    <team_key>314.l.548917.t.11</team_key>
-    <team_id>11</team_id>
-    <name>UpTheGut</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/11</url>
+    <team_key>346.l.39209.t.6</team_key>
+    <team_id>6</team_id>
+    <name>Al-Hammertime</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/6</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/nfl/img/icon_01_100.png</url>
+      <url>https://ct.yimg.com/cy/1617/24662141754_5a90f8919c_192sq.jpg</url>
      </team_logo>
     </team_logos>
-    <waiver_priority>4</waiver_priority>
-    <faab_balance>5</faab_balance>
-    <number_of_moves>39</number_of_moves>
-    <number_of_trades>2</number_of_trades>
+    <waiver_priority>6</waiver_priority>
+    <faab_balance>32</faab_balance>
+    <number_of_moves>62</number_of_moves>
+    <number_of_trades>1</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
+     <coverage_value>25</coverage_value>
      <value>0</value>
     </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
-      <manager_id>11</manager_id>
-      <nickname>Max lloyd</nickname>
-      <guid>6H2XYTR4CLFEJYOVK5CU3REXJM</guid>
-      <email>maxywithwings@gmail.com</email>
-      <image_url>https://socialprofiles.zenfs.com/images/602242dbda53b5d46e559daf844a2d54_64.jpg</image_url>
+      <manager_id>6</manager_id>
+      <nickname>Al-Hammertime</nickname>
+      <guid>6BXYTZOKJVJ3VKZL73ZNJOQLSU</guid>
+      <email>bloggingtarek@gmail.com</email>
+      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>314.l.548917.t.12</team_key>
-    <team_id>12</team_id>
-    <name>Alpaca Lips Now</name>
-    <url>http://football.fantasysports.yahoo.com/archive/nfl/2013/548917/12</url>
+    <team_key>346.l.39209.t.7</team_key>
+    <team_id>7</team_id>
+    <name>Kramerica</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/7</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/nfl/img/icon_04_100.png</url>
+      <url>https://ct.yimg.com/cy/1538/25322462245_06ffe6a1b3_192sq.jpg</url>
      </team_logo>
     </team_logos>
-    <waiver_priority>3</waiver_priority>
-    <faab_balance>94</faab_balance>
-    <number_of_moves>5</number_of_moves>
+    <waiver_priority>5</waiver_priority>
+    <faab_balance>74</faab_balance>
+    <number_of_moves>35</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
-     <coverage_value>17</coverage_value>
+     <coverage_value>25</coverage_value>
+     <value>2</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>7</manager_id>
+      <nickname>Cale</nickname>
+      <guid>JWTXHCRP2MMNNI472DRGBFG6IY</guid>
+      <email>dublover73@gmail.com</email>
+      <image_url>https://s.yimg.com/wv/images/82e71b845dea7e80b44d2c899817b508_64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.8</team_key>
+    <team_id>8</team_id>
+    <name>La Flama Blanca</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/8</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_4_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>4</waiver_priority>
+    <faab_balance>100</faab_balance>
+    <number_of_moves>8</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
      <value>0</value>
     </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>8</manager_id>
+      <nickname>Cameron</nickname>
+      <guid>VPZ4K3SQCXAYZDCXSIGS33GVNU</guid>
+      <email>camerongarrison@gmail.com</email>
+      <image_url>https://s.yimg.com/wv/images/15909c33b39fd9a1489eaf357d183532_64.jpg</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.9</team_key>
+    <team_id>9</team_id>
+    <name>The Underdog</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/9</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>12</waiver_priority>
+    <faab_balance>83</faab_balance>
+    <number_of_moves>14</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>9</manager_id>
+      <nickname>Dirrrty D</nickname>
+      <guid>FWK4CFFWYI5VAKFHNVWHNT5IXM</guid>
+      <email>dana.woulfe@gmail.com</email>
+      <image_url>https://s.yimg.com/dg/users/13RjPpCG-AAECWKF3oKbqpM6MnboD.64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.10</team_key>
+    <team_id>10</team_id>
+    <name>Barksdale Crew</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/10</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>3</waiver_priority>
+    <faab_balance>70</faab_balance>
+    <number_of_moves>39</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>10</manager_id>
+      <nickname>Stephen C</nickname>
+      <guid>6LFBOPBDFNW2MF6AXCO5GY6DB4</guid>
+      <email>scc13tru@hotmail.com</email>
+      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.11</team_key>
+    <team_id>11</team_id>
+    <name>Hindu Hammers</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/11</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_3_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>2</waiver_priority>
+    <faab_balance>53</faab_balance>
+    <number_of_moves>61</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <managers>
+     <manager>
+      <manager_id>11</manager_id>
+      <nickname>Kishore</nickname>
+      <guid>OSPCE6GJCEYZA3X46HN5JJETPY</guid>
+      <email>kishoresparmar@gmail.com</email>
+      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>346.l.39209.t.12</team_key>
+    <team_id>12</team_id>
+    <name>84's</name>
+    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/12</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://ct.yimg.com/cy/1712/24669523044_37a5ced4ee_192sq.jpg</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>1</waiver_priority>
+    <faab_balance>100</faab_balance>
+    <number_of_moves>23</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>2</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
     <managers>
      <manager>
       <manager_id>12</manager_id>
-      <nickname>Bryan</nickname>
-      <guid>UKW5TNNRAZACMTB5BPK454362Y</guid>
-      <email>belyeapower@gmail.com</email>
-      <image_url>https://socialprofiles.zenfs.com/images/3f319447cef427be25a8bccad142da03_64.jpg</image_url>
+      <nickname>Joey T</nickname>
+      <guid>W63ORBSZMSUOARG47DJV6JUIBI</guid>
+      <email>joeytomaino@gmail.com</email>
+      <image_url>https://s.yimg.com/wv/images/6c54282f323b06142e5f65fc42ff9051_64.jpg</image_url>
      </manager>
     </managers>
    </team>

@@ -1,5249 +1,6866 @@
 MATCH!
-	Russell Wilson	Russell Wilson
-	QB	QB
-	Sea, RANK 84
+	Carlos Rivero	Carlos Rivero
+	3B	3B
+	Ari, RANK 1292
 
 MATCH!
-	T.Y. Hilton	T.Y. Hilton
-	WR	WR
-	Ind, RANK 57
+	Rick Porcello	Rick Porcello
+	SP	SP
+	Bos, RANK 279
 
 MATCH!
-	Darrel Young	Darrel Young
-	RB	RB
-	Was, RANK 495
+	Matt Barnes	Matt Barnes
+	RP	RP
+	Bos, RANK 925
 
 MATCH!
-	Micheal Spurlock	Micheal Spurlock
-	WR	WR
-	Chi, RANK 1023
+	Chad Smith	Chad Smith
+	RP	RP
+	Tex, RANK 907
 
 MATCH!
-	Mike Gillislee	Mike Gillislee
-	RB	RB
-	Mia, RANK 747
+	David Murphy	David Murphy
+	OF	OF
+	Bos, RANK 540
 
-NO MATCH for David Carr (QB)
-	DEACTIVATE
-MATCH!
-	Brad Sorensen	Brad Sorensen
-	QB	QB
-	SD, RANK 1056
-
-MATCH!
-	Dante Rosario	Dante Rosario
-	TE	TE
-	Chi, RANK 936
-
-NO MATCH for Lawrence Tynes (K)
-	DEACTIVATE
-MATCH!
-	Javone Lawson	Javone Lawson
-	WR	WR
-	Ari, RANK 514
-
-NO MATCH for B.J. Coleman (QB)
-	DEACTIVATE
-MATCH!
-	Derrick Coleman	Derrick Coleman
-	RB	RB
-	Sea, RANK 940
-
-MATCH!
-	Emmanuel Ogbuehi	Emmanuel Ogbuehi
-	TE	TE
-	Cle, RANK 359
-
-MATCH!
-	Stepfan Taylor	Stepfan Taylor
-	RB	RB
-	Ari, RANK 948
-
-MATCH!
-	Rex Grossman	Rex Grossman
-	QB	QB
-	Was, RANK 1057
-
-MATCH!
-	Eric Decker	Eric Decker
-	WR	WR
-	NYJ, RANK 91
-
-MATCH!
-	Bradie Ewing	Bradie Ewing
-	RB	RB
-	Jax, RANK 748
-
-NO MATCH for Anthony Miller (TE)
-	DEACTIVATE
-MATCH!
-	Jamaal Charles	Jamaal Charles
-	RB	RB
-	KC, RANK 1
-
-MATCH!
-	BenJarvus Green-Ellis	BenJarvus Green-Ellis
-	RB	RB
-	Cin, RANK 169
-
-MATCH!
-	Nathan Overbay	Nathan Overbay
-	TE	TE
-	Bal, RANK 361
-
-NO MATCH for J.D. Woods (WR)
-	DEACTIVATE
-MATCH!
-	Chad Bumphis	Chad Bumphis
-	WR	WR
-	Jax, RANK 515
-
-MATCH!
-	Lance Lewis	Lance Lewis
-	WR	WR
-	Dal, RANK 516
-
-MATCH!
-	Mark Ingram	Mark Ingram
-	RB	RB
-	NO, RANK 158
-
-MATCH!
-	Matt Simms	Matt Simms
-	QB	QB
-	NYJ, RANK 1058
-
-MATCH!
-	Preston Parker	Preston Parker
-	WR	WR
-	NYG, RANK 518
-
-MATCH!
-	Emil Igwenagu	Emil Igwenagu
-	RB	TE
-	Phi, RANK 362
-
-MATCH!
-	Jay Cutler	Jay Cutler
-	QB	QB
-	Chi, RANK 77
-
-NO MATCH for Charlie Batch (QB)
-	DEACTIVATE
-MATCH!
-	Cody Wilson	Cody Wilson
-	WR	WR
-	Det, RANK 519
-
-MATCH!
-	Chris Rainey	Chris Rainey
-	RB	RB
-	Ind, RANK 889
-
-MATCH!
-	Buccaneers	Buccaneers
-	DEF	DEF
-	TB, RANK 241
-
-NO MATCH for Jerry Johnson (WR)
-	DEACTIVATE
-MATCH!
-	Phil Dawson	Phil Dawson
-	K	K
-	SF, RANK 203
-
-NO MATCH for Colin Cloherty (TE)
-	DEACTIVATE
-MATCH!
-	John Kuhn	John Kuhn
-	RB	RB
-	GB, RANK 987
-
-MATCH!
-	Ryan Nassib	Ryan Nassib
-	QB	QB
-	NYG, RANK 1061
-
-MATCH!
-	LaMichael James	LaMichael James
-	RB	RB
-	SF, RANK 996
-
-MATCH!
-	A.J. Green	A.J. Green
-	WR	WR
-	Cin, RANK 13
-
-MATCH!
-	Myles White	Myles White
-	WR	WR
-	GB, RANK 943
-
-NO MATCH for Graham Harrell (QB)
-	DEACTIVATE
-MATCH!
-	Cam Newton	Cam Newton
-	QB	QB
-	Car, RANK 56
-
-MATCH!
-	Virgil Green	Virgil Green
-	TE	TE
-	Den, RANK 933
-
-MATCH!
-	Anthony Allen	Anthony Allen
-	RB	RB
-	Buf, RANK 898
-
-NO MATCH for Dan DePalma (WR)
-	DEACTIVATE
-NO MATCH for Michael Calvin (WR)
-	DEACTIVATE
-NO MATCH for Andrell Smith (WR)
-	DEACTIVATE
-MATCH!
-	Stanley Havili	Stanley Havili
-	RB	RB
-	Ind, RANK 985
-
-MATCH!
-	Demetrius Harris	Demetrius Harris
-	TE	TE
-	KC, RANK 366
-
-NO MATCH for Nate Kaeding (K)
-	DEACTIVATE
-MATCH!
-	Brandon Barden	Brandon Barden
-	TE	TE
-	Jax, RANK 367
-
-MATCH!
-	Orson Charles	Orson Charles
-	TE	RB
-	Cin, RANK 1048
-
-MATCH!
-	Tyler Eifert	Tyler Eifert
-	TE	TE
-	Cin, RANK 146
-
-NO MATCH for JaMarcus Russell (QB)
-	DEACTIVATE
-MATCH!
-	Anthony Armstrong	Anthony Armstrong
-	WR	WR
-	Cle, RANK 525
-
-MATCH!
-	Keenan Allen	Keenan Allen
-	WR	WR
-	SD, RANK 29
-
-MATCH!
-	Zach Ertz	Zach Ertz
-	TE	TE
-	Phi, RANK 103
-
-MATCH!
-	Kris Durham	Kris Durham
-	WR	WR
-	Det, RANK 318
-
-MATCH!
-	Jerricho Cotchery	Jerricho Cotchery
-	WR	WR
-	Car, RANK 207
-
-NO MATCH for Richard Goodman (WR)
-	DEACTIVATE
-NO MATCH for Ryan Grant (RB)
-	DEACTIVATE
-NO MATCH for Matt Austin (WR)
-	DEACTIVATE
-MATCH!
-	Cardinals	Cardinals
-	DEF	DEF
-	Ari, RANK 186
-
-MATCH!
-	Tyler Thigpen	Tyler Thigpen
-	QB	QB
-	Cle, RANK 1063
-
-MATCH!
-	Steven Hauschka	Steven Hauschka
-	K	K
-	Sea, RANK 198
-
-MATCH!
-	James Starks	James Starks
-	RB	RB
-	GB, RANK 164
-
-MATCH!
-	Emory Blake	Emory Blake
-	WR	WR
-	StL, RANK 527
-
-MATCH!
-	Bilal Powell	Bilal Powell
-	RB	RB
-	NYJ, RANK 223
-
-MATCH!
-	Dustin Hopkins	Dustin Hopkins
-	K	K
-	Buf, RANK 951
-
-NO MATCH for Lawrence Vickers (RB)
-	DEACTIVATE
-MATCH!
-	Larry Fitzgerald	Larry Fitzgerald
-	WR	WR
-	Ari, RANK 40
-
-NO MATCH for Jason Hanson (K)
-	DEACTIVATE
-MATCH!
-	Kendall Wright	Kendall Wright
-	WR	WR
-	Ten, RANK 66
-
-NO MATCH for Philip Lutzenkirchen (TE)
-	DEACTIVATE
-NO MATCH for Nicholas Edwards (WR)
-	DEACTIVATE
-MATCH!
-	Adam Vinatieri	Adam Vinatieri
-	K	K
-	Ind, RANK 192
-
-MATCH!
-	Jordan Norwood	Jordan Norwood
-	WR	WR
-	Den, RANK 528
-
-MATCH!
-	Stephen Hill	Stephen Hill
-	WR	WR
-	NYJ, RANK 354
-
-MATCH!
-	Ben Roethlisberger	Ben Roethlisberger
-	QB	QB
-	Pit, RANK 104
-
-MATCH!
-	Josh Hill	Josh Hill
-	TE	TE
-	NO, RANK 497
-
-NO MATCH for Sam McGuffie (WR)
-	DEACTIVATE
-MATCH!
-	Alex Smith	Alex Smith
-	TE	TE
-	Cin, RANK 903
-
-NO MATCH for Lavasier Tuinei (WR)
-	DEACTIVATE
-NO MATCH for Kevin Norrell (WR)
-	DEACTIVATE
-NO MATCH for Dalton Williams (QB)
-	DEACTIVATE
-MATCH!
-	Kyle Nelson	Kyle Nelson
-	TE	TE
-	SF, RANK 370
-
-NO MATCH for Chastin West (WR)
-	DEACTIVATE
-MATCH!
-	Daniel Fells	Daniel Fells
-	TE	TE
-	NYG, RANK 472
-
-MATCH!
-	Matthew Mulligan	Matthew Mulligan
-	TE	TE
-	Chi, RANK 479
-
-NO MATCH for Taylor Cook (TE)
-	DEACTIVATE
-NO MATCH for Kyler Reed (TE)
-	DEACTIVATE
-NO MATCH for Brandon Ford (TE)
-	DEACTIVATE
-MATCH!
-	Josh Baker	Josh Baker
-	TE	TE
-	TB, RANK 371
-
-NO MATCH for Antavious Wilson (WR)
-	DEACTIVATE
-MATCH!
-	Michael Crabtree	Michael Crabtree
-	WR	WR
-	SF, RANK 49
-
-MATCH!
-	Matt Hasselbeck	Matt Hasselbeck
-	QB	QB
-	Ind, RANK 1052
-
-NO MATCH for Marcus Rivers (WR)
-	DEACTIVATE
-MATCH!
-	Marcus Lattimore	Marcus Lattimore
-	RB	RB
-	SF, RANK 752
-
-MATCH!
-	Chris Thompson	Chris Thompson
-	RB	RB
-	Was, RANK 1034
-
-NO MATCH for Devonte Campbell (RB,TE)
-	DEACTIVATE
-MATCH!
-	Ryan Succop	Ryan Succop
-	K	K
-	KC, RANK 257
-
-MATCH!
-	Marcedes Lewis	Marcedes Lewis
-	TE	TE
-	Jax, RANK 197
-
-NO MATCH for Brett Maher (K)
-	DEACTIVATE
-MATCH!
-	Jake Locker	Jake Locker
-	QB	QB
-	Ten, RANK 245
-
-NO MATCH for R.J. Webb (WR)
-	DEACTIVATE
-MATCH!
-	Terrance Williams	Terrance Williams
-	WR	WR
-	Dal, RANK 73
-
-MATCH!
-	Derek Moye	Derek Moye
-	WR	WR
-	Pit, RANK 901
-
-MATCH!
-	Lee Smith	Lee Smith
-	TE	TE
-	Buf, RANK 744
-
-NO MATCH for Kory Sperry (TE)
-	DEACTIVATE
-NO MATCH for Earnest Graham (RB)
-	DEACTIVATE
-MATCH!
-	Quinton Patton	Quinton Patton
-	WR	WR
-	SF, RANK 530
-
-NO MATCH for Kemonte Bateman (WR)
-	DEACTIVATE
-MATCH!
-	Cole Beasley	Cole Beasley
-	WR	WR
-	Dal, RANK 478
-
-MATCH!
-	Anquan Boldin	Anquan Boldin
-	WR	WR
-	SF, RANK 107
-
-MATCH!
-	Kyle Juszczyk	Kyle Juszczyk
-	RB	RB
-	Bal, RANK 1035
-
-MATCH!
-	Junior Hemingway	Junior Hemingway
-	WR	WR
-	KC, RANK 913
-
-NO MATCH for Havard Rugland (K)
-	DEACTIVATE
-NO MATCH for Zac Robinson (QB)
-	DEACTIVATE
-MATCH!
-	LaRod Stephens-Howling	LaRod Stephens-Howling
-	RB	RB
-	Pit, RANK 492
-
-MATCH!
-	Michael Ford	Michael Ford
-	RB	RB
-	Chi, RANK 1036
-
-MATCH!
-	George Winn	George Winn
-	RB	RB
-	Det, RANK 755
-
-MATCH!
-	Kyle Auffray	Kyle Auffray
-	TE	TE
-	NE, RANK 374
-
-NO MATCH for Erik Highsmith (WR)
-	DEACTIVATE
-MATCH!
-	Sidney Rice	Sidney Rice
-	WR	WR
-	Sea, RANK 247
-
-MATCH!
-	Antonio Brown	Antonio Brown
-	WR	WR
-	Pit, RANK 27
-
-MATCH!
-	Michael Palmer	Michael Palmer
-	TE	TE
-	Pit, RANK 474
-
-MATCH!
-	Charles Clay	Charles Clay
-	TE	TE
-	Mia, RANK 126
-
-NO MATCH for Steve Watson (TE)
-	DEACTIVATE
-NO MATCH for Kevin Walter (WR)
-	DEACTIVATE
-NO MATCH for Zach Rogers (WR)
-	DEACTIVATE
-MATCH!
-	Domenik Hixon	Domenik Hixon
-	WR	WR
-	Chi, RANK 742
-
-MATCH!
-	Kenbrell Thompkins	Kenbrell Thompkins
-	WR	WR
-	NE, RANK 233
-
-MATCH!
-	Zach Line	Zach Line
-	RB	RB
-	Min, RANK 756
-
-NO MATCH for Richard Murphy (RB)
-	DEACTIVATE
-MATCH!
-	LaQuan Williams	LaQuan Williams
-	WR	WR
-	Bal, RANK 907
-
-NO MATCH for Brock Bolen (RB)
-	DEACTIVATE
-MATCH!
-	Falcons	Falcons
-	DEF	DEF
-	Atl, RANK 341
-
-NO MATCH for Nick Johnson (WR)
-	DEACTIVATE
-MATCH!
-	Justin Veltung	Justin Veltung
-	WR	WR
-	StL, RANK 536
-
-NO MATCH for Demetrius Fields (WR)
-	DEACTIVATE
-NO MATCH for Hayden Smith (TE)
-	DEACTIVATE
-MATCH!
-	Austin Davis	Austin Davis
-	QB	QB
-	StL, RANK 1067
-
-NO MATCH for Damien Berry (RB)
-	DEACTIVATE
-NO MATCH for Justin Hilton (WR)
-	DEACTIVATE
-NO MATCH for Logan Brock (TE)
-	DEACTIVATE
-MATCH!
-	Keshawn Martin	Keshawn Martin
-	WR	WR
-	Hou, RANK 884
-
-MATCH!
-	David Akers	David Akers
-	K	K
-	Det, RANK 285
-
-NO MATCH for Carlton Mitchell (WR)
-	DEACTIVATE
-NO MATCH for Jon Hoese (RB)
-	DEACTIVATE
-MATCH!
-	Dan Buckner	Dan Buckner
-	WR	WR
-	Ari, RANK 537
-
-MATCH!
-	Ryan Griffin	Ryan Griffin
-	TE	TE
-	Hou, RANK 309
-
-MATCH!
-	Antonio Gates	Antonio Gates
-	TE	TE
-	SD, RANK 190
-
-NO MATCH for Greg Childs (WR)
-	DEACTIVATE
-MATCH!
-	James Casey	James Casey
-	TE	TE
-	Phi, RANK 908
-
-NO MATCH for Matt Leinart (QB)
-	DEACTIVATE
-NO MATCH for Jerome Harrison (RB)
-	DEACTIVATE
-MATCH!
-	Ben Tate	Ben Tate
-	RB	RB
-	Cle, RANK 70
-
-MATCH!
-	Rob Housler	Rob Housler
-	TE	TE
-	Ari, RANK 261
-
-MATCH!
-	Seyi Ajirotutu	Seyi Ajirotutu
-	WR	WR
-	SD, RANK 977
-
-MATCH!
-	Ryan Fitzpatrick	Ryan Fitzpatrick
-	QB	QB
-	Hou, RANK 201
-
-MATCH!
-	Raiders	Raiders
-	DEF	DEF
-	Oak, RANK 330
-
-MATCH!
-	Brad Smelley	Brad Smelley
-	TE	RB
-	Hou, RANK 757
-
-MATCH!
-	Zac Stacy	Zac Stacy
-	RB	RB
-	StL, RANK 25
-
-MATCH!
-	Drew Stanton	Drew Stanton
-	QB	QB
-	Ari, RANK 1069
-
-MATCH!
-	Griff Whalen	Griff Whalen
-	WR	WR
-	Ind, RANK 325
-
-MATCH!
-	Marcus Harris	Marcus Harris
-	WR	WR
-	NYG, RANK 539
-
-MATCH!
-	Matt Scott	Matt Scott
-	QB	QB
-	Cin, RANK 1070
-
-MATCH!
-	Rodney Smith	Rodney Smith
-	WR	WR
-	Min, RANK 540
-
-MATCH!
-	Chris Johnson	Chris Johnson
-	RB	RB
-	NYJ, RANK 65
-
-NO MATCH for Morgan Lineberry (K)
-	DEACTIVATE
-MATCH!
-	Jermaine Kearse	Jermaine Kearse
-	WR	WR
-	Sea, RANK 353
-
-MATCH!
-	Dennis Dixon	Dennis Dixon
-	QB	QB
-	Buf, RANK 1071
-
-NO MATCH for Andrei Lintz (TE)
-	DEACTIVATE
-MATCH!
-	Armon Binns	Armon Binns
-	WR	WR
-	Mia, RANK 498
-
-MATCH!
-	Will Johnson	Will Johnson
-	RB	RB
-	Pit, RANK 1014
-
-MATCH!
-	Kyle Miller	Kyle Miller
-	TE	TE
-	Mia, RANK 377
-
-NO MATCH for Devin Aromashodu (WR)
-	DEACTIVATE
-MATCH!
-	Cyrus Gray	Cyrus Gray
-	RB	RB
-	KC, RANK 1030
-
-NO MATCH for Greg Herd (WR)
-	DEACTIVATE
-MATCH!
-	Bobby Rainey	Bobby Rainey
-	RB	RB
-	TB, RANK 234
-
-MATCH!
-	Rob Gronkowski	Rob Gronkowski
-	TE	TE
-	NE, RANK 52
-
-MATCH!
-	Brandon Tate	Brandon Tate
-	WR	WR
-	Cin, RANK 1033
-
-NO MATCH for Greg Camarillo (WR)
-	DEACTIVATE
-MATCH!
-	Earl Bennett	Earl Bennett
-	WR	WR
-	Cle, RANK 332
-
-MATCH!
-	David Wilson	David Wilson
-	RB	RB
-	NYG, RANK 161
-
-MATCH!
-	Charlie Whitehurst	Charlie Whitehurst
-	QB	QB
-	Ten, RANK 1072
-
-MATCH!
-	John Conner	John Conner
-	RB	RB
-	NYG, RANK 1003
-
-MATCH!
-	Henry Hynoski	Henry Hynoski
-	RB	RB
-	NYG, RANK 902
-
-MATCH!
-	Brian Tyms	Brian Tyms
-	WR	WR
-	NE, RANK 1007
-
-MATCH!
-	B.J. Cunningham	B.J. Cunningham
-	WR	WR
-	Phi, RANK 542
-
-MATCH!
-	Percy Harvin	Percy Harvin
-	WR	WR
-	Sea, RANK 45
-
-NO MATCH for Jordan White (WR)
-	DEACTIVATE
-MATCH!
-	Kendall Hunter	Kendall Hunter
-	RB	RB
-	SF, RANK 357
-
-MATCH!
-	Shane Vereen	Shane Vereen
-	RB	RB
-	NE, RANK 50
-
-MATCH!
-	Hakeem Nicks	Hakeem Nicks
-	WR	WR
-	Ind, RANK 109
-
-NO MATCH for Mike Sims-Walker (WR)
-	DEACTIVATE
-MATCH!
-	Landry Jones	Landry Jones
-	QB	QB
-	Pit, RANK 1073
-
-MATCH!
-	Ryan Mathews	Ryan Mathews
-	RB	RB
-	SD, RANK 30
-
-NO MATCH for Darren Evans (RB)
-	DEACTIVATE
-MATCH!
-	Colin Anderson	Colin Anderson
-	TE	TE
-	NYJ, RANK 379
-
-MATCH!
-	Johnathan Franklin	Johnathan Franklin
-	RB	RB
-	GB, RANK 887
-
-MATCH!
-	Alec Lemon	Alec Lemon
-	WR	WR
-	Hou, RANK 544
-
-MATCH!
-	Shonn Greene	Shonn Greene
-	RB	RB
-	Ten, RANK 139
-
-MATCH!
-	Dennis Johnson	Dennis Johnson
-	RB	RB
-	Hou, RANK 863
-
-NO MATCH for Ben Bartholomew (RB)
-	DEACTIVATE
-NO MATCH for Josh Portis (QB)
-	DEACTIVATE
-MATCH!
-	Jordan Cameron	Jordan Cameron
-	TE	TE
-	Cle, RANK 58
-
-NO MATCH for Brandon Collins (WR)
-	DEACTIVATE
-MATCH!
-	EJ Manuel	EJ Manuel
-	QB	QB
-	Buf, RANK 317
-
-NO MATCH for Jeremy Wright (RB)
-	DEACTIVATE
-MATCH!
-	Nick Foles	Nick Foles
-	QB	QB
-	Phi, RANK 69
-
-MATCH!
-	Dan Orlovsky	Dan Orlovsky
-	QB	QB
-	Det, RANK 1075
-
-MATCH!
-	Gerell Robinson	Gerell Robinson
-	WR	TE
-	Den, RANK 381
-
-MATCH!
-	Eddie Royal	Eddie Royal
-	WR	WR
-	SD, RANK 212
-
-MATCH!
-	Cowboys	Cowboys
-	DEF	DEF
-	Dal, RANK 262
-
-MATCH!
-	Lonnie Pryor	Lonnie Pryor
-	RB	RB
-	TB, RANK 759
-
-MATCH!
-	Josh Bellamy	Josh Bellamy
-	WR	WR
-	Chi, RANK 546
-
-NO MATCH for Brady Quinn (QB)
-	DEACTIVATE
-NO MATCH for Roy Roundtree (WR)
-	DEACTIVATE
-NO MATCH for Jamie Childers (TE)
-	DEACTIVATE
-MATCH!
-	Marques Colston	Marques Colston
-	WR	WR
-	NO, RANK 71
-
-NO MATCH for Sammie Stroughter (WR)
-	DEACTIVATE
-NO MATCH for Alfonso Smith (RB)
-	DEACTIVATE
-MATCH!
-	Greg Orton	Greg Orton
-	WR	WR
-	NE, RANK 549
-
-MATCH!
-	Luke Stocker	Luke Stocker
-	TE	TE
-	TB, RANK 465
-
-MATCH!
-	Spencer Ware	Spencer Ware
-	RB	RB
-	Sea, RANK 762
-
-MATCH!
-	Brandon Lloyd	Brandon Lloyd
-	WR	WR
-	SF, RANK 335
-
-NO MATCH for Steve Slaton (RB)
-	DEACTIVATE
-NO MATCH for Omarius Hines (WR)
-	DEACTIVATE
-MATCH!
-	Anthony Sherman	Anthony Sherman
-	RB	RB
-	KC, RANK 1000
-
-MATCH!
-	Will Taufoou	Will Taufoou
-	RB	RB
-	Jax, RANK 1026
-
-MATCH!
-	Rusty Smith	Rusty Smith
-	QB	QB
-	NYG, RANK 1076
-
-NO MATCH for Mewelde Moore (RB)
-	DEACTIVATE
-NO MATCH for Morgan Newton (TE)
-	DEACTIVATE
-NO MATCH for Raymond Radway (WR)
-	DEACTIVATE
-MATCH!
-	Jorvorskie Lane	Jorvorskie Lane
-	RB	RB
-	TB, RANK 879
-
-MATCH!
-	B.J. Daniels	B.J. Daniels
-	QB	QB
-	Sea, RANK 1077
-
-NO MATCH for Drake Dunsmore (TE)
-	DEACTIVATE
-MATCH!
-	Derek Carrier	Derek Carrier
-	WR/TE	TE
-	SF, RANK 384
-
-MATCH!
-	DeMarco Sampson	DeMarco Sampson
-	WR	WR
-	SF, RANK 550
-
-NO MATCH for Tim Jenkins (QB)
-	DEACTIVATE
-MATCH!
-	Chase Reynolds	Chase Reynolds
-	RB	RB
-	StL, RANK 1037
-
-MATCH!
-	Chuck Jacobs	Chuck Jacobs
-	WR	WR
-	SF, RANK 551
-
-NO MATCH for DaRel Scott (RB)
-	DEACTIVATE
-MATCH!
-	Brenton Bersin	Brenton Bersin
-	WR	WR
-	Car, RANK 552
-
-MATCH!
-	Lance Moore	Lance Moore
-	WR	WR
-	Pit, RANK 267
-
-NO MATCH for Brian Leonard (RB)
-	DEACTIVATE
-MATCH!
-	Damian Williams	Damian Williams
-	WR	WR
-	Mia, RANK 929
-
-MATCH!
-	Ryan Mallett	Ryan Mallett
-	QB	QB
-	NE, RANK 1079
-
-MATCH!
-	Toby Gerhart	Toby Gerhart
-	RB	RB
-	Jax, RANK 34
-
-MATCH!
-	Robert Hughes	Robert Hughes
-	RB	RB
-	Ari, RANK 765
-
-MATCH!
-	Daryl Richardson	Daryl Richardson
-	RB	RB
-	NYJ, RANK 292
-
-MATCH!
-	Mikel LeShoure	Mikel Leshoure
-	RB	RB
-	Det, RANK 306
-
-NO MATCH for Alex Silvestro (TE)
-	DEACTIVATE
-MATCH!
-	Josh Gordon	Josh Gordon
-	WR	WR
-	Cle, RANK 535
-
-MATCH!
-	Jarrett Boykin	Jarrett Boykin
-	WR	WR
-	GB, RANK 145
-
-MATCH!
-	Toben Opurum	Toben Opurum
-	RB	RB
-	Hou, RANK 766
-
-NO MATCH for Jeff King (TE)
-	DEACTIVATE
-NO MATCH for Michael Jenkins (WR)
-	DEACTIVATE
-MATCH!
-	Tyler Bray	Tyler Bray
-	QB	QB
-	KC, RANK 1080
-
-MATCH!
-	Rod Streater	Rod Streater
-	WR	WR
-	Oak, RANK 211
-
-MATCH!
-	Rams	Rams
-	DEF	DEF
-	StL, RANK 166
-
-MATCH!
-	Ifeanyi Momah	Ifeanyi Momah
-	WR	WR
-	Phi, RANK 555
-
-MATCH!
-	Sean McGrath	Sean McGrath
-	TE	TE
-	KC, RANK 293
-
-MATCH!
-	Ryan Griffin	Ryan Griffin
-	QB	QB
-	NO, RANK 1081
-
-MATCH!
-	Greg Jennings	Greg Jennings
-	WR	WR
-	Min, RANK 142
-
-MATCH!
-	Sean Renfree	Sean Renfree
-	QB	QB
-	Atl, RANK 1082
-
-MATCH!
-	Darren McFadden	Darren McFadden
-	RB	RB
-	Oak, RANK 114
-
-NO MATCH for Nate Eachus (RB)
-	DEACTIVATE
-NO MATCH for Steve Breaston (WR)
-	DEACTIVATE
-MATCH!
-	Tony Romo	Tony Romo
-	QB	QB
-	Dal, RANK 75
-
-NO MATCH for Troy Burrell (WR)
-	DEACTIVATE
-MATCH!
-	Chris Summers	Chris Summers
-	WR	WR
-	Buf, RANK 556
-
-MATCH!
-	Kris Adams	Kris Adams
-	WR	WR
-	NYG, RANK 557
-
-MATCH!
-	Travis Kelce	Travis Kelce
-	TE	TE
-	KC, RANK 386
-
-NO MATCH for Leonard Pope (TE)
-	DEACTIVATE
-MATCH!
-	Kyle Rudolph	Kyle Rudolph
-	TE	TE
-	Min, RANK 97
-
-MATCH!
-	Brandon Myers	Brandon Myers
-	TE	TE
-	TB, RANK 204
-
-MATCH!
-	Kevin Kolb	Kevin Kolb
-	QB	QB
-	Buf, RANK 1046
-
-MATCH!
-	Tauren Poole	Tauren Poole
-	RB	RB
-	Pit, RANK 768
-
-MATCH!
-	Kashif Moore	Kashif Moore
-	WR	WR
-	Pit, RANK 559
-
-NO MATCH for David Douglas (WR)
-	DEACTIVATE
-MATCH!
-	Travis Harvey	Travis Harvey
-	WR	WR
-	NYG, RANK 560
-
-NO MATCH for Tim Tebow (QB)
-	DEACTIVATE
-NO MATCH for David Ruffer (K)
-	DEACTIVATE
-MATCH!
-	Cordarrelle Patterson	Cordarrelle Patterson
-	WR	WR
-	Min, RANK 48
-
-MATCH!
-	Greg Jenkins	Greg Jenkins
-	WR	WR
-	Oak, RANK 1038
-
-NO MATCH for John Beck (QB)
-	DEACTIVATE
-MATCH!
-	Andre Johnson	Andre Johnson
-	WR	WR
-	Hou, RANK 43
-
-MATCH!
-	Tommy Bohanon	Tommy Bohanon
-	RB	RB
-	NYJ, RANK 991
-
-MATCH!
-	Mike Leach	Mike Leach
-	TE	TE
-	Ari, RANK 503
-
-NO MATCH for Tyrell Sutton (RB)
-	DEACTIVATE
-MATCH!
-	Mychal Rivera	Mychal Rivera
-	TE	TE
-	Oak, RANK 270
-
-NO MATCH for Tashard Choice (RB)
-	DEACTIVATE
-MATCH!
-	Kirk Cousins	Kirk Cousins
-	QB	QB
-	Was, RANK 1054
-
-MATCH!
-	Andre Caldwell	Andre Caldwell
-	WR	WR
-	Den, RANK 493
-
-NO MATCH for Chaz Schilens (WR)
-	DEACTIVATE
-NO MATCH for Anthony Amos (WR)
-	DEACTIVATE
-MATCH!
-	Quinn Sharp	Quinn Sharp
-	K	K
-	Cin, RANK 955
-
-NO MATCH for Peter Tuitupou (TE)
-	DEACTIVATE
-NO MATCH for Jason Hill (WR)
-	DEACTIVATE
-NO MATCH for Ruvell Martin (WR)
-	DEACTIVATE
-NO MATCH for Harvey Unga (RB)
-	DEACTIVATE
-MATCH!
-	McLeod Bethel-Thompson	McLeod Bethel-Thompson
-	QB	QB
-	SF, RANK 1083
-
-MATCH!
-	Markus Wheaton	Markus Wheaton
-	WR	WR
-	Pit, RANK 115
-
-NO MATCH for Rashaad Carter (WR)
-	DEACTIVATE
-MATCH!
-	Frank Gore	Frank Gore
-	RB	RB
-	SF, RANK 46
-
-MATCH!
-	Chad Henne	Chad Henne
-	QB	QB
-	Jax, RANK 746
-
-MATCH!
-	Rob Bironas	Rob Bironas
-	K	K
-	Ten, RANK 289
-
-MATCH!
-	Shaun Suisham	Shaun Suisham
-	K	K
-	Pit, RANK 235
-
-MATCH!
-	Jerome Felton	Jerome Felton
-	RB	RB
-	Min, RANK 1040
-
-NO MATCH for Lamark Brown (WR/TE)
-	DEACTIVATE
-MATCH!
-	Cory Harkey	Cory Harkey
-	TE	TE
-	StL, RANK 468
-
-MATCH!
-	Charles Johnson	Charles Johnson
-	WR	WR
-	Cle, RANK 564
-
-MATCH!
-	Jake Byrne	Jake Byrne
-	TE	TE
-	SD, RANK 388
-
-NO MATCH for Matt Willis (WR)
-	DEACTIVATE
-MATCH!
-	Arrelious Benn	Arrelious Benn
-	WR	WR
-	Phi, RANK 896
-
-MATCH!
-	Andy Cruse	Andy Cruse
-	WR	WR
-	Min, RANK 566
-
-MATCH!
-	Vincent Brown	Vincent Brown
-	WR	WR
-	SD, RANK 466
-
-MATCH!
-	Marvin Jones	Marvin Jones
-	WR	WR
-	Cin, RANK 95
-
-NO MATCH for Mike Shanahan (TE)
-	DEACTIVATE
-MATCH!
-	Michael Smith	Michael Smith
-	RB	RB
-	TB, RANK 772
-
-MATCH!
-	Drew Davis	Drew Davis
-	WR	WR
-	Atl, RANK 865
-
-NO MATCH for Marcus Jackson (WR)
-	DEACTIVATE
-MATCH!
-	Taylor Thompson	Taylor Thompson
-	TE	TE
-	Ten, RANK 922
-
-NO MATCH for Chris Redman (QB)
-	DEACTIVATE
-MATCH!
-	Dustin Keller	Dustin Keller
-	TE	TE
-	Mia, RANK 314
-
-MATCH!
-	Ryan Tannehill	Ryan Tannehill
-	QB	QB
-	Mia, RANK 130
-
-NO MATCH for James Vandenberg (QB)
-	DEACTIVATE
-MATCH!
-	Andre Holmes	Andre Holmes
-	WR	WR
-	Oak, RANK 280
-
-MATCH!
-	Matt Cassel	Matt Cassel
-	QB	QB
-	Min, RANK 486
-
-MATCH!
-	Michael Hoomanawanui	Michael Hoomanawanui
-	TE	TE
-	NE, RANK 476
-
-MATCH!
-	Jaguars	Jaguars
-	DEF	DEF
-	Jax, RANK 496
-
-MATCH!
-	Kory Sheets	Kory Sheets
-	RB	RB
-	Oak, RANK 774
-
-MATCH!
-	Fendi Onobun	Fendi Onobun
-	TE	TE
-	Chi, RANK 390
-
-NO MATCH for Dan Moore (RB)
-	DEACTIVATE
-MATCH!
-	Jamaine Cook	Jamaine Cook
-	RB	RB
-	Cle, RANK 775
-
-MATCH!
-	Fozzy Whittaker	Fozzy Whittaker
-	RB	RB
-	Car, RANK 912
-
-MATCH!
-	LaRon Byrd	LaRon Byrd
-	WR	WR
-	Dal, RANK 568
-
-MATCH!
-	Browns	Browns
-	DEF	DEF
-	Cle, RANK 266
-
-MATCH!
-	Alan Bonner	Alan Bonner
-	WR	WR
-	Hou, RANK 569
-
-MATCH!
-	Matt Veldman	Matt Veldman
-	TE	TE
-	Det, RANK 391
-
-MATCH!
-	Calvin Johnson	Calvin Johnson
-	WR	WR
-	Det, RANK 6
-
-MATCH!
-	Isaiah Pead	Isaiah Pead
-	RB	RB
-	StL, RANK 1006
-
-MATCH!
-	Tarvaris Jackson	Tarvaris Jackson
-	QB	QB
-	Sea, RANK 1085
-
-NO MATCH for Braden Wilson (RB)
-	DEACTIVATE
-NO MATCH for Onterio McCalebb (RB)
-	DEACTIVATE
-NO MATCH for Corey McIntyre (RB)
-	DEACTIVATE
-MATCH!
-	Jake Stoneburner	Jake Stoneburner
-	TE	TE
-	GB, RANK 392
-
-MATCH!
-	Maurice Jones-Drew	Maurice Jones-Drew
-	RB	RB
-	Oak, RANK 82
-
-MATCH!
-	Robert Griffin III	Robert Griffin III
-	QB	QB
-	Was, RANK 61
-
-NO MATCH for D.J. Ware (RB)
-	DEACTIVATE
-MATCH!
-	Gerrard Sheppard	Gerrard Sheppard
-	WR	WR
-	Bal, RANK 573
-
-MATCH!
-	Corey Fuller	Corey Fuller
-	WR	WR
-	Det, RANK 574
-
-MATCH!
-	Carson Palmer	Carson Palmer
-	QB	QB
-	Ari, RANK 138
-
-MATCH!
-	Lance Kendricks	Lance Kendricks
-	TE	TE
-	StL, RANK 258
-
-MATCH!
-	Kevin Elliott	Kevin Elliott
-	WR	WR
-	Buf, RANK 876
-
-MATCH!
-	Teddy Williams	Teddy Williams
-	WR	WR
-	Ari, RANK 575
-
-MATCH!
-	Bernard Pierce	Bernard Pierce
-	RB	RB
-	Bal, RANK 98
-
-NO MATCH for Vidal Hazelton (WR)
-	DEACTIVATE
-MATCH!
-	Josh Vaughan	Josh Vaughan
-	RB	RB
-	Atl, RANK 779
-
-NO MATCH for Terrell Owens (WR)
-	DEACTIVATE
-NO MATCH for Martel Moore (WR)
-	DEACTIVATE
-NO MATCH for Colby Prince (TE)
-	DEACTIVATE
-MATCH!
-	Rishard Matthews	Rishard Matthews
-	WR	WR
-	Mia, RANK 327
-
-MATCH!
-	Patriots	Patriots
-	DEF	DEF
-	NE, RANK 195
-
-NO MATCH for Lonyae Miller (RB)
-	DEACTIVATE
-MATCH!
-	Michael Hill	Michael Hill
-	RB	RB
-	GB, RANK 998
-
-NO MATCH for James Shaw (WR)
-	DEACTIVATE
-NO MATCH for C.J. Akins (WR)
-	DEACTIVATE
-MATCH!
-	Nathan Palmer	Nathan Palmer
-	WR	WR
-	Den, RANK 576
-
-MATCH!
-	Conner Vernon	Conner Vernon
-	WR	WR
-	Cin, RANK 577
-
-NO MATCH for Travionte Session (WR)
-	DEACTIVATE
-MATCH!
-	Santana Moss	Santana Moss
-	WR	WR
-	Was, RANK 307
-
-MATCH!
-	Miguel Maysonet	Miguel Maysonet
-	RB	RB
-	Pit, RANK 781
-
-MATCH!
-	Craig Stevens	Craig Stevens
-	TE	TE
-	Ten, RANK 938
-
-NO MATCH for Caleb TerBush (QB)
-	DEACTIVATE
-MATCH!
-	Jeremy Maclin	Jeremy Maclin
-	WR	WR
-	Phi, RANK 67
-
-MATCH!
-	Edwin Baker	Edwin Baker
-	RB	RB
-	Cle, RANK 782
-
-MATCH!
-	Christian Ponder	Christian Ponder
-	QB	QB
-	Min, RANK 321
-
-NO MATCH for Garrett Hartley (K)
-	DEACTIVATE
-MATCH!
-	Kevin McDermott	Kevin McDermott
-	TE	TE
-	SF, RANK 394
-
-NO MATCH for Bobby Sewall (WR)
-	DEACTIVATE
-MATCH!
-	Ronnie Brown	Ronnie Brown
-	RB	RB
-	SD, RANK 909
-
-NO MATCH for Joe Hastings (WR)
-	DEACTIVATE
-MATCH!
-	Charles Hawkins	Charles Hawkins
-	WR	WR
-	NO, RANK 582
-
-NO MATCH for Matt Brown (QB)
-	DEACTIVATE
-MATCH!
-	Blair Walsh	Blair Walsh
-	K	K
-	Min, RANK 216
-
-NO MATCH for Javon Ringer (RB)
-	DEACTIVATE
-MATCH!
-	Geno Smith	Geno Smith
-	QB	QB
-	NYJ, RANK 176
-
-MATCH!
-	Anthony McCoy	Anthony McCoy
-	TE	TE
-	Sea, RANK 344
-
-MATCH!
-	Zac Dysert	Zac Dysert
-	QB	QB
-	Den, RANK 1088
-
-NO MATCH for Chris Denton (WR)
-	DEACTIVATE
-MATCH!
-	Jim Dray	Jim Dray
-	TE	TE
-	Cle, RANK 355
-
-MATCH!
-	Aldrick Robinson	Aldrick Robinson
-	WR	WR
-	Was, RANK 316
-
-MATCH!
-	Fred Davis	Fred Davis
-	TE	TE
-	Was, RANK 334
-
-MATCH!
-	Knile Davis	Knile Davis
-	RB	RB
-	KC, RANK 735
-
-NO MATCH for Curtis McNeal (RB)
-	DEACTIVATE
-MATCH!
-	Zach Sudfeld	Zach Sudfeld
-	TE	TE
-	NYJ, RANK 736
-
-MATCH!
-	Phil Bates	Phil Bates
-	WR	WR
-	Sea, RANK 583
-
-NO MATCH for Quentin Sims (WR)
-	DEACTIVATE
-NO MATCH for Lance Long (WR)
-	DEACTIVATE
-MATCH!
-	Brian Quick	Brian Quick
-	WR	WR
-	StL, RANK 506
-
-NO MATCH for Eric Stevens (RB)
-	DEACTIVATE
-NO MATCH for Terrell Sinkfield (WR)
-	DEACTIVATE
-MATCH!
-	Devin Hester	Devin Hester
-	WR	WR
-	Atl, RANK 1022
-
-NO MATCH for Moran Norris (RB)
-	DEACTIVATE
-MATCH!
-	Nick Toon	Nick Toon
-	WR	WR
-	NO, RANK 941
-
-MATCH!
-	Dominique Davis	Dominique Davis
-	QB	QB
-	Atl, RANK 1091
-
-MATCH!
-	Dontrelle Inman	Dontrelle Inman
-	WR	WR
-	SD, RANK 587
-
-NO MATCH for Ryan Katz (QB)
-	DEACTIVATE
-MATCH!
-	Lions	Lions
-	DEF	DEF
-	Det, RANK 302
-
-MATCH!
-	Riley Cooper	Riley Cooper
-	WR	WR
-	Phi, RANK 93
-
-NO MATCH for Jeremy Kelley (WR)
-	DEACTIVATE
-MATCH!
-	Kai Forbath	Kai Forbath
-	K	K
-	Was, RANK 272
-
-NO MATCH for Kevin OConnell (QB)
-	DEACTIVATE
-NO MATCH for Mardy Gilyard (WR)
-	DEACTIVATE
-MATCH!
-	Kevin Smith	Kevin Smith
-	RB	RB
-	Det, RANK 730
-
-MATCH!
-	Travis Beckum	Travis Beckum
-	TE	TE
-	Sea, RANK 396
-
-NO MATCH for Ryan DImperio (RB)
-	DEACTIVATE
-MATCH!
-	Clark Harris	Clark Harris
-	TE	TE
-	Cin, RANK 397
-
-MATCH!
-	Michael Zordich	Michael Zordich
-	RB	RB
-	Car, RANK 784
-
-MATCH!
-	C.J. Spiller	C.J. Spiller
-	RB	RB
-	Buf, RANK 28
-
-MATCH!
-	Mike Tolbert	Mike Tolbert
-	RB	RB
-	Car, RANK 238
-
-NO MATCH for Dan Gronkowski (TE)
-	DEACTIVATE
-NO MATCH for Jordan Roberts (RB)
-	DEACTIVATE
-MATCH!
-	Vonta Leach	Vonta Leach
-	RB	RB
-	Bal, RANK 1008
-
-NO MATCH for Eric Rogers (WR)
-	DEACTIVATE
-NO MATCH for Tyler Shaw (WR)
-	DEACTIVATE
-MATCH!
-	Jason Schepler	Jason Schepler
-	RB	TE
-	Ten, RANK 398
-
-NO MATCH for Adam Steiner (TE)
-	DEACTIVATE
-MATCH!
-	Chris Gragg	Chris Gragg
-	TE	TE
-	Buf, RANK 399
-
-NO MATCH for Tommy Gallarda (TE)
-	DEACTIVATE
-NO MATCH for Terriun Crump (WR)
-	DEACTIVATE
-MATCH!
-	Robert Turbin	Robert Turbin
-	RB	RB
-	Sea, RANK 928
-
-MATCH!
-	Ryan Taylor	Ryan Taylor
-	TE	TE
-	GB, RANK 947
-
-NO MATCH for Deji Karim (RB)
-	DEACTIVATE
-MATCH!
-	Andrew Szczerba	Andrew Szczerba
-	TE	TE
-	Atl, RANK 400
-
-NO MATCH for John Rabe (TE)
-	DEACTIVATE
-MATCH!
-	Matt Flynn	Matt Flynn
-	QB	QB
-	GB, RANK 982
-
-MATCH!
-	Willis McGahee	Willis McGahee
-	RB	RB
-	Cle, RANK 239
-
-MATCH!
-	Aaron Dobson	Aaron Dobson
-	WR	WR
-	NE, RANK 112
-
-NO MATCH for Nick Guess (TE)
-	DEACTIVATE
-NO MATCH for Jabar Gaffney (WR)
-	DEACTIVATE
-MATCH!
-	Miles Austin	Miles Austin
-	WR	WR
-	Cle, RANK 156
-
-MATCH!
-	Vick Ballard	Vick Ballard
-	RB	RB
-	Ind, RANK 350
-
-MATCH!
-	Jeff Cumberland	Jeff Cumberland
-	TE	TE
-	NYJ, RANK 226
-
-MATCH!
-	Ryan Williams	Ryan Williams
-	RB	RB
-	Dal, RANK 738
-
-NO MATCH for Alex Debniak (RB)
-	DEACTIVATE
-MATCH!
-	Caleb Sturgis	Caleb Sturgis
-	K	K
-	Mia, RANK 256
-
-NO MATCH for Terrance Ganaway (RB)
-	DEACTIVATE
-MATCH!
-	Dez Bryant	Dez Bryant
-	WR	WR
-	Dal, RANK 12
-
-NO MATCH for Roberto Wallace (WR)
-	DEACTIVATE
-MATCH!
-	Randy Bullock	Randy Bullock
-	K	K
-	Hou, RANK 301
-
-NO MATCH for Terrance Copper (WR)
-	DEACTIVATE
-MATCH!
-	Antone Smith	Antone Smith
-	RB	RB
-	Atl, RANK 931
-
-NO MATCH for Zack Pianalto (TE)
-	DEACTIVATE
-MATCH!
-	Delone Carter	Delone Carter
-	RB	RB
-	Jax, RANK 511
-
-MATCH!
-	Danario Alexander	Danario Alexander
-	WR	WR
-	SD, RANK 291
-
-MATCH!
-	Tony Gonzalez	Tony Gonzalez
-	TE	TE
-	Atl, RANK 534
-
-MATCH!
-	David Nelson	David Nelson
-	WR	WR
-	NYJ, RANK 297
-
-MATCH!
-	Matt Blanchard	Matt Blanchard
-	QB	QB
-	Car, RANK 1093
-
-NO MATCH for Brody Eldridge (TE)
-	DEACTIVATE
-MATCH!
-	Zach Miller	Zach Miller
-	TE	TE
-	Chi, RANK 401
-
-MATCH!
-	Ted Ginn Jr.	Ted Ginn Jr.
-	WR	WR
-	Ari, RANK 304
-
-NO MATCH for Randy Moss (WR)
-	DEACTIVATE
-NO MATCH for Seth Doege (QB)
-	DEACTIVATE
-MATCH!
-	C.J. Anderson	C.J. Anderson
-	RB	RB
-	Den, RANK 789
-
-NO MATCH for Taylor Stockemer (WR)
-	DEACTIVATE
-MATCH!
-	Phillip Tanner	Phillip Tanner
-	RB	RB
-	Dal, RANK 1005
-
-NO MATCH for Ray Holley (RB)
-	DEACTIVATE
-MATCH!
-	Devon Wylie	Devon Wylie
-	WR	WR
-	SF, RANK 880
-
-NO MATCH for David Rolf (TE)
-	DEACTIVATE
-NO MATCH for Dominique Curry (TE)
-	DEACTIVATE
-NO MATCH for Perez Ashford (WR)
-	DEACTIVATE
-MATCH!
-	Kamar Aiken	Kamar Aiken
-	WR	WR
-	Bal, RANK 594
-
-MATCH!
-	Jonathan Dwyer	Jonathan Dwyer
-	RB	RB
-	Ari, RANK 885
-
-NO MATCH for Tyrone Goard (WR)
-	DEACTIVATE
-NO MATCH for Laurent Robinson (WR)
-	DEACTIVATE
-NO MATCH for D.J. Monroe (WR)
-	DEACTIVATE
-NO MATCH for Jamie Harper (RB)
-	DEACTIVATE
-NO MATCH for Jeremiah Johnson (RB)
-	DEACTIVATE
-MATCH!
-	Packers	Packers
-	DEF	DEF
-	GB, RANK 274
-
-NO MATCH for Quentin Hines (RB)
-	DEACTIVATE
-MATCH!
-	T.J. Graham	T.J. Graham
-	WR	WR
-	Buf, RANK 741
-
-MATCH!
-	Tony Fiammetta	Tony Fiammetta
-	RB	RB
-	Chi, RANK 986
-
-MATCH!
-	MarQueis Gray	MarQueis Gray
-	RB,TE	TE
-	Cle, RANK 904
-
-MATCH!
-	Kellen Winslow	Kellen Winslow
-	TE	TE
-	NYJ, RANK 250
-
-NO MATCH for Chad Johnson (WR)
-	DEACTIVATE
-MATCH!
-	Jeremy Ross	Jeremy Ross
-	WR	WR
-	Det, RANK 877
-
-MATCH!
-	LeSean McCoy	LeSean McCoy
-	RB	RB
-	Phi, RANK 2
-
-MATCH!
-	Eagles	Eagles
-	DEF	DEF
-	Phi, RANK 275
-
-MATCH!
-	Dallas Walker	Dallas Walker
-	TE	TE
-	Dal, RANK 404
-
-MATCH!
-	Andrew Hawkins	Andrew Hawkins
-	WR	WR
-	Cle, RANK 160
-
-MATCH!
-	Brandon LaFell	Brandon LaFell
-	WR	WR
-	NE, RANK 168
-
-MATCH!
-	Kenjon Barner	Kenjon Barner
-	RB	RB
-	Car, RANK 1025
-
-NO MATCH for Ben Cotton (TE)
-	DEACTIVATE
-MATCH!
-	Danny Woodhead	Danny Woodhead
-	RB	RB
-	SD, RANK 111
-
-MATCH!
-	Trent Edwards	Trent Edwards
-	QB	QB
-	Oak, RANK 1095
-
-MATCH!
-	Chris Ogbonnaya	Chris Ogbonnaya
-	RB	RB
-	Cle, RANK 356
-
-MATCH!
-	Ryan Broyles	Ryan Broyles
-	WR	WR
-	Det, RANK 897
-
-MATCH!
-	Trindon Holliday	Trindon Holliday
-	WR	WR
-	NYG, RANK 1021
-
-MATCH!
-	Jeff Tuel	Jeff Tuel
-	QB	QB
-	Buf, RANK 1096
-
-MATCH!
-	Deonte Thompson	Deonte Thompson
-	WR	WR
-	Bal, RANK 944
-
-MATCH!
-	Cameron Morrah	Cameron Morrah
-	TE	TE
-	Den, RANK 405
-
-NO MATCH for Keith Carlos (WR)
-	DEACTIVATE
-MATCH!
-	Dennis Pitta	Dennis Pitta
-	TE	TE
-	Bal, RANK 94
-
-NO MATCH for Rodrick Rumble (WR)
-	DEACTIVATE
-NO MATCH for Devin Thomas (WR)
-	DEACTIVATE
-MATCH!
-	Matthew Tucker	Matthew Tucker
-	RB	RB
-	Phi, RANK 792
-
-MATCH!
-	Arceto Clark	Arceto Clark
-	WR	WR
-	Sea, RANK 597
-
-MATCH!
-	Erik Lorig	Erik Lorig
-	RB	RB
-	NO, RANK 1039
-
-MATCH!
-	DeSean Jackson	DeSean Jackson
-	WR	WR
-	Was, RANK 51
-
-MATCH!
-	T.J. Yates	T.J. Yates
-	QB	QB
-	Atl, RANK 1097
-
-MATCH!
-	Bruce Gradkowski	Bruce Gradkowski
-	QB	QB
-	Pit, RANK 1098
-
-MATCH!
-	Austin Pettis	Austin Pettis
-	WR	WR
-	StL, RANK 283
-
-MATCH!
-	James Develin	James Develin
-	RB	RB
-	NE, RANK 918
-
-MATCH!
-	Brandon Williams	Brandon Williams
-	TE	TE
-	Car, RANK 407
-
-NO MATCH for Billy Bajema (TE)
-	DEACTIVATE
-NO MATCH for Carnell Williams (RB)
-	DEACTIVATE
 MATCH!
-	Mike James	Mike James
-	RB	RB
-	TB, RANK 276
+	Brett Anderson	Brett Anderson
+	SP	SP
+	LAD, RANK 424
 
 MATCH!
-	Chase Ford	Chase Ford
-	TE	TE
-	Min, RANK 490
+	A.J. Cole	A.J. Cole
+	SP	P
+	Was, RANK 808
 
-NO MATCH for Dontel Watkins (WR)
+NO MATCH for Jeff Bianchi (3B/SS)
 	DEACTIVATE
-NO MATCH for Evan Landi (TE)
-	DEACTIVATE
-MATCH!
-	Josh Cooper	Josh Cooper
-	WR	WR
-	Min, RANK 866
-
-MATCH!
-	Tandon Doss	Tandon Doss
-	WR	WR
-	Jax, RANK 733
-
-NO MATCH for Stephen Burton (WR)
-	DEACTIVATE
-MATCH!
-	Brandon Gibson	Brandon Gibson
-	WR	WR
-	Mia, RANK 196
-
-NO MATCH for Randy McMichael (TE)
-	DEACTIVATE
-MATCH!
-	Texans	Texans
-	DEF	DEF
-	Hou, RANK 165
-
-MATCH!
-	Marcel Reece	Marcel Reece
-	RB	RB
-	Oak, RANK 271
-
-MATCH!
-	Mark Sanchez	Mark Sanchez
-	QB	QB
-	Phi, RANK 1055
-
-NO MATCH for Ovie Mughelli (RB)
-	DEACTIVATE
-MATCH!
-	Damaris Johnson	Damaris Johnson
-	WR	WR
-	Phi, RANK 1031
-
-NO MATCH for Richard Quinn (TE)
-	DEACTIVATE
-MATCH!
-	Brice Butler	Brice Butler
-	WR	WR
-	Oak, RANK 945
-
-MATCH!
-	Greg Salas	Greg Salas
-	WR	WR
-	NYJ, RANK 504
-
-MATCH!
-	Ray Graham	Ray Graham
-	RB	RB
-	Hou, RANK 793
-
-MATCH!
-	Graham Gano	Graham Gano
-	K	K
-	Car, RANK 231
-
-MATCH!
-	Wes Welker	Wes Welker
-	WR	WR
-	Den, RANK 41
-
-NO MATCH for Brandon Jacobs (RB)
-	DEACTIVATE
-MATCH!
-	Colt McCoy	Colt McCoy
-	QB	QB
-	Was, RANK 1100
-
-MATCH!
-	Matthew Slater	Matthew Slater
-	WR	WR
-	NE, RANK 1049
-
-MATCH!
-	Brett Brackett	Brett Brackett
-	TE	TE
-	Ari, RANK 409
-
-MATCH!
-	Curtis Painter	Curtis Painter
-	QB	QB
-	NYG, RANK 1101
-
-MATCH!
-	Quinn Johnson	Quinn Johnson
-	RB	RB
-	Ten, RANK 915
-
-MATCH!
-	Christine Michael	Christine Michael
-	RB	RB
-	Sea, RANK 129
-
-MATCH!
-	Greg Zuerlein	Greg Zuerlein
-	K	K
-	StL, RANK 260
-
-MATCH!
-	Jameson Konz	Jameson Konz
-	TE	TE
-	Den, RANK 410
-
-MATCH!
-	Jackie Battle	Jackie Battle
-	RB	RB
-	Ten, RANK 891
-
-NO MATCH for Mossis Madu (RB)
-	DEACTIVATE
-MATCH!
-	Tori Gurley	Tori Gurley
-	WR	WR
-	Buf, RANK 604
-
-MATCH!
-	Jared Cook	Jared Cook
-	TE	TE
-	StL, RANK 199
-
-NO MATCH for Jose Maltos (K)
-	DEACTIVATE
-MATCH!
-	Scott Chandler	Scott Chandler
-	TE	TE
-	Buf, RANK 213
-
-NO MATCH for Lance Ball (RB)
-	DEACTIVATE
-NO MATCH for Braylon Edwards (WR)
-	DEACTIVATE
-MATCH!
-	Khiry Robinson	Khiry Robinson
-	RB	RB
-	NO, RANK 154
-
-NO MATCH for Mike Smith (WR)
-	DEACTIVATE
-MATCH!
-	Weslye Saunders	Weslye Saunders
-	TE	TE
-	Ind, RANK 894
-
-MATCH!
-	Bills	Bills
-	DEF	DEF
-	Buf, RANK 215
-
-MATCH!
-	Alex Green	Alex Green
-	RB	RB
-	NYJ, RANK 984
-
-MATCH!
-	Frank Summers	Frank Summers
-	RB	RB
-	Buf, RANK 512
-
-MATCH!
-	Ed Dickson	Ed Dickson
-	TE	TE
-	Car, RANK 342
-
-MATCH!
-	Dexter McCluster	Dexter McCluster
-	WR	RB
-	Ten, RANK 303
-
-NO MATCH for Brent Leonard (WR)
-	DEACTIVATE
-MATCH!
-	Reggie Dunn	Reggie Dunn
-	WR	WR
-	Ari, RANK 608
-
-NO MATCH for Stefphon Jefferson (RB)
-	DEACTIVATE
-MATCH!
-	Caleb Hanie	Caleb Hanie
-	QB	QB
-	Dal, RANK 1102
-
-MATCH!
-	Travaris Cadet	Travaris Cadet
-	RB	RB
-	NO, RANK 1028
-
-MATCH!
-	Cedric Peerman	Cedric Peerman
-	RB	RB
-	Cin, RANK 1027
-
-MATCH!
-	Cordell Roberson	Cordell Roberson
-	WR	WR
-	Buf, RANK 610
-
-NO MATCH for Austin Signor (K)
-	DEACTIVATE
-MATCH!
-	Andre Smith	Andre Smith
-	TE	TE
-	Cle, RANK 412
-
-MATCH!
-	Marquise Goodwin	Marquise Goodwin
-	WR	WR
-	Buf, RANK 339
-
-MATCH!
-	Scott Tolzien	Scott Tolzien
-	QB	QB
-	GB, RANK 1103
-
-MATCH!
-	Dominique Jones	Dominique Jones
-	TE	TE
-	Buf, RANK 413
-
-NO MATCH for Kevin Hardy (WR)
-	DEACTIVATE
-MATCH!
-	Lance Dunbar	Lance Dunbar
-	RB	RB
-	Dal, RANK 172
-
-MATCH!
-	Case Keenum	Case Keenum
-	QB	QB
-	Hou, RANK 347
-
-MATCH!
-	Rian Lindell	Rian Lindell
-	K	K
-	TB, RANK 295
-
-NO MATCH for Evan Moore (TE)
-	DEACTIVATE
-MATCH!
-	Denarius Moore	Denarius Moore
-	WR	WR
-	Oak, RANK 189
-
-MATCH!
-	Mike Nugent	Mike Nugent
-	K	K
-	Cin, RANK 273
-
-MATCH!
-	LaVon Brazill	LaVon Brazill
-	WR	WR
-	Ind, RANK 502
-
-MATCH!
-	Eli Manning	Eli Manning
-	QB	QB
-	NYG, RANK 140
-
-NO MATCH for D.J. Harper (RB)
-	DEACTIVATE
-NO MATCH for Colin Cochart (TE)
-	DEACTIVATE
 MATCH!
-	Bryan Walters	Bryan Walters
-	WR	WR
-	Sea, RANK 615
+	Brett Bochy	Brett Bochy
+	RP	RP
+	SF, RANK 543
 
 MATCH!
-	Rhett Ellison	Rhett Ellison
-	RB	TE
-	Min, RANK 491
+	Gerardo Parra	Gerardo Parra
+	OF	OF
+	Col, RANK 176
 
 MATCH!
-	Matt Furstenburg	Matt Furstenburg
-	TE	TE
-	Bal, RANK 414
+	Juan Lagares	Juan Lagares
+	OF	OF
+	NYM, RANK 585
 
 MATCH!
-	Chandler Harnish	Chandler Harnish
-	QB	QB
-	Ind, RANK 1104
+	Didi Gregorius	Didi Gregorius
+	2B/SS	SS
+	NYY, RANK 476
 
 MATCH!
-	Matt McGloin	Matt McGloin
-	QB	QB
-	Oak, RANK 874
+	Ryan Zimmerman	Ryan Zimmerman
+	3B/OF	1B
+	Was, RANK 208
 
-NO MATCH for John Parker Wilson (QB)
-	DEACTIVATE
-MATCH!
-	Stedman Bailey	Stedman Bailey
-	WR	WR
-	StL, RANK 500
-
-NO MATCH for Tyler Shoemaker (WR)
-	DEACTIVATE
-MATCH!
-	Niles Paul	Niles Paul
-	TE	TE
-	Was, RANK 927
-
-NO MATCH for Brian Jennings (TE)
-	DEACTIVATE
-MATCH!
-	Josh Johnson	Josh Johnson
-	QB	QB
-	SF, RANK 1105
-
-NO MATCH for Kendial Lawrence (RB)
-	DEACTIVATE
-NO MATCH for Brad Herman (TE)
-	DEACTIVATE
-MATCH!
-	Steven Jackson	Steven Jackson
-	RB	RB
-	Atl, RANK 68
-
 MATCH!
-	Andrew Quarless	Andrew Quarless
-	TE	TE
-	GB, RANK 290
+	Bryan Holaday	Bryan Holaday
+	C	C
+	Det, RANK 1185
 
-NO MATCH for Greg McElroy (QB)
+NO MATCH for Brett Jackson (OF)
 	DEACTIVATE
-MATCH!
-	John Phillips	John Phillips
-	TE	TE
-	SD, RANK 935
-
-NO MATCH for Brandon Jackson (RB)
+NO MATCH for Josh Beckett (SP)
 	DEACTIVATE
-MATCH!
-	Kevin Cone	Kevin Cone
-	WR	WR
-	Mia, RANK 1013
-
 MATCH!
-	Steven Miller	Steven Miller
-	RB	RB
-	Det, RANK 798
+	Brad Peacock	Brad Peacock
+	SP	SP
+	Hou, RANK 919
 
 MATCH!
 	Nick Williams	Nick Williams
-	WR	WR
-	Was, RANK 992
+	OF	OF
+	Phi, RANK 1319
 
 MATCH!
-	Brandon McManus	Brandon McManus
-	K	K
-	NYG, RANK 960
+	Sam Fuld	Sam Fuld
+	OF	OF
+	Oak, RANK 1088
 
+NO MATCH for Brad Lincoln (RP)
+	DEACTIVATE
+MATCH!
+	JosÃ© Quintana	José Quintana
+	SP	SP
+	CWS, RANK 142
+
+MATCH!
+	Greg Bird	Greg Bird
+	1B	1B
+	NYY, RANK 1066
+
+MATCH!
+	Tyler Skaggs	Tyler Skaggs
+	SP	SP
+	LAA, RANK 737
+
+NO MATCH for NeftalÃ­ Soto (CI)
+	DEACTIVATE
+MATCH!
+	Bradley Zimmer	Bradley Zimmer
+	OF	OF
+	Cle, RANK 1321
+
+MATCH!
+	Jake Smolinski	Jake Smolinski
+	OF	OF
+	Oak, RANK 1122
+
+MATCH!
+	Sergio Santos	Sergio Santos
+	RP	RP
+	NYY, RANK 884
+
+MATCH!
+	Yadier Molina	Yadier Molina
+	C	C
+	StL, RANK 821
+
+MATCH!
+	Chris Denorfia	Chris Denorfia
+	OF	OF
+	NYY, RANK 1114
+
+NO MATCH for HÃ©ctor GÃ³mez (Util)
+	DEACTIVATE
+MATCH!
+	Max Scherzer	Max Scherzer
+	SP	SP
+	Was, RANK 18
+
+MATCH!
+	RenÃ© Rivera	René Rivera
+	C	C
+	TB, RANK 1189
+
+NO MATCH for Anthony Recker (C)
+	DEACTIVATE
+MATCH!
+	Alcides Escobar	Alcides Escobar
+	SS	SS
+	KC, RANK 228
+
+MATCH!
+	Alex Dickerson	Alex Dickerson
+	OF	OF
+	SD, RANK 1455
+
+MATCH!
+	Anthony Ranaudo	Anthony Ranaudo
+	SP	P
+	Tex, RANK 941
+
+MATCH!
+	Lucas Duda	Lucas Duda
+	1B	1B
+	NYM, RANK 177
+
+MATCH!
+	Jon Lester	Jon Lester
+	SP	SP
+	ChC, RANK 67
+
+MATCH!
+	Kevin Quackenbush	Kevin Quackenbush
+	RP	RP
+	SD, RANK 257
+
+MATCH!
+	Brett Cecil	Brett Cecil
+	RP	RP
+	Tor, RANK 303
+
+MATCH!
+	Gregor Blanco	Gregor Blanco
+	OF	OF
+	SF, RANK 404
+
+MATCH!
+	Starlin Castro	Starlin Castro
+	SS	2B,SS
+	NYY, RANK 231
+
+MATCH!
+	Evan Longoria	Evan Longoria
+	3B	3B
+	TB, RANK 109
+
+MATCH!
+	Clay Buchholz	Clay Buchholz
+	SP	SP
+	Bos, RANK 223
+
+MATCH!
+	Stephen Piscotty	Stephen Piscotty
+	OF	1B,OF
+	StL, RANK 291
+
+MATCH!
+	Robinson CanÃ³	Robinson Canó
+	2B	2B
+	Sea, RANK 56
+
+NO MATCH for Chris Getz (2B)
+	DEACTIVATE
+NO MATCH for Fernando Abad (RP)
+	DEACTIVATE
+MATCH!
+	Bud Norris	Bud Norris
+	SP	SP,RP
+	Atl, RANK 1049
+
+MATCH!
+	Eduardo NÃºÃ±ez	Eduardo Núñez
+	3B/SS/OF	3B,SS
+	Min, RANK 1033
+
+MATCH!
+	Zach Walters	Zach Walters
+	OF	Util
+	Cle, RANK 1275
+
+NO MATCH for Jason Lane (P)
+	DEACTIVATE
+MATCH!
+	Kendrys Morales	Kendrys Morales
+	1B	1B
+	KC, RANK 119
+
+NO MATCH for Todd Coffey (RP)
+	DEACTIVATE
+MATCH!
+	Edwin EncarnaciÃ³n	Edwin Encarnación
+	1B	1B
+	Tor, RANK 20
+
+MATCH!
+	Henry Owens	Henry Owens
+	SP	SP
+	Bos, RANK 756
+
+MATCH!
+	Chris Hatcher	Chris Hatcher
+	RP	RP
+	LAD, RANK 413
+
+MATCH!
+	Justin Turner	Justin Turner
+	2B/3B/SS	1B,3B
+	LAD, RANK 196
+
+NO MATCH for Jair Jurrjens (SP)
+	DEACTIVATE
+MATCH!
+	Shane Greene	Shane Greene
+	SP	SP
+	Det, RANK 1094
+
+NO MATCH for Matt Diaz (OF)
+	DEACTIVATE
+MATCH!
+	Wily Peralta	Wily Peralta
+	SP	SP
+	Mil, RANK 979
+
+NO MATCH for Brad Snyder (1B)
+	DEACTIVATE
+NO MATCH for Randy Messenger (RP)
+	DEACTIVATE
+NO MATCH for Corey Brown (OF)
+	DEACTIVATE
+MATCH!
+	Nick Burdi	Nick Burdi
+	RP	RP
+	Min, RANK 613
+
+MATCH!
+	Louis Coleman	Louis Coleman
+	RP	RP
+	LAD, RANK 741
+
+MATCH!
+	Trevor Rosenthal	Trevor Rosenthal
+	RP	RP
+	StL, RANK 103
+
+NO MATCH for Matt McBride (1B)
+	DEACTIVATE
+MATCH!
+	Rubby De La Rosa	Rubby De La Rosa
+	SP	SP
+	Ari, RANK 836
+
+MATCH!
+	Christian VÃ¡zquez	Christian Vázquez
+	C	C
+	Bos, RANK 1259
+
+MATCH!
+	Evan Scribner	Evan Scribner
+	RP	RP
+	Sea, RANK 431
+
+NO MATCH for Daric Barton (1B)
+	DEACTIVATE
+MATCH!
+	Jason Motte	Jason Motte
+	RP	RP
+	Col, RANK 255
+
+NO MATCH for Vin Mazzaro (RP)
+	DEACTIVATE
+MATCH!
+	Darren ODay	Darren ODay
+	RP	RP
+	Bal, RANK 273
+
+NO MATCH for Eury PÃ©rez (OF)
+	DEACTIVATE
+MATCH!
+	Steve Delabar	Steve Delabar
+	RP	RP
+	Tor, RANK 780
+
+MATCH!
+	Tommy Pham	Tommy Pham
+	OF	OF
+	StL, RANK 1101
+
+NO MATCH for Scott Baker (SP/RP)
+	DEACTIVATE
+MATCH!
+	Matt DomÃ­nguez	Matt Domínguez
+	3B	3B
+	Tor, RANK 1194
+
+MATCH!
+	Jorge RondÃ³n	Jorge Rondón
+	RP	RP
+	Pit, RANK 1037
+
+MATCH!
+	Rafael Montero	Rafael Montero
+	SP	P
+	NYM, RANK 801
+
+MATCH!
+	Matt Davidson	Matt Davidson
+	3B	3B
+	CWS, RANK 1332
+
+NO MATCH for Jhonatan Solano (C)
+	DEACTIVATE
+MATCH!
+	Trevor Bauer	Trevor Bauer
+	SP	SP
+	Cle, RANK 281
+
 MATCH!
-	Allen Reisner	Allen Reisner
-	TE	TE
-	Min, RANK 870
+	Khris Davis	Khris Davis
+	OF	OF
+	Oak, RANK 165
 
 MATCH!
-	Jordan Palmer	Jordan Palmer
-	QB	QB
-	Chi, RANK 1106
+	C.J. Cron	C.J. Cron
+	1B	1B
+	LAA, RANK 570
 
 MATCH!
-	Jerrod Johnson	Jerrod Johnson
-	QB	QB
-	Chi, RANK 1107
+	Bryan Price	Bryan Price
+	RP	RP
+	Cle, RANK 795
 
 MATCH!
-	Jerome Simpson	Jerome Simpson
-	WR	WR
-	Min, RANK 286
+	Cole Figueroa	Cole Figueroa
+	2B	3B
+	Pit, RANK 1276
 
-NO MATCH for Johnathan Haggerty (WR)
+NO MATCH for Juan Carlos Oviedo (RP)
 	DEACTIVATE
-NO MATCH for Rupert Bryan (RB)
+MATCH!
+	Jordy Mercer	Jordy Mercer
+	SS	SS
+	Pit, RANK 1012
+
+MATCH!
+	Jamie Romak	Jamie Romak
+	OF	OF
+	Ari, RANK 1282
+
+MATCH!
+	Garrett Richards	Garrett Richards
+	SP	SP
+	LAA, RANK 93
+
+NO MATCH for Sean Halton (1B)
 	DEACTIVATE
 MATCH!
-	Anthony Fasano	Anthony Fasano
-	TE	TE
-	KC, RANK 243
+	Jonathan Papelbon	Jonathan Papelbon
+	RP	RP
+	Was, RANK 126
 
+NO MATCH for Julio DePaula (RP)
+	DEACTIVATE
 MATCH!
-	Trent Richardson	Trent Richardson
-	RB	RB
-	Ind, RANK 72
+	Dan Otero	Dan Otero
+	RP	RP
+	Cle, RANK 932
 
-NO MATCH for Olindo Mare (K)
+NO MATCH for Will Middlebrooks (3B)
 	DEACTIVATE
 MATCH!
-	Demaryius Thomas	Demaryius Thomas
-	WR	WR
-	Den, RANK 11
+	Evan Marshall	Evan Marshall
+	RP	RP
+	Ari, RANK 867
 
 MATCH!
-	Montell Owens	Montell Owens
-	RB	RB
-	Det, RANK 505
+	Billy Butler	Billy Butler
+	1B	1B
+	Oak, RANK 378
 
+NO MATCH for Carlos CorporÃ¡n (C)
+	DEACTIVATE
+MATCH!
+	Lance Lynn	Lance Lynn
+	SP	SP
+	StL, RANK 1486
+
+NO MATCH for Allen Craig (1B/OF)
+	DEACTIVATE
 MATCH!
-	Darren Fells	Darren Fells
-	TE	TE
-	Ari, RANK 415
+	Cameron Rupp	Cameron Rupp
+	C	C
+	Phi, RANK 1124
 
 MATCH!
-	Jack Doyle	Jack Doyle
-	TE	TE
-	Ind, RANK 925
+	Tyler Lyons	Tyler Lyons
+	SP/RP	SP,RP
+	StL, RANK 451
 
 MATCH!
-	Matt Bryant	Matt Bryant
-	K	K
-	Atl, RANK 253
+	Roberto HernÃ¡ndez	Roberto Hernández
+	SP	SP,RP
+	Tor, RANK 948
 
-NO MATCH for Luke Tasker (WR)
+NO MATCH for Charles Brewer (RP)
 	DEACTIVATE
+MATCH!
+	Danny Duffy	Danny Duffy
+	SP/RP	SP,RP
+	KC, RANK 433
+
+MATCH!
+	Dallas Keuchel	Dallas Keuchel
+	SP	SP
+	Hou, RANK 54
+
+MATCH!
+	TJ House	TJ House
+	SP	SP
+	Cle, RANK 1014
+
 MATCH!
-	Jewel Hampton	Jewel Hampton
-	RB	RB
-	SF, RANK 801
+	Ian Krol	Ian Krol
+	RP	RP
+	Atl, RANK 939
 
-NO MATCH for Dayne Crist (QB)
+NO MATCH for Jason Frasor (RP)
 	DEACTIVATE
-NO MATCH for Nathan Stanley (QB)
+MATCH!
+	Collin Cowgill	Collin Cowgill
+	OF	OF
+	Cle, RANK 1181
+
+MATCH!
+	Jimmy Rollins	Jimmy Rollins
+	SS	SS
+	CWS, RANK 384
+
+MATCH!
+	Domingo Santana	Domingo Santana
+	OF	OF
+	Mil, RANK 256
+
+MATCH!
+	J.R. Graham	J.R. Graham
+	SP	RP
+	Min, RANK 957
+
+MATCH!
+	Devin Mesoraco	Devin Mesoraco
+	C	C
+	Cin, RANK 246
+
+MATCH!
+	Trevor Story	Trevor Story
+	SS	SS
+	Col, RANK 1339
+
+MATCH!
+	Jorge Soler	Jorge Soler
+	OF	OF
+	ChC, RANK 145
+
+MATCH!
+	Shawn Tolleson	Shawn Tolleson
+	RP	RP
+	Tex, RANK 175
+
+NO MATCH for Tim Hudson (SP)
 	DEACTIVATE
-NO MATCH for Adam Weber (QB)
+MATCH!
+	Junichi Tazawa	Junichi Tazawa
+	RP	RP
+	Bos, RANK 466
+
+MATCH!
+	A.J. Pierzynski	A.J. Pierzynski
+	C	C
+	Atl, RANK 574
+
+MATCH!
+	Chris Iannetta	Chris Iannetta
+	C	C
+	Sea, RANK 1093
+
+MATCH!
+	Dan Straily	Dan Straily
+	SP/RP	SP
+	Hou, RANK 929
+
+NO MATCH for Lucas Luetge (RP)
 	DEACTIVATE
 MATCH!
-	Michael Floyd	Michael Floyd
-	WR	WR
-	Ari, RANK 53
+	Matt den Dekker	Matt den Dekker
+	OF	OF
+	Was, RANK 1146
 
 MATCH!
-	Julio Jones	Julio Jones
-	WR	WR
-	Atl, RANK 19
+	Randy Choate	Randy Choate
+	RP	RP
+	StL, RANK 530
 
+NO MATCH for Josh Rutledge (2B/3B/SS)
+	DEACTIVATE
 MATCH!
-	Matt Schaub	Matt Schaub
-	QB	QB
-	Oak, RANK 351
+	Brandon Nimmo	Brandon Nimmo
+	OF	OF
+	NYM, RANK 1341
 
-NO MATCH for Charly Martin (WR)
+NO MATCH for Marco Scutaro (2B)
 	DEACTIVATE
 MATCH!
-	LeGarrette Blount	LeGarrette Blount
-	RB	RB
-	Pit, RANK 157
+	Taylor Thompson	Taylor Thompson
+	RP	RP
+	Oak, RANK 784
 
+NO MATCH for Gary Brown (OF)
+	DEACTIVATE
+NO MATCH for Chris Snyder (C)
+	DEACTIVATE
+NO MATCH for Donnie Joseph (RP)
+	DEACTIVATE
+NO MATCH for Chris PÃ©rez (RP)
+	DEACTIVATE
 MATCH!
-	Gary Barnidge	Gary Barnidge
-	TE	TE
-	Cle, RANK 494
+	Hunter Pence	Hunter Pence
+	OF	OF
+	SF, RANK 76
 
 MATCH!
-	Jacquizz Rodgers	Jacquizz Rodgers
-	RB	RB
-	Atl, RANK 240
+	Nathan Eovaldi	Nathan Eovaldi
+	SP	SP
+	NYY, RANK 729
 
 MATCH!
-	Sam Bradford	Sam Bradford
-	QB	QB
-	StL, RANK 188
+	Melky Cabrera	Melky Cabrera
+	OF	OF
+	CWS, RANK 202
 
 MATCH!
-	Leon Washington	Leon Washington
-	RB	RB
-	Ten, RANK 1050
+	Colby Rasmus	Colby Rasmus
+	OF	OF
+	Hou, RANK 346
 
 MATCH!
-	Isaiah Williams	Isaiah Williams
-	WR	WR
-	Ten, RANK 622
+	Jenrry MejÃ­a	Jenrry Mejía
+	SP/RP	RP
+	NYM, RANK 425
 
 MATCH!
-	Donnie Avery	Donnie Avery
-	WR	WR
-	KC, RANK 264
+	Josh Fields	Josh Fields
+	RP	RP
+	Hou, RANK 370
 
 MATCH!
-	Levine Toilolo	Levine Toilolo
-	TE	TE
-	Atl, RANK 499
+	AarÃ³n SÃ¡nchez	Aarón Sánchez
+	RP	SP,RP
+	Tor, RANK 349
 
 MATCH!
-	Joique Bell	Joique Bell
-	RB	RB
-	Det, RANK 54
+	AdriÃ¡n GonzÃ¡lez	Adrián González
+	1B	1B
+	LAD, RANK 47
 
-NO MATCH for Shawne Alston (RB)
+NO MATCH for Jeff Baker (1B/2B)
 	DEACTIVATE
+MATCH!
+	Rusney Castillo	Rusney Castillo
+	OF	OF
+	Bos, RANK 197
+
+MATCH!
+	Danny Salazar	Danny Salazar
+	SP	SP
+	Cle, RANK 87
+
 MATCH!
-	Ryan Spadola	Ryan Spadola
-	WR	WR
-	Mia, RANK 623
+	JosÃ© Iglesias	José Iglesias
+	3B/SS	SS
+	Det, RANK 934
 
 MATCH!
-	Matt Asiata	Matt Asiata
-	RB	RB
-	Min, RANK 294
+	Ken Giles	Ken Giles
+	RP	RP
+	Hou, RANK 108
 
-NO MATCH for Neil Rackers (K)
+NO MATCH for Daisuke Matsuzaka (SP/RP)
 	DEACTIVATE
-NO MATCH for Tristan Davis (RB)
+MATCH!
+	Giancarlo Stanton	Giancarlo Stanton
+	OF	OF
+	Mia, RANK 8
+
+MATCH!
+	Tyler Austin	Tyler Austin
+	OF	OF
+	NYY, RANK 1343
+
+NO MATCH for Josh Satin (1B)
 	DEACTIVATE
 MATCH!
-	Jourdan Brooks	Jourdan Brooks
-	RB	RB
-	Cle, RANK 802
+	Jhonny Peralta	Jhonny Peralta
+	SS	SS
+	StL, RANK 138
 
 MATCH!
-	Cameron Marshall	Cameron Marshall
-	RB	RB
-	Mia, RANK 803
+	Eric Hosmer	Eric Hosmer
+	1B	1B
+	KC, RANK 69
 
 MATCH!
-	Aaron Rodgers	Aaron Rodgers
-	QB	QB
-	GB, RANK 22
+	Steve Cishek	Steve Cishek
+	RP	RP
+	Sea, RANK 216
 
+NO MATCH for Tommy Field (2B/SS)
+	DEACTIVATE
+MATCH!
+	Michael Tonkin	Michael Tonkin
+	RP	RP
+	Min, RANK 763
+
+NO MATCH for Keith Butler (RP)
+	DEACTIVATE
 MATCH!
-	Knowshon Moreno	Knowshon Moreno
-	RB	RB
-	Mia, RANK 132
+	Corey Dickerson	Corey Dickerson
+	OF	OF
+	TB, RANK 124
 
 MATCH!
-	Stephen Williams	Stephen Williams
-	WR	WR
-	Mia, RANK 624
+	Chris Stewart	Chris Stewart
+	C	C
+	Pit, RANK 1166
 
-NO MATCH for Deon Butler (WR)
+NO MATCH for Vic Black (RP)
 	DEACTIVATE
+NO MATCH for Jeremy Affeldt (RP)
+	DEACTIVATE
+MATCH!
+	Cliff Lee	Cliff Lee
+	SP	SP
+	Phi, RANK 600
+
+MATCH!
+	Wilfredo Tovar	Wilfredo Tovar
+	SS	2B,SS
+	Min, RANK 1454
+
+MATCH!
+	Jake Odorizzi	Jake Odorizzi
+	SP	SP
+	TB, RANK 147
+
 MATCH!
-	Mohamed Sanu	Mohamed Sanu
-	WR	WR
-	Cin, RANK 281
+	Jaime GarcÃ­a	Jaime García
+	SP	SP
+	StL, RANK 206
 
 MATCH!
-	Justin Forsett	Justin Forsett
-	RB	RB
-	Bal, RANK 976
+	JosÃ© FernÃ¡ndez	José Fernández
+	SP	SP
+	Mia, RANK 32
 
 MATCH!
-	Chris Pantale	Chris Pantale
-	TE	TE
-	NYJ, RANK 417
+	Jorge Bonifacio	Jorge Bonifacio
+	OF	OF
+	KC, RANK 1344
 
-NO MATCH for Beanie Wells (RB)
+NO MATCH for John Baker (C)
 	DEACTIVATE
+MATCH!
+	A.J. Pollock	A.J. Pollock
+	OF	OF
+	Ari, RANK 17
+
+NO MATCH for Drake Britton (RP)
+	DEACTIVATE
+NO MATCH for Mitchell Boggs (RP)
+	DEACTIVATE
+MATCH!
+	Dale Thayer	Dale Thayer
+	RP	RP
+	Bal, RANK 490
+
+MATCH!
+	Josh Donaldson	Josh Donaldson
+	3B	3B
+	Tor, RANK 5
+
+MATCH!
+	Christian ColÃ³n	Christian Colón
+	2B	2B,3B,SS
+	KC, RANK 1178
+
 MATCH!
-	Mason Crosby	Mason Crosby
-	K	K
-	GB, RANK 214
+	Cory Gearrin	Cory Gearrin
+	RP	RP
+	SF, RANK 569
 
+NO MATCH for Tony Campana (OF)
+	DEACTIVATE
+NO MATCH for Justin Sellers (MI)
+	DEACTIVATE
 MATCH!
-	Stephen Gostkowski	Stephen Gostkowski
-	K	K
-	NE, RANK 187
+	Drew Stubbs	Drew Stubbs
+	OF	OF
+	Tex, RANK 1045
 
 MATCH!
-	Connor Barth	Connor Barth
-	K	K
-	TB, RANK 739
+	Ryan Cook	Ryan Cook
+	RP	RP
+	Sea, RANK 1008
 
 MATCH!
-	Chris Hogan	Chris Hogan
-	WR	WR
-	Buf, RANK 983
+	Will Venable	Will Venable
+	OF	OF
+	Cle, RANK 885
 
+NO MATCH for Ryan Wheeler (3B)
+	DEACTIVATE
 MATCH!
-	Richard Gordon	Richard Gordon
-	TE	TE
-	KC, RANK 480
+	Christian Friedrich	Christian Friedrich
+	SP/RP	RP
+	Col, RANK 1041
 
-NO MATCH for Jason Thompson (WR)
+NO MATCH for Alex Castellanos (OF)
 	DEACTIVATE
 MATCH!
-	Luke McCown	Luke McCown
-	QB	QB
-	NO, RANK 1108
+	Neftali Feliz	Neftali Feliz
+	RP	RP
+	Pit, RANK 792
 
 MATCH!
-	Justin Brown	Justin Brown
-	WR	WR
-	Pit, RANK 625
+	Josh Thole	Josh Thole
+	C	C
+	Tor, RANK 1270
 
 MATCH!
-	Justice Cunningham	Justice Cunningham
-	TE	TE
-	StL, RANK 418
+	Ryan Raburn	Ryan Raburn
+	OF	OF
+	Col, RANK 1052
 
 MATCH!
-	Alex Smith	Alex Smith
-	QB	QB
-	KC, RANK 163
+	Brandon Maurer	Brandon Maurer
+	SP/RP	RP
+	SD, RANK 361
 
-NO MATCH for David Thomas (TE)
+NO MATCH for Chris Valaika (1B/2B/3B)
 	DEACTIVATE
-NO MATCH for Keenan Davis (WR)
+MATCH!
+	Jake McGee	Jake McGee
+	RP	RP
+	Col, RANK 203
+
+MATCH!
+	Nolan Reimold	Nolan Reimold
+	OF	OF
+	Bal, RANK 1116
+
+NO MATCH for Antoan Richardson (OF)
 	DEACTIVATE
-NO MATCH for Brandon Banks (WR)
+MATCH!
+	Jonny GÃ³mes	Jonny Gómes
+	OF	OF
+	KC, RANK 1096
+
+MATCH!
+	Jackson Williams	Jackson Williams
+	C	C
+	Col, RANK 1283
+
+MATCH!
+	Brandon Moss	Brandon Moss
+	1B/OF	1B,OF
+	StL, RANK 483
+
+MATCH!
+	Randall Delgado	Randall Delgado
+	SP/RP	RP
+	Ari, RANK 369
+
+MATCH!
+	Eddie Gamboa	Eddie Gamboa
+	SP	SP
+	TB, RANK 635
+
+MATCH!
+	Juan Uribe	Juan Uribe
+	3B	2B,3B
+	Cle, RANK 598
+
+NO MATCH for HÃ©nry RodrÃ­guez (RP)
 	DEACTIVATE
+MATCH!
+	Ben Rowen	Ben Rowen
+	RP	RP
+	Tor, RANK 753
+
+MATCH!
+	Clint Robinson	Clint Robinson
+	1B	1B,OF
+	Was, RANK 990
+
+MATCH!
+	Wei-Chung Wang	Wei-Chung Wang
+	RP	RP
+	Mil, RANK 872
+
+MATCH!
+	Tony Watson	Tony Watson
+	RP	RP
+	Pit, RANK 278
+
 MATCH!
-	Rico Richardson	Rico Richardson
-	WR	WR
-	Ten, RANK 626
+	Kohl Stewart	Kohl Stewart
+	SP	SP
+	Min, RANK 637
 
-NO MATCH for Will Heller (TE)
+NO MATCH for Michael Taylor (OF)
 	DEACTIVATE
+MATCH!
+	Miguel GonzÃ¡lez	Miguel González
+	SP	SP
+	Bal, RANK 881
+
 MATCH!
-	DeMarco Murray	DeMarco Murray
-	RB	RB
-	Dal, RANK 16
+	Jonathon Niese	Jonathon Niese
+	SP	SP
+	Pit, RANK 796
 
 MATCH!
-	Alex Tanney	Alex Tanney
-	QB	QB
-	TB, RANK 1109
+	Travis Wood	Travis Wood
+	SP	SP,RP
+	ChC, RANK 453
 
 MATCH!
-	Fred Jackson	Fred Jackson
-	RB	RB
-	Buf, RANK 96
+	Greg GarcÃ­a	Greg García
+	MI	2B,SS
+	StL, RANK 1238
 
 MATCH!
-	Jeff Maehl	Jeff Maehl
-	WR	WR
-	Phi, RANK 917
+	Michael Wacha	Michael Wacha
+	SP	SP
+	StL, RANK 104
 
-NO MATCH for Casey Barth (K)
+MATCH!
+	Dellin Betances	Dellin Betances
+	RP	RP
+	NYY, RANK 204
+
+NO MATCH for Jamey Wright (RP)
 	DEACTIVATE
 MATCH!
-	Emmanuel Sanders	Emmanuel Sanders
-	WR	WR
-	Den, RANK 90
+	Alen Hanson	Alen Hanson
+	SS	SS
+	Pit, RANK 1350
 
 MATCH!
-	EZ Nwachukwu	EZ Nwachukwu
-	WR	WR
-	Hou, RANK 627
+	Dee Gordon	Dee Gordon
+	2B	2B
+	Mia, RANK 22
 
 MATCH!
-	Collin Mooney	Collin Mooney
-	RB	RB
-	Ten, RANK 1010
+	Xavier Scruggs	Xavier Scruggs
+	1B	1B
+	Mia, RANK 1232
 
 MATCH!
-	Jared Green	Jared Green
-	WR	WR
-	Oak, RANK 628
+	A.J. Ellis	A.J. Ellis
+	C	C
+	LAD, RANK 1121
 
-NO MATCH for Cedric Benson (RB)
+NO MATCH for Jonathan Pettibone (SP)
 	DEACTIVATE
 MATCH!
-	Shaun Hill	Shaun Hill
-	QB	QB
-	StL, RANK 1110
+	Matt Thornton	Matt Thornton
+	RP	RP
+	SD, RANK 387
 
-NO MATCH for Will Shaw (TE)
+NO MATCH for Zach Lutz (1B/3B)
 	DEACTIVATE
 MATCH!
-	Jonathan Grimes	Jonathan Grimes
-	RB	RB
-	Hou, RANK 804
+	Max Muncy	Max Muncy
+	1B	1B,3B
+	Oak, RANK 1206
 
 MATCH!
-	Dwayne Harris	Dwayne Harris
-	WR	WR
-	Dal, RANK 921
+	Daniel Butler	Daniel Butler
+	C	C
+	Bos, RANK 1312
 
+NO MATCH for Joe Thatcher (RP)
+	DEACTIVATE
+NO MATCH for Josh Willingham (OF)
+	DEACTIVATE
 MATCH!
-	Jon Baldwin	Jon Baldwin
-	WR	WR
-	SF, RANK 994
+	Nolan Arenado	Nolan Arenado
+	3B	3B
+	Col, RANK 11
 
+NO MATCH for Ryan Jackson (2B/SS)
+	DEACTIVATE
+NO MATCH for Ramiro Peña (2B/3B/SS)
+	DEACTIVATE
 MATCH!
-	Steve Maneri	Steve Maneri
-	TE	TE
-	TB, RANK 485
+	Ben Lively	Ben Lively
+	SP	SP
+	Phi, RANK 642
 
 MATCH!
-	Zach Boren	Zach Boren
-	RB	RB
-	SD, RANK 806
+	Miguel Sano	Miguel Sano
+	3B/SS	3B
+	Min, RANK 53
 
 MATCH!
-	Davone Bess	Davone Bess
-	WR	WR
-	Cle, RANK 311
+	Shae Simmons	Shae Simmons
+	RP	RP
+	Atl, RANK 567
 
-NO MATCH for Mike Williams (WR)
+NO MATCH for Michael McKenry (C)
 	DEACTIVATE
+MATCH!
+	Eric Stults	Eric Stults
+	SP	SP
+	LAD, RANK 977
+
 MATCH!
-	Greg Olsen	Greg Olsen
-	TE	TE
-	Car, RANK 74
+	Blaine Hardy	Blaine Hardy
+	RP	RP
+	Det, RANK 407
 
-NO MATCH for John Griffin (RB)
+NO MATCH for Bryan Anderson (C)
 	DEACTIVATE
+NO MATCH for Nick Evans (CI)
+	DEACTIVATE
 MATCH!
-	Brandon Kaufman	Brandon Kaufman
-	WR	WR
-	Buf, RANK 629
+	Melvin Upton Jr.	Melvin Upton Jr.
+	OF	OF
+	SD, RANK 1022
 
+NO MATCH for Sean OSullivan (P)
+	DEACTIVATE
+NO MATCH for Kyuji Fujikawa (RP)
+	DEACTIVATE
 MATCH!
-	Clay Harbor	Clay Harbor
-	TE	TE
-	Jax, RANK 312
+	Peter Moylan	Peter Moylan
+	RP	RP
+	KC, RANK 535
 
+NO MATCH for Jared Burton (RP)
+	DEACTIVATE
 MATCH!
-	David Reed	David Reed
-	WR	WR
-	SF, RANK 1032
+	Cliff Pennington	Cliff Pennington
+	2B/3B/SS	2B,3B,SS,OF
+	LAA, RANK 1135
 
+NO MATCH for Wandy RodrÃ­guez (SP)
+	DEACTIVATE
 MATCH!
-	Joseph Morgan	Joseph Morgan
-	WR	WR
-	NO, RANK 473
+	Hunter Dozier	Hunter Dozier
+	3B	3B
+	KC, RANK 1355
 
 MATCH!
-	Zach Miller	Zach Miller
-	TE	TE
-	Sea, RANK 217
+	RomÃ¡n MÃ©ndez	Román Méndez
+	RP	RP
+	Bos, RANK 820
 
-NO MATCH for Chris Koepplin (K)
+NO MATCH for David MartÃ­nez (RP)
+	DEACTIVATE
+NO MATCH for Justin Germano (RP)
+	DEACTIVATE
+NO MATCH for Austin Kearns (OF)
 	DEACTIVATE
+NO MATCH for Casey Coleman (RP)
+	DEACTIVATE
+NO MATCH for Jhoulys Chacin (SP)
+	DEACTIVATE
+MATCH!
+	Neal Cotts	Neal Cotts
+	RP	RP
+	Hou, RANK 503
+
 MATCH!
-	Colts	Colts
-	DEF	DEF
-	Ind, RANK 225
+	Troy Tulowitzki	Troy Tulowitzki
+	SS	SS
+	Tor, RANK 61
 
-NO MATCH for Drew Smith (RB)
+MATCH!
+	Gerrit Cole	Gerrit Cole
+	SP	SP
+	Pit, RANK 45
+
+MATCH!
+	Touki Toussaint	Touki Toussaint
+	SP	SP
+	Ari, RANK 646
+
+NO MATCH for Grant Green (2B/OF)
+	DEACTIVATE
+NO MATCH for Jason Bay (OF)
 	DEACTIVATE
-NO MATCH for James Rodgers (WR)
+MATCH!
+	Aaron Judge	Aaron Judge
+	OF	OF
+	NYY, RANK 1361
+
+MATCH!
+	Garrett Jones	Garrett Jones
+	1B/OF	1B,OF
+	NYY, RANK 1113
+
+MATCH!
+	Tommy La Stella	Tommy La Stella
+	2B	2B,3B
+	ChC, RANK 1173
+
+MATCH!
+	Jon Edwards	Jon Edwards
+	RP	RP
+	SD, RANK 843
+
+MATCH!
+	Mitch Moreland	Mitch Moreland
+	1B	1B
+	Tex, RANK 198
+
+MATCH!
+	David Wright	David Wright
+	3B	3B
+	NYM, RANK 171
+
+MATCH!
+	Robert Stephenson	Robert Stephenson
+	SP	SP
+	Cin, RANK 649
+
+MATCH!
+	Vince Belnome	Vince Belnome
+	Util	2B
+	TB, RANK 1451
+
+MATCH!
+	Travis dArnaud	Travis dArnaud
+	C	C
+	NYM, RANK 173
+
+NO MATCH for Tyler Pastornicky (2B)
 	DEACTIVATE
-NO MATCH for Denodus OBryant (RB)
+MATCH!
+	Luis SardiÃ±as	Luis Sardiñas
+	2B/SS	2B,SS
+	Sea, RANK 1262
+
+MATCH!
+	Zach Phillips	Zach Phillips
+	RP	RP
+	CWS, RANK 650
+
+MATCH!
+	Kirk Nieuwenhuis	Kirk Nieuwenhuis
+	OF	OF
+	Mil, RANK 1143
+
+MATCH!
+	Kenley Jansen	Kenley Jansen
+	RP	RP
+	LAD, RANK 78
+
+MATCH!
+	Willie Bloomquist	Willie Bloomquist
+	1B/2B/3B/SS	SS,CI
+	Sea, RANK 1290
+
+MATCH!
+	Mike Montgomery	Mike Montgomery
+	SP	SP
+	Sea, RANK 909
+
+MATCH!
+	Ryan Rua	Ryan Rua
+	1B,OF	OF
+	Tex, RANK 1191
+
+MATCH!
+	Josh Johnson	Josh Johnson
+	SP	SP
+	SD, RANK 651
+
+NO MATCH for Charlie Leesman (SP)
 	DEACTIVATE
 MATCH!
-	Santonio Holmes	Santonio Holmes
-	WR	WR
-	NYJ, RANK 236
+	Carlos SÃ¡nchez	Carlos Sánchez
+	2B	2B
+	CWS, RANK 1111
 
-NO MATCH for Lousaka Polite (RB)
+MATCH!
+	Cory Spangenberg	Cory Spangenberg
+	3B	2B,3B
+	SD, RANK 1013
+
+NO MATCH for Stephen Fife (SP)
 	DEACTIVATE
+NO MATCH for Greg Dobbs (1B)
+	DEACTIVATE
+MATCH!
+	Trevor Plouffe	Trevor Plouffe
+	3B	1B,3B
+	Min, RANK 252
+
 MATCH!
-	49ers	49ers
-	DEF	DEF
-	SF, RANK 144
+	Carlos Contreras	Carlos Contreras
+	RP	RP
+	Cin, RANK 930
 
+NO MATCH for Endy ChÃ¡vez (OF)
+	DEACTIVATE
 MATCH!
-	Skye Dawson	Skye Dawson
-	WR	WR
-	TB, RANK 1001
+	Casey Janssen	Casey Janssen
+	RP	RP
+	SD, RANK 487
 
+NO MATCH for Jesse Crain (RP)
+	DEACTIVATE
 MATCH!
-	Lamar Miller	Lamar Miller
-	RB	RB
-	Mia, RANK 80
+	David Hale	David Hale
+	SP/RP	SP,RP
+	Col, RANK 1003
 
-NO MATCH for Lucas Reed (TE)
+NO MATCH for Taylor Teagarden (C)
+	DEACTIVATE
+NO MATCH for Brayan Villarreal (RP)
 	DEACTIVATE
+MATCH!
+	D.J. Peterson	D.J. Peterson
+	3B	3B
+	Sea, RANK 1364
+
+MATCH!
+	Sean Marshall	Sean Marshall
+	RP	SP,RP
+	Cin, RANK 837
+
 MATCH!
-	Pierre Thomas	Pierre Thomas
-	RB	RB
-	NO, RANK 76
+	Chris Young	Chris Young
+	SP	SP,RP
+	KC, RANK 299
 
-NO MATCH for Michael Turner (RB)
+MATCH!
+	Scott Kazmir	Scott Kazmir
+	SP	SP
+	LAD, RANK 148
+
+NO MATCH for Ryan Reid (RP)
 	DEACTIVATE
-NO MATCH for Visanthe Shiancoe (TE)
+NO MATCH for Felipe Paulino (SP)
 	DEACTIVATE
+MATCH!
+	Chris Coghlan	Chris Coghlan
+	OF	2B,OF
+	Oak, RANK 364
+
+MATCH!
+	Brad Hand	Brad Hand
+	SP/RP	SP,RP
+	Mia, RANK 1029
+
 MATCH!
-	Mike Goodson	Mike Goodson
-	RB	RB
-	NYJ, RANK 509
+	JosÃ© Ãlvarez	José Álvarez
+	RP	RP
+	LAA, RANK 416
 
 MATCH!
-	Brian Robiskie	Brian Robiskie
-	WR	WR
-	Ten, RANK 631
+	Michael Gettys	Michael Gettys
+	OF	OF
+	SD, RANK 1366
 
-NO MATCH for Darius Reynaud (RB)
+NO MATCH for Rob Wooten (RP)
+	DEACTIVATE
+NO MATCH for GonzÃ¡lez Germen (RP)
 	DEACTIVATE
 MATCH!
-	Lamont Bryant	Lamont Bryant
-	WR	WR
-	Ten, RANK 633
+	JoaquÃ­n Ãrias	Joaquín Árias
+	1B/2B/3B/SS	SS,CI
+	Ari, RANK 1225
 
-NO MATCH for Mike Hermann (QB)
+MATCH!
+	Mark Trumbo	Mark Trumbo
+	1B/OF	1B,OF
+	Bal, RANK 219
+
+MATCH!
+	Mark Teixeira	Mark Teixeira
+	1B	1B
+	NYY, RANK 166
+
+NO MATCH for Miguel Olivo (C)
 	DEACTIVATE
+MATCH!
+	Kevin Kiermaier	Kevin Kiermaier
+	OF	OF
+	TB, RANK 215
+
 MATCH!
-	Tony Scheffler	Tony Scheffler
-	TE	TE
-	Det, RANK 337
+	Yangervis Solarte	Yangervis Solarte
+	2B/3B	1B,2B,3B
+	SD, RANK 348
 
 MATCH!
-	Matt Spaeth	Matt Spaeth
-	TE	TE
-	Pit, RANK 470
+	Derek Norris	Derek Norris
+	C	C,1B
+	SD, RANK 225
 
 MATCH!
-	Derek Hagan	Derek Hagan
-	WR	WR
-	Ten, RANK 864
+	Hunter Renfroe	Hunter Renfroe
+	OF	OF
+	SD, RANK 1369
 
-NO MATCH for Joe Sawyer (TE)
+NO MATCH for Barry Zito (SP)
 	DEACTIVATE
+MATCH!
+	Shane Victorino	Shane Victorino
+	OF	OF
+	ChC, RANK 1152
+
+MATCH!
+	Tyler Flowers	Tyler Flowers
+	C	C
+	Atl, RANK 1047
+
 MATCH!
-	Darius Johnson	Darius Johnson
-	WR	WR
-	Atl, RANK 743
+	Phil Hughes	Phil Hughes
+	SP	SP
+	Min, RANK 391
 
 MATCH!
-	Rueben Randle	Rueben Randle
-	WR	WR
-	NYG, RANK 101
+	Tanner Scheppers	Tanner Scheppers
+	SP	RP
+	Tex, RANK 937
 
+NO MATCH for Edward Mujica (RP)
+	DEACTIVATE
 MATCH!
-	Jasper Collins	Jasper Collins
-	WR	WR
-	Cin, RANK 634
+	Odrisamer Despaigne	Odrisamer Despaigne
+	SP	SP,RP
+	Bal, RANK 1057
 
 MATCH!
-	Danny Amendola	Danny Amendola
-	WR	WR
-	NE, RANK 127
+	John Jaso	John Jaso
+	C	OF
+	Pit, RANK 1031
 
-NO MATCH for Marlon Moore (WR)
+NO MATCH for Chris McGuiness (1B)
 	DEACTIVATE
+MATCH!
+	Mike Minor	Mike Minor
+	SP	SP
+	KC, RANK 878
+
+MATCH!
+	Francisco PeÃ±a	Francisco Peña
+	C	C
+	Bal, RANK 1467
+
 MATCH!
-	Bruce Miller	Bruce Miller
-	RB	RB
-	SF, RANK 980
+	Miguel Almonte	Miguel Almonte
+	SP	RP
+	KC, RANK 824
 
-NO MATCH for Ryan Roberson (RB)
+NO MATCH for Gerald Laird (C)
 	DEACTIVATE
+MATCH!
+	Erisbel Arruebarrena	Erisbel Arruebarrena
+	SS	2B,SS
+	LAD, RANK 1306
+
+MATCH!
+	Mookie Betts	Mookie Betts
+	2B/OF	OF
+	Bos, RANK 16
+
+MATCH!
+	Zack Cozart	Zack Cozart
+	SS	SS
+	Cin, RANK 1019
+
 MATCH!
-	Nick Kasa	Nick Kasa
-	TE	TE
-	Oak, RANK 934
+	Junior Lake	Junior Lake
+	OF	OF
+	Tor, RANK 1192
 
-NO MATCH for Owen Marecic (RB)
+NO MATCH for Donovan Hand (RP)
 	DEACTIVATE
-NO MATCH for Matt Brown (RB)
+MATCH!
+	Freddie Freeman	Freddie Freeman
+	1B	1B
+	Atl, RANK 62
+
+MATCH!
+	Corey Kluber	Corey Kluber
+	SP	SP
+	Cle, RANK 36
+
+MATCH!
+	Desmond Jennings	Desmond Jennings
+	OF	OF
+	TB, RANK 1102
+
+MATCH!
+	J.P. Howell	J.P. Howell
+	RP	RP
+	LAD, RANK 335
+
+NO MATCH for Trevor Bell (RP)
 	DEACTIVATE
-NO MATCH for Akeem Shavers (RB)
+MATCH!
+	Chris Bassitt	Chris Bassitt
+	SP	SP,RP
+	Oak, RANK 542
+
+MATCH!
+	Joe Smith	Joe Smith
+	RP	RP
+	LAA, RANK 319
+
+MATCH!
+	Kyle Blanks	Kyle Blanks
+	1B	1B
+	SF, RANK 1159
+
+MATCH!
+	Alex Meyer	Alex Meyer
+	SP	RP
+	Min, RANK 864
+
+NO MATCH for Rafael Furcal (2B)
 	DEACTIVATE
+MATCH!
+	Craig Breslow	Craig Breslow
+	RP	RP
+	Mia, RANK 981
+
+MATCH!
+	Manny Parra	Manny Parra
+	RP	RP
+	ChC, RANK 595
+
+MATCH!
+	Mike Napoli	Mike Napoli
+	1B	1B,OF
+	Cle, RANK 590
+
 MATCH!
-	Vikings	Vikings
-	DEF	DEF
-	Min, RANK 315
+	Jered Weaver	Jered Weaver
+	SP	SP
+	LAA, RANK 501
 
-NO MATCH for Gabe Miller (TE)
+MATCH!
+	Nick Hundley	Nick Hundley
+	C	C
+	Col, RANK 497
+
+NO MATCH for Sean Burnett (RP)
 	DEACTIVATE
-NO MATCH for Taulib Ikharo (WR)
+MATCH!
+	Sonny Gray	Sonny Gray
+	SP	SP
+	Oak, RANK 64
+
+MATCH!
+	HÃ©ctor Santiago	Héctor Santiago
+	SP/RP	SP
+	LAA, RANK 271
+
+MATCH!
+	Delino Deshields	Delino DeShields
+	2B	OF
+	Tex, RANK 386
+
+MATCH!
+	Kyle Schwarber	Kyle Schwarber
+	C,OF	C,OF
+	ChC, RANK 46
+
+MATCH!
+	Colin Moran	Colin Moran
+	3B	3B
+	Hou, RANK 1375
+
+MATCH!
+	Caleb Clay	Caleb Clay
+	RP	RP
+	Ari, RANK 661
+
+NO MATCH for Luis Perez (RP)
 	DEACTIVATE
 MATCH!
-	Alex Henery	Alex Henery
-	K	K
-	Phi, RANK 249
+	Brett Lawrie	Brett Lawrie
+	2B/3B	2B,3B
+	CWS, RANK 238
 
+NO MATCH for Craig Stammen (RP)
+	DEACTIVATE
+NO MATCH for Bruce Billings (RP)
+	DEACTIVATE
+NO MATCH for Scott Hairston (OF)
+	DEACTIVATE
+NO MATCH for Evan Reed (RP)
+	DEACTIVATE
+NO MATCH for HernÃ¡n PÃ©rez (Util)
+	DEACTIVATE
 MATCH!
-	Adam Thielen	Adam Thielen
-	WR	WR
-	Min, RANK 636
+	Tim Berry	Tim Berry
+	RP	RP
+	Mia, RANK 662
 
+NO MATCH for Reed Johnson (OF)
+	DEACTIVATE
 MATCH!
-	Ramses Barden	Ramses Barden
-	WR	WR
-	Buf, RANK 508
+	Ãlex Reyes	Álex Reyes
+	SP	SP
+	StL, RANK 663
 
-NO MATCH for Ryan Longwell (K)
+NO MATCH for Kevin Kouzmanoff (3B)
 	DEACTIVATE
 MATCH!
-	Malcom Floyd	Malcom Floyd
-	WR	WR
-	SD, RANK 328
+	Luke Jackson	Luke Jackson
+	SP	RP
+	Tex, RANK 586
 
-NO MATCH for Murphy Holloway (TE)
+NO MATCH for Xavier Avery (OF)
+	DEACTIVATE
+NO MATCH for Brad Mills (SP)
+	DEACTIVATE
+NO MATCH for Tony Abreu (Util)
 	DEACTIVATE
-NO MATCH for Dominique Whaley (RB)
+NO MATCH for Nate Freiman (1B)
 	DEACTIVATE
-NO MATCH for Justin Wilson (WR)
+NO MATCH for Brandon Cumpton (SP/RP)
 	DEACTIVATE
+NO MATCH for Matt Magill (SP)
+	DEACTIVATE
+MATCH!
+	Adam Eaton	Adam Eaton
+	OF	OF
+	CWS, RANK 83
+
 MATCH!
-	Kealoha Pilares	Kealoha Pilares
-	WR	WR
-	Car, RANK 872
+	Chris DomÃ­nguez	Chris Domínguez
+	OF	OF
+	Bos, RANK 1263
 
 MATCH!
-	John Potter	John Potter
-	K	K
-	Det, RANK 963
+	Jason Vargas	Jason Vargas
+	SP	SP
+	KC, RANK 461
 
 MATCH!
-	Danny Coale	Danny Coale
-	WR	WR
-	Pit, RANK 637
+	Luis AvilÃ¡n	Luis Avilán
+	RP	RP
+	LAD, RANK 517
 
 MATCH!
-	Harry Douglas	Harry Douglas
-	WR	WR
-	Atl, RANK 210
+	Daniel Coulombe	Daniel Coulombe
+	RP	RP
+	Oak, RANK 879
 
 MATCH!
-	Julian Edelman	Julian Edelman
-	WR	WR
-	NE, RANK 64
+	CC Sabathia	CC Sabathia
+	SP	SP
+	NYY, RANK 1006
 
 MATCH!
-	Joe Banyard	Joe Banyard
-	RB	RB
-	Min, RANK 808
+	Edwin Jackson	Edwin Jackson
+	SP	RP
+	Mia, RANK 771
 
+NO MATCH for Ronny CedeÃ±o (Util)
+	DEACTIVATE
+MATCH!
+	John Danks	John Danks
+	SP	SP
+	CWS, RANK 1064
+
 MATCH!
-	Brandon Pettigrew	Brandon Pettigrew
-	TE	TE
-	Det, RANK 254
+	Rafael Ortega	Rafael Ortega
+	OF	OF
+	LAA, RANK 1383
 
 MATCH!
-	Nate Burleson	Nate Burleson
-	WR	WR
-	Cle, RANK 178
+	Franklin Morales	Franklin Morales
+	SP/RP	RP
+	Mil, RANK 576
 
+NO MATCH for Tsuyoshi Wada (SP)
+	DEACTIVATE
 MATCH!
-	Tyler Clutts	Tyler Clutts
-	RB	RB
-	Dal, RANK 809
+	Mike Olt	Mike Olt
+	1B/3B	3B
+	CWS, RANK 1212
 
+NO MATCH for Michael Stutes (RP)
+	DEACTIVATE
 MATCH!
-	Ricardo Lockette	Ricardo Lockette
-	WR	WR
-	Sea, RANK 949
+	Archie Bradley	Archie Bradley
+	SP	SP
+	Ari, RANK 945
 
 MATCH!
-	Garrett Celek	Garrett Celek
-	TE	TE
-	SF, RANK 475
+	Suk-min Yoon	Suk-min Yoon
+	SP	SP
+	Bal, RANK 669
 
 MATCH!
-	Jets	Jets
-	DEF	DEF
-	NYJ, RANK 299
+	DJ LeMahieu	DJ LeMahieu
+	2B	2B
+	Col, RANK 163
 
 MATCH!
-	Peyton Manning	Peyton Manning
-	QB	QB
-	Den, RANK 15
+	Casey Kelly	Casey Kelly
+	SP	P
+	Atl, RANK 916
 
 MATCH!
-	Dion Sims	Dion Sims
-	TE	TE
-	Mia, RANK 732
+	Yunel Escobar	Yunel Escobar
+	SS	3B
+	LAA, RANK 305
 
 MATCH!
-	Joseph Randle	Joseph Randle
-	RB	RB
-	Dal, RANK 296
+	Cam Bedrosian	Cam Bedrosian
+	RP	RP
+	LAA, RANK 972
 
 MATCH!
-	Dwayne Bowe	Dwayne Bowe
-	WR	WR
-	KC, RANK 106
+	Manuel Margot	Manuel Margot
+	OF	OF
+	SD, RANK 1385
 
-NO MATCH for Jarred Fayson (WR)
+NO MATCH for Kevin Youkilis (1B/3B)
 	DEACTIVATE
 MATCH!
-	David Gilreath	David Gilreath
-	WR	WR
-	Sea, RANK 640
+	Gary SÃ¡nchez	Gary Sánchez
+	C	C
+	NYY, RANK 1463
 
 MATCH!
-	A.J. Jenkins	A.J. Jenkins
-	WR	WR
-	KC, RANK 906
+	Andrew Cashner	Andrew Cashner
+	SP	SP
+	SD, RANK 224
 
+NO MATCH for Luis Ayala (RP)
+	DEACTIVATE
 MATCH!
-	Jermichael Finley	Jermichael Finley
-	TE	TE
-	GB, RANK 184
+	Matt Holliday	Matt Holliday
+	OF	OF
+	StL, RANK 131
 
-NO MATCH for Isaac Redman (RB)
+NO MATCH for Paul Maholm (SP/RP)
 	DEACTIVATE
-NO MATCH for Tim Toone (WR)
+NO MATCH for Casey Crosby (SP)
 	DEACTIVATE
+NO MATCH for Ryan Roberts (3B)
+	DEACTIVATE
+MATCH!
+	Ãlex Ãvila	Álex Ávila
+	C	C,1B
+	CWS, RANK 1153
+
 MATCH!
-	DeVier Posey	DeVier Posey
-	WR	WR
-	Hou, RANK 946
+	Nate McLouth	Nate McLouth
+	OF	OF
+	Was, RANK 1304
 
 MATCH!
-	Cooper Helfet	Cooper Helfet
-	TE	TE
-	Sea, RANK 421
+	Billy Hamilton	Billy Hamilton
+	OF	OF
+	Cin, RANK 100
 
+NO MATCH for Brian Bogusevic (OF)
+	DEACTIVATE
 MATCH!
-	Andy Dalton	Andy Dalton
-	QB	QB
-	Cin, RANK 117
+	Adam Ottavino	Adam Ottavino
+	RP	RP
+	Col, RANK 406
 
 MATCH!
-	Brandon Bolden	Brandon Bolden
-	RB	RB
-	NE, RANK 263
+	Tommy Hunter	Tommy Hunter
+	RP	RP
+	Cle, RANK 423
 
-NO MATCH for Mohamed Massaquoi (WR)
+NO MATCH for Carlos Peguero (OF)
 	DEACTIVATE
+NO MATCH for J.J. Putz (RP)
+	DEACTIVATE
 MATCH!
-	Julian Talley	Julian Talley
-	WR	WR
-	NYG, RANK 642
+	Brad Glenn	Brad Glenn
+	OF	OF
+	Tor, RANK 1464
 
-NO MATCH for Armond Smith (RB)
+NO MATCH for Rafael Soriano (RP)
 	DEACTIVATE
-NO MATCH for Demarcus Dobbs (TE)
+NO MATCH for Ãlex GonzÃ¡lez (SS)
 	DEACTIVATE
 MATCH!
-	Ryan Lindley	Ryan Lindley
-	QB	QB
-	Ari, RANK 1140
+	James Loney	James Loney
+	1B	1B
+	TB, RANK 927
 
-NO MATCH for Stefan Logan (RB)
+NO MATCH for Matt Lindstrom (RP)
 	DEACTIVATE
+MATCH!
+	Scott Carroll	Scott Carroll
+	SP/RP	RP
+	CWS, RANK 914
+
+MATCH!
+	Jon Jay	Jon Jay
+	OF	OF
+	SD, RANK 1127
+
+MATCH!
+	Buster Posey	Buster Posey
+	C/1B	C,1B
+	SF, RANK 27
+
+MATCH!
+	Drew Rucinski	Drew Rucinski
+	RP	P
+	ChC, RANK 890
+
 MATCH!
-	Jacob Tamme	Jacob Tamme
-	TE	TE
-	Den, RANK 324
+	Ryan Howard	Ryan Howard
+	1B	1B
+	Phi, RANK 358
 
-NO MATCH for Brandon Carswell (WR)
+MATCH!
+	Kyle Seager	Kyle Seager
+	3B	3B
+	Sea, RANK 90
+
+NO MATCH for Ãlex Torres (RP)
 	DEACTIVATE
-NO MATCH for Bert Reed (WR)
+NO MATCH for Pedro Beato (RP)
 	DEACTIVATE
+MATCH!
+	Justin Marks	Justin Marks
+	RP	RP
+	Ari, RANK 768
+
+MATCH!
+	Lucas Giolito	Lucas Giolito
+	SP	SP
+	Was, RANK 673
+
 MATCH!
-	Jeron Mastrud	Jeron Mastrud
-	TE	TE
-	Chi, RANK 873
+	Noah Syndergaard	Noah Syndergaard
+	SP	SP
+	NYM, RANK 57
 
-NO MATCH for Seneca Wallace (QB)
+NO MATCH for JosÃ© Valverde (RP)
 	DEACTIVATE
+MATCH!
+	Kyle Kendrick	Kyle Kendrick
+	SP	SP
+	Col, RANK 1196
+
+MATCH!
+	Kendall Graveman	Kendall Graveman
+	RP	SP
+	Oak, RANK 811
+
 MATCH!
-	Bradley Randle	Bradley Randle
-	RB	RB
-	Min, RANK 812
+	Erik Goeddel	Erik Goeddel
+	RP	RP
+	NYM, RANK 412
 
 MATCH!
-	David Paulson	David Paulson
-	TE	TE
-	Pit, RANK 734
+	Andrew Lambo	Andrew Lambo
+	OF	OF
+	Oak, RANK 1484
 
+NO MATCH for Brandon Lyon (RP)
+	DEACTIVATE
 MATCH!
-	Sebastian Janikowski	Sebastian Janikowski
-	K	K
-	Oak, RANK 269
+	Koji Uehara	Koji Uehara
+	RP	RP
+	Bos, RANK 247
 
+NO MATCH for Andrew Albers (RP)
+	DEACTIVATE
 MATCH!
-	David Gettis	David Gettis
-	WR	WR
-	TB, RANK 644
+	Andrew Chafin	Andrew Chafin
+	SP	RP
+	Ari, RANK 347
 
 MATCH!
-	Jed Collins	Jed Collins
-	RB	RB
-	Det, RANK 1004
+	Brandon Barnes	Brandon Barnes
+	OF	OF
+	Col, RANK 1074
 
+NO MATCH for Doug Bernier (MI)
+	DEACTIVATE
 MATCH!
-	Brad Smith	Brad Smith
-	WR	WR
-	Phi, RANK 993
+	Josh Hamilton	Josh Hamilton
+	OF	OF
+	Tex, RANK 1039
 
 MATCH!
-	Daniel Thomas	Daniel Thomas
-	RB	RB
-	Mia, RANK 255
+	Nick MartÃ­nez	Nick Martínez
+	SP/RP	SP
+	Tex, RANK 949
 
-NO MATCH for Aaron Corp (QB)
+NO MATCH for Omar Quintanilla (SS)
 	DEACTIVATE
 MATCH!
-	Kellen Clemens	Kellen Clemens
-	QB	QB
-	SD, RANK 1051
+	JosÃ© Berrios	José Berrios
+	SP	SP
+	Min, RANK 675
 
 MATCH!
-	DeAndre Hopkins	DeAndre Hopkins
-	WR	WR
-	Hou, RANK 116
+	Marco Gonzales	Marco Gonzales
+	SP/RP	SP
+	StL, RANK 866
 
+NO MATCH for Erik Bedard (SP)
+	DEACTIVATE
 MATCH!
-	Tavarres King	Tavarres King
-	WR	WR
-	Car, RANK 646
+	Ryan Webb	Ryan Webb
+	RP	RP
+	TB, RANK 463
 
+NO MATCH for Robbie Grossman (OF)
+	DEACTIVATE
 MATCH!
-	Marquess Wilson	Marquess Wilson
-	WR	WR
-	Chi, RANK 647
+	Tim Beckham	Tim Beckham
+	SS	2B,SS
+	TB, RANK 1090
 
 MATCH!
-	Robert Woods	Robert Woods
-	WR	WR
-	Buf, RANK 162
+	Darin Ruf	Darin Ruf
+	1B/OF	1B,OF
+	Phi, RANK 1044
 
-NO MATCH for Thomas Jones (RB)
+NO MATCH for Bobby Wilson (C)
+	DEACTIVATE
+NO MATCH for Danny Hultzen (SP)
 	DEACTIVATE
-NO MATCH for Jake OConnell (TE)
+MATCH!
+	T.J. McFarland	T.J. McFarland
+	RP	RP
+	Bal, RANK 936
+
+MATCH!
+	Marlon Byrd	Marlon Byrd
+	OF	OF
+	SF, RANK 296
+
+MATCH!
+	Garin Cecchini	Garin Cecchini
+	3B	1B
+	Mil, RANK 1301
+
+MATCH!
+	Brian Goodwin	Brian Goodwin
+	OF	OF
+	Was, RANK 1393
+
+MATCH!
+	Wesley Wright	Wesley Wright
+	RP	RP
+	Ari, RANK 751
+
+MATCH!
+	Craig Kimbrel	Craig Kimbrel
+	RP	RP
+	Bos, RANK 73
+
+NO MATCH for Placido Polanco (2B/3B)
 	DEACTIVATE
 MATCH!
-	Vince Young	Vince Young
-	QB	QB
-	Cle, RANK 1114
+	Jake Goebbert	Jake Goebbert
+	1B	1B
+	Pit, RANK 1272
 
 MATCH!
-	Jerrell Jackson	Jerrell Jackson
-	WR	WR
-	KC, RANK 648
+	Kris Bryant	Kris Bryant
+	3B	3B,OF
+	ChC, RANK 13
 
+NO MATCH for Andrew Bailey (RP)
+	DEACTIVATE
+NO MATCH for Wilton LÃ³pez (RP)
+	DEACTIVATE
+NO MATCH for Phil Irwin (SP)
+	DEACTIVATE
 MATCH!
-	Mark Harrison	Mark Harrison
-	WR	WR
-	KC, RANK 650
+	Johnny Cueto	Johnny Cueto
+	SP	SP
+	SF, RANK 65
 
 MATCH!
-	Martellus Bennett	Martellus Bennett
-	TE	TE
-	Chi, RANK 124
+	Erik Cordier	Erik Cordier
+	RP	RP
+	Mia, RANK 841
 
-NO MATCH for Diondre Borel (WR)
+NO MATCH for Alfredo Marte (OF)
 	DEACTIVATE
-NO MATCH for Deangelo Peterson (TE)
+NO MATCH for Carlos Quentin (OF)
 	DEACTIVATE
+MATCH!
+	Patrick Corbin	Patrick Corbin
+	SP	SP
+	Ari, RANK 178
+
+MATCH!
+	Pedro Ãlvarez	Pedro Álvarez
+	1B/3B	1B
+	Pit, RANK 269
+
+MATCH!
+	Brandon McCarthy	Brandon McCarthy
+	SP	SP
+	LAD, RANK 521
+
+MATCH!
+	Tyler Chatwood	Tyler Chatwood
+	SP	SP,RP
+	Col, RANK 736
+
+MATCH!
+	Danny Santana	Danny Santana
+	SS/OF	SS
+	Min, RANK 1023
+
+MATCH!
+	Ichiro Suzuki	Ichiro Suzuki
+	OF	OF
+	Mia, RANK 1030
+
 MATCH!
-	Jay Feely	Jay Feely
-	K	K
-	Ari, RANK 228
+	Gio GonzÃ¡lez	Gio González
+	SP	SP
+	Was, RANK 158
 
 MATCH!
-	Michael Williams	Michael Williams
-	TE	TE
-	Det, RANK 424
+	Ben Paulsen	Ben Paulsen
+	1B	1B,OF
+	Col, RANK 242
 
 MATCH!
-	Dion Lewis	Dion Lewis
-	RB	RB
-	Cle, RANK 867
+	Zach Putnam	Zach Putnam
+	RP	RP
+	CWS, RANK 414
 
-NO MATCH for Sage Rosenfels (QB)
+NO MATCH for Dustin McGowan (SP/RP)
 	DEACTIVATE
 MATCH!
-	Josh Boyce	Josh Boyce
-	WR	WR
-	NE, RANK 899
+	Eric OFlaherty	Eric OFlaherty
+	RP	RP
+	Pit, RANK 1036
 
 MATCH!
-	Brittan Golden	Brittan Golden
-	WR	WR
-	Ari, RANK 507
+	Ãlex RodrÃ­guez	Álex Rodríguez
+	3B	Util
+	NYY, RANK 174
 
-NO MATCH for A.J. Feeley (QB)
+MATCH!
+	Mark Reynolds	Mark Reynolds
+	1B/3B	1B,3B,OF
+	Col, RANK 958
+
+MATCH!
+	Carlos Santana	Carlos Santana
+	C/1B/3B	1B
+	Cle, RANK 188
+
+MATCH!
+	Brandon Crawford	Brandon Crawford
+	SS	SS
+	SF, RANK 194
+
+NO MATCH for Kevin Correia (SP/RP)
 	DEACTIVATE
 MATCH!
-	David Garrard	David Garrard
-	QB	QB
-	NYJ, RANK 1116
+	Francisco Lindor	Francisco Lindor
+	SS	SS
+	Cle, RANK 112
 
-NO MATCH for Brett Swain (WR)
+NO MATCH for Joba Chamberlain (RP)
 	DEACTIVATE
+NO MATCH for Marc Krauss (1B/OF)
+	DEACTIVATE
+MATCH!
+	Enny Romero	Enny Romero
+	SP	RP
+	TB, RANK 933
+
+MATCH!
+	Alejandro De Aza	Alejandro De Aza
+	OF	OF
+	NYM, RANK 532
+
+MATCH!
+	Yimi GarcÃ­a	Yimi García
+	RP	RP
+	LAD, RANK 342
+
+MATCH!
+	Francisco Cervelli	Francisco Cervelli
+	C/1B	C
+	Pit, RANK 233
+
 MATCH!
-	Alvester Alexander	Alvester Alexander
-	RB	RB
-	Pit, RANK 814
+	Sam Dyson	Sam Dyson
+	RP	RP
+	Tex, RANK 320
 
 MATCH!
-	Bernard Scott	Bernard Scott
-	RB	RB
-	Bal, RANK 815
+	Aaron Loup	Aaron Loup
+	RP	RP
+	Tor, RANK 478
 
 MATCH!
-	Matt Szymanski	Matt Szymanski
-	K	K
-	Mia, RANK 966
+	Nelson Cruz	Nelson Cruz
+	OF	OF
+	Sea, RANK 29
 
+MATCH!
+	Hank Conger	Hank Conger
+	C	C
+	TB, RANK 1069
+
+NO MATCH for Freddy Garcia (SP)
+	DEACTIVATE
+MATCH!
+	Felix Doubront	Felix Doubront
+	SP/RP	SP
+	Oak, RANK 1034
+
+NO MATCH for B.J. Rosenberg (RP)
+	DEACTIVATE
+NO MATCH for Ryan Rowland-Smith (RP)
+	DEACTIVATE
 MATCH!
-	Kerwynn Williams	Kerwynn Williams
-	RB	RB
-	SD, RANK 817
+	Drew Smyly	Drew Smyly
+	SP	SP
+	TB, RANK 195
 
+NO MATCH for Dana Eveland (RP)
+	DEACTIVATE
 MATCH!
-	Brian Leonhardt	Brian Leonhardt
-	TE	TE
-	Oak, RANK 425
+	Jeff Locke	Jeff Locke
+	SP	SP
+	Pit, RANK 935
 
+NO MATCH for Jemile Weeks (2B)
+	DEACTIVATE
+NO MATCH for Alex Sanabia (SP)
+	DEACTIVATE
+NO MATCH for Troy Patton (RP)
+	DEACTIVATE
 MATCH!
-	Ravens	Ravens
-	DEF	DEF
-	Bal, RANK 237
+	Angel Nesbitt	Angel Nesbitt
+	RP	RP
+	Det, RANK 828
 
-NO MATCH for Robbie Rouse (RB)
+NO MATCH for Esmil Rogers (RP)
 	DEACTIVATE
-NO MATCH for Marcus Rucker (WR)
+NO MATCH for Chase dArnaud (SS)
 	DEACTIVATE
 MATCH!
-	Davin Meggett	Davin Meggett
-	RB	RB
-	Ind, RANK 818
+	Curt Casali	Curt Casali
+	C	C
+	TB, RANK 1137
 
+NO MATCH for Jeff Karstens (SP)
+	DEACTIVATE
 MATCH!
-	Rashad Ross	Rashad Ross
-	WR	WR
-	Was, RANK 651
+	Aaron Northcraft	Aaron Northcraft
+	RP	RP
+	SD, RANK 686
 
-NO MATCH for Alex Carder (QB)
+NO MATCH for Delmon Young (OF)
 	DEACTIVATE
+MATCH!
+	Dustin Pedroia	Dustin Pedroia
+	2B	2B
+	Bos, RANK 180
+
 MATCH!
-	Billy Cundiff	Billy Cundiff
-	K	K
-	Cle, RANK 282
+	Ian Desmond	Ian Desmond
+	SS	SS
+	Tex, RANK 150
 
-NO MATCH for Jamie McCoy (TE)
+MATCH!
+	Nick Vincent	Nick Vincent
+	RP	RP
+	SD, RANK 520
+
+MATCH!
+	Madison Bumgarner	Madison Bumgarner
+	SP	SP
+	SF, RANK 30
+
+MATCH!
+	Chris MartÃ­n	Chris Martín
+	RP	RP
+	NYY, RANK 920
+
+NO MATCH for Billy Buckner (SP)
 	DEACTIVATE
 MATCH!
-	Alshon Jeffery	Alshon Jeffery
-	WR	WR
-	Chi, RANK 21
+	Carson Smith	Carson Smith
+	RP	RP
+	Bos, RANK 301
 
 MATCH!
-	Kamar Jorden	Kamar Jorden
-	WR	WR
-	Min, RANK 652
+	Oliver Drake	Oliver Drake
+	SP	RP
+	Bal, RANK 747
 
 MATCH!
-	Chiefs	Chiefs
-	DEF	DEF
-	KC, RANK 182
+	Joel Peralta	Joel Peralta
+	RP	RP
+	Sea, RANK 459
 
 MATCH!
-	Arian Foster	Arian Foster
-	RB	RB
-	Hou, RANK 10
+	Shelby Miller	Shelby Miller
+	SP	SP
+	Ari, RANK 141
 
 MATCH!
-	Jeff Demps	Jeff Demps
-	RB	RB
-	TB, RANK 820
+	Kyle Lobstein	Kyle Lobstein
+	SP	SP
+	Pit, RANK 1027
 
 MATCH!
-	Vance McDonald	Vance McDonald
-	TE	TE
-	SF, RANK 740
+	Ben Zobrist	Ben Zobrist
+	2B/SS/OF	2B,OF
+	ChC, RANK 152
 
 MATCH!
-	Robbie Gould	Robbie Gould
-	K	K
-	Chi, RANK 230
+	Aaron Hicks	Aaron Hicks
+	OF	OF
+	NYY, RANK 831
 
 MATCH!
-	Jermaine Gresham	Jermaine Gresham
-	TE	TE
-	Cin, RANK 218
+	Will Harris	Will Harris
+	RP	RP
+	Hou, RANK 302
 
 MATCH!
-	Evan Rodriguez	Evan Rodriguez
-	RB	RB
-	Buf, RANK 919
+	Logan Morrison	Logan Morrison
+	1B/OF	1B
+	TB, RANK 553
 
+NO MATCH for Chone Figgins (3B)
+	DEACTIVATE
 MATCH!
-	Jalen Parmele	Jalen Parmele
-	RB	RB
-	Ari, RANK 883
+	Kelly Johnson	Kelly Johnson
+	1B/3B	1B,2B,3B,OF
+	Atl, RANK 860
 
 MATCH!
-	Michael Bush	Michael Bush
-	RB	RB
-	Chi, RANK 338
+	Omar Infante	Omar Infante
+	2B	2B
+	KC, RANK 1048
 
+NO MATCH for Brandon League (RP)
+	DEACTIVATE
 MATCH!
-	Kevin Ogletree	Kevin Ogletree
-	WR	WR
+	Alex Wilson	Alex Wilson
+	RP	RP
 	Det, RANK 322
 
 MATCH!
-	Derek Anderson	Derek Anderson
-	QB	QB
-	Car, RANK 1117
+	Luis GarcÃ­a	Luis García
+	RP	RP
+	Phi, RANK 803
 
 MATCH!
-	Eddie Lacy	Eddie Lacy
-	RB	RB
-	GB, RANK 4
+	Vinnie Pestano	Vinnie Pestano
+	RP	RP
+	NYY, RANK 816
 
-NO MATCH for Robert Gill (WR)
-	DEACTIVATE
-NO MATCH for Jason Snelling (RB)
-	DEACTIVATE
-MATCH!
-	Brian Hartline	Brian Hartline
-	WR	WR
-	Mia, RANK 120
-
-MATCH!
-	Julius Thomas	Julius Thomas
-	TE	TE
-	Den, RANK 36
-
-NO MATCH for Donte Stallworth (WR)
-	DEACTIVATE
-MATCH!
-	Robert Meachem	Robert Meachem
-	WR	WR
-	NO, RANK 510
-
-NO MATCH for Cole McKenzie (WR)
-	DEACTIVATE
-MATCH!
-	Mario Manningham	Mario Manningham
-	WR	WR
-	NYG, RANK 890
-
-NO MATCH for Sederrik Cunningham (WR)
-	DEACTIVATE
-MATCH!
-	Shayne Graham	Shayne Graham
-	K	K
-	NO, RANK 862
-
-NO MATCH for Stephen McGee (QB)
-	DEACTIVATE
-MATCH!
-	Mike Brown	Mike Brown
-	WR	WR
-	Jax, RANK 278
-
-MATCH!
-	Terrelle Pryor	Terrelle Pryor
-	QB	QB
-	Sea, RANK 471
-
-MATCH!
-	Delanie Walker	Delanie Walker
-	TE	TE
-	Ten, RANK 148
-
-NO MATCH for Adam Nissley (TE)
-	DEACTIVATE
-MATCH!
-	DaRick Rogers	DaRick Rogers
-	WR	WR
-	Ind, RANK 200
-
-MATCH!
-	Kerry Taylor	Kerry Taylor
-	WR	WR
-	Jax, RANK 469
-
-MATCH!
-	Brandon Bostick	Brandon Bostick
-	TE	TE
-	GB, RANK 331
-
-MATCH!
-	Rashad Jennings	Rashad Jennings
-	RB	RB
-	NYG, RANK 35
-
-MATCH!
-	Mike Caussin	Mike Caussin
-	TE	TE
-	Was, RANK 428
-
-MATCH!
-	Derek Dimke	Derek Dimke
-	K	K
-	NO, RANK 967
-
-NO MATCH for Todd Heap (TE)
-	DEACTIVATE
-MATCH!
-	Taylor Price	Taylor Price
-	WR	WR
-	Sea, RANK 658
-
-NO MATCH for David Buehler (K)
-	DEACTIVATE
-MATCH!
-	Ray Rice	Ray Rice
-	RB	RB
-	Bal, RANK 99
-
-MATCH!
-	Shaun Draughn	Shaun Draughn
-	RB	RB
-	Chi, RANK 745
-
-MATCH!
-	DuJuan Harris	DuJuan Harris
-	RB	RB
-	GB, RANK 349
-
-MATCH!
-	Marc Mariani	Marc Mariani
-	WR	WR
-	Ten, RANK 660
-
-MATCH!
-	D.C. Jefferson	D.C. Jefferson
-	TE	TE
-	Car, RANK 429
-
-MATCH!
-	Larry Donnell	Larry Donnell
-	TE	TE
-	NYG, RANK 924
-
-NO MATCH for Montario Hardesty (RB)
-	DEACTIVATE
-MATCH!
-	Chris Givens	Chris Givens
-	WR	WR
-	StL, RANK 313
-
-NO MATCH for Nick Provo (TE)
-	DEACTIVATE
-NO MATCH for Chris Cooley (TE)
-	DEACTIVATE
-MATCH!
-	Andre Brown	Andre Brown
-	RB	RB
-	Hou, RANK 153
-
-MATCH!
-	Randall Cobb	Randall Cobb
-	WR	WR
-	GB, RANK 31
-
-MATCH!
-	Beau Brinkley	Beau Brinkley
-	TE	TE
-	Ten, RANK 942
-
-MATCH!
-	Owen Daniels	Owen Daniels
-	TE	TE
-	Bal, RANK 181
-
-MATCH!
-	Bears	Bears
-	DEF	DEF
-	Chi, RANK 208
-
-MATCH!
-	Chris Pressley	Chris Pressley
-	RB	RB
-	Cle, RANK 893
-
-NO MATCH for Chase Clement (TE)
-	DEACTIVATE
-MATCH!
-	Josh McCown	Josh McCown
-	QB	QB
-	TB, RANK 131
-
-MATCH!
-	Theo Riddick	Theo Riddick
-	RB	RB
-	Det, RANK 997
-
-MATCH!
-	Luke Willson	Luke Willson
-	TE	TE
-	Sea, RANK 319
-
-MATCH!
-	LeVeon Bell	LeVeon Bell
-	RB	RB
-	Pit, RANK 17
-
-MATCH!
-	Matt Prater	Matt Prater
-	K	K
-	Den, RANK 191
-
-MATCH!
-	Ladarius Green	Ladarius Green
-	TE	TE
-	SD, RANK 125
-
-MATCH!
-	Jaron Brown	Jaron Brown
-	WR	WR
-	Ari, RANK 926
-
-MATCH!
-	Kendall Gaskins	Kendall Gaskins
-	RB	RB
-	NYG, RANK 823
-
-MATCH!
-	Kellen Davis	Kellen Davis
-	TE	TE
-	NYG, RANK 343
-
-MATCH!
-	Bengals	Bengals
-	DEF	DEF
-	Cin, RANK 185
-
-NO MATCH for Marcus Sales (WR)
-	DEACTIVATE
-MATCH!
-	Jamize Olawale	Jamize Olawale
-	RB	RB
-	Oak, RANK 1011
-
-MATCH!
-	Dan Bailey	Dan Bailey
-	K	K
-	Dal, RANK 205
-
-MATCH!
-	Mike McNeill	Mike McNeill
-	TE	TE
-	Car, RANK 488
-
-MATCH!
-	Maikon Bonani	Maikon Bonani
-	K	K
-	Ten, RANK 968
-
-MATCH!
-	Dallas Clark	Dallas Clark
-	TE	TE
-	Ind, RANK 227
-
-MATCH!
-	Kenny Stills	Kenny Stills
-	WR	WR
-	NO, RANK 135
-
-NO MATCH for Jeff Fuller (WR)
-	DEACTIVATE
-MATCH!
-	Josh Lenz	Josh Lenz
-	WR	WR
-	Ind, RANK 663
-
-MATCH!
-	Jimmy Graham	Jimmy Graham
-	TE	TE
-	NO, RANK 7
-
-MATCH!
-	Josh Brown	Josh Brown
-	K	K
-	NYG, RANK 252
-
-MATCH!
-	Naaman Roosevelt	Naaman Roosevelt
-	WR	WR
-	Buf, RANK 665
-
-MATCH!
-	Bryce Davis	Bryce Davis
-	TE	TE
-	Pit, RANK 432
-
-MATCH!
-	Toney Clemons	Toney Clemons
-	WR	WR
-	Car, RANK 882
-
-MATCH!
-	Rex Burkhead	Rex Burkhead
-	RB	RB
-	Cin, RANK 826
-
-NO MATCH for Alex Gottlieb (TE)
-	DEACTIVATE
-MATCH!
-	Josh Scobee	Josh Scobee
-	K	K
-	Jax, RANK 288
-
-NO MATCH for Brandon Bogotay (K)
-	DEACTIVATE
-MATCH!
-	Tavon Austin	Tavon Austin
-	WR	WR
-	StL, RANK 121
-
-NO MATCH for DeMarco Cosby (TE)
-	DEACTIVATE
-MATCH!
-	Dwayne Allen	Dwayne Allen
-	TE	TE
-	Ind, RANK 177
-
-MATCH!
-	Josh Freeman	Josh Freeman
-	QB	QB
-	NYG, RANK 989
-
-MATCH!
-	Joe McKnight	Joe McKnight
-	RB	RB
-	KC, RANK 886
-
-NO MATCH for Rashad Evans (WR)
-	DEACTIVATE
-MATCH!
-	Donald Brown	Donald Brown
-	RB	RB
-	SD, RANK 151
-
-MATCH!
-	Mike Willie	Mike Willie
-	WR	WR
-	Bal, RANK 667
-
-NO MATCH for Dorson Boyce (RB)
-	DEACTIVATE
-NO MATCH for Thomas Mayo (WR)
-	DEACTIVATE
-MATCH!
-	Ryan Otten	Ryan Otten
-	TE	TE
-	SD, RANK 436
-
-MATCH!
-	Seahawks	Seahawks
-	DEF	DEF
-	Sea, RANK 123
-
-MATCH!
-	Greg Little	Greg Little
-	WR	WR
-	Oak, RANK 310
-
-MATCH!
-	Tom Crabtree	Tom Crabtree
-	TE	TE
-	TB, RANK 345
-
-MATCH!
-	Brian Hoyer	Brian Hoyer
-	QB	QB
-	Cle, RANK 1119
-
-MATCH!
-	Dezmon Briscoe	Dezmon Briscoe
-	WR	WR
-	Dal, RANK 895
-
-NO MATCH for Baron Batch (RB)
-	DEACTIVATE
-MATCH!
-	Marshawn Lynch	Marshawn Lynch
-	RB	RB
-	Sea, RANK 9
-
-MATCH!
-	Dominique Croom	Dominique Croom
-	WR	WR
-	Atl, RANK 670
-
-NO MATCH for Colby Cameron (QB)
-	DEACTIVATE
-MATCH!
-	Latavius Murray	Latavius Murray
-	RB	RB
-	Oak, RANK 831
-
-MATCH!
-	Panthers	Panthers
-	DEF	DEF
-	Car, RANK 183
-
-NO MATCH for Adrian Arrington (WR)
-	DEACTIVATE
-MATCH!
-	Tony Moeaki	Tony Moeaki
-	TE	TE
-	Buf, RANK 340
-
-NO MATCH for Bobby Cowan (QB)
-	DEACTIVATE
-NO MATCH for Deion Branch (WR)
-	DEACTIVATE
-NO MATCH for Victor Marshall (TE)
-	DEACTIVATE
-MATCH!
-	Heath Miller	Heath Miller
-	TE	TE
-	Pit, RANK 149
-
-NO MATCH for Brit Miller (RB)
-	DEACTIVATE
-MATCH!
-	Russell Shepard	Russell Shepard
-	WR	WR
-	TB, RANK 1024
-
-MATCH!
-	Benny Cunningham	Benny Cunningham
-	RB	RB
-	StL, RANK 869
-
-MATCH!
-	Garrett Graham	Garrett Graham
-	TE	TE
-	Hou, RANK 155
-
-NO MATCH for Travis Tannahill (TE)
-	DEACTIVATE
-MATCH!
-	Nick Stephens	Nick Stephens
-	QB	QB
-	Bal, RANK 1120
-
-MATCH!
-	Tim Benford	Tim Benford
-	WR	WR
-	Dal, RANK 671
-
-NO MATCH for Julius Pruitt (WR)
-	DEACTIVATE
-MATCH!
-	Ina Liaina	Ina Liaina
-	RB	RB
-	GB, RANK 833
-
-NO MATCH for Jordan Shipley (WR)
-	DEACTIVATE
-MATCH!
-	Kyle Williams	Kyle Williams
-	WR	WR
-	KC, RANK 939
-
-MATCH!
-	Doug Martin	Doug Martin
-	RB	RB
-	TB, RANK 32
-
-NO MATCH for Mario Fannin (RB)
-	DEACTIVATE
-MATCH!
-	Brock Osweiler	Brock Osweiler
-	QB	QB
-	Den, RANK 1141
-
-NO MATCH for Donald Russell (RB)
-	DEACTIVATE
-MATCH!
-	Adrien Robinson	Adrien Robinson
-	TE	TE
-	NYG, RANK 439
-
-NO MATCH for J.P. Losman (QB)
-	DEACTIVATE
-MATCH!
-	Evan Royster	Evan Royster
-	RB	RB
-	Was, RANK 1042
-
-NO MATCH for Ryan Torain (RB)
-	DEACTIVATE
-MATCH!
-	Alfred Morris	Alfred Morris
-	RB	RB
-	Was, RANK 24
-
-MATCH!
-	Tom Brady	Tom Brady
-	QB	QB
-	NE, RANK 81
-
-MATCH!
-	Ben Hartsock	Ben Hartsock
-	TE	TE
-	Car, RANK 484
-
-MATCH!
-	Greg Jones	Greg Jones
-	RB	RB
-	Hou, RANK 1045
-
-MATCH!
-	Adrian Peterson	Adrian Peterson
-	RB	RB
-	Min, RANK 3
-
-NO MATCH for Spencer Larsen (RB)
-	DEACTIVATE
-MATCH!
-	Phillip Supernaw	Phillip Supernaw
-	TE	TE
-	Bal, RANK 440
-
-NO MATCH for Eddy Carmona (K)
-	DEACTIVATE
-MATCH!
-	James Hanna	James Hanna
-	TE	TE
-	Dal, RANK 911
-
-MATCH!
-	Chase Daniel	Chase Daniel
-	QB	QB
-	KC, RANK 1142
-
-MATCH!
-	Chris Matthews	Chris Matthews
-	WR	WR
-	Sea, RANK 673
-
-NO MATCH for John Skelton (QB)
-	DEACTIVATE
-NO MATCH for Jahvid Best (RB)
-	DEACTIVATE
-MATCH!
-	Leonard Hankerson	Leonard Hankerson
-	WR	WR
-	Was, RANK 246
-
-NO MATCH for Early Doucet (WR)
-	DEACTIVATE
-MATCH!
-	Lestar Jean	Lestar Jean
-	WR	WR
-	Min, RANK 999
-
-NO MATCH for Courtney Gardner (WR)
-	DEACTIVATE
 MATCH!
-	Tiquan Underwood	Tiquan Underwood
-	WR	WR
-	Car, RANK 268
+	Jesse Biddle	Jesse Biddle
+	SP	SP
+	Pit, RANK 689
 
-NO MATCH for Taiwan Jones (RB)
-	DEACTIVATE
-MATCH!
-	Joseph Fauria	Joseph Fauria
-	TE	TE
-	Det, RANK 209
-
-MATCH!
-	Steelers	Steelers
-	DEF	DEF
-	Pit, RANK 265
-
-NO MATCH for Robby Toma (WR)
-	DEACTIVATE
-MATCH!
-	Chargers	Chargers
-	DEF	DEF
-	SD, RANK 284
-
-MATCH!
-	Chase Coffman	Chase Coffman
-	TE	TE
-	Atl, RANK 441
-
-MATCH!
-	Jordan Rodgers	Jordan Rodgers
-	QB	QB
-	Mia, RANK 1122
-
-NO MATCH for Devin Moore (RB)
-	DEACTIVATE
-NO MATCH for Kenny Stafford (WR)
-	DEACTIVATE
-MATCH!
-	G.J. Kinne	G.J. Kinne
-	QB	QB
-	Phi, RANK 1123
-
-MATCH!
-	Jake Ballard	Jake Ballard
-	TE	TE
-	Ari, RANK 323
-
-MATCH!
-	Carson Wiggs	Carson Wiggs
-	K	K
-	Ind, RANK 972
-
-MATCH!
-	Kyle Orton	Kyle Orton
-	QB	QB
-	Dal, RANK 1125
-
-NO MATCH for Trey Diller (WR)
-	DEACTIVATE
-MATCH!
-	Jamar Newsome	Jamar Newsome
-	WR	WR
-	Dal, RANK 875
-
-MATCH!
-	Andre Roberts	Andre Roberts
-	WR	WR
-	Was, RANK 305
-
-MATCH!
-	Jerodis Williams	Jerodis Williams
-	RB	RB
-	Den, RANK 835
-
-MATCH!
-	Bear Pascoe	Bear Pascoe
-	TE	TE
-	Atl, RANK 920
-
-MATCH!
-	Travis Benjamin	Travis Benjamin
-	WR	WR
-	Cle, RANK 729
-
-NO MATCH for C.J. Akins (WR)
-	DEACTIVATE
-NO MATCH for K.J. Stroud (WR)
-	DEACTIVATE
-NO MATCH for Nathan Enderle (QB)
-	DEACTIVATE
-MATCH!
-	Matt Forte	Matt Forte
-	RB	RB
-	Chi, RANK 5
-
-MATCH!
-	Will Murphy	Will Murphy
-	WR	WR
-	Phi, RANK 677
-
-MATCH!
-	Reggie Bush	Reggie Bush
-	RB	RB
-	Det, RANK 38
-
-MATCH!
-	Andrew Luck	Andrew Luck
-	QB	QB
-	Ind, RANK 60
-
-NO MATCH for Roscoe Parrish (WR)
-	DEACTIVATE
-MATCH!
-	Jake Rogers	Jake Rogers
-	K	K
-	Cle, RANK 973
-
-NO MATCH for Armando Allen (RB)
-	DEACTIVATE
-MATCH!
-	Kellen Moore	Kellen Moore
-	QB	QB
-	Det, RANK 1127
-
-MATCH!
-	Cobi Hamilton	Cobi Hamilton
-	WR	WR
-	Cin, RANK 678
-
-MATCH!
-	Zach Potter	Zach Potter
-	TE	TE
-	Hou, RANK 501
-
-MATCH!
-	Jonas Gray	Jonas Gray
-	RB	RB
-	NE, RANK 837
-
-MATCH!
-	Jeremy Ebert	Jeremy Ebert
-	WR	WR
-	Atl, RANK 1002
-
-MATCH!
-	Colin Kaepernick	Colin Kaepernick
-	QB	QB
-	SF, RANK 87
-
-NO MATCH for Mike Edwards (WR)
-	DEACTIVATE
-MATCH!
-	Mike Glennon	Mike Glennon
-	QB	QB
-	TB, RANK 888
-
-NO MATCH for Zach Brown (RB)
-	DEACTIVATE
-MATCH!
-	Keavon Milton	Keavon Milton
-	TE	TE
-	Cle, RANK 443
-
-MATCH!
-	Jordan Reed	Jordan Reed
-	TE	TE
-	Was, RANK 100
-
-NO MATCH for Jarett Dillard (WR)
-	DEACTIVATE
-NO MATCH for Donald Jones (WR)
-	DEACTIVATE
-MATCH!
-	Mike Kafka	Mike Kafka
-	QB	QB
-	TB, RANK 1128
-
-MATCH!
-	Jason Campbell	Jason Campbell
-	QB	QB
-	Cin, RANK 881
-
-NO MATCH for Clay Belton (QB)
-	DEACTIVATE
-MATCH!
-	Kenny Britt	Kenny Britt
-	WR	WR
-	StL, RANK 179
-
-MATCH!
-	Matt Moore	Matt Moore
-	QB	QB
-	Mia, RANK 1129
-
-MATCH!
-	Joe Webb	Joe Webb
-	QB/WR	QB
-	Car, RANK 1143
-
-MATCH!
-	Doug Baldwin	Doug Baldwin
-	WR	WR
-	Sea, RANK 141
-
-MATCH!
-	Tommy Streeter	Tommy Streeter
-	WR	WR
-	TB, RANK 681
-
-MATCH!
-	Philip Rivers	Philip Rivers
-	QB	QB
-	SD, RANK 85
-
-NO MATCH for Chad Hall (WR)
-	DEACTIVATE
-NO MATCH for Nelson Rosario (TE)
-	DEACTIVATE
-MATCH!
-	Kassim Osgood	Kassim Osgood
-	WR	WR
-	SF, RANK 1043
-
-NO MATCH for Jamal Miles (WR)
-	DEACTIVATE
-MATCH!
-	Darren Sproles	Darren Sproles
-	RB	RB
-	Phi, RANK 108
-
-MATCH!
-	Alex Gillett	Alex Gillett
-	WR	WR
-	GB, RANK 683
-
-MATCH!
-	Eric Page	Eric Page
-	WR	WR
-	TB, RANK 1009
-
-MATCH!
-	Clyde Gates	Clyde Gates
-	WR	WR
-	NYJ, RANK 910
-
-NO MATCH for Kyle Adams (TE)
-	DEACTIVATE
-NO MATCH for Brandon Saine (RB)
-	DEACTIVATE
-MATCH!
-	Cierre Wood	Cierre Wood
-	RB	RB
-	Bal, RANK 839
-
-MATCH!
-	Kevin Dorsey	Kevin Dorsey
-	WR	WR
-	GB, RANK 684
-
-MATCH!
-	Justin Hunter	Justin Hunter
-	WR	WR
-	Ten, RANK 143
-
-MATCH!
-	Chris Owusu	Chris Owusu
-	WR	WR
-	TB, RANK 930
-
-MATCH!
-	Lavelle Hawkins	Lavelle Hawkins
-	WR	WR
-	TB, RANK 1041
-
-NO MATCH for Owen Schmitt (RB)
-	DEACTIVATE
 MATCH!
-	Marcus Thigpen	Marcus Thigpen
-	RB	RB
-	Mia, RANK 1015
+	Shawn Kelley	Shawn Kelley
+	RP	RP
+	Was, RANK 359
 
-MATCH!
-	Titans	Titans
-	DEF	DEF
-	Ten, RANK 248
-
-MATCH!
-	Matt Barkley	Matt Barkley
-	QB	QB
-	Phi, RANK 1131
-
-MATCH!
-	Michael Campbell	Michael Campbell
-	WR	WR
-	NYJ, RANK 689
-
-NO MATCH for Brett Baer (K)
-	DEACTIVATE
-MATCH!
-	Jordan Todman	Jordan Todman
-	RB	RB
-	Jax, RANK 483
-
-MATCH!
-	Andrew DePaola	Andrew DePaola
-	TE	TE
-	TB, RANK 447
-
-MATCH!
-	Michael Preston	Michael Preston
-	WR	WR
-	Ten, RANK 691
-
-NO MATCH for Keiland Williams (RB)
-	DEACTIVATE
-MATCH!
-	Chad Spann	Chad Spann
-	RB	RB
-	Hou, RANK 844
-
-MATCH!
-	Pierre Garcon	Pierre Garcon
-	WR	WR
-	Was, RANK 42
-
-NO MATCH for Tim Hightower (RB)
-	DEACTIVATE
-MATCH!
-	Armanti Edwards	Armanti Edwards
-	WR	WR
-	Chi, RANK 1029
-
-NO MATCH for Angelo Pease (RB)
-	DEACTIVATE
-MATCH!
-	Gavin Escobar	Gavin Escobar
-	TE	TE
-	Dal, RANK 352
-
-MATCH!
-	Anthony Dixon	Anthony Dixon
-	RB	RB
-	Buf, RANK 981
-
-MATCH!
-	Jacoby Ford	Jacoby Ford
-	WR	WR
-	NYJ, RANK 988
-
-NO MATCH for Emmanuel Arceneaux (WR)
-	DEACTIVATE
-MATCH!
-	Brent Celek	Brent Celek
-	TE	TE
-	Phi, RANK 220
-
-MATCH!
-	Mike Wallace	Mike Wallace
-	WR	WR
-	Mia, RANK 83
-
-MATCH!
-	Chris Polk	Chris Polk
-	RB	RB
-	Phi, RANK 333
-
-NO MATCH for Joseph Collins (WR)
-	DEACTIVATE
-MATCH!
-	Adam Schiltz	Adam Schiltz
-	TE	TE
-	KC, RANK 449
-
-MATCH!
-	David Ausberry	David Ausberry
-	TE	TE
-	Oak, RANK 482
-
-NO MATCH for Jeremy Shelley (K)
-	DEACTIVATE
-NO MATCH for Aaron Hernandez (TE)
-	DEACTIVATE
-NO MATCH for Kregg Lumpkin (RB)
-	DEACTIVATE
-MATCH!
-	Jeremy Kerley	Jeremy Kerley
-	WR	WR
-	NYJ, RANK 224
-
-NO MATCH for Darius Hanks (WR)
-	DEACTIVATE
-MATCH!
-	Giorgio Tavecchio	Giorgio Tavecchio
-	K	K
-	Det, RANK 975
-
-MATCH!
-	Michael Rios	Michael Rios
-	WR	WR
-	Mia, RANK 692
-
-MATCH!
-	James Jones	James Jones
-	WR	WR
-	Oak, RANK 119
-
-NO MATCH for Ryan Swope (WR)
-	DEACTIVATE
-MATCH!
-	Nick Folk	Nick Folk
-	K	K
-	NYJ, RANK 229
-
-MATCH!
-	Joe Flacco	Joe Flacco
-	QB	QB
-	Bal, RANK 159
-
-MATCH!
-	Roddy White	Roddy White
-	WR	WR
-	Atl, RANK 44
-
-NO MATCH for Isaiah Stanback (TE)
+NO MATCH for Josh Stinson (RP)
 	DEACTIVATE
-NO MATCH for Pat White (QB)
-	DEACTIVATE
 MATCH!
-	Michael Robinson	Michael Robinson
-	RB	RB
-	Sea, RANK 1017
+	Mat Latos	Mat Latos
+	SP	SP
+	CWS, RANK 833
 
 MATCH!
-	Giants	Giants
-	DEF	DEF
-	NYG, RANK 242
+	Geovany Soto	Geovany Soto
+	C	C
+	LAA, RANK 1134
 
-NO MATCH for Joseph Addai (RB)
-	DEACTIVATE
 MATCH!
-	Lanear Sampson	Lanear Sampson
-	WR	WR
-	Pit, RANK 694
+	Rafael De Paula	Rafael De Paula
+	SP	SP
+	SD, RANK 691
 
 MATCH!
-	Reggie Wayne	Reggie Wayne
-	WR	WR
-	Ind, RANK 88
+	Greg Holland	Greg Holland
+	RP	RP
+	KC, RANK 300
 
-NO MATCH for Lex Hilliard (RB)
+NO MATCH for Hiroki Kuroda (SP)
 	DEACTIVATE
-MATCH!
-	Jerrel Jernigan	Jerrel Jernigan
-	WR	WR
-	NYG, RANK 731
-
 MATCH!
-	Martell Webb	Martell Webb
-	TE	TE
-	Ind, RANK 452
+	Heath Hembree	Heath Hembree
+	RP	RP
+	Bos, RANK 548
 
-NO MATCH for Troy Smith (QB)
+NO MATCH for Luis JimÃ©nez (3B)
 	DEACTIVATE
-NO MATCH for Ben Obomanu (WR)
+NO MATCH for Kris Johnson (SP)
 	DEACTIVATE
-MATCH!
-	Chris Givens	Chris Givens
-	WR	WR
-	NO, RANK 695
-
-MATCH!
-	Marcus Easley	Marcus Easley
-	WR	WR
-	Buf, RANK 1019
-
-MATCH!
-	Victor Cruz	Victor Cruz
-	WR	WR
-	NYG, RANK 39
-
-MATCH!
-	Tobais Palmer	Tobais Palmer
-	WR	WR
-	SD, RANK 697
-
-NO MATCH for Paul Freedman (TE)
+NO MATCH for J.P. Arencibia (C/1B)
 	DEACTIVATE
 MATCH!
-	Jason Witten	Jason Witten
-	TE	TE
-	Dal, RANK 78
+	Jameson Taillon	Jameson Taillon
+	SP	SP
+	Pit, RANK 692
 
-NO MATCH for Garrett Hoskins (TE)
-	DEACTIVATE
 MATCH!
-	Dolphins	Dolphins
-	DEF	DEF
-	Mia, RANK 244
+	Kevin Jepsen	Kevin Jepsen
+	RP	RP
+	Min, RANK 304
 
-NO MATCH for Cameron Graham (TE)
+NO MATCH for Reid Brignac (3B)
 	DEACTIVATE
-NO MATCH for Legedu Naanee (WR)
+NO MATCH for Johan Santana (SP)
 	DEACTIVATE
-MATCH!
-	Golden Tate	Golden Tate
-	WR	WR
-	Det, RANK 79
-
 MATCH!
-	Jarius Wright	Jarius Wright
-	WR	WR
-	Min, RANK 279
+	Tucker Barnhart	Tucker Barnhart
+	C	C
+	Cin, RANK 1149
 
-NO MATCH for Dale Moss (WR)
+NO MATCH for Preston Guilmet (RP)
 	DEACTIVATE
-MATCH!
-	Jason Avant	Jason Avant
-	WR	WR
-	Car, RANK 320
-
-MATCH!
-	Drew Brees	Drew Brees
-	QB	QB
-	NO, RANK 18
-
-MATCH!
-	Saints	Saints
-	DEF	DEF
-	NO, RANK 277
-
 MATCH!
-	Tim Wright	Tim Wright
-	WR,TE	TE
-	TB, RANK 173
+	Alex Hassan	Alex Hassan
+	OF	OF
+	LAD, RANK 1450
 
-NO MATCH for Jheranie Boyd (WR)
+NO MATCH for John Lannan (RP)
 	DEACTIVATE
 MATCH!
-	Kevin Brock	Kevin Brock
-	TE	TE
-	Cin, RANK 878
+	Alberto Callaspo	Alberto Callaspo
+	1B/2B/3B	3B
+	LAD, RANK 1160
 
 MATCH!
-	Eric Kettani	Eric Kettani
-	RB	RB
-	KC, RANK 848
+	Jedd Gyorko	Jedd Gyorko
+	2B	2B,SS
+	StL, RANK 893
 
-NO MATCH for Konrad Reuland (TE)
-	DEACTIVATE
-NO MATCH for Devery Henderson (WR)
-	DEACTIVATE
 MATCH!
-	Matt Ryan	Matt Ryan
-	QB	QB
-	Atl, RANK 59
+	Brad Miller	Brad Miller
+	2B/SS	2B,SS,OF
+	TB, RANK 502
 
 MATCH!
-	Brandon Weeden	Brandon Weeden
-	QB	QB
-	Dal, RANK 464
+	Russell Martin	Russell Martin
+	C	C
+	Tor, RANK 118
 
-NO MATCH for Kahlil Bell (RB)
-	DEACTIVATE
 MATCH!
-	Benjamin Watson	Benjamin Watson
-	TE	TE
-	NO, RANK 308
+	David Phelps	David Phelps
+	SP/RP	SP
+	Mia, RANK 942
 
 MATCH!
-	Dwight Jones	Dwight Jones
-	WR	WR
-	NYJ, RANK 700
+	Alfredo SimÃ³n	Alfredo Simón
+	SP	SP
+	Det, RANK 974
 
-NO MATCH for Chip Reeves (WR)
-	DEACTIVATE
-NO MATCH for Plaxico Burress (WR)
+NO MATCH for Wilin Rosario (C)
 	DEACTIVATE
 MATCH!
-	Pat Devlin	Pat Devlin
-	QB	QB
-	Mia, RANK 1133
+	Pablo Sandoval	Pablo Sandoval
+	3B	3B
+	Bos, RANK 218
 
-MATCH!
-	Torrey Smith	Torrey Smith
-	WR	WR
-	Bal, RANK 63
-
-NO MATCH for Deonte Williams (RB)
+NO MATCH for RaÃºl IbaÃ±ez (OF)
 	DEACTIVATE
 MATCH!
-	Raymond Webber	Raymond Webber
-	WR	TE
-	GB, RANK 455
+	Austin Hedges	Austin Hedges
+	C	C
+	SD, RANK 1265
 
-NO MATCH for Joe Adams (WR)
+NO MATCH for David Cooper (1B)
 	DEACTIVATE
-MATCH!
-	Mike Williams	Mike Williams
-	WR	WR
-	Buf, RANK 175
-
-MATCH!
-	Jabin Sambrano	Jabin Sambrano
-	WR	WR
-	Atl, RANK 703
-
-MATCH!
-	Rashard Mendenhall	Rashard Mendenhall
-	RB	RB
-	Ari, RANK 193
-
-MATCH!
-	Aaron Mellette	Aaron Mellette
-	WR	WR
-	Bal, RANK 704
-
-MATCH!
-	Peyton Hillis	Peyton Hillis
-	RB	RB
-	NYG, RANK 251
-
-MATCH!
-	Saalim Hakim	Saalim Hakim
-	WR	WR
-	NYJ, RANK 705
-
 MATCH!
-	Nate Byham	Nate Byham
-	TE	TE
-	NE, RANK 456
+	Dustin Ackley	Dustin Ackley
+	OF	2B,OF
+	NYY, RANK 982
 
-MATCH!
-	DeAngelo Williams	DeAngelo Williams
-	RB	RB
-	Car, RANK 110
-
-NO MATCH for Kyle Padron (QB)
-	DEACTIVATE
-NO MATCH for Lee Evans (WR)
+NO MATCH for Aaron Crow (RP)
 	DEACTIVATE
-NO MATCH for Jacob Hester (RB)
+NO MATCH for Rafael Betancourt (RP)
 	DEACTIVATE
-NO MATCH for Joe Anderson (WR)
-	DEACTIVATE
 MATCH!
-	Denard Robinson	Denard Robinson
-	WR,RB	WR
-	Jax, RANK 1012
+	Ehire Adrianza	Ehire Adrianza
+	2B/SS	2B,SS
+	SF, RANK 1222
 
 MATCH!
-	LeRon McClain	LeRon McClain
-	RB	RB
-	SD, RANK 1047
+	Todd Cunningham	Todd Cunningham
+	OF	OF
+	LAA, RANK 1221
 
-NO MATCH for Byron Leftwich (QB)
-	DEACTIVATE
-NO MATCH for Steve Smith (WR)
-	DEACTIVATE
 MATCH!
-	Vernon Davis	Vernon Davis
-	TE	TE
-	SF, RANK 47
+	Chad Billingsley	Chad Billingsley
+	SP	SP
+	Phi, RANK 969
 
 MATCH!
-	Daniel Herron	Daniel Herron
-	RB	RB
-	Ind, RANK 914
+	Brandon Drury	Brandon Drury
+	SS	3B,MI
+	Ari, RANK 1248
 
-NO MATCH for Andrew Helmick (WR)
-	DEACTIVATE
 MATCH!
-	Nate Washington	Nate Washington
-	WR	WR
-	Ten, RANK 202
+	Jumbo Diaz	Jumbo Diaz
+	RP	RP
+	Cin, RANK 480
 
-NO MATCH for Kevin Boss (TE)
+NO MATCH for Brian Schlitter (RP)
 	DEACTIVATE
 MATCH!
-	Montee Ball	Montee Ball
-	RB	RB
-	Den, RANK 8
+	JosÃ© RamÃ­rez	José Ramírez
+	RP	RP
+	Atl, RANK 975
 
 MATCH!
-	Ace Sanders	Ace Sanders
-	WR	WR
-	Jax, RANK 326
+	Jesse Hahn	Jesse Hahn
+	SP	SP
+	Oak, RANK 339
 
 MATCH!
-	David Johnson	David Johnson
-	RB/TE	TE
-	SD, RANK 481
+	Yorman RodrÃ­guez	Yorman Rodríguez
+	OF	OF
+	Cin, RANK 1305
 
-NO MATCH for Titus Young (WR)
+NO MATCH for Johnny Hellweg (SP)
 	DEACTIVATE
 MATCH!
-	D.J. Williams	D.J. Williams
-	TE	TE
-	NE, RANK 487
+	Joe Mauer	Joe Mauer
+	1B	1B
+	Min, RANK 341
 
 MATCH!
-	Chris Harper	Chris Harper
-	WR	WR
-	GB, RANK 709
+	Mark Melancon	Mark Melancon
+	RP	RP
+	Pit, RANK 91
 
-NO MATCH for Terrence Austin (WR)
-	DEACTIVATE
-MATCH!
-	Mickey Shuler	Mickey Shuler
-	TE	TE
-	Atl, RANK 459
-
-MATCH!
-	Joel Dreessen	Joel Dreessen
-	TE	TE
-	Den, RANK 346
-
 MATCH!
-	Courtney Roby	Courtney Roby
-	WR	WR
-	Atl, RANK 905
+	Henderson Ãlvarez	Henderson Álvarez
+	SP	SP
+	Oak, RANK 817
 
 MATCH!
-	Brandon Marshall	Brandon Marshall
-	WR	WR
-	Chi, RANK 14
+	Gus Schlosser	Gus Schlosser
+	RP	RP
+	Col, RANK 825
 
-NO MATCH for Chris Gronkowski (RB)
-	DEACTIVATE
-NO MATCH for Marcus Davis (WR)
-	DEACTIVATE
 MATCH!
-	Vincent Jackson	Vincent Jackson
-	WR	WR
-	TB, RANK 33
+	Roberto PÃ©rez	Roberto Pérez
+	C	C
+	Cle, RANK 1109
 
 MATCH!
-	Michael Cox	Michael Cox
-	RB	RB
-	NYG, RANK 1018
+	Tom Murphy	Tom Murphy
+	C	C
+	Col, RANK 1199
 
 MATCH!
-	Coby Fleener	Coby Fleener
-	TE	TE
-	Ind, RANK 174
+	JesÃºs Aguilar	Jesús Aguilar
+	1B	1B
+	Cle, RANK 1293
 
 MATCH!
-	Josh Cribbs	Josh Cribbs
-	WR	WR
-	NYJ, RANK 995
+	Erik Johnson	Erik Johnson
+	SP	SP
+	CWS, RANK 544
 
 MATCH!
-	Broncos	Broncos
-	DEF	DEF
-	Den, RANK 206
+	Brian Flynn	Brian Flynn
+	P	SP
+	KC, RANK 789
 
 MATCH!
-	Jacoby Jones	Jacoby Jones
-	WR	WR
-	Bal, RANK 259
+	Dilson Herrera	Dilson Herrera
+	2B	2B
+	NYM, RANK 1208
 
 MATCH!
-	Ahmad Bradshaw	Ahmad Bradshaw
-	RB	RB
-	Ind, RANK 298
+	Clint Frazier	Clint Frazier
+	OF	OF
+	Cle, RANK 1414
 
-NO MATCH for Nick Miller (WR)
-	DEACTIVATE
 MATCH!
-	Jordy Nelson	Jordy Nelson
-	WR	WR
-	GB, RANK 23
+	Ervin Santana	Ervin Santana
+	SP	SP
+	Min, RANK 427
 
-NO MATCH for DeLeon Eskridge (RB)
+NO MATCH for Kyle Farnsworth (RP)
 	DEACTIVATE
 MATCH!
-	Dane Sanzenbacher	Dane Sanzenbacher
-	WR	WR
+	Tony Cingrani	Tony Cingrani
+	SP	RP
 	Cin, RANK 978
 
-NO MATCH for Royce Pollard (WR)
-	DEACTIVATE
-NO MATCH for Jeremy Shockey (TE)
-	DEACTIVATE
 MATCH!
-	Patrick DiMarco	Patrick DiMarco
-	RB	RB
-	Atl, RANK 1016
+	Aaron Nola	Aaron Nola
+	SP	SP
+	Phi, RANK 382
 
 MATCH!
-	Logan Paulsen	Logan Paulsen
-	TE	TE
-	Was, RANK 300
+	Corey Seager	Corey Seager
+	SS	SS
+	LAD, RANK 105
 
-MATCH!
-	John Carlson	John Carlson
-	TE	TE
-	Ari, RANK 329
-
-MATCH!
-	Redskins	Redskins
-	DEF	DEF
-	Was, RANK 287
-
-MATCH!
-	Andre Hardy	Andre Hardy
-	TE	TE
-	Ari, RANK 462
-
-MATCH!
-	Jimmy Clausen	Jimmy Clausen
-	QB	QB
-	Chi, RANK 1136
-
-MATCH!
-	Stevan Ridley	Stevan Ridley
-	RB	RB
-	NE, RANK 62
-
-MATCH!
-	Felix Jones	Felix Jones
-	RB	RB
-	Pit, RANK 916
-
-MATCH!
-	Tyler Wilson	Tyler Wilson
-	QB	QB
-	Ten, RANK 1137
-
-MATCH!
-	Ricky Stanzi	Ricky Stanzi
-	QB	QB
-	Jax, RANK 1138
-
-MATCH!
-	Ryan Whalen	Ryan Whalen
-	WR	WR
-	Cin, RANK 892
-
-MATCH!
-	Darrius Heyward-Bey	Darrius Heyward-Bey
-	WR	WR
-	Pit, RANK 348
-
-NO MATCH for Tim Biere (TE)
+NO MATCH for Gregorio Petit (3B/SS)
 	DEACTIVATE
 MATCH!
-	Eric Weems	Eric Weems
-	WR	WR
-	Chi, RANK 1044
+	Justin Nicolino	Justin Nicolino
+	SP	SP
+	Mia, RANK 527
 
-NO MATCH for Danny Noble (TE)
+MATCH!
+	Jarrett Grube	Jarrett Grube
+	RP	RP
+	Cle, RANK 740
+
+MATCH!
+	Santiago Casilla	Santiago Casilla
+	RP	RP
+	SF, RANK 207
+
+MATCH!
+	Blake Wood	Blake Wood
+	RP	RP
+	Cin, RANK 767
+
+MATCH!
+	Marco Estrada	Marco Estrada
+	SP/RP	SP,RP
+	Tor, RANK 254
+
+MATCH!
+	Jarrod Parker	Jarrod Parker
+	SP	SP
+	Oak, RANK 698
+
+MATCH!
+	Miles Head	Miles Head
+	3B	3B
+	Oak, RANK 1415
+
+MATCH!
+	Doug Fister	Doug Fister
+	SP	SP,RP
+	Hou, RANK 438
+
+MATCH!
+	Jason Kipnis	Jason Kipnis
+	2B	2B
+	Cle, RANK 66
+
+NO MATCH for Burch Smith (SP/RP)
+	DEACTIVATE
+NO MATCH for Grant Balfour (RP)
 	DEACTIVATE
 MATCH!
-	Andre Ellington	Andre Ellington
-	RB	RB
-	Ari, RANK 26
+	Matt Albers	Matt Albers
+	RP	RP
+	CWS, RANK 376
 
-NO MATCH for Brandon Stokley (WR)
+NO MATCH for Alfredo Figaro (RP)
 	DEACTIVATE
 MATCH!
-	Terrence Toliver	Terrence Toliver
-	WR	WR
-	Chi, RANK 717
+	Grady Sizemore	Grady Sizemore
+	OF	OF
+	TB, RANK 1055
 
 MATCH!
-	Justin Tucker	Justin Tucker
-	K	K
-	Bal, RANK 194
+	Nick Greenwood	Nick Greenwood
+	RP	RP
+	ChC, RANK 742
 
 MATCH!
-	Andy Tanner	Andy Tanner
-	WR	WR
-	NO, RANK 718
+	Rafael LÃ³pez	Rafael López
+	C	C
+	Det, RANK 1449
 
 MATCH!
-	Michael Vick	Michael Vick
-	QB	QB
-	NYJ, RANK 222
+	Bubba Starling	Bubba Starling
+	OF	OF
+	KC, RANK 1416
 
 MATCH!
-	Dorin Dickerson	Dorin Dickerson
-	WR/RB/TE	TE
-	Ten, RANK 477
+	L.J. Hoes	L.J. Hoes
+	OF	OF
+	Bal, RANK 1277
 
 MATCH!
-	Blaine Gabbert	Blaine Gabbert
-	QB	QB
-	SF, RANK 1053
+	Bronson Arroyo	Bronson Arroyo
+	SP	SP
+	Was, RANK 596
 
 MATCH!
-	Richie Brockel	Richie Brockel
-	TE	TE
-	Car, RANK 990
+	Hyun-Jin Ryu	Hyun-jin Ryu
+	SP	SP
+	LAD, RANK 456
 
-NO MATCH for Titus Ryan (WR)
-	DEACTIVATE
-NO MATCH for William Powell (RB)
+NO MATCH for Mark Ellis (2B)
 	DEACTIVATE
 MATCH!
-	Lamaar Thomas	Lamaar Thomas
-	WR	WR
-	Jax, RANK 719
+	Kyle Hendricks	Kyle Hendricks
+	SP	SP
+	ChC, RANK 179
 
 MATCH!
-	Marlon Brown	Marlon Brown
-	WR	WR
-	Bal, RANK 232
+	HÃ©ctor Neris	Héctor Neris
+	RP	RP
+	Phi, RANK 462
 
 MATCH!
-	Michael Egnew	Michael Egnew
-	TE	TE
-	Mia, RANK 871
+	Carlos GonzÃ¡lez	Carlos González
+	OF	OF
+	Col, RANK 39
 
-NO MATCH for Adam Yates (K)
+MATCH!
+	Kyle Zimmer	Kyle Zimmer
+	SP	SP
+	KC, RANK 699
+
+NO MATCH for Logan Watkins (2B)
 	DEACTIVATE
 MATCH!
-	Ronnie Wingo	Ronnie Wingo
-	RB	RB
-	Buf, RANK 859
+	ArquÃ­medes Caminero	Arquímedes Caminero
+	RP	RP
+	Pit, RANK 415
 
 MATCH!
-	Marvin McNutt	Marvin McNutt
-	WR	WR
-	Car, RANK 720
+	Onelki GarcÃ­a	Onelki García
+	RP	RP
+	CWS, RANK 703
 
 MATCH!
-	Dan Carpenter	Dan Carpenter
-	K	K
-	Buf, RANK 219
-
-NO MATCH for Jawan Jamison (RB)
-	DEACTIVATE
-NO MATCH for Patrick Scales (TE)
-	DEACTIVATE
-MATCH!
-	Mike Thomas	Mike Thomas
-	WR	WR
-	Hou, RANK 868
+	Adam Wainwright	Adam Wainwright
+	SP	SP
+	StL, RANK 85
 
 MATCH!
-	Austin Collie	Austin Collie
-	WR	WR
-	NE, RANK 932
+	Carlos Torres	Carlos Torres
+	RP	RP
+	Atl, RANK 477
 
-NO MATCH for David Ball (WR)
+MATCH!
+	Jeurys Familia	Jeurys Familia
+	RP	RP
+	NYM, RANK 99
+
+NO MATCH for Ryan Kalish (OF)
 	DEACTIVATE
 MATCH!
-	Giovani Bernard	Giovani Bernard
-	RB	RB
-	Cin, RANK 20
+	Micah Johnson	Micah Johnson
+	2B	2B
+	LAD, RANK 1230
 
 MATCH!
-	Justin Blackmon	Justin Blackmon
-	WR	WR
-	Jax, RANK 180
+	Peter Bourjos	Peter Bourjos
+	OF	OF
+	Phi, RANK 1108
 
 MATCH!
-	Jeremy Stewart	Jeremy Stewart
-	RB	RB
-	Oak, RANK 979
+	Pat Neshek	Pat Neshek
+	RP	RP
+	Hou, RANK 333
 
 MATCH!
-	Juron Criner	Juron Criner
-	WR	WR
-	Oak, RANK 737
+	Ian Kennedy	Ian Kennedy
+	SP	SP
+	KC, RANK 249
 
-MATCH!
-	Patrick Edwards	Patrick Edwards
-	WR	WR
-	Det, RANK 722
-
-NO MATCH for Scott Pillar (WR)
+NO MATCH for Josh Zeid (RP)
 	DEACTIVATE
 MATCH!
-	Bryce Brown	Bryce Brown
-	RB	RB
-	Buf, RANK 467
+	Jim Adduci	Jim Adduci
+	OF	OF
+	Tex, RANK 1288
 
-MATCH!
-	Shaun Chapas	Shaun Chapas
-	RB	RB
-	Bal, RANK 860
-
-NO MATCH for Jeremy Horne (WR)
+NO MATCH for Matt West (RP)
 	DEACTIVATE
 MATCH!
-	Ronnie Hillman	Ronnie Hillman
-	RB	RB
-	Den, RANK 336
+	Buck Farmer	Buck Farmer
+	P	SP,RP
+	Det, RANK 1068
 
 MATCH!
-	Chris Ivory	Chris Ivory
-	RB	RB
-	NYJ, RANK 118
+	Justin Upton	Justin Upton
+	OF	OF
+	Det, RANK 48
 
 MATCH!
-	Matthew Stafford	Matthew Stafford
-	QB	QB
-	Det, RANK 55
+	Randy Wolf	Randy Wolf
+	SP	SP
+	Det, RANK 1005
 
 MATCH!
-	Tyrod Taylor	Tyrod Taylor
-	QB	QB
-	Bal, RANK 1139
+	Chase Headley	Chase Headley
+	1B/3B	3B
+	NYY, RANK 363
 
 MATCH!
-	Stevie Johnson	Stevie Johnson
-	WR	WR
-	SF, RANK 170
+	David Price	David Price
+	SP	SP
+	Bos, RANK 40
 
-NO MATCH for Quincy McDuffie (WR)
+NO MATCH for Joel Hanrahan (RP)
 	DEACTIVATE
 MATCH!
-	Jonathan Stewart	Jonathan Stewart
-	RB	RB
-	Car, RANK 134
+	R.A. Dickey	R.A. Dickey
+	SP	SP
+	Tor, RANK 285
+
+NO MATCH for Brent Morel (3B)
+	DEACTIVATE
+NO MATCH for Ty Wigginton (1B/3B)
+	DEACTIVATE
+MATCH!
+	Albert Almora	Albert Almora
+	OF	OF
+	ChC, RANK 1425
 
 MATCH!
-	Nick Novak	Nick Novak
-	K	K
-	SD, RANK 221
+	Luke Gregerson	Luke Gregerson
+	RP	RP
+	Hou, RANK 235
 
-NO MATCH for Jonathan Amosa (RB)
+MATCH!
+	Yovani Gallardo	Yovani Gallardo
+	SP	SP
+	Bal, RANK 397
+
+MATCH!
+	Zelous Wheeler	Zelous Wheeler
+	3B/OF	3B,OF
+	NYY, RANK 1297
+
+NO MATCH for John McDonald (3B/SS)
 	DEACTIVATE
-New player! Jay Prosch (27739)
-New player! DeAnthony Thomas (27652)
-New player! Wilson Van Hooser (28277)
-New player! Robert Herron (27713)
-New player! Justin Jones (28005)
-New player! D.J. Tialavea (27881)
-New player! Brandon Hartson (27491)
-New player! Devin Street (27674)
-New player! Dustin Vaughan (28142)
-New player! Jerome Smith (28076)
-New player! Jordan Harris (28275)
-New player! Rahsaan Vaughn (27493)
-New player! Eric Waters (27818)
-New player! Erik Swoope (27914)
-New player! Keith Price (27807)
-New player! Jordan Lynch (27834)
-New player! Paul Richardson (27573)
-New player! Chandler Jones (28018)
-New player! Allen Hurns (27874)
-New player! Damien Thigpen (28290)
-New player! AJ McCarron (27692)
-New player! Jordan Thompson (27527)
-New player! Justin Perillo (28086)
-New player! Chandler Catanzaro (28103)
-New player! Karl Williams (28216)
-New player! Greg Hardin (27827)
-New player! Alfred Blue (27709)
-New player! Cody Latimer (27584)
-New player! Garrett Gilbert (27742)
-New player! Chase Rettig (28088)
-New player! Andre Williams (27641)
-New player! Crockett Gillmore (27627)
-New player! Brett Smith (28045)
-New player! Diontae Spencer (28279)
-New player! Jeff Budzien (27868)
-New player! Donte Foster (27897)
-New player! Jacob Maxwell (28003)
-New player! Greg Wilson (27511)
-New player! Kevin Greene (28280)
-New player! Trey Watts (27971)
-New player! Zach Mettenberger (27706)
-New player! Lorenzo Taliaferro (27666)
-New player! Geraldo Boldewijn (28054)
-New player! Eric Ebron (27538)
-New player! Rajion Neal (28084)
-New player! Derel Walker (27951)
-New player! Blake Bortles (27531)
-New player! Kelvin Benjamin (27556)
-New player! Ray Agnew (28011)
-New player! Stephen Campbell (27525)
-New player! Fred Williams (27502)
-New player! James White (27658)
-New player! Alex Neutz (28029)
-New player! Marcus Lucas (27941)
-New player! Mike Davis (28208)
-New player! Rob Blanchflower (27758)
-New player! Travis Coons (27958)
-New player! Kadron Boone (27788)
-New player! Bishop Sankey (27582)
-New player! Stephen Morris (27878)
-New player! Chris Williams (9729)
-New player! Tre Mason (27603)
-New player! Logan Kilgore (27929)
-New player! Evan Wilson (28146)
-New player! Tim Flanders (27924)
-New player! Darryl Surgent (28038)
-New player! Reggie Jordan (27876)
-New player! Zach Hocker (27756)
-New player! Jeremy Johnson (28299)
-New player! Chase Dixon (27802)
-New player! Willie Snead (28026)
-New player! James Oboh (28238)
-New player! Aaron Murray (27691)
-New player! Brandin Cooks (27548)
-New player! Dri Archer (27625)
-New player! Austin Johnson (26601)
-New player! Antonio Andrews (27946)
-New player! Cairo Santos (28227)
-New player! Matt Hazel (27718)
-New player! John Brown (27619)
-New player! Will Tukuafu (24735)
-New player! Roy Finch (27996)
-New player! Jeremy Hill (27583)
-New player! Derek Carr (27564)
-New player! Kevin Perry (28175)
-New player! Tevin Reese (27768)
-New player! Troy Niklas (27580)
-New player! Jonathan Krause (28020)
-New player! Senorise Perry (28223)
-New player! Albert Wilson (28046)
-New player! C.J. Goodwin (28289)
-New player! Deon Anthony (28293)
-New player! Carlos Hyde (27585)
-New player! Terrence Miller (27863)
-New player! Maurice Hagens (28058)
-New player! Chad Rempel (27522)
-New player! Cameron Brate (28267)
-New player! Shaq Evans (27643)
-New player! Micah Hatfield (27851)
-New player! Michael Flacco (27849)
-New player! Teddy Bridgewater (27560)
-New player! Ian Thompson (28269)
-New player! Jeremy Butler (27976)
-New player! Travis Partridge (28159)
-New player! Derrick Strozier (28229)
-New player! Allen Robinson (27589)
-New player! Brendan Bigelow (28218)
-New player! Tony Washington (27918)
-New player! Dominique Williams (27893)
-New player! Demitrius Bronson (28302)
-New player! C.J. Fiedorowicz (27593)
-New player! Jace Davis (27977)
-New player! Cody Hoffman (28172)
-New player! David Fluellen (27790)
-New player! Jake Murphy (28213)
-New player! David Wright (27953)
-New player! Cody Parkey (27911)
-New player! Orleans Darkwa (28169)
-New player! Damian Copeland (27871)
-New player! Fitzgerald Toussaint (28283)
-New player! Ted Bolser (27745)
-New player! Austin Seferian-Jenkins (27566)
-New player! Tramaine Thompson (28079)
-New player! Mitch Ewald (28322)
-New player! Willie Carter (27505)
-New player! James Baker (28225)
-New player! Blake Annen (27786)
-New player! Zurlon Tipton (27916)
-New player! Walt Powell (27724)
-New player! Nic Jacobs (27927)
-New player! KaDeem Carey (27645)
-New player! Torrence Allen (27844)
-New player! Noel Grigsby (28210)
-New player! Kevin Smith (28118)
-New player! Arthur Lynch (27683)
-New player! Terrance Cobb (27869)
-New player! Kadeem Jones (27965)
-New player! Michael Palardy (28292)
-New player! Chad Abram (27991)
-New player! Freddie Martino (28060)
-New player! Jeff Mathews (28061)
-New player! Xavier Grimble (28184)
-New player! Seantavius Jones (27928)
-New player! D.J. Adams (27843)
-New player! Beau Blankenship (28255)
-New player! Terrance West (27622)
-New player! Gerald Ford (28298)
-New player! Julian Horton (28259)
-New player! LaDarius Perkins (28087)
-New player! Sergio Castillo (28300)
-New player! Davante Adams (27581)
-New player! Taylor Gabriel (28234)
-New player! Carey Spear (27799)
-New player! Sammy Watkins (27532)
-New player! Tyler Gaffney (27732)
-New player! Josh Stewart (27950)
-New player! Brock Jensen (28241)
-New player! Lee Doss (28180)
-New player! Quron Pratt (27798)
-New player! Quincy Enunwa (27737)
-New player! Asante Cleveland (28147)
-New player! James Wilder Jr. (28031)
-New player! Seth Lobato (27906)
-New player! Logan Thomas (27648)
-New player! Tommy Rees (28179)
-New player! Lache Seastrunk (27714)
-New player! Brennan Clay (27824)
-New player! Asa Watson (28010)
-New player! Keith Wenning (27722)
-New player! Brandon Coleman (27921)
-New player! Chris Boyd (28125)
-New player! Andrew Peacock (28008)
-New player! Andrew Furney (28313)
-New player! Jordan Najvar (28134)
-New player! Jamaine Sherman (27970)
-New player! LDamian Washington (28143)
-New player! Austin Franklin (27962)
-New player! Nate Freese (27757)
-New player! Trey Burton (27789)
-New player! Cole Stanford (28328)
-New player! Silas Redd (28176)
-New player! James Franklin (27994)
-New player! Colin Lockett (28028)
-New player! Cameron White (27526)
-New player! D.J. Coles (28207)
-New player! Jimmy Garoppolo (27590)
-New player! Corey Washington (28121)
-New player! Waymon James (28260)
-New player! Jaz Reynolds (27949)
-New player! Jacob Pedersen (28069)
-New player! Tajh Boyd (27741)
-New player! Bennie Fowler (27826)
-New player! Reese Wiggins (28278)
-New player! Connor Shaw (28024)
-New player! Weston Dressler (27513)
-New player! Eric Ward (27952)
-New player! Glasco Martin (28133)
-New player! Stephen Houston (28004)
-New player! Julian Jones (28059)
-New player! Trey Millard (27773)
-New player! Brian Wozniak (28081)
-New player! Greg Moore (27909)
-New player! Chad Young (27866)
-New player! Charcandrick West (28044)
-New player! Jordan Hall (28305)
-New player! Scott Simonson (28215)
-New player! Marqise Lee (27567)
-New player! Kapri Bibbs (27821)
-New player! Chris Coyle (28191)
-New player! Damien Williams (28115)
-New player! Alex Bayer (27959)
-New player! Ryan Grant (27670)
-New player! Charles Sims (27597)
-New player! Aaron Burks (28035)
-New player! Nathan Slaughter (28203)
-New player! Brelan Chancellor (27845)
-New player! Harold Hoskins (28095)
-New player! Chris Boswell (28188)
-New player! Morrell Presley (28325)
-New player! Solomon Patton (28043)
-New player! Brendon Kay (27814)
-New player! Ryan Hewitt (28021)
-New player! Derrick Johnson (28245)
-New player! Ben Malena (28131)
-New player! Tyler Ott (28221)
-New player! Bryn Renner (27829)
-New player! Patrick Murray (27506)
-New player! Odell Beckham Jr. (27540)
-New player! Juwan Thompson (27832)
-New player! Bruce Ellington (27634)
-New player! Roosevelt Nix (28068)
-New player! Nikita Whitlock (28030)
-New player! Colt Lyerla (28251)
-New player! Tim Cornett (28106)
-New player! Branden Oliver (28272)
-New player! Jeff Scott (28158)
-New player! Henry Josey (27794)
-New player! David Fales (27711)
-New player! Anthony McClung (28202)
-New player! Jordan Matthews (27570)
-New player! Marcel Jensen (27875)
-New player! Quintin Payton (28268)
-New player! Donte Moncrief (27618)
-New player! Tom Savage (27663)
-New player! A.C. Leonard (27885)
-New player! Jerry Rice Jr. (28314)
-New player! Steve Hull (28228)
-New player! James Wright (27767)
-New player! Jarvis Landry (27591)
-New player! Richard Rodgers (27626)
-New player! Marion Grice (27729)
-New player! Devonta Freeman (27631)
-New player! Darrin Reaves (27943)
-New player! Tyler Beck (27995)
-New player! Storm Johnson (27750)
-New player! Kain Colter (27886)
-New player! J.C. Copeland (28128)
-New player! Eric Thomas (27915)
-New player! Isaiah Crowell (28014)
-New player! George Atkinson III (28185)
-New player! Lacoltan Bester (28232)
-New player! Brandon Wimberly (28294)
-New player! Michael Campanaro (27746)
-New player! Mike Evans (27535)
-New player! Jace Amaro (27577)
-New player! JeRon Hamm (27926)
-New player! Caleb Holley (28264)
-New player! Kory Faulkner (28066)
-New player! Martavis Bryant (27646)
-New player! Ryan Lankford (28104)
-New player! Rantavious Wooten (28119)
-New player! Rashaun Allen (28253)
-New player! Jeff Janis (27764)
-New player! Jeremy Gallon (27772)
-New player! Jalen Saunders (27632)
-New player! Travis Labhart (28198)
-New player! Javontee Herndon (27852)
-New player! Isaiah Burse (27822)
-New player! Kiero Small (27755)
-New player! Josh Huff (27614)
-New player! Kevin Ozier (28282)
-New player! Kevin Norwood (27651)
-New player! Anthony Denham (28192)
-New player! Bernard Reedy (28071)
-New player! Zach Bauman (28098)
-New player! Kofi Hughes (28173)
-New player! Seth Roberts (28214)
-New player! Jerick McKinnon (27624)
-New player! Philly Brown (27938)
-New player! Erik Lora (27895)
-New player! Tyler McDonald (28318)
-New player! Carlin Isles (27504)
-New player! Rashad Lawrence (28174)
-New player! Johnny Manziel (27550)
-New player! Jared Abbrederis (27704)
-New player! Kenny Shaw (28025)
-New player! Kelsey Pope (28112)
-New player! TJ Jones (27717)
-Inserted 298 new players
+NO MATCH for CC Lee (RP)
+	DEACTIVATE
+MATCH!
+	Jake Lamb	Jake Lamb
+	3B	3B
+	Ari, RANK 1017
+
+MATCH!
+	Mike Zunino	Mike Zunino
+	C	C
+	Sea, RANK 1138
+
+MATCH!
+	Ernesto Frieri	Ernesto Frieri
+	RP	RP
+	Phi, RANK 799
+
+MATCH!
+	Casey McGehee	Casey McGehee
+	3B	1B,3B
+	Det, RANK 1130
+
+MATCH!
+	Derek Hill	Derek Hill
+	OF	OF
+	Det, RANK 1426
+
+MATCH!
+	Wilking RodrÃ­guez	Wilking Rodríguez
+	RP	RP
+	NYY, RANK 591
+
+NO MATCH for Mickey Storey (RP)
+	DEACTIVATE
+MATCH!
+	Sam Freeman	Sam Freeman
+	RP	RP
+	Tex, RANK 551
+
+NO MATCH for Jason Kubel (OF)
+	DEACTIVATE
+MATCH!
+	Jordan Zimmermann	Jordan Zimmermann
+	SP	SP
+	Det, RANK 102
+
+MATCH!
+	Jeff Francis	Jeff Francis
+	RP	RP
+	Tor, RANK 892
+
+MATCH!
+	Chase Anderson	Chase Anderson
+	SP	SP
+	Mil, RANK 594
+
+MATCH!
+	Chris Parmelee	Chris Parmelee
+	1B/OF	1B,OF
+	NYY, RANK 1162
+
+MATCH!
+	Braden Shipley	Braden Shipley
+	SP	SP
+	Ari, RANK 706
+
+MATCH!
+	Collin McHugh	Collin McHugh
+	SP	SP
+	Hou, RANK 122
+
+MATCH!
+	Jake Buchanan	Jake Buchanan
+	RP	RP
+	Hou, RANK 588
+
+NO MATCH for Shane Robinson (OF)
+	DEACTIVATE
+NO MATCH for Nick Maronde (RP)
+	DEACTIVATE
+NO MATCH for Nick Punto (2B/SS)
+	DEACTIVATE
+MATCH!
+	Alex Jackson	Alex Jackson
+	OF	OF
+	Sea, RANK 1427
+
+MATCH!
+	Wei-Yin Chen	Wei-Yin Chen
+	SP	SP
+	Mia, RANK 199
+
+NO MATCH for David Aardsma (RP)
+	DEACTIVATE
+NO MATCH for Nick Masset (RP)
+	DEACTIVATE
+NO MATCH for Pete Kozma (MI)
+	DEACTIVATE
+NO MATCH for Logan Ondrusek (RP)
+	DEACTIVATE
+MATCH!
+	Sam Tuivailala	Sam Tuivailala
+	RP	RP
+	StL, RANK 750
+
+MATCH!
+	Austin Meadows	Austin Meadows
+	OF	OF
+	Pit, RANK 1428
+
+MATCH!
+	Nick Franklin	Nick Franklin
+	2B/SS	1B,2B,SS
+	TB, RANK 1255
+
+MATCH!
+	Justin Miller	Justin Miller
+	RP	RP
+	Col, RANK 421
+
+NO MATCH for Samuel Deduno (SP/RP)
+	DEACTIVATE
+MATCH!
+	JosÃ© Altuve	José Altuve
+	2B	2B
+	Hou, RANK 12
+
+NO MATCH for Nick Tepesch (SP)
+	DEACTIVATE
+NO MATCH for Brent Lillibridge (2B/3B)
+	DEACTIVATE
+MATCH!
+	Steve Clevenger	Steve Clevenger
+	C	C
+	Sea, RANK 1163
+
+NO MATCH for Heath Bell (RP)
+	DEACTIVATE
+NO MATCH for Jason Marquis (SP)
+	DEACTIVATE
+NO MATCH for Cord Phelps (2B)
+	DEACTIVATE
+MATCH!
+	Jeff Hoffman	Jeff Hoffman
+	SP	SP
+	Col, RANK 710
+
+MATCH!
+	Drew Hutchison	Drew Hutchison
+	SP	SP
+	Tor, RANK 992
+
+MATCH!
+	Brad Brach	Brad Brach
+	RP	RP
+	Bal, RANK 316
+
+NO MATCH for Maikel Cleto (RP)
+	DEACTIVATE
+NO MATCH for Christian Garcia (RP)
+	DEACTIVATE
+MATCH!
+	Yasiel Puig	Yasiel Puig
+	OF	OF
+	LAD, RANK 63
+
+MATCH!
+	Carlos BeltrÃ¡n	Carlos Beltrán
+	OF	OF
+	NYY, RANK 262
+
+MATCH!
+	Matt Harvey	Matt Harvey
+	SP	SP
+	NYM, RANK 43
+
+NO MATCH for Brendan Ryan (2B/SS)
+	DEACTIVATE
+MATCH!
+	Sean Doolittle	Sean Doolittle
+	RP	RP
+	Oak, RANK 200
+
+MATCH!
+	Darwin Barney	Darwin Barney
+	2B	2B
+	Tor, RANK 1193
+
+MATCH!
+	Chris Owings	Chris Owings
+	2B/SS	2B,SS
+	Ari, RANK 870
+
+MATCH!
+	Jesse Chavez	Jesse Chavez
+	SP/RP	SP
+	Tor, RANK 486
+
+NO MATCH for Justin Masterson (SP)
+	DEACTIVATE
+MATCH!
+	Marc Rzepczynski	Marc Rzepczynski
+	RP	RP
+	Oak, RANK 858
+
+MATCH!
+	Pedro FlorimÃ³n	Pedro Florimón
+	SS	SS
+	Pit, RANK 1313
+
+NO MATCH for Irving Falú (2B)
+	DEACTIVATE
+MATCH!
+	Tyler Collins	Tyler Collins
+	OF	OF
+	Det, RANK 1117
+
+MATCH!
+	Kennys Vargas	Kennys Vargas
+	1B	1B
+	Min, RANK 1110
+
+MATCH!
+	Bartolo ColÃ³n	Bartolo Colón
+	SP	SP
+	NYM, RANK 350
+
+NO MATCH for Matt Hague (1B)
+	DEACTIVATE
+NO MATCH for James Russell (RP)
+	DEACTIVATE
+MATCH!
+	Cole Gillespie	Cole Gillespie
+	OF	OF
+	Mia, RANK 1118
+
+NO MATCH for Carlos PeÃ±a (1B)
+	DEACTIVATE
+MATCH!
+	Henry Urrutia	Henry Urrutia
+	OF	OF
+	Bal, RANK 1241
+
+MATCH!
+	Daniel Nava	Daniel Nava
+	1B/OF	1B,OF
+	LAA, RANK 1171
+
+NO MATCH for Mike Kickham (RP)
+	DEACTIVATE
+MATCH!
+	Fernando Salas	Fernando Salas
+	RP	RP
+	LAA, RANK 372
+
+NO MATCH for Nick Noonan (2B)
+	DEACTIVATE
+MATCH!
+	Eric Jokisch	Eric Jokisch
+	P	RP
+	ChC, RANK 730
+
+MATCH!
+	Jason Hammel	Jason Hammel
+	SP	SP
+	ChC, RANK 193
+
+MATCH!
+	Xavier CedeÃ±o	Xavier Cedeño
+	RP	RP
+	TB, RANK 365
+
+MATCH!
+	Ryan Braun	Ryan Braun
+	OF	OF
+	Mil, RANK 37
+
+MATCH!
+	JoaquÃ­n Benoit	Joaquín Benoit
+	RP	RP
+	Sea, RANK 297
+
+NO MATCH for Eric ChÃ¡vez (3B)
+	DEACTIVATE
+MATCH!
+	Lisalverto Bonilla	Lisalverto Bonilla
+	SP	RP
+	LAD, RANK 557
+
+MATCH!
+	Ryan Pressly	Ryan Pressly
+	RP	RP
+	Min, RANK 469
+
+MATCH!
+	Kyle Ryan	Kyle Ryan
+	RP	SP,RP
+	Det, RANK 869
+
+MATCH!
+	Juan Nicasio	Juan Nicasio
+	SP/RP	RP
+	Pit, RANK 921
+
+MATCH!
+	Paul Goldschmidt	Paul Goldschmidt
+	1B	1B
+	Ari, RANK 2
+
+MATCH!
+	CÃ©sar HernÃ¡ndez	César Hernández
+	2B/3B	2B,3B,SS
+	Phi, RANK 577
+
+MATCH!
+	David Ortiz	David Ortiz
+	1B	1B
+	Bos, RANK 81
+
+MATCH!
+	J.A. Happ	J.A. Happ
+	SP	SP
+	Tor, RANK 328
+
+MATCH!
+	Jordan Lyles	Jordan Lyles
+	SP	SP
+	Col, RANK 962
+
+MATCH!
+	Billy McKinney	Billy McKinney
+	OF	OF
+	ChC, RANK 1437
+
+MATCH!
+	Ben Revere	Ben Revere
+	OF	OF
+	Was, RANK 89
+
+NO MATCH for JosÃ© Ortega (RP)
+	DEACTIVATE
+MATCH!
+	Orlando Arcia	Orlando Arcia
+	SS	SS
+	Mil, RANK 1438
+
+MATCH!
+	Jake Peavy	Jake Peavy
+	SP	SP
+	SF, RANK 331
+
+MATCH!
+	Mike Fiers	Mike Fiers
+	SP	SP
+	Hou, RANK 183
+
+MATCH!
+	Yusmeiro Petit	Yusmeiro Petit
+	SP/RP	RP
+	Was, RANK 409
+
+MATCH!
+	Taijuan Walker	Taijuan Walker
+	SP	SP
+	Sea, RANK 139
+
+NO MATCH for Jake Dunning (RP)
+	DEACTIVATE
+MATCH!
+	Tim Collins	Tim Collins
+	RP	RP
+	KC, RANK 758
+
+MATCH!
+	Chris Johnson	Chris Johnson
+	3B	1B,3B
+	Mia, RANK 1084
+
+MATCH!
+	Tony Sipp	Tony Sipp
+	RP	RP
+	Hou, RANK 312
+
+MATCH!
+	Andre Ethier	Andre Ethier
+	OF	OF
+	LAD, RANK 383
+
+MATCH!
+	Justin Maxwell	Justin Maxwell
+	OF	OF
+	Mia, RANK 1141
+
+MATCH!
+	Joe Nathan	Joe Nathan
+	RP	RP
+	Det, RANK 500
+
+MATCH!
+	Carlos Villanueva	Carlos Villanueva
+	SP/RP	RP
+	SD, RANK 380
+
+MATCH!
+	Jorge De La Rosa	Jorge De La Rosa
+	SP	SP
+	Col, RANK 445
+
+MATCH!
+	Reymond Fuentes	Reymond Fuentes
+	OF	OF
+	KC, RANK 1440
+
+MATCH!
+	Edwin Escobar	Edwin Escobar
+	RP	RP
+	Bos, RANK 597
+
+NO MATCH for Neil Wagner (RP)
+	DEACTIVATE
+MATCH!
+	Leonys MartÃ­n	Leonys Martín
+	OF	OF
+	Sea, RANK 968
+
+MATCH!
+	Chaz Roe	Chaz Roe
+	RP	RP
+	Bal, RANK 552
+
+MATCH!
+	Blaine Boyer	Blaine Boyer
+	RP	RP
+	Mil, RANK 405
+
+MATCH!
+	Seth Maness	Seth Maness
+	RP	RP
+	StL, RANK 472
+
+NO MATCH for EliÃ¡n Herrera (3B/SS/OF)
+	DEACTIVATE
+MATCH!
+	Tyler Clippard	Tyler Clippard
+	RP	RP
+	Ari, RANK 298
+
+NO MATCH for Erik Davis (RP)
+	DEACTIVATE
+MATCH!
+	Ryan Goins	Ryan Goins
+	2B/SS	2B,SS
+	Tor, RANK 993
+
+MATCH!
+	Jake Diekman	Jake Diekman
+	RP	RP
+	Tex, RANK 541
+
+MATCH!
+	Leury GarcÃ­a	Leury García
+	2B/3B/OF	OF
+	CWS, RANK 1267
+
+MATCH!
+	Daniel Norris	Daniel Norris
+	P	SP
+	Det, RANK 467
+
+MATCH!
+	Arismendy AlcÃ¡ntara	Arismendy Alcántara
+	2B/OF	2B
+	ChC, RANK 1216
+
+MATCH!
+	Kyle Lohse	Kyle Lohse
+	SP	SP,RP
+	Mil, RANK 1082
+
+MATCH!
+	Alex Guerrero	Alex Guerrero
+	OF	3B,OF
+	LAD, RANK 1086
+
+MATCH!
+	C.J. Wilson	C.J. Wilson
+	SP	SP
+	LAA, RANK 418
+
+MATCH!
+	Tyler Kolek	Tyler Kolek
+	SP	SP
+	Mia, RANK 718
+
+MATCH!
+	Jairo DÃ­az	Jairo Díaz
+	RP	RP
+	Col, RANK 510
+
+MATCH!
+	Terrance Gore	Terrance Gore
+	Util	OF
+	KC, RANK 1246
+
+MATCH!
+	Luke Hochevar	Luke Hochevar
+	SP/RP	RP
+	KC, RANK 518
+
+NO MATCH for Juan PÃ©rez (OF)
+	DEACTIVATE
+MATCH!
+	Jacoby Ellsbury	Jacoby Ellsbury
+	OF	OF
+	NYY, RANK 71
+
+MATCH!
+	Ryan Buchter	Ryan Buchter
+	RP	RP
+	SD, RANK 579
+
+MATCH!
+	Carlos Ruiz	Carlos Ruiz
+	C	C
+	Phi, RANK 1144
+
+NO MATCH for Edgmer Escalona (RP)
+	DEACTIVATE
+MATCH!
+	Mike Foltynewicz	Mike Foltynewicz
+	RP	SP
+	Atl, RANK 1056
+
+MATCH!
+	Rob Scahill	Rob Scahill
+	RP	RP
+	Pit, RANK 573
+
+MATCH!
+	Anibal SÃ¡nchez	Anibal Sánchez
+	SP	SP
+	Det, RANK 210
+
+MATCH!
+	Bryan Mitchell	Bryan Mitchell
+	P	RP
+	NYY, RANK 971
+
+MATCH!
+	David Buchanan	David Buchanan
+	SP	SP
+	Phi, RANK 1148
+
+MATCH!
+	Howie Kendrick	Howie Kendrick
+	2B	2B
+	LAD, RANK 213
+
+MATCH!
+	Kolten Wong	Kolten Wong
+	2B	2B
+	StL, RANK 123
+
+MATCH!
+	Juan Centeno	Juan Centeno
+	C	C
+	Min, RANK 1485
+
+NO MATCH for Jamey Carroll (2B/3B)
+	DEACTIVATE
+NO MATCH for Andy Parrino (SS)
+	DEACTIVATE
+MATCH!
+	Jason Grilli	Jason Grilli
+	RP	RP
+	Atl, RANK 311
+
+MATCH!
+	Miguel Cabrera	Miguel Cabrera
+	1B/3B	1B
+	Det, RANK 7
+
+MATCH!
+	Jim Johnson	Jim Johnson
+	RP	RP
+	Atl, RANK 917
+
+NO MATCH for Ike Davis (1B)
+	DEACTIVATE
+NO MATCH for Pedro HernÃ¡ndez (SP)
+	DEACTIVATE
+MATCH!
+	Lucas Sims	Lucas Sims
+	SP	SP
+	Atl, RANK 723
+
+MATCH!
+	Ãdgar Olmos	Édgar Olmos
+	RP	P
+	ChC, RANK 829
+
+NO MATCH for Jose Mijares (RP)
+	DEACTIVATE
+MATCH!
+	Bryan Shaw	Bryan Shaw
+	RP	RP
+	Cle, RANK 356
+
+NO MATCH for Kevin Frandsen (1B/2B/3B/OF)
+	DEACTIVATE
+MATCH!
+	Miguel Montero	Miguel Montero
+	C	C
+	ChC, RANK 274
+
+NO MATCH for Jorge De LeÃ³n (RP)
+	DEACTIVATE
+MATCH!
+	Brock Holt	Brock Holt
+	1B/2B/3B/SS/OF	1B,2B,3B,SS,OF
+	Bos, RANK 420
+
+NO MATCH for Erik Kratz (C)
+	DEACTIVATE
+NO MATCH for Matt Tuiasosopo (3B/OF)
+	DEACTIVATE
+NO MATCH for Eli Whiteside (C)
+	DEACTIVATE
+MATCH!
+	Stephen Drew	Stephen Drew
+	2B/SS	2B,SS
+	Was, RANK 1065
+
+MATCH!
+	Shawn OMalley	Shawn OMalley
+	OF	OF
+	Sea, RANK 1180
+
+MATCH!
+	Rob Rasmussen	Rob Rasmussen
+	RP	RP
+	LAA, RANK 960
+
+MATCH!
+	Matt Harrison	Matt Harrison
+	SP	SP
+	Phi, RANK 903
+
+MATCH!
+	Ian Kinsler	Ian Kinsler
+	2B	2B
+	Det, RANK 82
+
+NO MATCH for Dayan Viciedo (OF)
+	DEACTIVATE
+MATCH!
+	Sergio Romo	Sergio Romo
+	RP	RP
+	SF, RANK 329
+
+MATCH!
+	JosÃ© RamÃ­rez	José Ramírez
+	2B/SS	2B,3B,SS
+	Cle, RANK 996
+
+MATCH!
+	MartÃ­n PÃ©rez	Martín Pérez
+	SP	SP
+	Tex, RANK 911
+
+MATCH!
+	JosÃ© Reyes	José Reyes
+	SS	SS
+	Col, RANK 121
+
+MATCH!
+	Patrick McCoy	Patrick McCoy
+	RP	RP
+	Tor, RANK 806
+
+MATCH!
+	Taylor Lindsey	Taylor Lindsey
+	2B	2B
+	SD, RANK 1445
+
+MATCH!
+	Domonic Brown	Domonic Brown
+	OF	OF
+	Tor, RANK 1071
+
+NO MATCH for Alex Presley (OF)
+	DEACTIVATE
+MATCH!
+	J.J. Hoover	J.J. Hoover
+	RP	RP
+	Cin, RANK 226
+
+MATCH!
+	Michael Morse	Michael Morse
+	1B/OF	1B,OF
+	Pit, RANK 1098
+
+MATCH!
+	Mike Moustakas	Mike Moustakas
+	3B	3B
+	KC, RANK 222
+
+NO MATCH for Tommy Hanson (SP)
+	DEACTIVATE
+MATCH!
+	Miguel Alfredo GÃ³nzalez	Miguel Alfredo Gónzalez
+	RP	SP,RP
+	Phi, RANK 769
+
+NO MATCH for Juan Pierre (OF)
+	DEACTIVATE
+NO MATCH for Jeff Kobernus (2B)
+	DEACTIVATE
+MATCH!
+	Joe Wieland	Joe Wieland
+	P	SP
+	Sea, RANK 905
+
+MATCH!
+	Fernando Rodney	Fernando Rodney
+	RP	RP
+	SD, RANK 332
+
+MATCH!
+	Nick Ahmed	Nick Ahmed
+	SS	SS
+	Ari, RANK 1061
+
+MATCH!
+	IvÃ¡n Nova	Iván Nova
+	SP	SP
+	NYY, RANK 964
+
+NO MATCH for Jose Tabata (OF)
+	DEACTIVATE
+MATCH!
+	Corey Knebel	Corey Knebel
+	RP	RP
+	Mil, RANK 479
+
+NO MATCH for Phil Coke (RP)
+	DEACTIVATE
+MATCH!
+	Tony Cruz	Tony Cruz
+	C	C
+	KC, RANK 1258
+
+MATCH!
+	Prince Fielder	Prince Fielder
+	1B	1B
+	Tex, RANK 38
+
+NO MATCH for Scott Atchison (RP)
+	DEACTIVATE
+MATCH!
+	Pedro BÃ¡ez	Pedro Báez
+	RP	RP
+	LAD, RANK 375
+
+MATCH!
+	Jerry Sands	Jerry Sands
+	Util	1B,OF
+	CWS, RANK 1175
+
+NO MATCH for Jim Henderson (RP)
+	DEACTIVATE
+NO MATCH for Casper Wells (OF)
+	DEACTIVATE
+NO MATCH for Alexi Ogando (RP)
+	DEACTIVATE
+NO MATCH for Pedro Ciriaco (2B)
+	DEACTIVATE
+MATCH!
+	Ryan Flaherty	Ryan Flaherty
+	2B/3B/SS	1B,2B,3B,SS,OF
+	Bal, RANK 1092
+
+NO MATCH for Brooks Conrad (2B)
+	DEACTIVATE
+MATCH!
+	Clayton Blackburn	Clayton Blackburn
+	SP	SP
+	SF, RANK 605
+
+NO MATCH for Joe Saunders (SP/RP)
+	DEACTIVATE
+MATCH!
+	Aaron Blair	Aaron Blair
+	SP	SP
+	Atl, RANK 606
+
+MATCH!
+	Anthony DeSclafani	Anthony DeSclafani
+	SP/RP	SP
+	Cin, RANK 243
+
+NO MATCH for Andy Oliver (SP)
+	DEACTIVATE
+MATCH!
+	Andrew Susac	Andrew Susac
+	C	C
+	SF, RANK 1172
+
+NO MATCH for Tim Byrdak (RP)
+	DEACTIVATE
+MATCH!
+	George Springer	George Springer
+	OF	OF
+	Hou, RANK 31
+
+NO MATCH for Evan Meek (RP)
+	DEACTIVATE
+NO MATCH for Francisco Peguero (OF)
+	DEACTIVATE
+NO MATCH for David Carpenter (RP)
+	DEACTIVATE
+NO MATCH for Jonathan DÃ­az (SS)
+	DEACTIVATE
+MATCH!
+	Ender Inciarte	Ender Inciarte
+	OF	OF
+	Atl, RANK 164
+
+MATCH!
+	Trevor May	Trevor May
+	SP	SP,RP
+	Min, RANK 505
+
+MATCH!
+	Carlos Correa	Carlos Correa
+	SS	SS
+	Hou, RANK 10
+
+MATCH!
+	Johnny Giavotella	Johnny Giavotella
+	2B	2B
+	LAA, RANK 926
+
+MATCH!
+	Chris Withrow	Chris Withrow
+	RP	RP
+	Atl, RANK 581
+
+MATCH!
+	Logan Darnell	Logan Darnell
+	SP	RP
+	Min, RANK 832
+
+MATCH!
+	Tyler Thornburg	Tyler Thornburg
+	RP	RP
+	Mil, RANK 562
+
+MATCH!
+	Josh Phegley	Josh Phegley
+	C	C
+	Oak, RANK 1072
+
+MATCH!
+	Matt Adams	Matt Adams
+	1B	1B
+	StL, RANK 1046
+
+MATCH!
+	Cristhian Adames	Cristhian Adames
+	MI	SS
+	Col, RANK 1284
+
+MATCH!
+	Julio UrÃ­as	Julio Urías
+	SP	SP
+	LAD, RANK 608
+
+MATCH!
+	Justin Morneau	Justin Morneau
+	1B	1B
+	Col, RANK 970
+
+MATCH!
+	Francisco Liriano	Francisco Liriano
+	SP	SP
+	Pit, RANK 96
+
+MATCH!
+	Rex Brothers	Rex Brothers
+	RP	RP
+	ChC, RANK 849
+
+MATCH!
+	Cole Hamels	Cole Hamels
+	SP	SP
+	Tex, RANK 68
+
+MATCH!
+	Jay Bruce	Jay Bruce
+	OF	OF
+	Cin, RANK 133
+
+MATCH!
+	Gordon Beckham	Gordon Beckham
+	2B/3B	2B,3B
+	Atl, RANK 1112
+
+MATCH!
+	Zack Wheeler	Zack Wheeler
+	SP	SP
+	NYM, RANK 523
+
+NO MATCH for Gaby SÃ¡nchez (1B)
+	DEACTIVATE
+NO MATCH for Marcos Mateo (RP)
+	DEACTIVATE
+MATCH!
+	Aaron Harang	Aaron Harang
+	SP	SP
+	Phi, RANK 1028
+
+NO MATCH for Brad Penny (SP)
+	DEACTIVATE
+MATCH!
+	Kole Calhoun	Kole Calhoun
+	OF	OF
+	LAA, RANK 92
+
+MATCH!
+	Rajai Davis	Rajai Davis
+	OF	OF
+	Cle, RANK 352
+
+MATCH!
+	Tim Anderson	Tim Anderson
+	SS	SS
+	CWS, RANK 1324
+
+NO MATCH for Donnie Murphy (1B/2B)
+	DEACTIVATE
+MATCH!
+	Sean Nolin	Sean Nolin
+	RP	SP
+	Mil, RANK 918
+
+MATCH!
+	James McCann	James McCann
+	C	C
+	Det, RANK 1053
+
+MATCH!
+	Trevor Cahill	Trevor Cahill
+	SP/RP	SP,RP
+	ChC, RANK 997
+
+NO MATCH for Ryan Feierabend (RP)
+	DEACTIVATE
+MATCH!
+	Johnny Monell	Johnny Monell
+	C	C
+	NYM, RANK 1307
+
+MATCH!
+	Michael Bourn	Michael Bourn
+	OF	OF
+	Atl, RANK 983
+
+MATCH!
+	Jed Lowrie	Jed Lowrie
+	SS	3B,SS
+	Oak, RANK 1016
+
+MATCH!
+	Andy Wilkins	Andy Wilkins
+	1B	1B,3B
+	Mil, RANK 1465
+
+MATCH!
+	Adam Lind	Adam Lind
+	1B	1B
+	Sea, RANK 209
+
+MATCH!
+	Jacob Turner	Jacob Turner
+	SP/RP	SP
+	CWS, RANK 956
+
+MATCH!
+	Jeanmar GÃ³mez	Jeanmar Gómez
+	RP	RP
+	Phi, RANK 507
+
+MATCH!
+	Jurickson Profar	Jurickson Profar
+	2B/SS	2B,SS
+	Tex, RANK 1327
+
+MATCH!
+	Joey Votto	Joey Votto
+	1B	1B
+	Cin, RANK 21
+
+MATCH!
+	David Dahl	David Dahl
+	OF	OF
+	Col, RANK 1328
+
+MATCH!
+	J.B. Shuck	J.B. Shuck
+	OF	OF
+	CWS, RANK 1140
+
+MATCH!
+	Lorenzo Cain	Lorenzo Cain
+	OF	OF
+	KC, RANK 50
+
+MATCH!
+	Coco Crisp	Coco Crisp
+	OF	OF
+	Oak, RANK 1155
+
+MATCH!
+	Josh Collmenter	Josh Collmenter
+	SP/RP	SP,RP
+	Ari, RANK 437
+
+MATCH!
+	Dexter Fowler	Dexter Fowler
+	OF	OF
+	ChC, RANK 134
+
+MATCH!
+	Jarred Cosart	Jarred Cosart
+	SP	SP
+	Mia, RANK 874
+
+MATCH!
+	Ãlex RÃ­os	Álex Ríos
+	OF	OF
+	KC, RANK 861
+
+NO MATCH for Ross Detwiler (RP)
+	DEACTIVATE
+NO MATCH for Wil Nieves (C)
+	DEACTIVATE
+MATCH!
+	Jason Rogers	Jason Rogers
+	1B	1B
+	Pit, RANK 1120
+
+NO MATCH for Michael Cuddyer (1B/OF)
+	DEACTIVATE
+NO MATCH for Dan Haren (SP)
+	DEACTIVATE
+NO MATCH for Eric Fryer (C)
+	DEACTIVATE
+NO MATCH for John Buck (C)
+	DEACTIVATE
+MATCH!
+	Adam Duvall	Adam Duvall
+	1B	OF
+	Cin, RANK 1195
+
+MATCH!
+	Ãlex ColomÃ©	Álex Colomé
+	SP	SP,RP
+	TB, RANK 410
+
+NO MATCH for Travis Hafner (1B)
+	DEACTIVATE
+MATCH!
+	Maikel Franco	Maikel Franco
+	3B	3B
+	Phi, RANK 153
+
+MATCH!
+	Chris Davis	Chris Davis
+	1B/3B	1B,OF
+	Bal, RANK 44
+
+MATCH!
+	Christian Arroyo	Christian Arroyo
+	SS	SS
+	SF, RANK 1331
+
+NO MATCH for CÃ©sar Cabral (RP)
+	DEACTIVATE
+MATCH!
+	Boone Logan	Boone Logan
+	RP	RP
+	Col, RANK 904
+
+NO MATCH for Scott Elbert (RP)
+	DEACTIVATE
+MATCH!
+	John Ryan Murphy	John Ryan Murphy
+	C	C
+	Min, RANK 1132
+
+MATCH!
+	Robinson Chirinos	Robinson Chirinos
+	C	C
+	Tex, RANK 1010
+
+MATCH!
+	Andrew Romine	Andrew Romine
+	2B/SS	1B,2B,3B,SS
+	Det, RANK 1077
+
+NO MATCH for Chia-Jen Lo (RP)
+	DEACTIVATE
+NO MATCH for Jack Hannahan (1B)
+	DEACTIVATE
+MATCH!
+	Matt Wieters	Matt Wieters
+	C	C
+	Bal, RANK 187
+
+MATCH!
+	Ryan Dennick	Ryan Dennick
+	RP	RP
+	Cin, RANK 782
+
+NO MATCH for Cory Burns (RP)
+	DEACTIVATE
+NO MATCH for David Huff (RP)
+	DEACTIVATE
+NO MATCH for Tony Gwynn Jr. (OF)
+	DEACTIVATE
+NO MATCH for Ryan Brasier (RP)
+	DEACTIVATE
+NO MATCH for James McDonald (SP)
+	DEACTIVATE
+MATCH!
+	Jeremy Hellickson	Jeremy Hellickson
+	SP	SP
+	Phi, RANK 797
+
+MATCH!
+	JosÃ© LobatÃ³n	José Lobatón
+	C	C
+	Was, RANK 1186
+
+NO MATCH for JosÃ© Cisnero (RP)
+	DEACTIVATE
+NO MATCH for Jordany ValdespÃ­n (2B/OF)
+	DEACTIVATE
+NO MATCH for Eury De La Rosa (RP)
+	DEACTIVATE
+NO MATCH for Jake Elmore (MI)
+	DEACTIVATE
+MATCH!
+	Matt Clark	Matt Clark
+	1B	1B,OF
+	Mil, RANK 1285
+
+MATCH!
+	Travis Ishikawa	Travis Ishikawa
+	1B	1B,OF
+	CWS, RANK 1215
+
+MATCH!
+	Brayan PeÃ±a	Brayan Peña
+	C/1B	C
+	StL, RANK 1125
+
+MATCH!
+	Chris Taylor	Chris Taylor
+	SS	SS
+	Sea, RANK 1244
+
+MATCH!
+	Bradin Hagens	Bradin Hagens
+	RP	RP
+	TB, RANK 748
+
+MATCH!
+	Mark Lowe	Mark Lowe
+	RP	RP
+	Det, RANK 357
+
+NO MATCH for Andy Dirks (OF)
+	DEACTIVATE
+NO MATCH for Tony SÃ¡nchez (C)
+	DEACTIVATE
+NO MATCH for Chad Gaudin (SP/RP)
+	DEACTIVATE
+MATCH!
+	Yoenis CÃ©spedes	Yoenis Céspedes
+	OF	OF
+	NYM, RANK 33
+
+MATCH!
+	Kevin Plawecki	Kevin Plawecki
+	C	C
+	NYM, RANK 1188
+
+MATCH!
+	Albert Pujols	Albert Pujols
+	1B	1B
+	LAA, RANK 72
+
+MATCH!
+	Steve Geltz	Steve Geltz
+	RP	RP
+	TB, RANK 399
+
+MATCH!
+	Kurt Suzuki	Kurt Suzuki
+	C	C
+	Min, RANK 995
+
+MATCH!
+	Jason Heyward	Jason Heyward
+	OF	OF
+	ChC, RANK 58
+
+MATCH!
+	Forrest Wall	Forrest Wall
+	2B	2B
+	Col, RANK 1337
+
+NO MATCH for Koyie Hill (C)
+	DEACTIVATE
+NO MATCH for Alberto Cabrera (RP)
+	DEACTIVATE
+NO MATCH for Scott Rice (RP)
+	DEACTIVATE
+NO MATCH for Jeff Beliveau (RP)
+	DEACTIVATE
+MATCH!
+	Oliver PÃ©rez	Oliver Pérez
+	RP	RP
+	Was, RANK 465
+
+MATCH!
+	Juan Jaime	Juan Jaime
+	RP	RP
+	LAD, RANK 822
+
+MATCH!
+	Mark Buehrle	Mark Buehrle
+	SP	SP
+	Tor, RANK 351
+
+MATCH!
+	Burke Badenhop	Burke Badenhop
+	RP	RP
+	Was, RANK 776
+
+MATCH!
+	Bo Schultz	Bo Schultz
+	RP	RP
+	Tor, RANK 515
+
+MATCH!
+	Emilio Bonifacio	Emilio Bonifacio
+	2B/OF	2B
+	Atl, RANK 1182
+
+MATCH!
+	Cory Luebke	Cory Luebke
+	SP/RP	SP,RP
+	Pit, RANK 618
+
+MATCH!
+	Casey Sadler	Casey Sadler
+	RP	SP
+	Pit, RANK 572
+
+MATCH!
+	Chris Herrmann	Chris Herrmann
+	OF	C
+	Ari, RANK 1257
+
+MATCH!
+	Aaron Hill	Aaron Hill
+	2B/3B	2B,3B
+	Mil, RANK 985
+
+MATCH!
+	Mike Trout	Mike Trout
+	OF	OF
+	LAA, RANK 1
+
+MATCH!
+	Drew Pomeranz	Drew Pomeranz
+	SP/RP	SP,RP
+	SD, RANK 338
+
+MATCH!
+	Max Stassi	Max Stassi
+	C	C
+	Hou, RANK 1227
+
+NO MATCH for Kelly Shoppach (C)
+	DEACTIVATE
+NO MATCH for Henry Rodriguez (2B)
+	DEACTIVATE
+MATCH!
+	Aaron Barrett	Aaron Barrett
+	RP	RP
+	Was, RANK 449
+
+NO MATCH for Mike Belfiore (RP)
+	DEACTIVATE
+MATCH!
+	Tim Lincecum	Tim Lincecum
+	SP/RP	SP
+	SF, RANK 752
+
+NO MATCH for Luke Putkonen (RP)
+	DEACTIVATE
+NO MATCH for Ian Stewart (3B)
+	DEACTIVATE
+MATCH!
+	Stefen Romero	Stefen Romero
+	OF	OF
+	Sea, RANK 1234
+
+MATCH!
+	Hisashi Iwakuma	Hisashi Iwakuma
+	SP	SP
+	Sea, RANK 149
+
+MATCH!
+	Charlie Morton	Charlie Morton
+	SP	SP
+	Phi, RANK 835
+
+NO MATCH for Sam Lecure (RP)
+	DEACTIVATE
+MATCH!
+	Reese McGuire	Reese McGuire
+	C	C
+	Pit, RANK 1340
+
+MATCH!
+	Michael Conforto	Michael Conforto
+	OF	OF
+	NYM, RANK 212
+
+NO MATCH for Engel Beltre (OF)
+	DEACTIVATE
+MATCH!
+	Kevin Pillar	Kevin Pillar
+	OF	OF
+	Tor, RANK 170
+
+NO MATCH for Yorvit Torrealba (C)
+	DEACTIVATE
+MATCH!
+	Anthony Rizzo	Anthony Rizzo
+	1B	1B
+	ChC, RANK 14
+
+MATCH!
+	Eddie Rosario	Eddie Rosario
+	2B	OF
+	Min, RANK 450
+
+NO MATCH for Ramon Ortiz (SP/RP)
+	DEACTIVATE
+MATCH!
+	James Jones	James Jones
+	OF	OF
+	Tex, RANK 1207
+
+MATCH!
+	Jorge Alfaro	Jorge Alfaro
+	C	C
+	Phi, RANK 1342
+
+NO MATCH for Juan Francisco (1B/3B)
+	DEACTIVATE
+MATCH!
+	Starling Marte	Starling Marte
+	OF	OF
+	Pit, RANK 24
+
+MATCH!
+	Charlie Blackmon	Charlie Blackmon
+	OF	OF
+	Col, RANK 23
+
+NO MATCH for Dewayne Wise (OF)
+	DEACTIVATE
+NO MATCH for Tim Federowicz (C)
+	DEACTIVATE
+MATCH!
+	Cody Asche	Cody Asche
+	3B	3B,OF
+	Phi, RANK 953
+
+MATCH!
+	Bobby Parnell	Bobby Parnell
+	RP	RP
+	Det, RANK 952
+
+MATCH!
+	EfrÃ©n Navarro	Efrén Navarro
+	1B/OF	1B,OF
+	Sea, RANK 1202
+
+MATCH!
+	Dioner Navarro	Dioner Navarro
+	C	C
+	CWS, RANK 1070
+
+MATCH!
+	Brandon Morrow	Brandon Morrow
+	SP/RP	SP
+	SD, RANK 471
+
+NO MATCH for Jerry Hairston Jr. (3B/OF)
+	DEACTIVATE
+MATCH!
+	Jimmy Nelson	Jimmy Nelson
+	SP	SP
+	Mil, RANK 190
+
+MATCH!
+	Kaleb Cowart	Kaleb Cowart
+	3B	3B
+	LAA, RANK 1250
+
+MATCH!
+	Pierce Johnson	Pierce Johnson
+	SP	SP
+	ChC, RANK 628
+
+NO MATCH for Chris Dickerson (OF)
+	DEACTIVATE
+MATCH!
+	Eric Sogard	Eric Sogard
+	2B/SS	2B,SS
+	Oak, RANK 1024
+
+NO MATCH for Alex White (SP)
+	DEACTIVATE
+NO MATCH for Michael Roth (RP)
+	DEACTIVATE
+MATCH!
+	Chris Archer	Chris Archer
+	SP	SP
+	TB, RANK 52
+
+MATCH!
+	Tyson Ross	Tyson Ross
+	SP	SP
+	SD, RANK 88
+
+MATCH!
+	Alexei RamÃ­rez	Alexei Ramírez
+	SS	SS
+	SD, RANK 315
+
+MATCH!
+	Wade Miley	Wade Miley
+	SP	SP
+	Sea, RANK 259
+
+NO MATCH for Frank Francisco (RP)
+	DEACTIVATE
+MATCH!
+	Hunter Strickland	Hunter Strickland
+	RP	RP
+	SF, RANK 324
+
+NO MATCH for Nate Adcock (RP)
+	DEACTIVATE
+NO MATCH for Joe Savery (RP)
+	DEACTIVATE
+MATCH!
+	Hanley RamÃ­rez	Hanley Ramírez
+	SS	OF
+	Bos, RANK 106
+
+MATCH!
+	Chris Carter	Chris Carter
+	1B/OF	1B
+	Mil, RANK 403
+
+MATCH!
+	Justin Ruggiano	Justin Ruggiano
+	OF	OF
+	Tex, RANK 1078
+
+MATCH!
+	Yasmani Grandal	Yasmani Grandal
+	C/1B	C
+	LAD, RANK 280
+
+MATCH!
+	Jarrod Dyson	Jarrod Dyson
+	OF	OF
+	KC, RANK 834
+
+MATCH!
+	Ryan Vogelsong	Ryan Vogelsong
+	SP	SP,RP
+	Pit, RANK 913
+
+NO MATCH for Ryan Dempster (SP)
+	DEACTIVATE
+MATCH!
+	Ezequiel Carrera	Ezequiel Carrera
+	OF	OF
+	Tor, RANK 1080
+
+NO MATCH for Matt Daley (RP)
+	DEACTIVATE
+NO MATCH for Juan GutiÃ©rrez (RP)
+	DEACTIVATE
+NO MATCH for Charlie Culberson (2B/3B/SS)
+	DEACTIVATE
+MATCH!
+	Danny Farquhar	Danny Farquhar
+	RP	RP
+	TB, RANK 761
+
+MATCH!
+	Jordan Walden	Jordan Walden
+	RP	RP
+	StL, RANK 460
+
+MATCH!
+	Justin Wilson	Justin Wilson
+	RP	RP
+	Det, RANK 355
+
+MATCH!
+	Tim Stauffer	Tim Stauffer
+	SP/RP	RP
+	Ari, RANK 944
+
+MATCH!
+	Mark Appel	Mark Appel
+	SP	SP
+	Phi, RANK 631
+
+MATCH!
+	Miguel Rojas	Miguel Rojas
+	3B/SS	3B,SS
+	Mia, RANK 1161
+
+NO MATCH for Xavier Nady (OF)
+	DEACTIVATE
+MATCH!
+	Ryan Madson	Ryan Madson
+	RP	RP
+	Oak, RANK 327
+
+NO MATCH for MoisÃ©s Sierra (OF)
+	DEACTIVATE
+NO MATCH for Eric Young (OF)
+	DEACTIVATE
+MATCH!
+	Ryan Hanigan	Ryan Hanigan
+	C	C
+	Bos, RANK 1119
+
+MATCH!
+	Justin De Fratus	Justin De Fratus
+	RP	RP
+	Sea, RANK 1018
+
+NO MATCH for Kyle Drabek (RP)
+	DEACTIVATE
+MATCH!
+	JosÃ© Peraza	José Peraza
+	SS	2B
+	Cin, RANK 1260
+
+MATCH!
+	Homer Bailey	Homer Bailey
+	SP	SP
+	Cin, RANK 804
+
+MATCH!
+	Scott Snodgress	Scott Snodgress
+	RP	RP
+	LAA, RANK 788
+
+MATCH!
+	Justin Verlander	Justin Verlander
+	SP	SP
+	Det, RANK 162
+
+NO MATCH for Yuniesky Betancourt (1B/3B)
+	DEACTIVATE
+NO MATCH for Adam Moore (C)
+	DEACTIVATE
+MATCH!
+	Drew Storen	Drew Storen
+	RP	RP
+	Tor, RANK 251
+
+MATCH!
+	Colby Lewis	Colby Lewis
+	SP	SP
+	Tex, RANK 522
+
+MATCH!
+	Lane Adams	Lane Adams
+	OF	OF
+	NYY, RANK 1448
+
+MATCH!
+	Andrew McCutchen	Andrew McCutchen
+	OF	OF
+	Pit, RANK 6
+
+MATCH!
+	Cody Allen	Cody Allen
+	RP	RP
+	Cle, RANK 113
+
+NO MATCH for Dane De La Rosa (RP)
+	DEACTIVATE
+MATCH!
+	Stephen Vogt	Stephen Vogt
+	C/1B/OF	C,1B
+	Oak, RANK 192
+
+MATCH!
+	Willy Adames	Willy Adames
+	SS	SS
+	TB, RANK 1348
+
+MATCH!
+	Nate Jones	Nate Jones
+	RP	RP
+	CWS, RANK 442
+
+MATCH!
+	Matt Kemp	Matt Kemp
+	OF	OF
+	SD, RANK 70
+
+MATCH!
+	Fernando RodrÃ­guez	Fernando Rodríguez
+	RP	RP
+	Oak, RANK 390
+
+MATCH!
+	Drew VerHagen	Drew VerHagen
+	SP	RP
+	Det, RANK 464
+
+MATCH!
+	Tanner Roark	Tanner Roark
+	SP	SP,RP
+	Was, RANK 443
+
+MATCH!
+	Craig Gentry	Craig Gentry
+	OF	OF
+	LAA, RANK 1204
+
+MATCH!
+	Mario Hollands	Mario Hollands
+	RP	RP
+	Phi, RANK 774
+
+MATCH!
+	Carlos Carrasco	Carlos Carrasco
+	SP/RP	SP
+	Cle, RANK 60
+
+NO MATCH for Phillippe Aumont (RP)
+	DEACTIVATE
+NO MATCH for Alfonso Soriano (OF)
+	DEACTIVATE
+MATCH!
+	Matt Cain	Matt Cain
+	SP	SP
+	SF, RANK 1002
+
+NO MATCH for Andrew Brown (OF)
+	DEACTIVATE
+NO MATCH for Dan Johnson (1B)
+	DEACTIVATE
+MATCH!
+	Huston Street	Huston Street
+	RP	RP
+	LAA, RANK 136
+
+MATCH!
+	Brett Gardner	Brett Gardner
+	OF	OF
+	NYY, RANK 97
+
+MATCH!
+	Rickie Weeks	Rickie Weeks
+	2B	OF
+	Ari, RANK 1179
+
+MATCH!
+	Maicer Izturis	Maicer Izturis
+	2B	2B,3B
+	Tor, RANK 1298
+
+MATCH!
+	Matt Carpenter	Matt Carpenter
+	3B	2B,3B
+	StL, RANK 59
+
+MATCH!
+	Jerry Blevins	Jerry Blevins
+	RP	RP
+	NYM, RANK 474
+
+NO MATCH for Xavier Paul (OF)
+	DEACTIVATE
+MATCH!
+	Tommy Kahnle	Tommy Kahnle
+	RP	RP
+	CWS, RANK 912
+
+MATCH!
+	Brandon Workman	Brandon Workman
+	SP	SP,RP
+	Bos, RANK 873
+
+MATCH!
+	Dan Jennings	Dan Jennings
+	RP	RP
+	CWS, RANK 731
+
+MATCH!
+	Matt Shoemaker	Matt Shoemaker
+	SP/RP	SP
+	LAA, RANK 368
+
+MATCH!
+	Dominic Smith	Dominic Smith
+	1B	1B
+	NYM, RANK 1352
+
+NO MATCH for Blake Parker (RP)
+	DEACTIVATE
+NO MATCH for Deunte Heath (RP)
+	DEACTIVATE
+MATCH!
+	Randal Grichuk	Randal Grichuk
+	OF	OF
+	StL, RANK 181
+
+NO MATCH for Humberto Quintero (C)
+	DEACTIVATE
+NO MATCH for Roger Bernadina (OF)
+	DEACTIVATE
+MATCH!
+	David HernÃ¡ndez	David Hernández
+	RP	RP
+	Phi, RANK 263
+
+NO MATCH for Everett Teaford (RP)
+	DEACTIVATE
+NO MATCH for Hiram Burgos (SP)
+	DEACTIVATE
+MATCH!
+	Sean Manaea	Sean Manaea
+	SP	SP
+	KC, RANK 641
+
+MATCH!
+	Jake Marisnick	Jake Marisnick
+	OF	OF
+	Hou, RANK 539
+
+MATCH!
+	Asher Wojciechowski	Asher Wojciechowski
+	RP	SP
+	Hou, RANK 931
+
+MATCH!
+	Paco RodrÃ­guez	Paco Rodríguez
+	RP	RP
+	Atl, RANK 549
+
+MATCH!
+	Jeff Samardzija	Jeff Samardzija
+	SP	SP
+	SF, RANK 143
+
+NO MATCH for Buddy Boshers (RP)
+	DEACTIVATE
+MATCH!
+	Cory Rasmus	Cory Rasmus
+	SP/RP	RP
+	LAA, RANK 528
+
+MATCH!
+	Christian Walker	Christian Walker
+	1B	1B
+	Bal, RANK 1473
+
+NO MATCH for Donald Lutz (1B/OF)
+	DEACTIVATE
+MATCH!
+	Travis Snider	Travis Snider
+	OF	OF
+	KC, RANK 1079
+
+NO MATCH for Torii Hunter (OF)
+	DEACTIVATE
+MATCH!
+	Bobby LaFromboise	Bobby LaFromboise
+	RP	RP
+	Phi, RANK 504
+
+NO MATCH for David Carpenter (RP)
+	DEACTIVATE
+MATCH!
+	Drew Butera	Drew Butera
+	C	C
+	KC, RANK 1266
+
+NO MATCH for Laynce Nix (1B/OF)
+	DEACTIVATE
+MATCH!
+	Brad Boxberger	Brad Boxberger
+	RP	RP
+	TB, RANK 184
+
+MATCH!
+	Leonel Campos	Leonel Campos
+	RP	RP
+	SD, RANK 778
+
+MATCH!
+	Joe Panik	Joe Panik
+	2B	2B
+	SF, RANK 284
+
+MATCH!
+	Austin Wates	Austin Wates
+	OF	OF
+	Mia, RANK 1357
+
+NO MATCH for Ed Lucas (2B/SS/CI)
+	DEACTIVATE
+NO MATCH for Jon Garland (SP)
+	DEACTIVATE
+NO MATCH for CÃ©sar Ramos (SP/RP)
+	DEACTIVATE
+MATCH!
+	Kevin Gausman	Kevin Gausman
+	SP	SP,RP
+	Bal, RANK 295
+
+MATCH!
+	Stryker Trahan	Stryker Trahan
+	C	C
+	Ari, RANK 1358
+
+NO MATCH for RamÃ³n RamÃ­rez (RP)
+	DEACTIVATE
+MATCH!
+	Daniel Webb	Daniel Webb
+	RP	RP
+	CWS, RANK 1007
+
+MATCH!
+	Aroldis Chapman	Aroldis Chapman
+	RP	RP
+	NYY, RANK 80
+
+MATCH!
+	Daniel Corcino	Daniel Corcino
+	SP	RP
+	LAD, RANK 745
+
+NO MATCH for Anthony Bass (RP)
+	DEACTIVATE
+NO MATCH for Zoilo Almonte (OF)
+	DEACTIVATE
+MATCH!
+	A.J. Ramos	A.J. Ramos
+	RP	RP
+	Mia, RANK 159
+
+MATCH!
+	David Ross	David Ross
+	C	C
+	ChC, RANK 1471
+
+MATCH!
+	James Paxton	James Paxton
+	SP	SP
+	Sea, RANK 264
+
+NO MATCH for Zeke Spruill (RP)
+	DEACTIVATE
+NO MATCH for AlÃ­ SolÃ­s (C)
+	DEACTIVATE
+MATCH!
+	Kyle Parker	Kyle Parker
+	OF	OF
+	Col, RANK 1237
+
+MATCH!
+	Jed Bradley	Jed Bradley
+	SP	SP
+	Mil, RANK 647
+
+NO MATCH for Aaron Thompson (RP)
+	DEACTIVATE
+MATCH!
+	Rymer Liriano	Rymer Liriano
+	OF	OF
+	Mil, RANK 1269
+
+MATCH!
+	Glen Perkins	Glen Perkins
+	RP	RP
+	Min, RANK 167
+
+NO MATCH for Lester Oliveros (RP)
+	DEACTIVATE
+NO MATCH for Jose De La Torre (RP)
+	DEACTIVATE
+MATCH!
+	Matt Olson	Matt Olson
+	1B	1B
+	Oak, RANK 1362
+
+NO MATCH for Alexi Casilla (Util)
+	DEACTIVATE
+MATCH!
+	Andrew Miller	Andrew Miller
+	RP	RP
+	NYY, RANK 185
+
+NO MATCH for Logan Schafer (OF)
+	DEACTIVATE
+MATCH!
+	Chris Heston	Chris Heston
+	P	SP
+	SF, RANK 393
+
+NO MATCH for David Lough (OF)
+	DEACTIVATE
+MATCH!
+	Eddie Butler	Eddie Butler
+	SP	SP
+	Col, RANK 1126
+
+NO MATCH for Manuel Corpas (RP)
+	DEACTIVATE
+NO MATCH for Michael Gonzalez (RP)
+	DEACTIVATE
+MATCH!
+	Curtis Granderson	Curtis Granderson
+	OF	OF
+	NYM, RANK 111
+
+MATCH!
+	John Holdzkom	John Holdzkom
+	RP	RP
+	Pit, RANK 547
+
+MATCH!
+	Pedro Strop	Pedro Strop
+	RP	RP
+	ChC, RANK 313
+
+MATCH!
+	Michael Pineda	Michael Pineda
+	SP	SP
+	NYY, RANK 120
+
+MATCH!
+	Robbie Erlin	Robbie Erlin
+	SP	SP
+	SD, RANK 762
+
+MATCH!
+	Charlie Furbush	Charlie Furbush
+	RP	RP
+	Sea, RANK 402
+
+NO MATCH for Tyler Colvin (OF)
+	DEACTIVATE
+MATCH!
+	Luis Severino	Luis Severino
+	RP	SP
+	NYY, RANK 266
+
+MATCH!
+	Andrelton Simmons	Andrelton Simmons
+	SS	SS
+	LAA, RANK 571
+
+NO MATCH for Everth Cabrera (SS)
+	DEACTIVATE
+NO MATCH for Josh Outman (RP)
+	DEACTIVATE
+MATCH!
+	Daniel Hudson	Daniel Hudson
+	RP	RP
+	Ari, RANK 441
+
+NO MATCH for JesÃºs GuzmÃ¡n (1B/OF)
+	DEACTIVATE
+MATCH!
+	Kyle Freeland	Kyle Freeland
+	SP	SP
+	Col, RANK 655
+
+NO MATCH for Dillon Gee (SP)
+	DEACTIVATE
+MATCH!
+	Eduardo Escobar	Eduardo Escobar
+	2B/3B/SS	2B,3B,SS,OF
+	Min, RANK 458
+
+MATCH!
+	Jean Machi	Jean Machi
+	RP	RP
+	ChC, RANK 556
+
+MATCH!
+	Gareth Morgan	Gareth Morgan
+	OF	OF
+	Sea, RANK 1365
+
+MATCH!
+	Josh Harrison	Josh Harrison
+	2B/3B/OF	2B,3B,OF
+	Pit, RANK 248
+
+NO MATCH for Pedro Figueroa (RP)
+	DEACTIVATE
+MATCH!
+	Jeff Manship	Jeff Manship
+	RP	RP
+	Cle, RANK 353
+
+NO MATCH for RaÃºl Valdes (RP)
+	DEACTIVATE
+NO MATCH for Josh Wall (RP)
+	DEACTIVATE
+MATCH!
+	Zach Duke	Zach Duke
+	RP	RP
+	CWS, RANK 385
+
+MATCH!
+	Steven Wright	Steven Wright
+	RP	SP,RP
+	Bos, RANK 475
+
+NO MATCH for Trevor Crowe (OF)
+	DEACTIVATE
+NO MATCH for Hak-Ju Lee (SS)
+	DEACTIVATE
+NO MATCH for Francisley Bueno (RP)
+	DEACTIVATE
+NO MATCH for Duke Welker (RP)
+	DEACTIVATE
+NO MATCH for Wilson Betemit (3B)
+	DEACTIVATE
+MATCH!
+	Blake Treinen	Blake Treinen
+	SP/RP	RP
+	Was, RANK 555
+
+MATCH!
+	Abraham Almonte	Abraham Almonte
+	OF	OF
+	Cle, RANK 1038
+
+MATCH!
+	Brandon Phillips	Brandon Phillips
+	2B	2B
+	Cin, RANK 239
+
+NO MATCH for Jordan Schafer (OF)
+	DEACTIVATE
+MATCH!
+	Jorge Polanco	Jorge Polanco
+	SS	SS
+	Min, RANK 1264
+
+MATCH!
+	Neil Walker	Neil Walker
+	2B	2B
+	NYM, RANK 172
+
+MATCH!
+	Munenori Kawasaki	Munenori Kawasaki
+	2B/3B	2B
+	ChC, RANK 1211
+
+MATCH!
+	Marcus Stroman	Marcus Stroman
+	SP/RP	SP
+	Tor, RANK 114
+
+NO MATCH for Jeremy Bonderman (SP)
+	DEACTIVATE
+MATCH!
+	Avisail GarcÃ­a	Avisail García
+	OF	OF
+	CWS, RANK 400
+
+MATCH!
+	Matt Stites	Matt Stites
+	RP	RP
+	Ari, RANK 980
+
+MATCH!
+	Jarrod Saltalamacchia	Jarrod Saltalamacchia
+	C	C
+	Det, RANK 1073
+
+MATCH!
+	Antonio Bastardo	Antonio Bastardo
+	RP	RP
+	NYM, RANK 343
+
+NO MATCH for Jeff Keppinger (3B)
+	DEACTIVATE
+NO MATCH for George Kottaras (C)
+	DEACTIVATE
+MATCH!
+	Jayson Werth	Jayson Werth
+	OF	OF
+	Was, RANK 230
+
+MATCH!
+	Chris Colabello	Chris Colabello
+	1B/OF	1B,OF
+	Tor, RANK 344
+
+MATCH!
+	J.T. Realmuto	J.T. Realmuto
+	C	C
+	Mia, RANK 283
+
+NO MATCH for Brennan Boesch (OF)
+	DEACTIVATE
+MATCH!
+	GrÃ©gory Polanco	Grégory Polanco
+	OF	OF
+	Pit, RANK 86
+
+MATCH!
+	Hunter Harvey	Hunter Harvey
+	SP	SP
+	Bal, RANK 659
+
+MATCH!
+	Brad Ziegler	Brad Ziegler
+	RP	RP
+	Ari, RANK 201
+
+NO MATCH for Mike Carp (1B/OF)
+	DEACTIVATE
+MATCH!
+	Ross Ohlendorf	Ross Ohlendorf
+	SP/RP	RP
+	KC, RANK 496
+
+MATCH!
+	Christian Yelich	Christian Yelich
+	OF	OF
+	Mia, RANK 130
+
+MATCH!
+	Spencer Patton	Spencer Patton
+	RP	RP
+	ChC, RANK 938
+
+MATCH!
+	John Lamb	John Lamb
+	SP	SP
+	Cin, RANK 963
+
+NO MATCH for Michael MartÃ­nez (2B)
+	DEACTIVATE
+MATCH!
+	Justin Bour	Justin Bour
+	1B	1B
+	Mia, RANK 440
+
+NO MATCH for Robert Coello (RP)
+	DEACTIVATE
+MATCH!
+	Conor Gillaspie	Conor Gillaspie
+	3B	3B
+	SF, RANK 1104
+
+MATCH!
+	Aaron Altherr	Aaron Altherr
+	OF	OF
+	Phi, RANK 1099
+
+MATCH!
+	Nori Aoki	Nori Aoki
+	OF	OF
+	Sea, RANK 282
+
+NO MATCH for Buddy Carlyle (RP)
+	DEACTIVATE
+NO MATCH for Shawn Camp (RP)
+	DEACTIVATE
+MATCH!
+	Jarrett Parker	Jarrett Parker
+	OF	OF
+	SF, RANK 1136
+
+MATCH!
+	Joe Blanton	Joe Blanton
+	SP	SP,RP
+	LAD, RANK 314
+
+MATCH!
+	Guilder RodrÃ­guez	Guilder Rodríguez
+	Util	2B,SS
+	Tex, RANK 1311
+
+MATCH!
+	Kyle Crick	Kyle Crick
+	SP	SP
+	SF, RANK 664
+
+MATCH!
+	Jeremy Guthrie	Jeremy Guthrie
+	SP	SP,RP
+	KC, RANK 1150
+
+MATCH!
+	Sean Newcomb	Sean Newcomb
+	SP	SP
+	Atl, RANK 665
+
+MATCH!
+	Jake Petricka	Jake Petricka
+	RP	RP
+	CWS, RANK 468
+
+MATCH!
+	Jon Singleton	Jon Singleton
+	1B	1B
+	Hou, RANK 1183
+
+NO MATCH for Hiro Nakajima (SS)
+	DEACTIVATE
+MATCH!
+	Tyler Glasnow	Tyler Glasnow
+	SP	SP
+	Pit, RANK 667
+
+MATCH!
+	Tommy Layne	Tommy Layne
+	RP	RP
+	Bos, RANK 531
+
+NO MATCH for Kevin Gregg (RP)
+	DEACTIVATE
+MATCH!
+	Michael Mariot	Michael Mariot
+	RP	RP
+	Phi, RANK 827
+
+NO MATCH for Joe Paterson (RP)
+	DEACTIVATE
+MATCH!
+	Jesse Winker	Jesse Winker
+	OF	OF
+	Cin, RANK 1381
+
+NO MATCH for Nick Hagadone (RP)
+	DEACTIVATE
+MATCH!
+	Brooks Brown	Brooks Brown
+	RP	RP
+	LAD, RANK 850
+
+NO MATCH for Todd Redmond (RP)
+	DEACTIVATE
+MATCH!
+	Nick Buss	Nick Buss
+	OF	OF
+	LAA, RANK 1382
+
+NO MATCH for Jason Pridie (OF)
+	DEACTIVATE
+MATCH!
+	Matt Wisler	Matt Wisler
+	SP	SP
+	Atl, RANK 902
+
+MATCH!
+	Danny Espinosa	Danny Espinosa
+	2B/SS	1B,2B,3B,SS
+	Was, RANK 818
+
+MATCH!
+	Neil RamÃ­rez	Neil Ramírez
+	RP	RP
+	ChC, RANK 446
+
+MATCH!
+	Taylor Guerrieri	Taylor Guerrieri
+	SP	SP
+	TB, RANK 668
+
+NO MATCH for Brett Hayes (C)
+	DEACTIVATE
+NO MATCH for Ryan Mattheus (RP)
+	DEACTIVATE
+NO MATCH for Cesar Izturis (2B/SS)
+	DEACTIVATE
+MATCH!
+	Kelvin Herrera	Kelvin Herrera
+	RP	RP
+	KC, RANK 321
+
+MATCH!
+	Tommy Medica	Tommy Medica
+	1B/OF	1B,OF
+	Mia, RANK 1205
+
+NO MATCH for Kameron Loe (SP/RP)
+	DEACTIVATE
+MATCH!
+	Chad Bettis	Chad Bettis
+	RP	SP
+	Col, RANK 848
+
+NO MATCH for CÃ©sar JimÃ©nez (RP)
+	DEACTIVATE
+MATCH!
+	J.J. Hardy	J.J. Hardy
+	SS	SS
+	Bal, RANK 1015
+
+MATCH!
+	Nick Markakis	Nick Markakis
+	OF	OF
+	Atl, RANK 307
+
+NO MATCH for Chris Nelson (3B)
+	DEACTIVATE
+MATCH!
+	Danny Valencia	Danny Valencia
+	1B/3B	3B,OF
+	Oak, RANK 330
+
+MATCH!
+	Phil Gosselin	Phil Gosselin
+	2B/3B/SS	2B,3B
+	Ari, RANK 1105
+
+MATCH!
+	Clayton Richard	Clayton Richard
+	SP/RP	SP,RP
+	ChC, RANK 493
+
+MATCH!
+	Justin Grimm	Justin Grimm
+	RP	RP
+	ChC, RANK 326
+
+NO MATCH for Jason Giambi (Util)
+	DEACTIVATE
+MATCH!
+	Adam LaRoche	Adam LaRoche
+	1B	1B
+	CWS, RANK 928
+
+MATCH!
+	Scooter Gennett	Scooter Gennett
+	2B	2B
+	Mil, RANK 900
+
+MATCH!
+	Byron Buxton	Byron Buxton
+	OF	OF
+	Min, RANK 290
+
+MATCH!
+	Matt Joyce	Matt Joyce
+	OF	OF
+	Pit, RANK 1165
+
+MATCH!
+	Luis Valbuena	Luis Valbuena
+	2B/3B	1B,3B
+	Hou, RANK 388
+
+MATCH!
+	Chasen Shreve	Chasen Shreve
+	RP	RP
+	NYY, RANK 394
+
+NO MATCH for Lyle Overbay (1B)
+	DEACTIVATE
+MATCH!
+	Austin Romine	Austin Romine
+	C	1B
+	NYY, RANK 1456
+
+MATCH!
+	Francisco RodrÃ­guez	Francisco Rodríguez
+	RP	RP
+	Det, RANK 161
+
+MATCH!
+	Vidal NuÃ±o	Vidal Nuño
+	SP	SP,RP
+	Sea, RANK 738
+
+MATCH!
+	Brandon Guyer	Brandon Guyer
+	OF	OF
+	TB, RANK 773
+
+MATCH!
+	Adalberto MejÃ­a	Adalberto Mejía
+	RP	RP
+	SF, RANK 672
+
+NO MATCH for Guillermo Quiroz (C)
+	DEACTIVATE
+MATCH!
+	Nick Castellanos	Nick Castellanos
+	3B	3B
+	Det, RANK 439
+
+MATCH!
+	Elvis Andrus	Elvis Andrus
+	SS	SS
+	Tex, RANK 205
+
+MATCH!
+	Joc Pederson	Joc Pederson
+	OF	OF
+	LAD, RANK 132
+
+NO MATCH for Luke Scott (Util)
+	DEACTIVATE
+MATCH!
+	Joakim Soria	Joakim Soria
+	RP	RP
+	KC, RANK 272
+
+MATCH!
+	C.J. Riefenhauser	C.J. Riefenhauser
+	RP	RP
+	ChC, RANK 846
+
+MATCH!
+	John Lackey	John Lackey
+	SP	SP
+	ChC, RANK 135
+
+NO MATCH for Kevin Slowey (RP)
+	DEACTIVATE
+MATCH!
+	Jason Castro	Jason Castro
+	C	C
+	Hou, RANK 1060
+
+MATCH!
+	Alex Gordon	Alex Gordon
+	OF	OF
+	KC, RANK 155
+
+NO MATCH for Cody Ross (OF)
+	DEACTIVATE
+NO MATCH for Jordan Danks (OF)
+	DEACTIVATE
+MATCH!
+	Brian Matusz	Brian Matusz
+	RP	RP
+	Bal, RANK 422
+
+NO MATCH for Rudy Owens (SP)
+	DEACTIVATE
+MATCH!
+	Robbie Ross Jr.	Robbie Ross Jr.
+	SP/RP	RP
+	Bos, RANK 883
+
+MATCH!
+	Marcus Semien	Marcus Semien
+	2B/3B	SS
+	Oak, RANK 276
+
+NO MATCH for Scott Barnes (RP)
+	DEACTIVATE
+MATCH!
+	Stolmy Pimentel	Stolmy Pimentel
+	RP	RP
+	NYM, RANK 787
+
+NO MATCH for Miguel Tejada (2B/3B)
+	DEACTIVATE
+NO MATCH for Sandy LeÃ³n (C)
+	DEACTIVATE
+MATCH!
+	John Axford	John Axford
+	RP	RP
+	Oak, RANK 381
+
+NO MATCH for Jordan Pacheco (C/1B)
+	DEACTIVATE
+MATCH!
+	Shin-Soo Choo	Shin-soo Choo
+	OF	OF
+	Tex, RANK 110
+
+MATCH!
+	A.J. Achter	A.J. Achter
+	RP	RP
+	LAA, RANK 840
+
+NO MATCH for Dylan Axelrod (SP)
+	DEACTIVATE
+MATCH!
+	Javier BÃ¡ez	Javier Báez
+	2B/SS	2B,3B,SS
+	ChC, RANK 1190
+
+MATCH!
+	Joey Terdoslavich	Joey Terdoslavich
+	1B/OF	1B
+	Bal, RANK 1261
+
+NO MATCH for Ryan Doumit (OF)
+	DEACTIVATE
+MATCH!
+	Marcus Walden	Marcus Walden
+	RP	RP
+	Cin, RANK 676
+
+MATCH!
+	Chris Tillman	Chris Tillman
+	SP	SP
+	Bal, RANK 895
+
+MATCH!
+	Erick Aybar	Erick Aybar
+	SS	SS
+	Atl, RANK 268
+
+MATCH!
+	Devon Travis	Devon Travis
+	2B	2B
+	Tor, RANK 261
+
+MATCH!
+	Tom Wilhelmsen	Tom Wilhelmsen
+	RP	RP
+	Tex, RANK 277
+
+NO MATCH for JosÃ© DomÃ­nguez (RP)
+	DEACTIVATE
+NO MATCH for Carlos Triunfel (SS)
+	DEACTIVATE
+NO MATCH for Andres Torres (OF)
+	DEACTIVATE
+MATCH!
+	Yonder Alonso	Yonder Alonso
+	1B	1B
+	Oak, RANK 896
+
+NO MATCH for Brandon Kintzler (RP)
+	DEACTIVATE
+MATCH!
+	Lance McCullers	Lance McCullers
+	SP	SP
+	Hou, RANK 128
+
+NO MATCH for Miles Mikolas (SP)
+	DEACTIVATE
+NO MATCH for RamÃ³n Santiago (2B/3B/SS)
+	DEACTIVATE
+MATCH!
+	Clint Barmes	Clint Barmes
+	2B/SS	SS
+	KC, RANK 1156
+
+MATCH!
+	Yordano Ventura	Yordano Ventura
+	SP	SP
+	KC, RANK 182
+
+MATCH!
+	Michael A. Taylor	Michael A. Taylor
+	OF	OF
+	Was, RANK 583
+
+MATCH!
+	Andrew Heaney	Andrew Heaney
+	SP	SP
+	LAA, RANK 292
+
+MATCH!
+	Josh Bell	Josh Bell
+	OF	OF
+	Pit, RANK 1396
+
+MATCH!
+	Mason Williams	Mason Williams
+	OF	OF
+	NYY, RANK 1252
+
+MATCH!
+	Chase Whitley	Chase Whitley
+	SP/RP	SP
+	TB, RANK 830
+
+NO MATCH for JosÃ© Molina (C)
+	DEACTIVATE
+MATCH!
+	Jimmy Paredes	Jimmy Paredes
+	3B	2B
+	Bal, RANK 845
+
+MATCH!
+	Jackie Bradley Jr.	Jackie Bradley Jr.
+	OF	OF
+	Bos, RANK 923
+
+NO MATCH for Danny Worth (SS)
+	DEACTIVATE
+MATCH!
+	Asdrubal Cabrera	Asdrubal Cabrera
+	2B/SS	SS
+	NYM, RANK 317
+
+MATCH!
+	Chris Young	Chris Young
+	OF	OF
+	Bos, RANK 533
+
+NO MATCH for Matt Guerrier (RP)
+	DEACTIVATE
+MATCH!
+	Zac Rosscup	Zac Rosscup
+	RP	RP
+	ChC, RANK 786
+
+NO MATCH for Tommy Joseph (C/1B)
+	DEACTIVATE
+MATCH!
+	Michael Blazek	Michael Blazek
+	RP	RP
+	Mil, RANK 336
+
+MATCH!
+	DarÃ­o Ãlvarez	Darío Álvarez
+	RP	RP
+	NYM, RANK 812
+
+NO MATCH for Robert Carson (RP)
+	DEACTIVATE
+MATCH!
+	Rafael Ynoa	Rafael Ynoa
+	3B	3B,MI,OF
+	Col, RANK 1177
+
+MATCH!
+	TomÃ¡s TelÃ­s	Tomás Telís
+	C	C
+	Mia, RANK 1457
+
+NO MATCH for DÃ³novan Solano (2B)
+	DEACTIVATE
+MATCH!
+	David Holmberg	David Holmberg
+	SP	SP
+	Atl, RANK 1011
+
+MATCH!
+	Lonnie Chisenhall	Lonnie Chisenhall
+	1B/3B	3B,OF
+	Cle, RANK 823
+
+NO MATCH for A.J. Griffin (SP)
+	DEACTIVATE
+MATCH!
+	Wade Davis	Wade Davis
+	RP	RP
+	KC, RANK 74
+
+MATCH!
+	Chad Qualls	Chad Qualls
+	RP	RP
+	Col, RANK 396
+
+MATCH!
+	Bruce Rondon	Bruce Rondon
+	RP	RP
+	Det, RANK 856
+
+NO MATCH for Nyjer Morgan (OF)
+	DEACTIVATE
+MATCH!
+	Eric Fornataro	Eric Fornataro
+	RP	RP
+	Was, RANK 749
+
+MATCH!
+	Tom Koehler	Tom Koehler
+	SP	SP
+	Mia, RANK 506
+
+MATCH!
+	Logan Forsythe	Logan Forsythe
+	2B	1B,2B
+	TB, RANK 245
+
+MATCH!
+	Kevin Chapman	Kevin Chapman
+	RP	RP
+	Hou, RANK 599
+
+MATCH!
+	AndrÃ©s Blanco	Andrés Blanco
+	3B/MI	2B,3B,SS
+	Phi, RANK 1040
+
+MATCH!
+	Josh Reddick	Josh Reddick
+	OF	OF
+	Oak, RANK 144
+
+NO MATCH for Adam Rosales (1B/2B/3B)
+	DEACTIVATE
+NO MATCH for Adam Dunn (1B/OF)
+	DEACTIVATE
+MATCH!
+	Mark Canha	Mark Canha
+	1B,OF	1B,OF
+	Oak, RANK 417
+
+MATCH!
+	Welington Castillo	Welington Castillo
+	C	C
+	Ari, RANK 236
+
+MATCH!
+	Edinson VÃ³lquez	Edinson Vólquez
+	SP	SP
+	KC, RANK 234
+
+MATCH!
+	Joe Beimel	Joe Beimel
+	RP	RP
+	Sea, RANK 563
+
+NO MATCH for Jaff Decker (OF)
+	DEACTIVATE
+NO MATCH for Tom Gorzelanny (RP)
+	DEACTIVATE
+MATCH!
+	Nick Gordon	Nick Gordon
+	SS	SS
+	Min, RANK 1400
+
+MATCH!
+	Taylor Jordan	Taylor Jordan
+	SP	P
+	Was, RANK 908
+
+MATCH!
+	Manny BaÃ±uelos	Manny Bañuelos
+	RP	SP
+	Atl, RANK 875
+
+NO MATCH for Scott Sizemore (CI)
+	DEACTIVATE
+NO MATCH for Chad Tracy (1B/3B)
+	DEACTIVATE
+MATCH!
+	Michael Brantley	Michael Brantley
+	OF	OF
+	Cle, RANK 79
+
+MATCH!
+	Joey Gallo	Joey Gallo
+	3B	3B,OF
+	Tex, RANK 253
+
+NO MATCH for Steve Tolleson (2B/3B)
+	DEACTIVATE
+MATCH!
+	Mikie Mahtook	Mikie Mahtook
+	OF	OF
+	TB, RANK 1076
+
+MATCH!
+	FÃ©lix HernÃ¡ndez	Félix Hernández
+	SP	SP
+	Sea, RANK 41
+
+MATCH!
+	Mike Dunn	Mike Dunn
+	RP	RP
+	Mia, RANK 481
+
+MATCH!
+	Chris Capuano	Chris Capuano
+	SP/RP	SP,RP
+	Mil, RANK 1081
+
+MATCH!
+	Carlos FrÃ­as	Carlos Frías
+	RP	SP
+	LAD, RANK 868
+
+NO MATCH for Ronald Belisario (RP)
+	DEACTIVATE
+MATCH!
+	Joey Butler	Joey Butler
+	OF	OF
+	Cle, RANK 1032
+
+MATCH!
+	Wil Myers	Wil Myers
+	OF	1B,OF
+	SD, RANK 232
+
+MATCH!
+	Denard Span	Denard Span
+	OF	OF
+	SF, RANK 237
+
+NO MATCH for Curtis Partch (RP)
+	DEACTIVATE
+NO MATCH for Josh Vitters (3B)
+	DEACTIVATE
+MATCH!
+	Michael Saunders	Michael Saunders
+	OF	OF
+	Tor, RANK 1184
+
+NO MATCH for Allen Webster (SP)
+	DEACTIVATE
+MATCH!
+	Zach Britton	Zach Britton
+	RP	RP
+	Bal, RANK 116
+
+MATCH!
+	Zack Greinke	Zack Greinke
+	SP	SP
+	Ari, RANK 35
+
+MATCH!
+	Scott Feldman	Scott Feldman
+	SP	SP
+	Hou, RANK 568
+
+NO MATCH for Brandon Hicks (2B)
+	DEACTIVATE
+MATCH!
+	Alexi Amarista	Alexi Amarista
+	2B/3B/SS/OF	2B,SS,OF
+	SD, RANK 1106
+
+MATCH!
+	Christian Bergman	Christian Bergman
+	SP	SP,RP
+	Col, RANK 973
+
+MATCH!
+	Matt Reynolds	Matt Reynolds
+	RP	RP
+	Ari, RANK 790
+
+MATCH!
+	Seth Smith	Seth Smith
+	OF	OF
+	Sea, RANK 578
+
+MATCH!
+	Taylor Hill	Taylor Hill
+	P	RP
+	Was, RANK 839
+
+MATCH!
+	SeÃ¡n RodrÃ­guez	Seán Rodríguez
+	1B/2B/3B/OF	1B,MI,OF
+	Pit, RANK 1097
+
+NO MATCH for Anthony Varvaro (RP)
+	DEACTIVATE
+MATCH!
+	Yu Darvish	Yu Darvish
+	SP	SP
+	Tex, RANK 127
+
+MATCH!
+	Chad Jenkins	Chad Jenkins
+	RP	RP
+	Tor, RANK 744
+
+NO MATCH for A.J. Burnett (SP)
+	DEACTIVATE
+MATCH!
+	Nick Kingham	Nick Kingham
+	SP	SP
+	Pit, RANK 690
+
+NO MATCH for Jeremy Horst (RP)
+	DEACTIVATE
+NO MATCH for Scott Downs (RP)
+	DEACTIVATE
+MATCH!
+	Carlos Rodon	Carlos Rodon
+	RP	SP
+	CWS, RANK 140
+
+NO MATCH for Lucas Harrell (SP)
+	DEACTIVATE
+MATCH!
+	Jonathan Broxton	Jonathan Broxton
+	RP	RP
+	StL, RANK 457
+
+MATCH!
+	Jonathan Villar	Jonathan Villar
+	SS	3B,SS
+	Mil, RANK 1085
+
+MATCH!
+	Kyle Gibson	Kyle Gibson
+	SP	SP
+	Min, RANK 250
+
+MATCH!
+	Stephen Strasburg	Stephen Strasburg
+	SP	SP
+	Was, RANK 49
+
+MATCH!
+	Adam Jones	Adam Jones
+	OF	OF
+	Bal, RANK 42
+
+MATCH!
+	Derek Holland	Derek Holland
+	SP	SP
+	Tex, RANK 534
+
+NO MATCH for Pedro Villarreal (RP)
+	DEACTIVATE
+NO MATCH for LaTroy Hawkins (RP)
+	DEACTIVATE
+NO MATCH for Anthony Swarzak (SP/RP)
+	DEACTIVATE
+MATCH!
+	Phillip Ervin	Phillip Ervin
+	OF	OF
+	Cin, RANK 1407
+
+MATCH!
+	Carlos MartÃ­nez	Carlos Martínez
+	SP/RP	SP
+	StL, RANK 129
+
+NO MATCH for David Adams (2B/3B)
+	DEACTIVATE
+MATCH!
+	Zach McAllister	Zach McAllister
+	SP/RP	RP
+	Cle, RANK 432
+
+NO MATCH for Mike Baxter (OF)
+	DEACTIVATE
+MATCH!
+	Jean Segura	Jean Segura
+	SS	SS
+	Ari, RANK 217
+
+MATCH!
+	Jake Arrieta	Jake Arrieta
+	SP	SP
+	ChC, RANK 26
+
+MATCH!
+	Corey Hart	Corey Hart
+	OF	1B
+	Pit, RANK 1210
+
+MATCH!
+	Todd Frazier	Todd Frazier
+	1B/3B	3B
+	CWS, RANK 55
+
+MATCH!
+	Brett Wallace	Brett Wallace
+	1B/3B	1B
+	SD, RANK 1139
+
+NO MATCH for Joseph Ortiz (RP)
+	DEACTIVATE
+MATCH!
+	Tyler Moore	Tyler Moore
+	1B	1B,OF
+	Was, RANK 1158
+
+MATCH!
+	Josh Edgin	Josh Edgin
+	RP	RP
+	NYM, RANK 525
+
+NO MATCH for Caleb Thielbar (RP)
+	DEACTIVATE
+MATCH!
+	Melvin Mercedes	Melvin Mercedes
+	RP	RP
+	Det, RANK 580
+
+NO MATCH for Steve Lombardozzi (2B)
+	DEACTIVATE
+MATCH!
+	Liam Hendriks	Liam Hendriks
+	SP	RP
+	Oak, RANK 345
+
+NO MATCH for Wilmer Font (RP)
+	DEACTIVATE
+MATCH!
+	Raimel Tapia	Raimel Tapia
+	OF	OF
+	Col, RANK 1411
+
+MATCH!
+	Mike Morin	Mike Morin
+	RP	RP
+	LAA, RANK 512
+
+MATCH!
+	Tyler Matzek	Tyler Matzek
+	SP	SP
+	Col, RANK 865
+
+MATCH!
+	J.P. Crawford	J.P. Crawford
+	SS	SS
+	Phi, RANK 1413
+
+NO MATCH for Darin Downs (RP)
+	DEACTIVATE
+MATCH!
+	Seth Rosin	Seth Rosin
+	RP	RP
+	SD, RANK 889
+
+MATCH!
+	Ubaldo JimÃ©nez	Ubaldo Jiménez
+	SP	SP
+	Bal, RANK 494
+
+NO MATCH for Steve Johnson (SP)
+	DEACTIVATE
+MATCH!
+	Brandon Belt	Brandon Belt
+	1B	1B,OF
+	SF, RANK 117
+
+MATCH!
+	Tuffy Gosewisch	Tuffy Gosewisch
+	C	C
+	Ari, RANK 1219
+
+MATCH!
+	Oswaldo Arcia	Oswaldo Arcia
+	OF	OF
+	Min, RANK 1131
+
+NO MATCH for Preston Claiborne (RP)
+	DEACTIVATE
+MATCH!
+	Manny Machado	Manny Machado
+	3B	3B,SS
+	Bal, RANK 9
+
+MATCH!
+	Arodys VizcaÃ­no	Arodys Vizcaíno
+	RP	RP
+	Atl, RANK 220
+
+MATCH!
+	James Shields	James Shields
+	SP	SP
+	SD, RANK 137
+
+MATCH!
+	Nathan Karns	Nathan Karns
+	SP	SP
+	Sea, RANK 362
+
+MATCH!
+	Matt Belisle	Matt Belisle
+	RP	RP
+	Was, RANK 759
+
+NO MATCH for Chris Leroux (RP)
+	DEACTIVATE
+NO MATCH for Blake Beavan (SP)
+	DEACTIVATE
+MATCH!
+	Dalton Pompey	Dalton Pompey
+	OF	OF
+	Tor, RANK 1167
+
+NO MATCH for Caleb Gindl (OF)
+	DEACTIVATE
+NO MATCH for Josh Lindblom (SP)
+	DEACTIVATE
+NO MATCH for Luis Cruz (3B/SS)
+	DEACTIVATE
+MATCH!
+	Brian McCann	Brian McCann
+	C/1B	C,1B
+	NYY, RANK 157
+
+MATCH!
+	Don Kelly	Don Kelly
+	1B/3B/OF	CI
+	Mia, RANK 1253
+
+MATCH!
+	Bryce Brentz	Bryce Brentz
+	OF	OF
+	Bos, RANK 1294
+
+MATCH!
+	Yan Gomes	Yan Gomes
+	C	C
+	Cle, RANK 229
+
+MATCH!
+	Freddy Galvis	Freddy Galvis
+	3B/SS	SS
+	Phi, RANK 526
+
+MATCH!
+	Donn Roach	Donn Roach
+	RP	SP
+	Sea, RANK 899
+
+NO MATCH for Carlos MÃ¡rmol (RP)
+	DEACTIVATE
+MATCH!
+	Marcell Ozuna	Marcell Ozuna
+	OF	OF
+	Mia, RANK 294
+
+NO MATCH for HÃ©ctor SÃ¡nchez (C)
+	DEACTIVATE
+MATCH!
+	Joe Kelly	Joe Kelly
+	SP	SP
+	Bos, RANK 275
+
+MATCH!
+	Scott Van Slyke	Scott Van Slyke
+	1B/OF	1B,OF
+	LAD, RANK 1062
+
+MATCH!
+	JosÃ© Abreu	José Abreu
+	1B	1B
+	CWS, RANK 19
+
+MATCH!
+	Kyle Crockett	Kyle Crockett
+	RP	RP
+	Cle, RANK 538
+
+MATCH!
+	HÃ©ctor NoesÃ­	Héctor Noesí
+	SP/RP	SP,RP
+	CWS, RANK 1054
+
+MATCH!
+	David DeJesÃºs	David DeJesús
+	OF	OF
+	LAA, RANK 1095
+
+MATCH!
+	David Robertson	David Robertson
+	RP	RP
+	CWS, RANK 94
+
+MATCH!
+	MartÃ­n Maldonado	Martín Maldonado
+	C	C
+	Mil, RANK 1169
+
+MATCH!
+	Rio Ruiz	Rio Ruiz
+	3B	3B
+	Atl, RANK 1417
+
+MATCH!
+	Billy Burns	Billy Burns
+	Util	OF
+	Oak, RANK 156
+
+NO MATCH for Jason Bartlett (OF)
+	DEACTIVATE
+MATCH!
+	Evan Gattis	Evan Gattis
+	C	OF
+	Hou, RANK 160
+
+NO MATCH for Ryan Sweeney (OF)
+	DEACTIVATE
+MATCH!
+	Matt Moore	Matt Moore
+	SP	SP
+	TB, RANK 289
+
+MATCH!
+	Max Fried	Max Fried
+	SP	SP
+	Atl, RANK 700
+
+MATCH!
+	Chris Dwyer	Chris Dwyer
+	RP	RP
+	Bal, RANK 701
+
+MATCH!
+	Rougned Odor	Rougned Odor
+	2B	2B
+	Tex, RANK 98
+
+NO MATCH for Darin Mastroianni (OF)
+	DEACTIVATE
+MATCH!
+	Yohan Flande	Yohan Flande
+	SP/RP	SP,RP
+	Col, RANK 947
+
+MATCH!
+	Rosell Herrera	Rosell Herrera
+	SS	SS
+	Col, RANK 1418
+
+NO MATCH for Kevin Whelan (RP)
+	DEACTIVATE
+MATCH!
+	Brandon Beachy	Brandon Beachy
+	SP	SP
+	LAD, RANK 880
+
+MATCH!
+	Chris Heisey	Chris Heisey
+	OF	OF
+	Was, RANK 1176
+
+MATCH!
+	Ji-Man Choi	Ji-Man Choi
+	1B	1B
+	LAA, RANK 1420
+
+MATCH!
+	Anthony Gose	Anthony Gose
+	OF	OF
+	Det, RANK 435
+
+MATCH!
+	Zach Lee	Zach Lee
+	SP	SP
+	LAD, RANK 898
+
+MATCH!
+	Caleb Joseph	Caleb Joseph
+	C	C
+	Bal, RANK 998
+
+NO MATCH for Jim Miller (RP)
+	DEACTIVATE
+MATCH!
+	Alex Wood	Alex Wood
+	SP/RP	SP
+	LAD, RANK 214
+
+NO MATCH for Alfredo Aceves (RP)
+	DEACTIVATE
+MATCH!
+	Daniel Descalso	Daniel Descalso
+	2B/3B/SS	2B,SS,CI
+	Col, RANK 1145
+
+MATCH!
+	CÃ©sar Puello	César Puello
+	OF	OF
+	NYY, RANK 1423
+
+MATCH!
+	Daniel Murphy	Daniel Murphy
+	2B/3B	1B,2B,3B
+	Was, RANK 154
+
+NO MATCH for Brandon GÃ³mes (RP)
+	DEACTIVATE
+MATCH!
+	Steve Pearce	Steve Pearce
+	1B/OF	1B,2B,OF
+	TB, RANK 819
+
+MATCH!
+	Matt Garza	Matt Garza
+	SP	SP
+	Mil, RANK 1115
+
+MATCH!
+	Frank GarcÃ©s	Frank Garcés
+	RP	RP
+	SD, RANK 959
+
+MATCH!
+	Chris Sale	Chris Sale
+	SP	SP
+	CWS, RANK 25
+
+MATCH!
+	Jacob deGrom	Jacob deGrom
+	SP	SP
+	NYM, RANK 34
+
+MATCH!
+	Addison Russell	Addison Russell
+	SS	2B,SS
+	ChC, RANK 211
+
+MATCH!
+	Carl Crawford	Carl Crawford
+	OF	OF
+	LAD, RANK 976
+
+MATCH!
+	Clayton Kershaw	Clayton Kershaw
+	SP	SP
+	LAD, RANK 4
+
+MATCH!
+	Steven MoyÃ 	Steven Moyà
+	OF	OF
+	Det, RANK 1466
+
+NO MATCH for Nick Christiani (RP)
+	DEACTIVATE
+MATCH!
+	Mike Bolsinger	Mike Bolsinger
+	SP	SP
+	LAD, RANK 498
+
+MATCH!
+	Jared Hughes	Jared Hughes
+	RP	RP
+	Pit, RANK 377
+
+MATCH!
+	Kirby Yates	Kirby Yates
+	RP	RP
+	NYY, RANK 906
+
+MATCH!
+	Brandon Finnegan	Brandon Finnegan
+	RP	SP,RP
+	Cin, RANK 288
+
+MATCH!
+	Carter Capps	Carter Capps
+	RP	RP
+	Mia, RANK 293
+
+MATCH!
+	Adam Warren	Adam Warren
+	RP	SP,RP
+	ChC, RANK 308
+
+MATCH!
+	Bryce Harper	Bryce Harper
+	OF	OF
+	Was, RANK 3
+
+MATCH!
+	Jeremy Jeffress	Jeremy Jeffress
+	RP	RP
+	Mil, RANK 360
+
+MATCH!
+	AdriÃ¡n BÃ©ltre	Adrián Béltre
+	3B	3B
+	Tex, RANK 84
+
+NO MATCH for HÃ©ctor AmbrÃ­z (RP)
+	DEACTIVATE
+MATCH!
+	Gavin Floyd	Gavin Floyd
+	SP	RP
+	Tor, RANK 516
+
+NO MATCH for Yoslan Herrera (RP)
+	DEACTIVATE
+MATCH!
+	Julio TeherÃ¡n	Julio Teherán
+	SP	SP
+	Atl, RANK 168
+
+MATCH!
+	Mike AvilÃ©s	Mike Avilés
+	2B/3B/SS/OF	2B,3B,SS,OF
+	Det, RANK 1067
+
+NO MATCH for Roger Kieschnick (OF)
+	DEACTIVATE
+NO MATCH for JosÃ© Veras (RP)
+	DEACTIVATE
+MATCH!
+	Bryan Morris	Bryan Morris
+	RP	RP
+	Mia, RANK 419
+
+MATCH!
+	Justin Smoak	Justin Smoak
+	1B	1B
+	Tor, RANK 852
+
+NO MATCH for Aaron Poreda (RP)
+	DEACTIVATE
+MATCH!
+	Vance Worley	Vance Worley
+	SP	SP,RP
+	Bal, RANK 508
+
+MATCH!
+	Jonathan Herrera	Jonathan Herrera
+	3B/SS	2B,3B
+	ChC, RANK 1168
+
+MATCH!
+	Ricky Nolasco	Ricky Nolasco
+	SP	SP
+	Min, RANK 1026
+
+MATCH!
+	Radhames Liz	Radhames Liz
+	RP	RP
+	Pit, RANK 798
+
+MATCH!
+	Roenis ElÃ­as	Roenis Elías
+	SP	SP
+	Bos, RANK 484
+
+NO MATCH for Wade LeBlanc (SP/RP)
+	DEACTIVATE
+NO MATCH for Ryan Lavarnway (1B)
+	DEACTIVATE
+MATCH!
+	Josmil Pinto	Josmil Pinto
+	C	C
+	Mil, RANK 1239
+
+MATCH!
+	Nick Swisher	Nick Swisher
+	1B/OF	1B,OF
+	Atl, RANK 1164
+
+NO MATCH for Jayson Nix (2B/3B)
+	DEACTIVATE
+NO MATCH for Josh Wilson (2B)
+	DEACTIVATE
+MATCH!
+	JesÃºs Montero	Jesús Montero
+	Util	1B
+	Sea, RANK 1174
+
+MATCH!
+	HÃ©ctor RondÃ³n	Héctor Rondón
+	RP	RP
+	ChC, RANK 146
+
+MATCH!
+	Marwin GonzÃ¡lez	Marwin González
+	2B/3B/SS	1B,2B,3B,SS,OF
+	Hou, RANK 765
+
+MATCH!
+	Kevin Siegrist	Kevin Siegrist
+	RP	RP
+	StL, RANK 306
+
+MATCH!
+	Dean Anna	Dean Anna
+	SS	2B,SS
+	StL, RANK 1309
+
+NO MATCH for Frank Herrmann (RP)
+	DEACTIVATE
+MATCH!
+	Erasmo RamÃ­rez	Erasmo Ramírez
+	SP	SP,RP
+	TB, RANK 325
+
+NO MATCH for Daniel McCutchen (RP)
+	DEACTIVATE
+MATCH!
+	Michael Choice	Michael Choice
+	OF	OF
+	Cle, RANK 1247
+
+MATCH!
+	Dan Uggla	Dan Uggla
+	2B	2B
+	Was, RANK 1228
+
+MATCH!
+	David Peralta	David Peralta
+	OF	OF
+	Ari, RANK 151
+
+MATCH!
+	Jonathan Schoop	Jonathan Schoop
+	2B/3B	2B
+	Bal, RANK 267
+
+MATCH!
+	Matt Duffy	Matt Duffy
+	2B,SS	2B,3B
+	SF, RANK 191
+
+MATCH!
+	Blake Swihart	Blake Swihart
+	C	C
+	Bos, RANK 994
+
+MATCH!
+	Chris GimÃ©nez	Chris Giménez
+	C/1B	C
+	Tex, RANK 1129
+
+MATCH!
+	Alex Cobb	Alex Cobb
+	SP	SP
+	TB, RANK 287
+
+MATCH!
+	Audry PÃ©rez	Audry Pérez
+	C	C
+	Bal, RANK 1432
+
+MATCH!
+	Eduardo RodrÃ­guez	Eduardo Rodríguez
+	SP	SP
+	Bos, RANK 258
+
+MATCH!
+	Shane Peterson	Shane Peterson
+	1B	OF
+	Mil, RANK 1151
+
+MATCH!
+	Xander Bogaerts	Xander Bogaerts
+	3B/SS	SS
+	Bos, RANK 77
+
+NO MATCH for Quintin Berry (OF)
+	DEACTIVATE
+NO MATCH for Brooks Raley (RP)
+	DEACTIVATE
+NO MATCH for Pedro Feliciano (RP)
+	DEACTIVATE
+MATCH!
+	Kris Medlen	Kris Medlen
+	SP	SP,RP
+	KC, RANK 447
+
+NO MATCH for Jason Bourgeois (OF)
+	DEACTIVATE
+MATCH!
+	Brian Dozier	Brian Dozier
+	2B	2B
+	Min, RANK 75
+
+MATCH!
+	Rich Hill	Rich Hill
+	RP	SP
+	Oak, RANK 354
+
+MATCH!
+	Daniel Robertson	Daniel Robertson
+	SS	SS
+	TB, RANK 1435
+
+MATCH!
+	Jace Peterson	Jace Peterson
+	2B/3B	2B
+	Atl, RANK 950
+
+NO MATCH for Ethan Martin (RP)
+	DEACTIVATE
+NO MATCH for Brett Marshall (RP)
+	DEACTIVATE
+MATCH!
+	Phil Klein	Phil Klein
+	RP	RP
+	Tex, RANK 897
+
+MATCH!
+	Javier LÃ³pez	Javier López
+	RP	RP
+	SF, RANK 379
+
+MATCH!
+	Chase Utley	Chase Utley
+	2B	2B,CI
+	LAD, RANK 961
+
+MATCH!
+	Adeiny Hechavarria	Adeiny Hechavarria
+	SS	SS
+	Mia, RANK 428
+
+MATCH!
+	Tyler Holt	Tyler Holt
+	OF	OF
+	Cin, RANK 1461
+
+MATCH!
+	Jacob Lindgren	Jacob Lindgren
+	RP	RP
+	NYY, RANK 755
+
+MATCH!
+	Nick Tropeano	Nick Tropeano
+	SP	SP
+	LAA, RANK 499
+
+MATCH!
+	Steven Matz	Steven Matz
+	SP	SP
+	NYM, RANK 186
+
+NO MATCH for Josh Lueke (RP)
+	DEACTIVATE
+MATCH!
+	Yohan Pino	Yohan Pino
+	SP	RP
+	KC, RANK 807
+
+MATCH!
+	Red Patterson	Red Patterson
+	SP	SP
+	LAD, RANK 593
+
+NO MATCH for Eric Surkamp (RP)
+	DEACTIVATE
+NO MATCH for Elliot Johnson (OF)
+	DEACTIVATE
+NO MATCH for Brian Wilson (RP)
+	DEACTIVATE
+NO MATCH for Aramis RamÃ­rez (3B)
+	DEACTIVATE
+MATCH!
+	JosÃ© Bautista	José Bautista
+	1B/OF	OF
+	Tor, RANK 15
+
+MATCH!
+	Jeff Francoeur	Jeff Francoeur
+	OF	OF
+	Atl, RANK 1004
+
+MATCH!
+	MartÃ­n Prado	Martín Prado
+	2B/3B/OF	2B,3B
+	Mia, RANK 337
+
+MATCH!
+	Austin Jackson	Austin Jackson
+	OF	OF
+	ChC, RANK 334
+
+MATCH!
+	Eugenio SuÃ¡rez	Eugenio Suárez
+	SS	SS
+	Cin, RANK 244
+
+MATCH!
+	Cameron Maybin	Cameron Maybin
+	OF	OF
+	Det, RANK 323
+
+MATCH!
+	Masahiro Tanaka	Masahiro Tanaka
+	SP	SP
+	NYY, RANK 107
+
+MATCH!
+	Will Smith	Will Smith
+	RP	RP
+	Mil, RANK 260
+
+MATCH!
+	Chris Rusin	Chris Rusin
+	RP	SP
+	Col, RANK 1107
+
+MATCH!
+	Mike Pelfrey	Mike Pelfrey
+	SP	SP
+	Det, RANK 1063
+
+MATCH!
+	Matt Szczur	Matt Szczur
+	OF	OF
+	ChC, RANK 1220
+
+MATCH!
+	Jonathan LuCroy	Jonathan Lucroy
+	C/1B	C,1B
+	Mil, RANK 95
+
+NO MATCH for Bobby Korecky (RP)
+	DEACTIVATE
+NO MATCH for Matt Pagnozzi (C)
+	DEACTIVATE
+NO MATCH for Colt Hynes (RP)
+	DEACTIVATE
+MATCH!
+	Mike Leake	Mike Leake
+	SP	SP
+	StL, RANK 221
+
+MATCH!
+	Wilson Ramos	Wilson Ramos
+	C	C
+	Was, RANK 286
+
+MATCH!
+	Daniel Robertson	Daniel Robertson
+	OF	OF
+	Sea, RANK 1170
+
+MATCH!
+	Addison Reed	Addison Reed
+	RP	RP
+	NYM, RANK 401
+
+NO MATCH for Andy Marte (3B)
+	DEACTIVATE
+MATCH!
+	Josh Tomlin	Josh Tomlin
+	SP/RP	SP
+	Cle, RANK 309
+
+MATCH!
+	Tommy Milone	Tommy Milone
+	SP	SP
+	Min, RANK 429
+
+MATCH!
+	Jon Gray	Jon Gray
+	SP	SP
+	Col, RANK 967
+
+MATCH!
+	Christian Bethancourt	Christian Bethancourt
+	C	C
+	SD, RANK 1203
+
+NO MATCH for Scott Diamond (SP)
+	DEACTIVATE
+NO MATCH for John Hester (C)
+	DEACTIVATE
+NO MATCH for Stephen Pryor (RP)
+	DEACTIVATE
+MATCH!
+	George Kontos	George Kontos
+	RP	RP
+	SF, RANK 310
+
+NO MATCH for Kristopher Negron (2B/3B)
+	DEACTIVATE
+MATCH!
+	David Freese	David Freese
+	3B	3B
+	LAA, RANK 434
+
+MATCH!
+	Casey Fien	Casey Fien
+	RP	RP
+	Min, RANK 392
+
+MATCH!
+	Skip Schumaker	Skip Schumaker
+	2B/OF	2B,OF
+	SD, RANK 1133
+
+MATCH!
+	Yoervis Medina	Yoervis Medina
+	RP	RP
+	Phi, RANK 601
+
+MATCH!
+	Derek Dietrich	Derek Dietrich
+	2B	3B,OF
+	Mia, RANK 1025
+
+NO MATCH for Michael Kohn (RP)
+	DEACTIVATE
+MATCH!
+	Wilmer Flores	Wilmer Flores
+	2B/SS	2B,SS
+	NYM, RANK 452
+
+NO MATCH for Bruce Chen (SP/RP)
+	DEACTIVATE
+MATCH!
+	Braxton Davidson	Braxton Davidson
+	OF	OF
+	Atl, RANK 1443
+
+MATCH!
+	Al Alburquerque	Al Alburquerque
+	RP	RP
+	LAA, RANK 559
+
+MATCH!
+	Brian Duensing	Brian Duensing
+	RP	RP
+	KC, RANK 564
+
+MATCH!
+	Robbie Ray	Robbie Ray
+	SP	SP
+	Ari, RANK 488
+
+MATCH!
+	Jeff Mathis	Jeff Mathis
+	C	C
+	Mia, RANK 1249
+
+MATCH!
+	Casey Gillaspie	Casey Gillaspie
+	1B	1B
+	TB, RANK 1444
+
+MATCH!
+	Rob Brantly	Rob Brantly
+	C	C
+	CWS, RANK 1295
+
+NO MATCH for Mike Adams (RP)
+	DEACTIVATE
+MATCH!
+	Dallas Beeler	Dallas Beeler
+	SP	SP
+	ChC, RANK 943
+
+NO MATCH for JosÃ© Constanza (OF)
+	DEACTIVATE
+MATCH!
+	Jon Denney	Jon Denney
+	C	C
+	Bos, RANK 1446
+
+MATCH!
+	Dylan Bundy	Dylan Bundy
+	RP	RP
+	Bal, RANK 727
+
+NO MATCH for Jonny Venters (RP)
+	DEACTIVATE
+MATCH!
+	Brett Oberholtzer	Brett Oberholtzer
+	SP	SP
+	Phi, RANK 940
+
+MATCH!
+	Austin Adams	Austin Adams
+	RP	RP
+	Cle, RANK 770
+
+NO MATCH for Michael Kirkman (RP)
+	DEACTIVATE
+MATCH!
+	RaÃºl MondesÃ­	Raúl Mondesí
+	SS	SS
+	KC, RANK 1447
+
+New player! Duane Underwood (10165)
+New player! Erik González (10122)
+New player! Franklin Barreto (9998)
+New player! Orlando Calixte (9937)
+New player! Akeel Morris (9997)
+New player! Michael Reed (10097)
+New player! Rookie Davis (10204)
+New player! Carson Fulmer (10168)
+New player! Rafael Martín (9932)
+New player! Odubel Herrera (9906)
+New player! Boog Powell (10146)
+New player! Amed Rosario (10233)
+New player! Williams Pérez (9957)
+New player! Rocky Gale (10081)
+New player! Avery Romero (10129)
+New player! Antonio Senzatela (10176)
+New player! Kendry Flores (9968)
+New player! Alex Bregman (10183)
+New player! Travis Shaw (9961)
+New player! Jon Moscot (9985)
+New player! Matt Boyd (10011)
+New player! Kevin Ziomek (10181)
+New player! Édgar Ibarra (9982)
+New player! Greg Mahle (10127)
+New player! David Rollins (9908)
+New player! Andrew Velazquez (10220)
+New player! Dariel Álvarez (10058)
+New player! Socrates Brito (10086)
+New player! Lewis Brinson (10222)
+New player! Paulo Orlando (9918)
+New player! Conner Greene (10225)
+New player! Samuel Coonrod (10213)
+New player! Andrew McKirahan (9911)
+New player! Toru Murata (10014)
+New player! Guido Knudson (10052)
+New player! Diego Moreno (10008)
+New player! Javier Guerra (10238)
+New player! Carlos Asuaje (10211)
+New player! Taylor Jungmann (9990)
+New player! Carson Blair (10075)
+New player! Taylor Featherston (9917)
+New player! Brian Morán (9659)
+New player! Rey Navarro (9943)
+New player! Mitch Harris (9939)
+New player! Trevor Williams (10144)
+New player! Chris Beck (9963)
+New player! Michael Feliz (9978)
+New player! Jake Thompson (10139)
+New player! Tyrone Taylor (10195)
+New player! JaCoby Jones (10124)
+New player! Preston Tucker (9958)
+New player! Ariel Peña (10083)
+New player! Miguel Gonzalez (9515)
+New player! Alex Blandino (10174)
+New player! David Goforth (9973)
+New player! Joel De La Cruz (9930)
+New player! Taylor Williams (10198)
+New player! Ryan Brett (9935)
+New player! Frank De Los Santos (9694)
+New player! Brandon Cunniff (9921)
+New player! Rafael Devers (10235)
+New player! Alec Asher (10063)
+New player! Trey Ball (10161)
+New player! Jon Keller (10158)
+New player! Luke Weaver (10217)
+New player! Jake Reed (10134)
+New player! Daniel Castro (10002)
+New player! Sammy Solís (9951)
+New player! Scott McGough (10054)
+New player! Trea Turner (10056)
+New player! Kelby Tomlinson (10043)
+New player! Seung-hwan Oh (10106)
+New player! Kenta Maeda (10105)
+New player! Ken Roberts (9955)
+New player! Sam Moll (10178)
+New player! Miguel Castro (9903)
+New player! Frankie Montás (10027)
+New player! Matt Andriese (9904)
+New player! Ed Easley (9923)
+New player! Austin Barnes (9971)
+New player! Jason Gurka (10061)
+New player! Matt Grace (9941)
+New player! Jason Hursh (10118)
+New player! Marcus Hatley (10016)
+New player! Jimmie Sherfy (10114)
+New player! Deven Marrero (10009)
+New player! Ryan Kelly (10015)
+New player! Pat Venditte (9986)
+New player! Cody Clark (9501)
+New player! Brian Anderson (10193)
+New player! Keury Mella (10172)
+New player! Erick Fedde (10229)
+New player! Tyler Saladino (10026)
+New player! Elvis Araujo (9954)
+New player! Ryan Strausborger (10044)
+New player! Travis Jankowski (10050)
+New player! Raisel Iglesias (9902)
+New player! Chase DeJong (10190)
+New player! Matt Reynolds (9913)
+New player! Tyler Cravy (9980)
+New player! Mac Williamson (10092)
+New player! Stephen Tarpley (10208)
+New player! Júnior Guerra (9989)
+New player! Jeff Ferrell (10018)
+New player! Cory Mazzoni (9946)
+New player! Ryan Weber (10085)
+New player! Scott Oberg (9926)
+New player! Jack Leathersich (9948)
+New player! Chang-Yong Lim (9527)
+New player! Justin OConner (10149)
+New player! Luke Maile (10068)
+New player! Mitch Nay (10226)
+New player! Jett Bandy (10078)
+New player! Hansel Robles (9938)
+New player! Eric Beaulac (9511)
+New player! Danny Muno (9914)
+New player! Cody Anderson (10004)
+New player! Tyler Anderson (10031)
+New player! Slade Heathcott (9828)
+New player! Buddy Baumann (10103)
+New player! Kyle Kubitza (9994)
+New player! Chance Sisco (10155)
+New player! Harold Ramírez (10207)
+New player! Keith Hessler (10046)
+New player! Dansby Swanson (10234)
+New player! Yhónathan Barrios (10099)
+New player! Tyler ONeill (10215)
+New player! Wilfredo Boscán (9965)
+New player! Chris Ellis (10116)
+New player! Chad Pinder (10138)
+New player! Cody Reed (10241)
+New player! Andrew Bellatti (9962)
+New player! Adam Conley (9993)
+New player! Jefry Marte (10023)
+New player! Byung-ho Park (10101)
+New player! James Pazos (10066)
+New player! Chris Rearick (9924)
+New player! Chih-Wei Hu (10219)
+New player! José De León (10188)
+New player! Yoan López (10110)
+New player! Travis Tartamella (10094)
+New player! Tyler Duffey (10039)
+New player! Max Pentecost (10224)
+New player! Oscar Hernandez (9899)
+New player! Tyler Wilson (9967)
+New player! Keyvius Sampson (10033)
+New player! Gavin Cecchini (10135)
+New player! Eric Jagielo (10201)
+New player! Ryan Yarbrough (10147)
+New player! Colin Rea (10048)
+New player! Roman Quinn (10140)
+New player! Trevor Gott (9996)
+New player! Robert Gsellman (10199)
+New player! Josh Smith (9928)
+New player! Roberto Baldoquín (10126)
+New player! Keone Kela (9916)
+New player! Elías Díaz (10076)
+New player! Matt Chapman (10205)
+New player! Gleyber Torres (10236)
+New player! Austin Voth (10153)
+New player! Giovanny Urshela (9991)
+New player! Ramón Cabrera (10071)
+New player! Joe Gatto (10231)
+New player! Mike Yastrzemski (10119)
+New player! Trevor Brown (10091)
+New player! Brian Ellington (10042)
+New player! Kyle Skipworth (9360)
+New player! J.D. Davis (10186)
+New player! Mark Zagunis (10164)
+New player! Anderson Espinoza (10243)
+New player! Yoan Moncada (9900)
+New player! Dwight Smith (10151)
+New player! Tyler Wagner (9977)
+New player! Trey Mancini (10157)
+New player! Silvino Bracho (10064)
+New player! Trayce Thompson (10040)
+New player! Darnell Sweeney (10053)
+New player! Enrique Burgos (9950)
+New player! Dan Winkler (9910)
+New player! Kyle Waldrop (10037)
+New player! Felipe Rivero (9934)
+New player! Dixon Machado (9972)
+New player! Ryan Dull (10074)
+New player! Austin Kubitza (10182)
+New player! Ryan Butler (10210)
+New player! John Hicks (10059)
+New player! Pedro Severino (10077)
+New player! Cody Decker (10089)
+New player! Adam Morgan (10005)
+New player! Ryan Lollis (10019)
+New player! José Valdez (10035)
+New player! Nick Goody (10030)
+New player! Mallex Smith (10117)
+New player! Gabby Guerrero (10112)
+New player! Tyler Wade (10203)
+New player! Patrick Kivlehan (10150)
+New player! Jordan Patterson (10177)
+New player! Darrell Ceciliani (9970)
+New player! Steven Okert (10109)
+New player! Severino Gonzalez (9944)
+New player! Austin Dean (10192)
+New player! Matt Tracy (9925)
+New player! Jorge López (10096)
+New player! Shawn Armstrong (10047)
+New player! Brian Johnson (9999)
+New player! Max Kepler (10095)
+New player! Willson Contreras (10166)
+New player! Rob Kaminsky (10170)
+New player! Tayron Guerrero (10145)
+New player! Adonis Garcia (9966)
+New player! Abel De los Santos (10028)
+New player! Zack Godley (10029)
+New player! J.T. Chargois (10132)
+New player! Sam Travis (10160)
+New player! Dillon Tate (10221)
+New player! Allan Dykstra (9922)
+New player! Hyun-soo Kim (10104)
+New player! Tyler Beede (10212)
+New player! Hanser Alberto (9975)
+New player! Nomar Mazara (10000)
+New player! Chris Anderson (10128)
+New player! Stephen Gonsalves (10197)
+New player! James Ramsey (10107)
+New player! Josh Ravin (9984)
+New player! Nick Rumbelow (10007)
+New player! Tony Barnette (10102)
+New player! Ryan LaMarre (10055)
+New player! Jake Brigham (10013)
+New player! Jason García (9919)
+New player! Dalier Hinojosa (9952)
+New player! Raudel Lazo (10080)
+New player! Carlos Pérez (9956)
+New player! Steven Baron (10087)
+New player! A.J. Reed (10184)
+New player! Wilmer Difo (9969)
+New player! Taylor Rogers (10133)
+New player! Tyler Ladendorf (9905)
+New player! Caleb Cotham (10032)
+New player! John Cornely (9942)
+New player! Andrew Faulkner (10062)
+New player! Drew Ward (10228)
+New player! Nefi Ogando (10060)
+New player! Jake Barrett (10113)
+New player! Scott Alexánder (10072)
+New player! Jen-Ho Tseng (10167)
+New player! Willy García (10142)
+New player! Rob Refsnyder (9851)
+New player! Adam Liberatore (9936)
+New player! Wendell Rijo (10162)
+New player! Josh Osich (10021)
+New player! Tyler Naquin (10121)
+New player! Cody Martin (9920)
+New player! Anthony Alford (10240)
+New player! Matt Purke (9772)
+New player! Jerad Eickhoff (10049)
+New player! Ryan Tepera (9959)
+New player! Chad Kuhl (10143)
+New player! Clint Coulter (10196)
+New player! Branden Pinder (9933)
+New player! Dusty Coleman (10020)
+New player! Tyler Jay (10232)
+New player! Ryan McMahon (10175)
+New player! Daniel Fields (9983)
+New player! Tyler Olson (9912)
+New player! Ángel Castro (9960)
+New player! José Rondón (10209)
+New player! Ryan Cordell (10223)
+New player! Zach Eflin (10141)
+New player! David Hess (10156)
+New player! José De Paula (10001)
+New player! Tony Zych (10073)
+New player! Matt Marksberry (10034)
+New player! Noé Ramírez (10022)
+New player! Danny Dorn (9940)
+New player! Giovanni Soto (10082)
+New player! Mike Wright (9964)
+New player! Tyrell Jenkins (10115)
+New player! Ozhaino Albies (10237)
+New player! Yadiel Rivera (10100)
+New player! Renato Núñez (10137)
+New player! Brent Honeywell (10218)
+New player! Charlie Tilson (10216)
+New player! Trey Michalczewski (10169)
+New player! Ramón Flores (9979)
+New player! Chi Chi González (9976)
+New player! Joe Musgrove (10185)
+New player! Richie Shaffer (10041)
+New player! Ryan ORourke (10025)
+New player! Victor Alcántara (10187)
+New player! Sean Gilmartin (9909)
+New player! Tim Cooney (9947)
+New player! Scott Copeland (9953)
+New player! Gabriel Ynoa (10136)
+New player! Colton Murray (10067)
+New player! Cody Hall (10079)
+New player! Adam Plutko (10123)
+New player! Mayckol Guaipe (9981)
+New player! James Kaprielian (10200)
+New player! Dustin Garneau (10051)
+New player! Brett Phillips (10194)
+New player! Miguel Socolovich (9238)
+New player! Peter OBrien (9901)
+New player! José Urena (9931)
+New player! Michael Lorenzen (9949)
+New player! Johan Camargo (10154)
+New player! Jorge Mateo (10239)
+New player! Spencer Turnbull (10180)
+New player! Sugar Ray Marimón (9929)
+New player! Logan Verrett (9915)
+New player! Michael Broadway (9995)
+New player! Zach Davies (10070)
+New player! Tony Kemp (10125)
+New player! Andrew Benintendi (10159)
+New player! Dillon Overton (10206)
+New player! Ketel Marte (10036)
+New player! Nevin Ashley (10084)
+New player! Taylor Dugas (10017)
+New player! Scott Schebler (9988)
+New player! Matt Duffy (10090)
+New player! Tyler Danish (10120)
+New player! Taylor Sparks (10173)
+New player! Reynaldo López (10152)
+New player! Vince Velásquez (9992)
+New player! Cheslor Cuthbert (10024)
+New player! Francis Martes (10242)
+New player! Edwin Díaz (10214)
+New player! Joe Ross (9987)
+New player! Ty Buttrey (10163)
+New player! Cody Stanley (9945)
+New player! Rico Noel (10065)
+New player! Héctor Olivera (9974)
+New player! Blake Snell (10148)
+New player! Ronald Torreyes (10088)
+New player! Nick Wittgren (10130)
+New player! Danny Burawa (10006)
+New player! Chris Reed (10038)
+New player! Michael Fulmer (10179)
+New player! Roberto Osuna (9907)
+New player! Amir Garrett (10171)
+New player! Adrian Houser (10098)
+New player! Brendan Rodgers (10230)
+New player! Kyle Barraclough (10045)
+New player! Keon Broxton (10093)
+New player! Víctor Robles (10227)
+New player! Jharel Cotton (10189)
+New player! Jonathan Aro (10010)
+New player! Deolis Guerra (10012)
+New player! Jarlin Garc�a (10191)
+New player! A.J. Schugel (9927)
+New player! Mychal Givens (10003)
+New player! Ian Clarkin (10202)
+Inserted 351 new players

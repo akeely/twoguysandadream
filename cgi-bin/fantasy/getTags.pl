@@ -592,7 +592,7 @@ print <<FOOTER1;
 <br>
     <input type=hidden name="TEAMS" value="$user">
     <input type=checkbox name='LOCK_ME' value='true'>$tag_text<br>
-    <input type=submit name="submit_tag" value="Assign Tag" style="margin-left: auto; margin-right: auto; text-align: center;">
+    <input type=submit name="submit_tag" id="submit1" value="Assign Tag" style="margin-left: auto; margin-right: auto; text-align: center;">
     <input type="reset" value="Clear The Form" id=reset1 name=reset1> 
 <br>
     <input type="hidden" id=league name="league" value="$league_t">

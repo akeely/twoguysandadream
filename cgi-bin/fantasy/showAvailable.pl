@@ -25,7 +25,7 @@ $sth->finish();
 my @positions;
 if($sport eq 'baseball')
 { 
-    @positions = qw(C 1B 2B SS 3B OF SP RP DH);
+    @positions = qw(C 1B 2B SS 3B OF SP RP Util);
 }
 else
 {

@@ -23,8 +23,10 @@ my $dbh = dbConnect();
 ##  2011 nfl auction - 503339
 ##  2012 nfl auction - 540994
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
-my $game_key = 314;
-my $league_id = 548917;
+my $game_key = 346;
+my $league_id = 39209;
+##my $game_key = 314;
+##my $league_id = 548917;
 my $team_id = 2; 
 my $league_key = "${game_key}.l.${league_id}";
 my $team_key = "${game_key}.l.${league_id}.t.${team_id}";
@@ -48,7 +50,7 @@ my $trade_end_epoch = timelocal(0,0,0,$day,$month,$year);
 print LOG "Epoch: $trade_end_epoch\n";
 print "Epoch: $trade_end_epoch\n";
 
-open(ROSTER,">./roster_check.log");
+open(ROSTER,">./roster_check_$league_id.log");
 
 ## Fetch transaction data
 $data = $oauth->view_restricted_resource("$url/transactions");
