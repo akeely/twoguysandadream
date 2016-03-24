@@ -2,12 +2,12 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="league.findOne"><![CDATA[
-       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
        FROM leagues
        WHERE id = :leagueId
     ]]></entry>
     <entry key="league.findOneByName"><![CDATA[
-       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
        FROM leagues
        WHERE name = :leagueName
     ]]></entry>

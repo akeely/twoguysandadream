@@ -20,6 +20,9 @@ use DBTools;
 ##  2013 mlb = 308
 ##  2013 nfl = 314  **
 ##  2014 mlb = 328  **
+##  2014 nfl = 331
+##  2015 mlb = 346
+##  2015 nfl = 348
 
 ## league_key = {game_key}.l.{league_id}
 ##  2010 nfl auction - league ID 513310
@@ -32,8 +35,8 @@ use DBTools;
 ##  2013 mlb auction - 39507
 ###  2014 nfl auction - 339579
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
-my $game_key = 314;
-my $league_key = 548917;
+my $game_key = 346;
+my $league_key = 39209;
 
 my $sport = '';
 print "Enter the sport [(b)aseball|(f)ootball]: ";

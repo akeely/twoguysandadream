@@ -70,7 +70,7 @@ if ($import_contracts eq 'yes')
     $fa_costs{'3B'} = $cgi->param('3B_price');
     $fa_costs{'SS'} = $cgi->param('SS_price');
     $fa_costs{'OF'} = $cgi->param('OF_price');
-    $fa_costs{'DH'} = $cgi->param('DH_price');
+    $fa_costs{'Util'} = $cgi->param('DH_price');
     $fa_costs{'SP'} = $cgi->param('SP_price');
     $fa_costs{'RP'} = $cgi->param('RP_price');
   }

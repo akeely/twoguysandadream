@@ -61,7 +61,13 @@ public class LeagueDao implements LeagueRepository {
         List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
         List<Team> teams = getTeams(metadata.getId());
         LeagueSettings settings = getSettings(metadata);
-        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams);
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, 
+            isPaused(metadata));
+    }
+
+    private boolean isPaused(LeagueMetadata metadata) {
+
+        return metadata.getDraft_status().equalsIgnoreCase("paused");
     }
 
     private LeagueSettings getSettings(LeagueMetadata metadata) {
@@ -116,6 +122,7 @@ public class LeagueDao implements LeagueRepository {
         private BigDecimal salary_cap;
         private String sport;
         private long auction_length, bid_time_ext, bid_time_buff;
+        private String draft_status;
 
         public long getId() {
             return id;
@@ -147,6 +154,14 @@ public class LeagueDao implements LeagueRepository {
 
         public void setSport(String sport) {
             this.sport = sport;
+        }
+
+        public String getDraft_status() {
+            return draft_status;
+        }
+
+        public void setDraft_status(String draft_status) {
+            this.draft_status = draft_status;
         }
 
         public long getAuction_length() {

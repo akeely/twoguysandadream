@@ -1,6 +1,7 @@
 package com.twoguysandadream.api.legacy;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.twoguysandadream.core.Bid;
 import com.twoguysandadream.core.Position;
 import com.twoguysandadream.core.TeamStatistics;
 
@@ -30,7 +31,7 @@ public class League {
                     Map<String, Object> bid = new HashMap<>();
                     bid.put("RFA_PREV_OWNER", "NA");
                     bid.put("NAME", b.getPlayer().getName());
-                    bid.put("TIME", b.getExpirationTime());
+                    bid.put("TIME", getExpirationTime(b));
                     bid.put("BIDDER", b.getTeam());
                     bid.put("TARGET", 0);
                     bid.put("TEAM", b.getPlayer().getRealTeam());
@@ -38,6 +39,13 @@ public class League {
                     bid.put("POS", getPositionString(b.getPlayer().getPositions()));
                     return bid;
                 }));
+    }
+
+    private Object getExpirationTime(Bid bid) {
+
+        return Optional.<Object>of(bid.getExpirationTime())
+            .filter(b -> !league.isPaused())
+            .orElse("PAUSED");
     }
 
     @JsonProperty("ROSTERS")

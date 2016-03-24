@@ -17,15 +17,17 @@ public class League {
 
     private final List<Bid> auctionBoard;
     private final List<Team> teams;
+    private final boolean isPaused;
 
-    public League(long id, String name, LeagueSettings settings, List<Bid> auctionBoard,
-            List<Team> teams) {
+    public League(long id, String name, int rosterSize, BigDecimal budget, List<Bid> auctionBoard,
+            List<Team> teams, boolean isPaused) {
 
         this.id = id;
         this.name = name;
         this.settings = settings;
         this.auctionBoard = auctionBoard;
         this.teams = teams;
+        this.isPaused = isPaused;
     }
 
     public Map<Team,TeamStatistics> getTeamStatistics() {
@@ -59,6 +61,10 @@ public class League {
 
     public LeagueSettings getSettings() {
         return settings;
+    }
+
+    public boolean isPaused() {
+        return isPaused;
     }
 
     private TeamStatistics toStatistics(Team team) {

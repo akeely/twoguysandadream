@@ -8,9 +8,10 @@ our @ISA = qw(Exporter);
 use vars qw/@EXPORT/;
 @EXPORT = qw/dbConnect dbDisconnect setCmdLine/;
 
-my $dburl = "DBI:mysql:auction:localhost";
-my $dbuser = "root";
-my $dbpass = '';
+##my $dburl = "DBI:mysql:auction:localhost";
+my $dburl = "DBI:mysql:auction:akeely-auction.cwp74fsixexb.us-east-1.rds.amazonaws.com";
+my $dbuser = "akeely";
+my $dbpass = '6CV#GVloZ%TVF$Rg';
 
 sub setCmdLine($)
 {
