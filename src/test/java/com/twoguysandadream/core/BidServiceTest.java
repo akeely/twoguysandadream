@@ -58,7 +58,7 @@ public class BidServiceTest {
         verify(bidRepository).save(eq(LEAGUE_ID), captor.capture());
 
         assertEquals("Unexpected player bid on.", PLAYER_ID, captor.getValue().getPlayer().getId());
-        assertEquals("Unexpected team making bid.", TEAM_ID, captor.getValue().getTeamId());
+        assertEquals("Unexpected team making bid.", (Long) TEAM_ID, captor.getValue().getTeamId());
         assertEquals("Unexpected bid amount.", amount, captor.getValue().getAmount());
     }
 
@@ -77,7 +77,7 @@ public class BidServiceTest {
         verify(bidRepository).save(eq(LEAGUE_ID), captor.capture());
 
         assertEquals("Unexpected player bid on.", PLAYER_ID, captor.getValue().getPlayer().getId());
-        assertEquals("Unexpected team making bid.", TEAM_ID, captor.getValue().getTeamId());
+        assertEquals("Unexpected team making bid.", (Long) TEAM_ID, captor.getValue().getTeamId());
         assertEquals("Unexpected bid amount.", amount, captor.getValue().getAmount());
     }
 
@@ -96,7 +96,7 @@ public class BidServiceTest {
         verify(bidRepository).save(eq(LEAGUE_ID), captor.capture());
 
         assertEquals("Unexpected player bid on.", PLAYER_ID, captor.getValue().getPlayer().getId());
-        assertEquals("Unexpected team making bid.", TEAM_ID, captor.getValue().getTeamId());
+        assertEquals("Unexpected team making bid.", (Long) TEAM_ID, captor.getValue().getTeamId());
         assertEquals("Unexpected bid amount.", amount, captor.getValue().getAmount());
     }
 
@@ -317,7 +317,7 @@ public class BidServiceTest {
 
     private Player createPlayer(long id) {
 
-        return new Player(id, "playerName", Collections.emptyList(), "realTeam");
+        return new Player(id, "playerName", Collections.emptyList(), "realTeam", 1);
     }
 
     private long future(int seconds) {
