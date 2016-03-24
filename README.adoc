@@ -3,3 +3,7 @@
 image:https://snap-ci.com/akeely/twoguysandadream/branch/master/build_image["Build Status", link="https://snap-ci.com/akeely/twoguysandadream/branch/master"]
 
 A fantasy sports auction website.
+
+To build, run:
+ ./gradlew -i test assemble
+
