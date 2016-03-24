@@ -296,7 +296,7 @@ public class BidServiceTest {
 
         LeagueSettings settings = createSettings();
         List<Team> teams = createTeams(roster);
-        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams);
+        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams, false);
         when(leagueRepository.findOne(LEAGUE_ID)).thenReturn(Optional.of(league));
         return league;
     }

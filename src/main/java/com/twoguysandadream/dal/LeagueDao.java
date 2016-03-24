@@ -61,8 +61,7 @@ public class LeagueDao implements LeagueRepository {
         List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
         List<Team> teams = getTeams(metadata.getId());
         LeagueSettings settings = getSettings(metadata);
-        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, 
-            isPaused(metadata));
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, isPaused(metadata));
     }
 
     private boolean isPaused(LeagueMetadata metadata) {

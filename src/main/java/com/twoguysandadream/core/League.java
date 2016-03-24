@@ -19,8 +19,8 @@ public class League {
     private final List<Team> teams;
     private final boolean isPaused;
 
-    public League(long id, String name, int rosterSize, BigDecimal budget, List<Bid> auctionBoard,
-            List<Team> teams, boolean isPaused) {
+    public League(long id, String name, LeagueSettings settings, List<Bid> auctionBoard, List<Team> teams,
+        boolean isPaused) {
 
         this.id = id;
         this.name = name;
