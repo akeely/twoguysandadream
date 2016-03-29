@@ -2,7 +2,7 @@
 --
 -- Host: akeely-auction.cwp74fsixexb.us-east-1.rds.amazonaws.com    Database: auction
 -- ------------------------------------------------------
--- Server version	5.6.21-log
+-- Server version  5.6.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -128,7 +128,7 @@ DROP TABLE IF EXISTS `leagues`;
 CREATE TABLE `leagues` (
   `name` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL DEFAULT '',
   `password` varchar(25) NOT NULL DEFAULT '',
-  `owner` varchar(50) NOT NULL DEFAULT '',
+  `owner` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL DEFAULT '',
   `draft_type` enum('auction','snake','rfa') NOT NULL DEFAULT 'auction',
   `draft_status` enum('open','closed','paused') NOT NULL DEFAULT 'open',
   `keepers_locked` enum('no','yes') NOT NULL DEFAULT 'no',
@@ -230,7 +230,7 @@ DROP TABLE IF EXISTS `positions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `positions` (
-  `league` varchar(50) NOT NULL DEFAULT '',
+  `league` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL DEFAULT '',
   `position` varchar(10) NOT NULL DEFAULT '',
   PRIMARY KEY (`league`,`position`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
