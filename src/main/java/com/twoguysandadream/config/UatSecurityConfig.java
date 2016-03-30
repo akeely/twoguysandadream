@@ -14,8 +14,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Profile("uat")
 public class UatSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    static final String LOGIN_PAGE = "/login";
-
     @Autowired
     private OpenIdUserDetailsService userDetailsService;
 
