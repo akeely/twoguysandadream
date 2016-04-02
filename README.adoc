@@ -3,3 +3,21 @@
 image:https://snap-ci.com/akeely/twoguysandadream/branch/master/build_image["Build Status", link="https://snap-ci.com/akeely/twoguysandadream/branch/master"]
 
 A fantasy sports auction website.
+
+To build, run:
+
+ ./gradlew -i test assemble
+
+To run the functional tests:
+
+ ./gradlew -i ft
+
+To run the acceptance tests, start a MySQL database in Vagrant, then run:
+
+ java -jar -Dspring.profiles.active=uat build/libs/twoguysandadream-*.jar --debug &
+ ./gradlew -i uat
+
+[NOTE]
+=====
+Running the acceptance tests will leave the application and database running in the background.
+=====

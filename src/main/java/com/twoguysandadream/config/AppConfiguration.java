@@ -1,37 +1,23 @@
 package com.twoguysandadream.config;
 
 import com.twoguysandadream.core.LeagueRepository;
-import com.twoguysandadream.dal.LeagueDao;
 import com.twoguysandadream.resources.legacy.AuctionBoard;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-import javax.sql.DataSource;
-
-/**
- * Created by andrewk on 3/13/15.
- */
 @Configuration
-//@Import(DataSourceConfiguration.class)
-@PropertySource("classpath:twoguysandadream-queries.properties")
+@PropertySource("classpath:twoguysandadream-queries.xml")
+@ComponentScan("com.twoguysandadream.dal")
 public class AppConfiguration {
 
     @Bean
-    public AuctionBoard auctionBoard() {
+    public AuctionBoard auctionBoard(LeagueRepository leagueRepository) {
 
-        return new AuctionBoard(leagueRepository());
+        return new AuctionBoard(leagueRepository);
     }
-
-    @Bean
-    public LeagueRepository leagueRepository() {
-
-        return new LeagueDao(namedParameterJdbcTemplate);
-    }
-
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="league.findOne"><![CDATA[
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
+       FROM leagues
+       WHERE id = :leagueId
+    ]]></entry>
+    <entry key="league.findOneByName"><![CDATA[
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
+       FROM leagues
+       WHERE name = :leagueName
+    ]]></entry>
+    <entry key="league.rosterSpots"><![CDATA[
+       SELECT COUNT(*) FROM positions WHERE leagueid = :leagueId
+    ]]></entry>
+    <entry key="team.findAll"><![CDATA[
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       FROM teams t
+       WHERE t.leagueid = :leagueId
+    ]]></entry>
+    <entry key="team.findOne"><![CDATA[
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       FROM teams t
+       WHERE t.leagueid = :leagueId
+         AND t.id = :teamId
+    ]]></entry>
+    <entry key="team.save"><![CDATA[
+       UPDATE teams
+       SET name = :name, num_adds = :adds, money_plusminus = :budgetAdjustment
+       WHERE leagueid = :leagueId
+         AND id = :teamId
+    ]]></entry>
+    <entry key="team.findRosters"><![CDATA[
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.name AS team
+       FROM players_won pw
+       JOIN players p
+         ON pw.playerid=p.playerid
+       JOIN teams t
+         ON t.id=pw.teamid
+       WHERE pw.leagueid = :leagueId
+    ]]></entry>
+    <entry key="user.findOne"><![CDATA[
+       SELECT id FROM passwd WHERE openid=:openIdToken
+    ]]></entry>
+    <entry key="user.create"><![CDATA[
+       INSERT INTO passwd (openid) VALUES (:openIdToken)
+    ]]></entry>
+    <entry key="user.findTeam"><![CDATA[
+       SELECT id FROM teams WHERE ownerid=:userId AND leagueid=:leagueId
+    ]]></entry>
+    <entry key="bid.findAll"><![CDATA[
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
+       FROM auction_players ap
+       JOIN players p
+         ON ap.playerid=p.playerid
+       JOIN teams t
+         ON ap.teamid=t.id
+       WHERE ap.leagueid = :leagueId
+    ]]></entry>
+    <entry key="bid.save"><![CDATA[
+       UPDATE auction_players
+       SET time=:expirationTime, teamid=:teamId, price=:amount
+       WHERE playerid=:playerId
+         AND leagueid=:leagueId
+    ]]></entry>
+    <entry key="bid.create"><![CDATA[
+       INSERT INTO auction_players
+           (playerid,price,time,rfa_override,teamid,leagueid)
+       VALUES
+           (:playerId, :amount, :expirationTime,'NA', :teamId, :leagueId);
+    ]]></entry>
+    <entry key="player.findOne"><![CDATA[
+       SELECT playerid,name,position,team,rank FROM players WHERE playerid=:playerId AND active=1
+    ]]></entry>
+    <entry key="player.findAllAvailable"><![CDATA[
+        SELECT p.playerid, p.name, p.position, p.team, p.rank
+        FROM players p
+        JOIN leagues l
+          ON p.sport=l.sport
+        LEFT JOIN players_won pw
+          ON l.id = pw.leagueid
+          AND p.playerid = pw.playerid
+        LEFT JOIN auction_players ap
+          ON l.id = ap.leagueid
+          AND p.playerid = ap.playerid
+        WHERE l.id=1
+          AND ap.playerid IS NULL
+          AND pw.playerid IS NULL
+          AND p.active = 1
+          ORDER BY rank
+    ]]></entry>
+</properties>

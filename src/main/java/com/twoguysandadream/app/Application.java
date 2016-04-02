@@ -12,7 +12,6 @@ import org.springframework.context.annotation.PropertySource;
  */
 @EnableAutoConfiguration
 @Import(AppConfiguration.class)
-@PropertySource("classpath:twoguysandadream-queries.properties")
 @ComponentScan("com.twoguysandadream")
 public class Application {
 

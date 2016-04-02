@@ -13,20 +13,18 @@ public class League {
 
     private final long id;
     private final String name;
-    private final int rosterSize;
-    private final BigDecimal budget;
-    private final BigDecimal minimumBid = new BigDecimal(BigInteger.valueOf(5), 1);
+    private final LeagueSettings settings;
+
     private final List<Bid> auctionBoard;
     private final List<Team> teams;
     private final boolean isPaused;
 
-    public League(long id, String name, int rosterSize, BigDecimal budget, List<Bid> auctionBoard,
-            List<Team> teams, boolean isPaused) {
+    public League(long id, String name, LeagueSettings settings, List<Bid> auctionBoard, List<Team> teams,
+        boolean isPaused) {
 
         this.id = id;
         this.name = name;
-        this.rosterSize = rosterSize;
-        this.budget = budget;
+        this.settings = settings;
         this.auctionBoard = auctionBoard;
         this.teams = teams;
         this.isPaused = isPaused;
@@ -35,11 +33,7 @@ public class League {
     public Map<Team,TeamStatistics> getTeamStatistics() {
 
         return teams.stream()
-                .map((t) -> {
-                    TeamStatistics stats = new TeamStatistics (t, budget, minimumBid, rosterSize);
-                    return toMapEntry(t, stats);
-                })
-            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+            .collect(Collectors.toMap(Function.identity(), this::toStatistics));
     }
 
     public Map<Team, Collection<RosteredPlayer>> getRosters() {
@@ -65,12 +59,15 @@ public class League {
         return name;
     }
 
+    public LeagueSettings getSettings() {
+        return settings;
+    }
+
     public boolean isPaused() {
         return isPaused;
     }
 
-    private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {
-
-        return new AbstractMap.SimpleEntry<K,V>(key, value);
+    private TeamStatistics toStatistics(Team team) {
+        return new TeamStatistics(team, settings);
     }
 }

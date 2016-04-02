@@ -30,8 +30,6 @@ def requestResponse
 
 Before() {
 
-
-
     String dbUrl
     String dbUser
     String dbPassword
@@ -66,9 +64,9 @@ Given(~'^a league called (.*) exists$') { league ->
     def params = ["league" : (league)]
     jdbcTemplate.update("""
 INSERT INTO leagues
-  (name, password, owner, max_teams, salary_cap, auction_length, bid_time_ext, bid_time_buff)
+  (name, password, ownerid, max_teams, salary_cap, auction_length, bid_time_ext, bid_time_buff)
 VALUES
-  (:league, 'pwd', 'owner', 12, 200, 180, 120, 120)
+  (:league, 'pwd', 123, 12, 200, 180, 120, 120)
 
     """, params)
 
@@ -76,10 +74,13 @@ VALUES
 
 Given(~/^The following teams are in (.*):$/) { String league, DataTable teams ->
 
+    def leagueParams = ["league" : (league)]
+    def leagueid = jdbcTemplate.queryForObject("SELECT id FROM leagues WHERE name = :league", leagueParams, Integer.class)
+
     def teamNames = teams.asList(String.class).tail()
-    teamNames.each { teamName ->
-        def params = ["league" : (league), "team" : (teamName)]
-        jdbcTemplate.update("INSERT INTO teams (owner, name, league) VALUES (:team, :team, :league)", params)
+    teamNames.eachWithIndex { teamName, idx ->
+        def params = ["league" : (leagueid), "team" : (teamName), "ownerid" : (idx)]
+        jdbcTemplate.update("INSERT INTO teams (ownerid, name, leagueid) VALUES (:ownerid, :team, :league)", params)
     }
 }
 
@@ -91,10 +92,13 @@ Given(~/^(.*) has a salary cap of \$(\d+)$/) { String league, int salaryCap ->
 
 Given(~/^(.*) has (\d+) roster spots per team$/) { String league, int rosterSpots ->
 
-    (9..rosterSpots).eachWithIndex { i, idx ->
-        def params = ["league": (league), "position" : "BN$idx"]
+    def leagueParams = ["league" : (league)]
+    def leagueid = jdbcTemplate.queryForObject("SELECT id FROM leagues WHERE name = :league", leagueParams, Integer.class)
 
-        jdbcTemplate.update("INSERT INTO positions (league, position) VALUES (:league, :position)", params)
+    (9..rosterSpots).eachWithIndex { i, idx ->
+        def params = ["league": (leagueid), "position" : "BN$idx"]
+
+        jdbcTemplate.update("INSERT INTO positions (leagueid, position) VALUES (:league, :position)", params)
     }
 }
 
@@ -103,8 +107,8 @@ When(~/^I retrieve the current auction board for (.*)$/) { String league ->
     HTTPBuilder http = new HTTPBuilder("http://localhost:8080")
 
     http.request(Method.GET, JSON) {
-        println "Request: /legacy/auction/league/$league"
-        uri.path = "/legacy/auction/league/$league"
+        println "Request: /api/legacy/auction/league/$league"
+        uri.path = "/api/legacy/auction/league/$league"
         uri.query = [playerids:""]
 
         response.success = { resp, json ->
@@ -147,34 +151,42 @@ Then(~/^All teams have a maximum bid of \$(\d+\.?\d*)$/) { BigDecimal maxBid ->
 
 Given(~/^the following bids are open in (.*):$/) { String league, DataTable bids ->
 
+    def leagueParams = ["league" : (league)]
+    def leagueid = jdbcTemplate.queryForObject("SELECT id FROM leagues WHERE name = :league", leagueParams, Integer.class)
+
     bids.raw().tail().each { bid ->
 
-        def params = [league: league, team: bid.get(0), name: bid.get(1), bid: (bid.get(2) - '$'),
+        def params = [league: leagueid, team: bid.get(0), name: bid.get(1), bid: (bid.get(2) - '$'),
                       time: (System.currentTimeMillis()/1000 + 180)]
         jdbcTemplate.update("INSERT INTO players (name, active, yahooid, position) VALUES (:name,1,1,'OF')",
                 params)
         jdbcTemplate.update("""
-INSERT INTO auction_players (name, price, team, time, league)
-SELECT playerid, :bid, :team, :time, :league
-FROM players
-WHERE name=:name
+INSERT INTO auction_players (playerid, price, teamid, time, leagueid)
+SELECT p.playerid, :bid, t.id, :time, :league
+FROM players p, teams t
+WHERE p.name=:name
+AND t.name=:team
 """, params)
     }
 }
 
 Given(~/^the following players have been won in (.*):$/) { String league, DataTable wonPlayers ->
 
+    def leagueParams = ["league" : (league)]
+    def leagueid = jdbcTemplate.queryForObject("SELECT id FROM leagues WHERE name = :league", leagueParams, Integer.class)
+
     wonPlayers.raw().tail().each { bid ->
 
-        def params = [league: league, team: bid.get(0), name: bid.get(1), bid: (bid.get(2) - '$'),
+        def params = [league: leagueid, team: bid.get(0), name: bid.get(1), bid: (bid.get(2) - '$'),
                       time: (System.currentTimeMillis()/1000 - 180)]
         jdbcTemplate.update("INSERT INTO players (name, active, yahooid, position) VALUES (:name,1,1, 'OF')",
                 params)
         jdbcTemplate.update("""
-INSERT INTO players_won (name, price, team, time, league)
-SELECT playerid, :bid, :team, :time, :league
-FROM players
-WHERE name=:name
+INSERT INTO players_won (playerid, price, teamid, time, leagueid)
+SELECT playerid, :bid, t.id, :time, :league
+FROM players p, teams t
+WHERE p.name=:name
+AND t.name=:team
 """, params)
     }
 }

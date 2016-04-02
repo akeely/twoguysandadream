@@ -1,0 +1,17 @@
+spring:
+  thymeleaf:
+    cache: false
+
+logging:
+  file: build/logs/tgaad.log
+  level:
+    ROOT: INFO
+
+
+server:
+  tomcat:
+    basedir: build/tomcat
+    accesslog:
+      enabled: true
+      directory: logs
+

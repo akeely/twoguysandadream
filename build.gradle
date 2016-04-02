@@ -4,22 +4,25 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE"
         classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
         classpath 'mysql:mysql-connector-java:5.1.34'
-        classpath 'io.spring.gradle:dependency-management-plugin:0.3.1.RELEASE'
     }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "3.2"
+    id "io.spring.dependency-management" version "0.5.4.RELEASE"
 }
 
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
-apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 
 dependencyManagement {
     imports {
-        mavenBom 'io.spring.platform:platform-bom:1.1.1.RELEASE'
+        mavenBom 'io.spring.platform:platform-bom:2.0.3.RELEASE'
     }
 }
 
@@ -33,8 +36,12 @@ bootRepackage {
     mainClass = "com.twoguysandadream.app.Application"
 }
 
-configurations {
-    all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+bootRun {
+    environment 'spring.profiles.active', 'dev'
+}
+
+bootRun.doFirst {
+    file("${project.buildDir}/logs").mkdirs()
 }
 
 sourceSets {
@@ -56,14 +63,19 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-starter-security"
+    compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile "mysql:mysql-connector-java"
     compile "com.mchange:c3p0"
     compile "org.springframework:spring-jdbc"
+    compile "org.springframework.security:spring-security-openid"
+    compile "com.google.guava:guava"
 
     testCompile "junit:junit"
     testCompile "org.springframework:spring-test"
     testCompile "org.hsqldb:hsqldb"
     testCompile "commons-io:commons-io"
+    testCompile "org.mockito:mockito-core"
 
     uatCompile "org.codehaus.groovy:groovy-all"
     uatCompile "info.cukes:cucumber-groovy:1.2.2"

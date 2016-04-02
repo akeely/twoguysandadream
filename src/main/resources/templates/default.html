@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <title>Two Guys and a Dream</title>
+
+    <!-- Bootstrap dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
+    <script language="JavaScript">
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+    <!-- React dependencies -->
+    <script src="https://fb.me/react-0.14.2.js" />
+    <script src="https://fb.me/react-dom-0.14.2.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- DataTables -->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" />
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
+
+    <!-- Custom dependencies -->
+    <link rel="stylesheet" th:href="@{/css/auction.css}" />
+    <script th:src="@{/js/auction.jsx}" type="text/babel" />
+    <script th:src="@{/js/teams.jsx}" type="text/babel" />
+
+    <!-- CSRF Token -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+    <meta name="_league_id" th:content="${leagueId}" />
+    <meta name="_team_id" th:content="${teamId}" />
+</head>
+
+<body>
+
+<div th:fragment="footer" class="navbar navbar-default text-center">
+    <p class="navbar-text">&copy; 2016 Two Guys and a Dream</p>
+</div>
+
+</body>
+
+</html>

@@ -1,48 +1,52 @@
 package com.twoguysandadream.dal;
 
-import com.twoguysandadream.core.*;
+import com.twoguysandadream.core.Bid;
+import com.twoguysandadream.core.BidRepository;
+import com.twoguysandadream.core.League;
+import com.twoguysandadream.core.LeagueRepository;
+import com.twoguysandadream.core.LeagueSettings;
+import com.twoguysandadream.core.Team;
+import com.twoguysandadream.core.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.RowCallbackHandler;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
-/**
- * Created by andrewk on 3/13/15.
- */
 @Repository
 public class LeagueDao implements LeagueRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
+    private final BidRepository bidRepository;
+    private final TeamRepository teamRepository;
 
     @Value("${league.findOne}")
     private String findOneQuery;
+    @Value("${league.findOneByName}")
+    private String findOneByNameQuery;
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
-    @Value("${league.findBids}")
-    private String findBidsQuery;
-    @Value("${league.findRosters}")
-    private String findRostersQuery;
-    @Value("${league.findTeams}")
-    private String findTeamsQuery;
-
-    public void setFindOneQuery(String findOneQuery) {
-        this.findOneQuery = findOneQuery;
-    }
 
     @Autowired
-    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate) {
+    public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate, BidRepository bidRepository,
+        TeamRepository teamRepository) {
         this.jdbcTemplate = jdbcTemplate;
+        this.bidRepository = bidRepository;
+        this.teamRepository = teamRepository;
+    }
+
+    @Override
+    public Optional<League> findOne(long id) {
+
+        Optional<LeagueMetadata> metadata = getMetadata(id);
+
+        return metadata.map(this::getLeagueData);
     }
 
     @Override public Optional<League> findOneByName(String name) {
@@ -54,10 +58,10 @@ public class LeagueDao implements LeagueRepository {
 
     private League getLeagueData(LeagueMetadata metadata) {
 
-        List<Bid> auctionBoard = getAuctionBoard(metadata.getName());
-        List<Team> teams = getTeams(metadata.getName());
-        return new League(-1L, metadata.getName(), getRosterSize(metadata),
-            metadata.getSalary_cap(), auctionBoard, teams, isPaused(metadata));
+        List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
+        List<Team> teams = getTeams(metadata.getId());
+        LeagueSettings settings = getSettings(metadata);
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, isPaused(metadata));
     }
 
     private boolean isPaused(LeagueMetadata metadata) {
@@ -65,27 +69,15 @@ public class LeagueDao implements LeagueRepository {
         return metadata.getDraft_status().equalsIgnoreCase("paused");
     }
 
-    private List<Team> getTeams(String name) {
-
-        Map<String,List<RosteredPlayer>> rosters = getRosters(name);
-
-        return jdbcTemplate.query(findTeamsQuery, Collections.singletonMap("leagueName", name),
-            new TeamRowMapper(rosters));
+    private LeagueSettings getSettings(LeagueMetadata metadata) {
+        int rosterSize = getRosterSize(metadata);
+        return new LeagueSettings(rosterSize, metadata.getSalary_cap(), metadata.getAuction_length(),
+            metadata.getBid_time_ext(), metadata.getBid_time_ext());
     }
 
-    private Map<String,List<RosteredPlayer>> getRosters(String leagueName) {
+    private List<Team> getTeams(long leagueId) {
 
-        RosteredPlayerCallbackHandler handler = new RosteredPlayerCallbackHandler();
-        jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueName", leagueName),
-            handler);
-
-        return handler.getRosters();
-    }
-
-    private List<Bid> getAuctionBoard(String leagueName) {
-
-        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueName", leagueName),
-            new BidRowMapper());
+        return teamRepository.findAll(leagueId);
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
@@ -93,7 +85,7 @@ public class LeagueDao implements LeagueRepository {
         Sport sport = Sport.valueOf(metadata.getSport().toUpperCase());
 
         int additionalRosterSpots = jdbcTemplate.queryForObject(rosterSpotsQuery,
-            Collections.singletonMap("leagueName", metadata.getName()), Integer.class);
+            Collections.singletonMap("leagueId", metadata.getId()), Integer.class);
 
         return sport.getBaseRosterSize() + additionalRosterSpots;
     }
@@ -102,7 +94,7 @@ public class LeagueDao implements LeagueRepository {
 
         try {
             return Optional.of(jdbcTemplate
-                .queryForObject(findOneQuery, Collections.singletonMap("leagueName", name),
+                .queryForObject(findOneByNameQuery, Collections.singletonMap("leagueName", name),
                     new BeanPropertyRowMapper<>(LeagueMetadata.class)));
         }
         catch (EmptyResultDataAccessException e) {
@@ -110,23 +102,34 @@ public class LeagueDao implements LeagueRepository {
         }
     }
 
-    private String decodeString(String string) {
+    private Optional<LeagueMetadata> getMetadata(long id) {
 
         try {
-            return new String(string.getBytes("ISO-8859-1"), "UTF-8");
+            return Optional.of(jdbcTemplate
+                .queryForObject(findOneQuery, Collections.singletonMap("leagueId", id),
+                    new BeanPropertyRowMapper<>(LeagueMetadata.class)));
         }
-        catch (UnsupportedEncodingException e) {
-
-            return string;
+        catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
         }
     }
 
     public static class LeagueMetadata {
 
+        private long id;
         private String name;
         private BigDecimal salary_cap;
         private String sport;
+        private long auction_length, bid_time_ext, bid_time_buff;
         private String draft_status;
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
 
         public String getName() {
             return name;
@@ -159,70 +162,29 @@ public class LeagueDao implements LeagueRepository {
         public void setDraft_status(String draft_status) {
             this.draft_status = draft_status;
         }
-    }
 
-    public class BidRowMapper implements RowMapper<Bid> {
-
-        @Override public Bid mapRow(ResultSet rs, int rowNum) throws SQLException {
-
-            BigDecimal amount = rs.getBigDecimal("price");
-            long expirationTime = rs.getLong("time");
-
-            String team = rs.getString("team");
-
-            long id = rs.getLong("playerid");
-            String name = decodeString(rs.getString("name"));
-            Collection<Position> positions = Collections.singletonList(
-                new Position(rs.getString("position")));
-            String realTeam = rs.getString("realTeam");
-            Player player = new Player(id, name, positions, realTeam);
-
-            return new Bid(team, player, amount, expirationTime);
-        }
-    }
-
-    public class TeamRowMapper implements RowMapper<Team> {
-
-        private final Map<String,List<RosteredPlayer>> rosters;
-
-        public TeamRowMapper(Map<String, List<RosteredPlayer>> rosters) {
-            this.rosters = rosters;
+        public long getAuction_length() {
+            return auction_length;
         }
 
-        @Override public Team mapRow(ResultSet rs, int rowNum) throws SQLException {
-
-            String name = rs.getString("name");
-            Collection<RosteredPlayer> roster = rosters.getOrDefault(name, Collections.emptyList());
-            BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
-            int adds = rs.getInt("num_adds");
-            return new Team(-1L,name,roster,budgetAdjustment,adds);
-        }
-    }
-
-    public class RosteredPlayerCallbackHandler implements RowCallbackHandler {
-
-        private final Map<String,List<RosteredPlayer>> rosters = new HashMap<>();
-
-        @Override public void processRow(ResultSet rs) throws SQLException {
-
-            String team = rs.getString("team");
-
-            long id = rs.getLong("playerid");
-            String name = decodeString(rs.getString("name"));
-            Collection<Position> positions = Collections.singletonList(
-                new Position(rs.getString("position")));
-            String realTeam = rs.getString("realTeam");
-            Player player = new Player(id, name, positions, realTeam);
-
-            BigDecimal cost = rs.getBigDecimal("price");
-
-            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost);
-            rosters.putIfAbsent(team, new ArrayList<>());
-            rosters.get(team).add(rosteredPlayer);
+        public void setAuction_length(long auction_length) {
+            this.auction_length = auction_length;
         }
 
-        public Map<String, List<RosteredPlayer>> getRosters() {
-            return rosters;
+        public long getBid_time_ext() {
+            return bid_time_ext;
+        }
+
+        public void setBid_time_ext(long bid_time_ext) {
+            this.bid_time_ext = bid_time_ext;
+        }
+
+        public long getBid_time_buff() {
+            return bid_time_buff;
+        }
+
+        public void setBid_time_buff(long bid_time_buff) {
+            this.bid_time_buff = bid_time_buff;
         }
     }
 

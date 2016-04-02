@@ -75,7 +75,7 @@ Scenario: Putting everything together
     | Team C | Player J  | $14.50 |
   And the following team statistics are returned:
     | Team   | Max Bid | Money   | Roster Spots | Adds |
-    | Team A | $186    | $190.5  | 10           | 2    |
-    | Team B | $193    | $198    | 11           | 2    |
+    | Team A | $186.0  | $190.5  | 10           | 2    |
+    | Team B | $193.0  | $198    | 11           | 2    |
     | Team C | $79.5   | $83.5   | 9            | 2    |
   And the response contains the current server time information

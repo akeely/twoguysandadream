@@ -7,5 +7,6 @@ import java.util.Optional;
  */
 public interface LeagueRepository {
 
+    public Optional<League> findOne(long id);
     public Optional<League> findOneByName(String name);
 }

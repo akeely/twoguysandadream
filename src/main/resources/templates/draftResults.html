@@ -1,0 +1,85 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head th:include="default :: head">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Two Guys and a Dream</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/league/{leagueId}/auction(leagueId=${leagueId})}">Auction</a></li>
+                <li><a th:href="@{/league/{leagueId}/availableplayers(leagueId=${leagueId})}">Add Player</a></li>
+                <li class="active"><a th:href="@{/league/{leagueId}/results(leagueId=${leagueId})}">Draft Results</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 11px"><i class="fa fa-cog fa-2x" /></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel">
+                <table class="table" id="results">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Position</th>
+                            <th>Cost</th>
+                        </tr>
+
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th><input type="text" placeholder="Search Player" /></th>
+                            <th><input type="text" placeholder="Search Team" /></th>
+                            <th><input type="text" placeholder="Search Position" /></th>
+                            <th />
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr th:each="player : ${players}">
+                            <td th:text="${player.player.player.name}">Player Name</td>
+                            <td th:text="${player.team.name}">Team Name</td>
+                            <td th:text="${#strings.listJoin(player.player.player.positions, ',')}">WR</td>
+                            <td th:text="'$' + ${player.player.cost}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        var table = $('#results').DataTable();
+
+        // Apply the search
+        table.columns().every( function () {
+            var that = this;
+
+            $( 'input', this.footer() ).on( 'keyup change', function () {
+                if ( that.search() !== this.value ) {
+                    that
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+    } );
+</script>
+<div th:include="default :: footer"></div>
+</body>
+</html>

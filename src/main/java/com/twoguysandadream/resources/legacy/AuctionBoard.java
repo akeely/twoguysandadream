@@ -1,6 +1,7 @@
 package com.twoguysandadream.resources.legacy;
 
 import com.twoguysandadream.core.*;
+import com.twoguysandadream.resources.ApiConfiguration;
 import com.twoguysandadream.resources.InvalidArgumentException;
 import com.twoguysandadream.resources.MissingResourceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,8 @@ import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by andrew_keely on 2/10/15.
- */
 @Controller
-@RequestMapping("/legacy/auction")
+@RequestMapping(ApiConfiguration.ROOT_PATH + "/legacy/auction")
 public class AuctionBoard {
 
     private final LeagueRepository leagueRepository;
@@ -35,7 +33,7 @@ public class AuctionBoard {
     @RequestMapping("/league/{leagueName}")
     @ResponseBody
     public com.twoguysandadream.api.legacy.League checkBids(@PathVariable String leagueName,
-        @RequestParam("playerids") String playerIdsString)
+        @RequestParam(value = "playerids", required = false) String playerIdsString)
         throws IOException, MissingResourceException, InvalidArgumentException {
 
         Optional<League> league = leagueRepository.findOneByName(leagueName);
@@ -83,7 +81,7 @@ public class AuctionBoard {
 
         return rosteredPlayer
             .map((p) -> rosteredPlayerToBid(p))
-            .orElse(new Bid("NA", new Player(playerId, "", Collections.emptyList(), ""),
+            .orElse(new Bid(0L, "NA", new Player(playerId, "", Collections.emptyList(), "", 0),
                     BigDecimal.ZERO, -1L));
     }
 
@@ -102,7 +100,7 @@ public class AuctionBoard {
 
     private Bid rosteredPlayerToBid(Map.Entry<Team,RosteredPlayer> player) {
 
-        return new Bid(player.getKey().getName(), player.getValue().getPlayer(),
+        return new Bid(player.getKey().getId(), player.getKey().getName(), player.getValue().getPlayer(),
             player.getValue().getCost(), -1L);
     }
 
