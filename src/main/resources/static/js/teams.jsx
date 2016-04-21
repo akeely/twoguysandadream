@@ -1,10 +1,14 @@
 
 var TeamSidebar = React.createClass({
 
+    compareTeams: function(a,b) {
+        return a.name.localeCompare(b.name)
+    },
+
     loadTeams: function () {
         $.ajax('/api/league/1/team').done(response => {
 
-            this.setState({teams: response});
+            this.setState({teams: response.sort(this.compareTeams)});
         });
     },
 
@@ -18,7 +22,32 @@ var TeamSidebar = React.createClass({
     },
     render: function () {
         return (
-            <Teams teams={this.state.teams} />
+            <div>
+                <Teams teams={this.state.teams} />
+                <Rosters teams={this.state.teams} />
+            </div>
+        )
+    }
+});
+
+var Rosters = React.createClass({
+    render: function() {
+
+        var rosters = this.props.teams.map(team =>
+            <Roster key={"roster." + team.id} team={team} />
+        );
+
+        return (
+            <table className="table table-striped table-condensed">
+                <thead>
+                <tr>
+                    <th>Roster</th>
+                </tr>
+                </thead>
+                <tbody>
+                {rosters}
+                </tbody>
+            </table>
         )
     }
 });
@@ -29,28 +58,21 @@ var Teams = React.createClass({
             <Team key={"team." + team.id} team={team} />
         );
 
-        var rosters = this.props.teams.map(team =>
-            <Roster key={"roster." + team.id} roster={team.roster} />
-        );
         return (
-            <div>
-                <table className="table table-striped table-condensed">
-                    <thead>
-                    <tr>
-                        <th>Team</th>
-                        <th>Money</th>
-                        <th>Max</th>
-                        <th>Roster</th>
-                        <th>Adds</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {teams}
-                    </tbody>
-                </table>
-
-                {rosters}
-            </div>
+            <table className="table table-striped table-condensed">
+                <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Money</th>
+                    <th>Max</th>
+                    <th>Roster</th>
+                    <th>Adds</th>
+                </tr>
+                </thead>
+                <tbody>
+                {teams}
+                </tbody>
+            </table>
         )
     }
 });
@@ -74,7 +96,7 @@ var Roster = React.createClass({
 
     render: function() {
         return (
-            <p>Roster goes here</p>
+            <tr id={"roster." + this.props.team.id}><td>Roster goes here for {this.props.team.name}</td></tr>
         )
     }
 });
