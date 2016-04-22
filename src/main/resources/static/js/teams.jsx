@@ -30,28 +30,6 @@ var TeamSidebar = React.createClass({
     }
 });
 
-var Rosters = React.createClass({
-    render: function() {
-
-        var rosters = this.props.teams.map(team =>
-            <Roster key={"roster." + team.id} team={team} />
-        );
-
-        return (
-            <table className="table table-striped table-condensed">
-                <thead>
-                <tr>
-                    <th>Roster</th>
-                </tr>
-                </thead>
-                <tbody>
-                {rosters}
-                </tbody>
-            </table>
-        )
-    }
-});
-
 var Teams = React.createClass({
     render: function() {
         var teams = this.props.teams.map(team =>
@@ -92,13 +70,69 @@ var Team = React.createClass({
     }
 });
 
+var Rosters = React.createClass({
+    render: function() {
+
+        var rosters = this.props.teams.map(team =>
+            <Roster key={"roster." + team.id} team={team} />
+        );
+
+        return (
+            <div>
+            {rosters}
+            </div>
+        )
+    }
+});
+
 var Roster = React.createClass({
 
     render: function() {
+
+        var playersWon = this.props.team.roster.map(entry =>
+            <WonPlayer key={"won." + entry.player.id} rosterEntry={entry} />
+        );
+
         return (
-            <tr id={"roster." + this.props.team.id}><td>Roster goes here for {this.props.team.name}</td></tr>
+            <table className="table table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th colSpan="3">{this.props.team.name}</th>
+                    </tr>
+                    <tr>
+                        <th>Player</th>
+                        <th>Cost</th>
+                        <th>Pos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {playersWon}
+                </tbody>
+            </table>
         )
     }
+});
+
+var WonPlayer = React.createClass({
+
+    render: function() {
+
+        var player = this.props.rosterEntry.player;
+        var cost = this.props.rosterEntry.cost;
+
+        var positions = player.positions
+            .map(function(pos){return pos.name;})
+            .join(', ');
+
+        return (
+            <tr>
+                <td>{player.name}</td>
+                <td>${cost}</td>
+                <td>{positions}</td>
+            </tr>
+        )
+    }
+
 });
 
 ReactDOM.render(
