@@ -12,19 +12,28 @@ var TeamSidebar = React.createClass({
         });
     },
 
+    updateCurrentTeam: function(newTeam) {
+
+        this.setState({currentTeam: newTeam});
+    },
+
     getInitialState: function () {
 
-        return ({teams: []});
+        var activeTeam = $("meta[name='_team_id'").attr("content");
+
+        return ({teams: [], currentTeam: activeTeam});
     },
+
     componentDidMount: function () {
         this.loadTeams();
         setInterval(this.loadTeams, this.props.pollInterval);
     },
+
     render: function () {
         return (
             <div>
-                <Teams teams={this.state.teams} />
-                <Rosters teams={this.state.teams} />
+                <Teams teams={this.state.teams} currentTeam={this.state.currentTeam} updateTeam={this.updateCurrentTeam} />
+                <Rosters teams={this.state.teams} currentTeam={this.state.currentTeam} />
             </div>
         )
     }
@@ -33,7 +42,7 @@ var TeamSidebar = React.createClass({
 var Teams = React.createClass({
     render: function() {
         var teams = this.props.teams.map(team =>
-            <Team key={"team." + team.id} team={team} />
+            <Team key={"team." + team.id} team={team} currentTeam={this.props.currentTeam} updateTeam={this.props.updateTeam}/>
         );
 
         return (
@@ -56,11 +65,21 @@ var Teams = React.createClass({
 });
 
 var Team = React.createClass({
+
+    updateTeam: function() {
+        this.props.updateTeam(this.props.team.id);
+    },
+
     render: function() {
 
+        var highlightClass= '';
+        if (this.props.team.id == this.props.currentTeam) {
+            highlightClass = 'info';
+        }
+
         return (
-            <tr id={"team." + this.props.team.id}>
-                <td>{this.props.team.name}</td>
+            <tr id={"team." + this.props.team.id} className={highlightClass}>
+                <td><a href="#" onClick={this.updateTeam}>{this.props.team.name}</a></td>
                 <td>{this.props.team.statistics.availableBudget}</td>
                 <td>{this.props.team.statistics.maxBid}</td>
                 <td>{this.props.team.statistics.openRosterSpots}</td>
@@ -73,7 +92,9 @@ var Team = React.createClass({
 var Rosters = React.createClass({
     render: function() {
 
-        var rosters = this.props.teams.map(team =>
+        var teams = this.props.teams.filter(team => team.id == this.props.currentTeam)
+
+        var rosters = teams.map(team =>
             <Roster key={"roster." + team.id} team={team} />
         );
 
