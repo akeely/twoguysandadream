@@ -5,13 +5,13 @@ buildscript {
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE"
-        classpath 'org.flywaydb:flyway-gradle-plugin:3.1'
+        classpath 'org.flywaydb:flyway-gradle-plugin:4.0'
         classpath 'mysql:mysql-connector-java:5.1.34'
     }
 }
 
 plugins {
-    id "org.flywaydb.flyway" version "3.2"
+    id "org.flywaydb.flyway" version "4.0"
     id "io.spring.dependency-management" version "0.5.4.RELEASE"
 }
 
@@ -72,6 +72,7 @@ dependencies {
     compile "org.springframework:spring-jdbc"
     compile "org.springframework.security:spring-security-openid"
     compile "com.google.guava:guava"
+    compile "org.flywaydb:flyway-core:4.0"
 
     testCompile "junit:junit"
     testCompile "org.springframework:spring-test"
@@ -83,7 +84,6 @@ dependencies {
     uatCompile "info.cukes:cucumber-groovy:1.2.2"
     uatCompile "info.cukes:cucumber-junit:1.2.2"
     uatCompile "junit:junit"
-    uatCompile "org.flywaydb:flyway-core"
     uatCompile "org.codehaus.groovy.modules.http-builder:http-builder:0.7"
     uatCompile "mysql:mysql-connector-java"
     uatCompile "com.mchange:c3p0"
