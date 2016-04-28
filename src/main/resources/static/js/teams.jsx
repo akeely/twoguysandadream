@@ -6,7 +6,10 @@ var TeamSidebar = React.createClass({
     },
 
     loadTeams: function () {
-        $.ajax('/api/league/1/team').done(response => {
+
+        var leagueId = $("meta[name='_league_id'").attr("content");
+
+        $.ajax('/api/league/' + leagueId + '/team').done(response => {
 
             this.setState({teams: response.sort(this.compareTeams)});
         });

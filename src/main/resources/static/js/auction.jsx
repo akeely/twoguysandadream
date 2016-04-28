@@ -58,7 +58,10 @@ var App = React.createClass({
     },
 
     loadAuctionBoard: function () {
-        $.ajax('/api/league/1/bid').done(response => {
+
+        var leagueId = $("meta[name='_league_id'").attr("content");
+
+        $.ajax('/api/league/' + leagueId + '/bid').done(response => {
 
             var merged = this.mergePlayers(this.state.auctionPlayers, response);
             this.setState({auctionPlayers: merged});
