@@ -84,7 +84,7 @@
         LEFT JOIN auction_players ap
           ON l.id = ap.leagueid
           AND p.playerid = ap.playerid
-        WHERE l.id=1
+        WHERE l.id=:leagueId
           AND ap.playerid IS NULL
           AND pw.playerid IS NULL
           AND p.active = 1
