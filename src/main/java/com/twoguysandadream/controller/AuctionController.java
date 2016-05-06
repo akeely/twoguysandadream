@@ -6,10 +6,12 @@ import com.twoguysandadream.resources.MissingResourceException;
 import com.twoguysandadream.security.AuctionUser;
 import com.twoguysandadream.security.AuctionUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -41,7 +43,7 @@ public class AuctionController {
     }
 
 
-    @RequestMapping("/league/{leagueId}/auction")
+    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/auction")
     public ModelAndView auctionBoard(@PathVariable long leagueId, @AuthenticationPrincipal
         AuctionUser user) throws MissingResourceException {
 
@@ -58,7 +60,7 @@ public class AuctionController {
         return mav;
     }
 
-    @RequestMapping("/league/{leagueId}/results")
+    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/results")
     public ModelAndView draftResults(@PathVariable long leagueId, @AuthenticationPrincipal AuctionUser user)
         throws MissingResourceException {
 
@@ -79,7 +81,7 @@ public class AuctionController {
         return mav;
     }
 
-    @RequestMapping("/league/{leagueId}/availableplayers")
+    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/availableplayers")
     public ModelAndView addPlayer(@PathVariable long leagueId, @AuthenticationPrincipal AuctionUser user)
         throws MissingResourceException {
 
@@ -99,6 +101,12 @@ public class AuctionController {
         mav.addObject("team", team);
 
         return mav;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/registration")
+    public ModelAndView registration() {
+
+        return new ModelAndView("registration");
     }
 
     private static class WonPlayer {
