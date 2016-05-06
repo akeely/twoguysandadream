@@ -1,5 +1,6 @@
 package com.twoguysandadream.security;
 
+import java.util.Optional;
 import java.util.OptionalLong;
 
 /**
@@ -14,6 +15,14 @@ public interface AuctionUserRepository {
      * @return The user.
      */
     AuctionUser findOrCreate(String openIdToken);
+
+    /**
+     * Find the user associated with the given token, or create a new user if one doesn't exist.
+     *
+     * @param openIdToken The openId token.
+     * @return The user.
+     */
+    Optional<AuctionUser> findOne(String openIdToken);
 
     /**
      * Find the team associated with the current user in the given league.

@@ -32,6 +32,7 @@ public class OpenIdUserDetailsService implements AuthenticationUserDetailsServic
 
         LOG.debug("Loading user [{}] with token [{}]", token.getName(), token);
 
-        return userRepository.findOrCreate(token.getName());
+        return userRepository.findOne(token.getName())
+            .orElseThrow(() -> new UsernameNotFoundException("No user for " + token));
     }
 }

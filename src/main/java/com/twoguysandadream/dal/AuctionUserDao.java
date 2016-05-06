@@ -2,6 +2,8 @@ package com.twoguysandadream.dal;
 
 import com.twoguysandadream.security.AuctionUser;
 import com.twoguysandadream.security.AuctionUserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataAccessException;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.OptionalLong;
 
 /**
@@ -22,6 +25,8 @@ import java.util.OptionalLong;
  */
 @Repository
 public class AuctionUserDao implements AuctionUserRepository {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AuctionUserDao.class);
 
     @Value("${user.findOne}")
     private String findOneQuery;
@@ -40,15 +45,12 @@ public class AuctionUserDao implements AuctionUserRepository {
     @Override
     public AuctionUser findOrCreate(String openIdToken) {
 
-        SqlParameterSource params = buildParams(openIdToken);
+        return findOneInternal(openIdToken).orElseGet(() -> create(openIdToken));
+    }
 
-        try {
-            long id = jdbcTemplate.queryForObject(findOneQuery, params, Long.class);
-            return new AuctionUser(id, openIdToken);
-        }
-        catch (EmptyResultDataAccessException e) {
-            return create(openIdToken, params);
-        }
+    @Override
+    public Optional<AuctionUser> findOne(String openIdToken) {
+        return findOneInternal(openIdToken);
     }
 
     @Override
@@ -66,7 +68,24 @@ public class AuctionUserDao implements AuctionUserRepository {
         }
     }
 
-    private AuctionUser create(String openIdToken, SqlParameterSource params) {
+    private Optional<AuctionUser> findOneInternal(String openIdToken) {
+
+        SqlParameterSource params = buildParams(openIdToken);
+
+        try {
+            long id = jdbcTemplate.queryForObject(findOneQuery, params, Long.class);
+            return Optional.of(new AuctionUser(id, openIdToken));
+        }
+        catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    private AuctionUser create(String openIdToken) {
+
+        SqlParameterSource params = buildParams(openIdToken);
+
+        LOG.info("Found new user with openIdToken {}. Creating...", openIdToken);
 
         GeneratedKeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(createQuery, params, keyHolder);

@@ -1,14 +1,19 @@
 package com.twoguysandadream.config;
 
 
+import com.google.common.collect.ImmutableMap;
 import com.twoguysandadream.resources.ApiConfiguration;
 import com.twoguysandadream.security.OpenIdUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -22,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http
             .logout()
                 .logoutUrl("/logout")
@@ -29,44 +35,54 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .and()
             .authorizeRequests()
-            .antMatchers("/css/**").permitAll()
-            .antMatchers("/img/**").permitAll()
-            .antMatchers("/js/**").permitAll()
-            .anyRequest().authenticated()
-            .and()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/img/**").permitAll()
+                .antMatchers("/js/**").permitAll()
+                .antMatchers("/registration").permitAll()
+                .anyRequest().authenticated()
+                .and()
             .openidLogin()
-            .loginPage(LOGIN_PAGE)
-            .permitAll()
-            .defaultSuccessUrl("/auction")
-            .authenticationUserDetailsService(userDetailsService)
-            .attributeExchange("https://www.google.com/.*")
-            .attribute("email")
-            .type("http://axschema.org/contact/email")
-            .required(true)
-            .and()
-            .attribute("firstname")
-            .type("http://axschema.org/namePerson/first")
-            .required(true)
-            .and()
-            .attribute("lastname")
-            .type("http://axschema.org/namePerson/last")
-            .required(true)
-            .and()
-            .and()
-            .attributeExchange(".*yahoo.com.*")
-            .attribute("email")
-            .type("http://axschema.org/contact/email")
-            .required(true)
-            .and()
-            .attribute("fullname")
-            .type("http://axschema.org/namePerson")
-            .required(true)
-            .and()
-            .and()
-            .attributeExchange(".*myopenid.com.*")
-            .attribute("email")
-            .type("http://schema.openid.net/contact/email").required(true).and()
-            .attribute("fullname").type("http://schema.openid.net/namePerson")
-            .required(true);
+                .loginPage(LOGIN_PAGE)
+                .permitAll()
+                .defaultSuccessUrl("/auction")
+                .authenticationUserDetailsService(userDetailsService)
+                .failureHandler(failureHandler())
+                .attributeExchange("https://www.google.com/.*")
+                    .attribute("email")
+                        .type("http://axschema.org/contact/email")
+                        .required(true)
+                        .and()
+                    .attribute("firstname")
+                        .type("http://axschema.org/namePerson/first")
+                        .required(true)
+                        .and()
+                    .attribute("lastname")
+                        .type("http://axschema.org/namePerson/last")
+                        .required(true)
+                        .and()
+                    .and()
+                .attributeExchange(".*yahoo.com.*")
+                    .attribute("email")
+                        .type("http://axschema.org/contact/email")
+                        .required(true)
+                        .and()
+                    .attribute("fullname")
+                        .type("http://axschema.org/namePerson")
+                        .required(true)
+                        .and()
+                    .and()
+                .attributeExchange(".*myopenid.com.*")
+                    .attribute("email")
+                        .type("http://schema.openid.net/contact/email").required(true).and()
+                        .attribute("fullname").type("http://schema.openid.net/namePerson")
+                        .required(true);
+    }
+
+    @Bean
+    public AuthenticationFailureHandler failureHandler() {
+
+        ExceptionMappingAuthenticationFailureHandler handler = new ExceptionMappingAuthenticationFailureHandler();
+        handler.setExceptionMappings(ImmutableMap.of(UsernameNotFoundException.class.getName(), "/registration"));
+        return handler;
     }
 }
