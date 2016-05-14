@@ -14,6 +14,7 @@ import com.twoguysandadream.core.LeagueRepository;
 import com.twoguysandadream.core.exception.BidException;
 import com.twoguysandadream.security.AuctionUser;
 import com.twoguysandadream.security.AuctionUserRepository;
+import com.twoguysandadream.security.NotRegisteredException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,8 +91,12 @@ public class BidResource {
 
     private long getTeam(AuctionUser user, long leagueId) throws MissingResourceException {
 
-        return userRepository.findTeamId(user, leagueId)
+        return userRepository.findTeamId(toTeamId(user), leagueId)
             .orElseThrow(() -> new MissingResourceException("team [" + "-" + user.getId() + "-" +leagueId + "]"));
+    }
+
+    private long toTeamId(AuctionUser user) {
+        return user.getId().orElseThrow(() -> new NotRegisteredException(user.getUsername()));
     }
 
     private static class NewBid {

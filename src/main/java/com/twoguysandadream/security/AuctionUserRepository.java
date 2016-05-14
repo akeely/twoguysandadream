@@ -27,9 +27,9 @@ public interface AuctionUserRepository {
     /**
      * Find the team associated with the current user in the given league.
      *
-     * @param user The user to find the team for.
+     * @param userId The user to find the team for.
      * @param leagueId The league that the team is in.
      * @return The identifier of the team.
      */
-    OptionalLong findTeamId(AuctionUser user, long leagueId);
+    OptionalLong findTeamId(long userId, long leagueId);
 }

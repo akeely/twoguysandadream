@@ -11,10 +11,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.openid.OpenIDAuthenticationToken;
 import org.springframework.stereotype.Service;
 
-
-/**
- * Created by andrewk on 10/18/15.
- */
 @Service
 public class OpenIdUserDetailsService implements AuthenticationUserDetailsService<OpenIDAuthenticationToken> {
 
@@ -33,6 +29,6 @@ public class OpenIdUserDetailsService implements AuthenticationUserDetailsServic
         LOG.debug("Loading user [{}] with token [{}]", token.getName(), token);
 
         return userRepository.findOne(token.getName())
-            .orElseThrow(() -> new UsernameNotFoundException("No user for " + token));
+            .orElse(new AuctionUser(token.getName()));
     }
 }

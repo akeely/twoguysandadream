@@ -54,10 +54,10 @@ public class AuctionUserDao implements AuctionUserRepository {
     }
 
     @Override
-    public OptionalLong findTeamId(AuctionUser user, long leagueId) {
+    public OptionalLong findTeamId(long userId, long leagueId) {
 
         Map<String, Object> params = new HashMap<>(2);
-        params.put("userId", user.getId());
+        params.put("userId", userId);
         params.put("leagueId", leagueId);
 
         try {

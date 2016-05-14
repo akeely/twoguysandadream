@@ -5,13 +5,14 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * Created by andrewk on 11/1/15.
  */
 public class AuctionUser extends User {
 
-    private final long userId;
+    private final Long userId;
 
     public AuctionUser(long userId, String username) {
 
@@ -19,7 +20,12 @@ public class AuctionUser extends User {
         this.userId = userId;
     }
 
-    public long getId() {
-        return userId;
+    public AuctionUser(String username) {
+        super(username, "", AuthorityUtils.createAuthorityList("ROLE_USER"));
+        this.userId = null;
+    }
+
+    public Optional<Long> getId() {
+        return Optional.ofNullable(userId);
     }
 }
