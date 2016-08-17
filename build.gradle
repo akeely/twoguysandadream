@@ -11,8 +11,8 @@ buildscript {
 }
 
 plugins {
-    id "org.flywaydb.flyway" version "4.0"
-    id "io.spring.dependency-management" version "0.5.4.RELEASE"
+    id "org.flywaydb.flyway" version "4.0.3"
+    id "io.spring.dependency-management" version "0.6.0.RELEASE"
 }
 
 apply plugin: 'java'
@@ -22,7 +22,7 @@ apply plugin: 'idea'
 
 dependencyManagement {
     imports {
-        mavenBom 'io.spring.platform:platform-bom:2.0.3.RELEASE'
+        mavenBom 'io.spring.platform:platform-bom:2.0.7.RELEASE'
     }
 }
 
@@ -72,7 +72,7 @@ dependencies {
     compile "org.springframework:spring-jdbc"
     compile "org.springframework.security:spring-security-openid"
     compile "com.google.guava:guava"
-    compile "org.flywaydb:flyway-core:4.0"
+    compile "org.flywaydb:flyway-core:4.0.3"
 
     testCompile "junit:junit"
     testCompile "org.springframework:spring-test"
