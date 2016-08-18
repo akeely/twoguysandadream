@@ -1,9 +1,9 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.33.10:3306/auction
-    username: uat
-    password: password
+    url: jdbc:mysql://localhost:3306/auction_prod
+    username: root
+    password: 
     test-on-borrow: true
     validation-query: SELECT 1
 

@@ -2,6 +2,7 @@ package com.twoguysandadream.controller;
 
 
 import com.twoguysandadream.core.*;
+import com.twoguysandadream.resources.AuthorizationException;
 import com.twoguysandadream.resources.MissingResourceException;
 import com.twoguysandadream.security.AuctionUser;
 import com.twoguysandadream.security.AuctionUserRepository;
@@ -53,7 +54,7 @@ public class AuctionController {
         League league = leagueRepository.findOne(leagueId)
             .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
         long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
-            .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
+            .orElseThrow(() -> new AuthorizationException("team for user: " + user.getUsername()));
 
         mav.addObject("leagueId", leagueId);
         mav.addObject("teamId", teamId);

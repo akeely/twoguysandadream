@@ -45,6 +45,13 @@ bootRun.doFirst {
     file("${project.buildDir}/logs").mkdirs()
 }
 
+flyway {
+    url = 'jdbc:mysql://localhost:3306/auction_prod'
+    user = 'root'
+    schemas = ['auction_prod']
+    baselineDescription = 'Production import'
+}
+
 sourceSets {
     ft
     uat
