@@ -5,10 +5,10 @@
     <title>Two Guys and a Dream</title>
 
     <!-- Bootstrap dependencies -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
-    <script src="//code.jquery.com/jquery-1.11.3.min.js" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
     <script language="JavaScript">
         $(function () {
           $('[data-toggle="tooltip"]').tooltip()
@@ -19,9 +19,9 @@
     </script>
 
     <!-- React dependencies -->
-    <script src="https://fb.me/react-0.14.2.js" />
-    <script src="https://fb.me/react-dom-0.14.2.js" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" />
+    <script src="https://npmcdn.com/react@15.3.0/dist/react.min.js" />
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js" />
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
@@ -33,8 +33,8 @@
 
     <!-- Custom dependencies -->
     <link rel="stylesheet" th:href="@{/css/auction.css}" />
-    <script th:src="@{/js/auction.jsx}" type="text/babel" />
-    <script th:src="@{/js/teams.jsx}" type="text/babel" />
+    <script th:src="@{/js/pages/Auction.js}" type="text/babel" />
+    <script th:src="@{/js/components/auction/TeamSummary.js}" type="text/babel" />
 
     <!-- CSRF Token -->
     <meta name="_csrf" th:content="${_csrf.token}"/>

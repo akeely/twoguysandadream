@@ -1,11 +1,18 @@
 
-var TeamSidebar = React.createClass({
+class TeamSidebar extends React.Component {
 
-    compareTeams: function(a,b) {
+    constructor(props) {
+        super(props);
+
+        var activeTeam = $("meta[name='_team_id'").attr("content");
+        this.state = {teams: [], currentTeam: activeTeam};
+    }
+
+    compareTeams(a,b) {
         return a.name.localeCompare(b.name)
-    },
+    }
 
-    loadTeams: function () {
+    loadTeams() {
 
         var leagueId = $("meta[name='_league_id'").attr("content");
 
@@ -13,26 +20,19 @@ var TeamSidebar = React.createClass({
 
             this.setState({teams: response.sort(this.compareTeams)});
         });
-    },
+    }
 
-    updateCurrentTeam: function(newTeam) {
+    updateCurrentTeam(newTeam) {
 
         this.setState({currentTeam: newTeam});
-    },
-
-    getInitialState: function () {
-
-        var activeTeam = $("meta[name='_team_id'").attr("content");
-
-        return ({teams: [], currentTeam: activeTeam});
-    },
-
-    componentDidMount: function () {
+    }
+    
+    componentDidMount() {
         this.loadTeams();
         setInterval(this.loadTeams, this.props.pollInterval);
-    },
+    }
 
-    render: function () {
+    render() {
         return (
             <div>
                 <Teams teams={this.state.teams} currentTeam={this.state.currentTeam} updateTeam={this.updateCurrentTeam} />
@@ -40,7 +40,7 @@ var TeamSidebar = React.createClass({
             </div>
         )
     }
-});
+}
 
 var Teams = React.createClass({
     render: function() {
