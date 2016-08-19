@@ -6,6 +6,9 @@ class TeamSidebar extends React.Component {
 
         var activeTeam = $("meta[name='_team_id'").attr("content");
         this.state = {teams: [], currentTeam: activeTeam};
+
+        this.loadTeams = this.loadTeams.bind(this);
+        this.updateCurrentTeam = this.updateCurrentTeam.bind(this);
     }
 
     compareTeams(a,b) {
@@ -26,7 +29,7 @@ class TeamSidebar extends React.Component {
 
         this.setState({currentTeam: newTeam});
     }
-    
+
     componentDidMount() {
         this.loadTeams();
         setInterval(this.loadTeams, this.props.pollInterval);
