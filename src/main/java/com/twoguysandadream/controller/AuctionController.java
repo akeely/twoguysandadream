@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Controller
 public class AuctionController {
@@ -73,8 +75,8 @@ public class AuctionController {
         long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
             .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
 
-        List<WonPlayer> players = league.getRosters().entrySet().stream()
-            .flatMap((e) -> e.getValue().stream().map((p) -> new WonPlayer(e.getKey(), p)))
+        List<WonPlayer> players = league.getTeams().stream()
+            .flatMap(this::toWonPlayers)
             .collect(Collectors.toList());
 
         mav.addObject("leagueId", leagueId);
@@ -130,6 +132,11 @@ public class AuctionController {
     private long toUserId(AuctionUser user) {
 
         return user.getId().orElseThrow(() -> new NotRegisteredException(user.getUsername()));
+    }
+
+    private Stream<WonPlayer> toWonPlayers(Team team) {
+
+        return team.getRoster().stream().map(p -> new WonPlayer(team, p));
     }
 
     private static class WonPlayer {

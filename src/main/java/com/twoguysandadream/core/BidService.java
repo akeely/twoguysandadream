@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -40,7 +41,7 @@ public class BidService {
         League league = leagueRepository.findOne(leagueId).orElseThrow(
             () -> new IllegalArgumentException("No league with id " + leagueId));
 
-        Team team = league.getTeamStatistics().keySet().stream().filter((t) -> t.getId() == teamId).findFirst()
+        Team team = league.getTeams().stream().filter((t) -> t.getId() == teamId).findFirst()
             .orElseThrow(() -> new IllegalArgumentException("No team " + teamId + " exists in league " + leagueId));
 
         Bid existingBid = league.getAuctionBoard().stream().filter((b) -> b.getPlayer().getId() == playerId)
@@ -63,7 +64,7 @@ public class BidService {
         League league = leagueRepository.findOne(leagueId).orElseThrow(
             () -> new IllegalArgumentException("No league with id " + leagueId));
 
-        Team team = league.getTeamStatistics().keySet().stream().filter((t) -> t.getId() == teamId).findFirst()
+        Team team = league.getTeams().stream().filter((t) -> t.getId() == teamId).findFirst()
             .orElseThrow(() -> new IllegalArgumentException("No team " + teamId + " exists in league " + leagueId));
 
         validateAvailable(league, playerId);
@@ -111,8 +112,9 @@ public class BidService {
             throw new AuctionExpiredException(playerId);
         }
 
-        if (league.getRosters().entrySet().stream()
-                .flatMap((e) -> e.getValue().stream())
+        if (league.getTeams().stream()
+                .map(Team::getRoster)
+                .flatMap(Collection::stream)
                 .anyMatch((p) -> p.getPlayer().getId() == playerId)) {
 
             throw new AuctionExpiredException(playerId);

@@ -30,20 +30,15 @@ public class League {
         this.isPaused = isPaused;
     }
 
-    public Map<Team,TeamStatistics> getTeamStatistics() {
+    public Map<Long,TeamStatistics> getTeamStatistics() {
 
         return teams.stream()
-            .collect(Collectors.toMap(Function.identity(), this::toStatistics));
+            .collect(Collectors.toMap(Team::getId, this::toStatistics));
     }
 
-    public Map<Team, Collection<RosteredPlayer>> getRosters() {
+    public List<Team> getTeams() {
 
-        return teams.stream()
-                .collect(Collectors.toMap(
-                    Function.identity(),
-                    Team::getRoster,
-                    (s, a) -> s)
-                );
+        return teams;
     }
 
     public List<Bid> getAuctionBoard() {

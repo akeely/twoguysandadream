@@ -34,8 +34,8 @@ public class TeamResource {
         League league =  leagueRepository.findOne(leagueId)
             .orElseThrow(() -> new MissingResourceException("league [" + leagueId + "]"));
 
-        return league.getTeamStatistics().entrySet().stream()
-            .map(e -> new TeamDto(e.getKey(), e.getValue()))
+        return league.getTeams().stream()
+            .map(t -> new TeamDto(t, league.getTeamStatistics().get(t.getId())))
             .collect(Collectors.toList());
     }
 
