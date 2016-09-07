@@ -3,6 +3,8 @@ package com.twoguysandadream.api.legacy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.twoguysandadream.core.Bid;
 import com.twoguysandadream.core.Position;
+import com.twoguysandadream.core.RosteredPlayer;
+import com.twoguysandadream.core.Team;
 import com.twoguysandadream.core.TeamStatistics;
 
 import java.math.BigDecimal;
@@ -105,6 +107,30 @@ public class League {
         currentTime.put("SECOND", String.format("%02d", time.getSecond()));
 
         return currentTime;
+    }
+
+    @JsonProperty("RFA")
+    public Map<String, Map<String, String>> getRfaResults() {
+
+        Map<String, Map<String, String>> rfaResults = new HashMap<>();
+
+        Map<Team, Collection<RosteredPlayer>> rosters = league.getRosters();
+        for (Team team : rosters.keySet()) {
+            List<RosteredPlayer> rfaPlayers = rosters.get(team).stream()
+                .filter(r -> !"NA".equals(r.getRfaOverride()))
+                .collect(Collectors.toList());
+
+            for (RosteredPlayer player : rfaPlayers) {
+                Map<String, String> result = new HashMap<>();
+                result.put("TEAM", team.getName());
+                result.put("PRICE", player.getCost().toPlainString());
+                result.put("OVERRIDE", player.getRfaOverride());
+
+                rfaResults.put(player.getPlayer().getName(), result);
+            }
+        }
+
+        return rfaResults;
     }
 
     private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {

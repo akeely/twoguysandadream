@@ -231,8 +231,9 @@ public class LeagueDao implements LeagueRepository {
 
             BigDecimal cost = rs.getBigDecimal("price");
             String time = rs.getString("time");
+            String rfaOverride = rs.getString("rfa_override");
 
-            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost, time);
+            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost, time, rfaOverride);
             rosters.putIfAbsent(team, new ArrayList<>());
             rosters.get(team).add(rosteredPlayer);
         }
