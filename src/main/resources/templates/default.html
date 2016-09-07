@@ -7,8 +7,8 @@
     <!-- Bootstrap dependencies -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
-    <script src="//code.jquery.com/jquery-1.12.4.min.js" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+
+    <!--
     <script language="JavaScript">
         $(function () {
           $('[data-toggle="tooltip"]').tooltip()
@@ -17,24 +17,15 @@
           $('[data-toggle="popover"]').popover()
         })
     </script>
-
-    <!-- React dependencies -->
-    <script src="https://npmcdn.com/react@15.3.0/dist/react.min.js" />
-    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js" />
-    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js" />
-
+    -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
     <!-- DataTables -->
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" />
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
 
     <!-- Custom dependencies -->
     <link rel="stylesheet" th:href="@{/css/auction.css}" />
-    <script th:src="@{/js/pages/Auction.js}" type="text/babel" />
-    <script th:src="@{/js/components/auction/TeamSummary.js}" type="text/babel" />
 
     <!-- CSRF Token -->
     <meta name="_csrf" th:content="${_csrf.token}"/>
@@ -48,6 +39,7 @@
 
 <div th:fragment="footer" class="navbar navbar-default text-center">
     <p class="navbar-text">&copy; 2016 Two Guys and a Dream</p>
+    <script src="http://localhost:8888/tgaad.bundle.js" type="text/javascript" />
 </div>
 
 </body>

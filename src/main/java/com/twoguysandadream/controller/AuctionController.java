@@ -56,7 +56,8 @@ public class AuctionController {
         League league = leagueRepository.findOne(leagueId)
             .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
         long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
-            .orElseThrow(() -> new AuthorizationException("team for user: " + user.getUsername()));
+            .orElseThrow(() -> new AuthorizationException("team for user: " + user.getUsername() + " [" + user.getId()
+                + "]"));
 
         mav.addObject("leagueId", leagueId);
         mav.addObject("teamId", teamId);
