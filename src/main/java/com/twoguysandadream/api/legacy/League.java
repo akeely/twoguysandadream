@@ -29,7 +29,7 @@ public class League {
         return league.getAuctionBoard().stream()
             .collect(Collectors.toMap((b) -> b.getPlayer().getId(), (b) -> {
                     Map<String, Object> bid = new HashMap<>();
-                    bid.put("RFA_PREV_OWNER", "NA");
+                    bid.put("RFA_PREV_OWNER", b.getPreviousTeam().orElse("NA"));
                     bid.put("NAME", b.getPlayer().getName());
                     bid.put("TIME", getExpirationTime(b));
                     bid.put("BIDDER", b.getTeam());
@@ -43,9 +43,19 @@ public class League {
 
     private Object getExpirationTime(Bid bid) {
 
-        return Optional.<Object>of(bid.getExpirationTime())
+        return Optional.of(bid)
+            .map(b -> toRfaWait(b))
             .filter(b -> !league.isPaused())
             .orElse("PAUSED");
+    }
+
+    private Object toRfaWait(Bid bid) {
+
+        if (bid.getExpirationTime() < bid.getCurrentTime() && "WAIT".equals(bid.getRfaOverride())) {
+            return "WAIT";
+        }
+
+        return bid.getExpirationTime();
     }
 
     @JsonProperty("ROSTERS")

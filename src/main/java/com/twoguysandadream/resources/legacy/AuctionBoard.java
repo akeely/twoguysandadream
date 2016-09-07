@@ -84,8 +84,9 @@ public class AuctionBoard {
         return rosteredPlayer
             .map((p) -> rosteredPlayerToBid(p))
             .orElse(new Bid("NA", new Player(playerId, "", Collections.emptyList(), ""),
-                    BigDecimal.ZERO, -1L));
+                    BigDecimal.ZERO, -1L, null, null, -1L));
     }
+
 
     private Optional<Map.Entry<Team,RosteredPlayer>> getPlayerWon(League league, Long playerId) {
 
@@ -103,7 +104,7 @@ public class AuctionBoard {
     private Bid rosteredPlayerToBid(Map.Entry<Team,RosteredPlayer> player) {
 
         return new Bid(player.getKey().getName(), player.getValue().getPlayer(),
-            player.getValue().getCost(), -1L);
+            player.getValue().getCost(), -1L, null, null, -1L);
     }
 
     private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {

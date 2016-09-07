@@ -19,9 +19,10 @@ public class League {
     private final List<Bid> auctionBoard;
     private final List<Team> teams;
     private final boolean isPaused;
+    private final String previousLeague;
 
     public League(long id, String name, int rosterSize, BigDecimal budget, List<Bid> auctionBoard,
-            List<Team> teams, boolean isPaused) {
+            List<Team> teams, boolean isPaused, String previousLeague) {
 
         this.id = id;
         this.name = name;
@@ -30,6 +31,7 @@ public class League {
         this.auctionBoard = auctionBoard;
         this.teams = teams;
         this.isPaused = isPaused;
+        this.previousLeague = previousLeague;
     }
 
     public Map<Team,TeamStatistics> getTeamStatistics() {
@@ -67,6 +69,10 @@ public class League {
 
     public boolean isPaused() {
         return isPaused;
+    }
+
+    public Optional<String> getPreviousLeague() {
+        return Optional.ofNullable(previousLeague);
     }
 
     private <K,V> Map.Entry<K,V> toMapEntry(K key, V value) {

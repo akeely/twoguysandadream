@@ -9,10 +9,12 @@ public class RosteredPlayer {
 
     private final Player player;
     private final BigDecimal cost;
+    private final String time;
 
-    public RosteredPlayer(Player player, BigDecimal cost) {
+    public RosteredPlayer(Player player, BigDecimal cost, String time) {
         this.player = player;
         this.cost = cost;
+        this.time = time;
     }
 
     public Player getPlayer() {
@@ -21,5 +23,9 @@ public class RosteredPlayer {
 
     public BigDecimal getCost() {
         return cost;
+    }
+
+    public String getTime() {
+        return time;
     }
 }

@@ -54,10 +54,10 @@ public class LeagueDao implements LeagueRepository {
 
     private League getLeagueData(LeagueMetadata metadata) {
 
-        List<Bid> auctionBoard = getAuctionBoard(metadata.getName());
+        List<Bid> auctionBoard = getAuctionBoard(metadata.getName(), metadata.getPrevious_league());
         List<Team> teams = getTeams(metadata.getName());
         return new League(-1L, metadata.getName(), getRosterSize(metadata),
-            metadata.getSalary_cap(), auctionBoard, teams, isPaused(metadata));
+            metadata.getSalary_cap(), auctionBoard, teams, isPaused(metadata), metadata.getPrevious_league());
     }
 
     private boolean isPaused(LeagueMetadata metadata) {
@@ -82,10 +82,13 @@ public class LeagueDao implements LeagueRepository {
         return handler.getRosters();
     }
 
-    private List<Bid> getAuctionBoard(String leagueName) {
+    private List<Bid> getAuctionBoard(String leagueName, String previousLeague) {
 
-        return jdbcTemplate.query(findBidsQuery, Collections.singletonMap("leagueName", leagueName),
-            new BidRowMapper());
+        Map<String, String> params = new HashMap<>();
+        params.put("leagueName", leagueName);
+        params.put("previousLeague", previousLeague);
+
+        return jdbcTemplate.query(findBidsQuery, params, new BidRowMapper());
     }
 
     private int getRosterSize(LeagueMetadata metadata) {
@@ -127,6 +130,7 @@ public class LeagueDao implements LeagueRepository {
         private BigDecimal salary_cap;
         private String sport;
         private String draft_status;
+        private String previous_league;
 
         public String getName() {
             return name;
@@ -159,6 +163,14 @@ public class LeagueDao implements LeagueRepository {
         public void setDraft_status(String draft_status) {
             this.draft_status = draft_status;
         }
+
+        public String getPrevious_league() {
+            return previous_league;
+        }
+
+        public void setPrevious_league(String previous_league) {
+            this.previous_league = previous_league;
+        }
     }
 
     public class BidRowMapper implements RowMapper<Bid> {
@@ -176,8 +188,11 @@ public class LeagueDao implements LeagueRepository {
                 new Position(rs.getString("position")));
             String realTeam = rs.getString("realTeam");
             Player player = new Player(id, name, positions, realTeam);
+            String rfaOverride = rs.getString("rfa_override");
+            String previousTeam = rs.getString("previousTeam");
+            long currentTime = rs.getLong("currentTime");
 
-            return new Bid(team, player, amount, expirationTime);
+            return new Bid(team, player, amount, expirationTime, rfaOverride, previousTeam, currentTime);
         }
     }
 
@@ -215,8 +230,9 @@ public class LeagueDao implements LeagueRepository {
             Player player = new Player(id, name, positions, realTeam);
 
             BigDecimal cost = rs.getBigDecimal("price");
+            String time = rs.getString("time");
 
-            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost);
+            RosteredPlayer rosteredPlayer = new RosteredPlayer(player, cost, time);
             rosters.putIfAbsent(team, new ArrayList<>());
             rosters.get(team).add(rosteredPlayer);
         }
