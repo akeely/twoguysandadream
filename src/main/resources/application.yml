@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/auction_prod
+    url: jdbc:mysql://localhost:3306/auction_prod2
     username: root
     password: 
     test-on-borrow: true

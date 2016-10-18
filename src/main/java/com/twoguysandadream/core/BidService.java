@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -48,9 +49,9 @@ public class BidService {
             .findAny().orElseThrow(() -> new AuctionExpiredException(playerId));
 
         checkExpired(existingBid);
+        validateRosterSpace(team, existingBid, league);
         validateBid(existingBid, amount);
         validateFunds(league, team, existingBid, amount);
-        validateRosterSpace(team, existingBid, league);
 
         long expirationTime = getExpirationTime(league, existingBid);
         Bid newBid = new Bid(teamId, team.getName(), existingBid.getPlayer(), amount, expirationTime);
@@ -127,7 +128,7 @@ public class BidService {
             return;
         }
 
-        int availableSpaces = league.getTeamStatistics().get(team).getOpenRosterSpots();
+        int availableSpaces = league.getTeamStatistics().get(team.getId()).getOpenRosterSpots();
         long openBids = league.getAuctionBoard().stream().filter((b) -> b.getTeamId() == team.getId()).count();
 
         if (availableSpaces <= openBids) {
@@ -145,14 +146,15 @@ public class BidService {
     private void validateFunds(League league, Team team, Bid existingBid, BigDecimal amount)
         throws InsufficientFundsException {
 
-        TeamStatistics statistics = league.getTeamStatistics().get(team);
+        Map<Long, TeamStatistics> map = league.getTeamStatistics();
+        TeamStatistics statistics = map.get(team.getId());
         BigDecimal adjustment = Optional.ofNullable(existingBid)
             .filter((b) -> b.getTeamId() == team.getId())
             .map(Bid::getAmount)
             .orElse(BigDecimal.ZERO);
 
         if (amount.compareTo(statistics.getMaxBid().subtract(adjustment)) > 0) {
-            throw new InsufficientFundsException(amount, statistics.getMaxBid());
+            throw new InsufficientFundsException(amount, statistics.getMaxBid().subtract(adjustment));
         }
     }
 

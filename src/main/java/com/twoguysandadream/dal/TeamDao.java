@@ -48,7 +48,7 @@ public class TeamDao implements TeamRepository {
     }
 
     @Override public List<Team> findAll(long leagueId) {
-        Map<String,List<RosteredPlayer>> rosters = getRosters(leagueId);
+        Map<Long,List<RosteredPlayer>> rosters = getRosters(leagueId);
 
         return jdbcTemplate.query(findAllQuery, Collections.singletonMap("leagueId", leagueId),
             new TeamRowMapper(rosters));
@@ -56,7 +56,7 @@ public class TeamDao implements TeamRepository {
 
     @Override public Optional<Team> findOne(long leagueId, long teamId) {
 
-        Map<String,List<RosteredPlayer>> rosters = getRosters(leagueId);
+        Map<Long,List<RosteredPlayer>> rosters = getRosters(leagueId);
 
         Map<String, Long> params = ImmutableMap.<String, Long>builder()
             .put("leagueId", leagueId)
@@ -88,7 +88,7 @@ public class TeamDao implements TeamRepository {
         return new MapSqlParameterSource(params);
     }
 
-    private Map<String,List<RosteredPlayer>> getRosters(long leagueId) {
+    private Map<Long,List<RosteredPlayer>> getRosters(long leagueId) {
 
         RosteredPlayerCallbackHandler handler = new RosteredPlayerCallbackHandler();
         jdbcTemplate.query(findRostersQuery, Collections.singletonMap("leagueId", leagueId),
@@ -110,9 +110,9 @@ public class TeamDao implements TeamRepository {
 
     public class TeamRowMapper implements RowMapper<Team> {
 
-        private final Map<String,List<RosteredPlayer>> rosters;
+        private final Map<Long,List<RosteredPlayer>> rosters;
 
-        public TeamRowMapper(Map<String, List<RosteredPlayer>> rosters) {
+        public TeamRowMapper(Map<Long, List<RosteredPlayer>> rosters) {
             this.rosters = rosters;
         }
 
@@ -120,7 +120,7 @@ public class TeamDao implements TeamRepository {
 
             long id = rs.getLong("id");
             String name = rs.getString("name");
-            Collection<RosteredPlayer> roster = rosters.getOrDefault(name, Collections.emptyList());
+            Collection<RosteredPlayer> roster = rosters.getOrDefault(id, Collections.emptyList());
             BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
             int adds = rs.getInt("num_adds");
             return new Team(id,name,roster,budgetAdjustment,adds);
@@ -129,11 +129,11 @@ public class TeamDao implements TeamRepository {
 
     public class RosteredPlayerCallbackHandler implements RowCallbackHandler {
 
-        private final Map<String,List<RosteredPlayer>> rosters = new HashMap<>();
+        private final Map<Long,List<RosteredPlayer>> rosters = new HashMap<>();
 
         @Override public void processRow(ResultSet rs) throws SQLException {
 
-            String team = rs.getString("team");
+            long team = rs.getLong("teamId");
 
             long id = rs.getLong("playerid");
             String name = decodeString(rs.getString("name"));
@@ -151,7 +151,7 @@ public class TeamDao implements TeamRepository {
             rosters.get(team).add(rosteredPlayer);
         }
 
-        public Map<String, List<RosteredPlayer>> getRosters() {
+        public Map<Long, List<RosteredPlayer>> getRosters() {
             return rosters;
         }
     }

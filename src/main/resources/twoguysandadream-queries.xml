@@ -32,7 +32,7 @@
          AND id = :teamId
     ]]></entry>
     <entry key="team.findRosters"><![CDATA[
-       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.name AS team
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.id AS teamId
        FROM players_won pw
        JOIN players p
          ON pw.playerid=p.playerid

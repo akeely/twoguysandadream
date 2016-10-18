@@ -16,6 +16,7 @@ ALTER TABLE `auction_players` ADD `teamid` INT NULL;
 UPDATE auction_players AS a
   INNER JOIN teams AS t
   ON a.team=t.name
+  AND a.league=t.league
 SET a.teamid=t.id;
 ALTER TABLE `auction_players` DROP `team`;
 
@@ -24,6 +25,7 @@ ALTER TABLE `final_rosters` ADD `teamid` INT NULL;
 UPDATE final_rosters AS a
   INNER JOIN teams AS t
   ON a.team=t.name
+  AND a.league=t.league
 SET a.teamid=t.id;
 ALTER TABLE `final_rosters` DROP `team`;
 
@@ -32,6 +34,7 @@ ALTER TABLE `players_won` ADD `teamid` INT NULL;
 UPDATE players_won AS a
   INNER JOIN teams AS t
   ON a.team=t.name
+  AND a.league=t.league
 SET a.teamid=t.id;
 ALTER TABLE `players_won` DROP `team`;
 

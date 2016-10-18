@@ -46,9 +46,9 @@ bootRun.doFirst {
 }
 
 flyway {
-    url = 'jdbc:mysql://localhost:3306/auction_prod'
+    url = 'jdbc:mysql://localhost:3306/auction_prod2'
     user = 'root'
-    schemas = ['auction_prod']
+    schemas = ['auction_prod2']
     baselineDescription = 'Production import'
 }
 

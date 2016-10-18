@@ -31,8 +31,12 @@ public class TeamStatistics {
                 .map(RosteredPlayer::getCost)
                 .reduce((x,y) -> x.add(y))
                 .orElse(BigDecimal.ZERO));
-        this.maxBid = availableBudget.subtract(settings.getMinimumBid().multiply(new BigDecimal
-                (openRosterSpots-1)));
+        if (openRosterSpots == 0) {
+            this.maxBid = BigDecimal.ZERO;
+        } else {
+            this.maxBid = availableBudget
+                    .subtract(settings.getMinimumBid().multiply(new BigDecimal(openRosterSpots - 1)));
+        }
     }
 
     public BigDecimal getAvailableBudget() {
