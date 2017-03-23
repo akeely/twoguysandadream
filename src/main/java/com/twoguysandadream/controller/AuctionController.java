@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,29 +42,19 @@ public class AuctionController {
         this.teamRepository = teamRepository;
     }
 
+    /**
+     * Handle any request that is not handled by other controllers. This should handle all requests that are not
+     * API requests and logon requests.
+     */
+    @GetMapping({"/", "/league/**"})
+    public String home() {
+        return "index";
+    }
+
     @RequestMapping("/login")
     public String login() {
 
         return "login";
-    }
-
-
-    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/auction")
-    public ModelAndView auctionBoard(@PathVariable long leagueId, @AuthenticationPrincipal
-        AuctionUser user) throws MissingResourceException {
-
-        ModelAndView mav = new ModelAndView("auction");
-        League league = leagueRepository.findOne(leagueId)
-            .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
-        long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
-            .orElseThrow(() -> new AuthorizationException("team for user: " + user.getUsername() + " [" + user.getId()
-                + "]"));
-
-        mav.addObject("leagueId", leagueId);
-        mav.addObject("teamId", teamId);
-        mav.addObject("league", league);
-        mav.addObject("user", user);
-        return mav;
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/results")
