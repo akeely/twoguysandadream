@@ -57,49 +57,6 @@ public class AuctionController {
         return "login";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/results")
-    public ModelAndView draftResults(@PathVariable long leagueId, @AuthenticationPrincipal AuctionUser user)
-        throws MissingResourceException {
-
-        ModelAndView mav = new ModelAndView("draftResults");
-        League league = leagueRepository.findOne(leagueId)
-            .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
-        long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
-            .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
-
-        List<WonPlayer> players = league.getTeams().stream()
-            .flatMap(this::toWonPlayers)
-            .collect(Collectors.toList());
-
-        mav.addObject("leagueId", leagueId);
-        mav.addObject("teamId", teamId);
-        mav.addObject("players", players);
-
-        return mav;
-    }
-
-    @RequestMapping(method = RequestMethod.GET, path = "/league/{leagueId}/availableplayers")
-    public ModelAndView addPlayer(@PathVariable long leagueId, @AuthenticationPrincipal AuctionUser user)
-        throws MissingResourceException {
-
-        ModelAndView mav = new ModelAndView("addPlayer");
-        League league = leagueRepository.findOne(leagueId)
-            .orElseThrow(() -> new MissingResourceException("league: " + leagueId));
-        long teamId = auctionUserRepository.findTeamId(toUserId(user), leagueId)
-            .orElseThrow(() -> new MissingResourceException("team for user: " + user.getUsername()));
-
-        List<Player> players = playerRepository.findAllAvailable(leagueId);
-        Team team = teamRepository.findOne(leagueId, teamId)
-            .orElseThrow(() -> new MissingResourceException("team: " + teamId));
-
-        mav.addObject("leagueId", leagueId);
-        mav.addObject("teamId", teamId);
-        mav.addObject("players", players);
-        mav.addObject("team", team);
-
-        return mav;
-    }
-
     @RequestMapping(method = RequestMethod.GET, path = "/registration")
     public ModelAndView registration() {
 
@@ -119,35 +76,5 @@ public class AuctionController {
         auctionUserRepository.findOrCreate(token);
 
         return "redirect:/";
-    }
-
-    private long toUserId(AuctionUser user) {
-
-        return user.getId().orElseThrow(() -> new NotRegisteredException(user.getUsername()));
-    }
-
-    private Stream<WonPlayer> toWonPlayers(Team team) {
-
-        return team.getRoster().stream().map(p -> new WonPlayer(team, p));
-    }
-
-    private static class WonPlayer {
-
-        private final Team team;
-        private final RosteredPlayer player;
-
-
-        private WonPlayer(Team team, RosteredPlayer player) {
-            this.team = team;
-            this.player = player;
-        }
-
-        public Team getTeam() {
-            return team;
-        }
-
-        public RosteredPlayer getPlayer() {
-            return player;
-        }
     }
 }
