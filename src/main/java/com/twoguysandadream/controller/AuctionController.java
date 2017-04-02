@@ -56,20 +56,7 @@ public class AuctionController {
 
         return "login";
     }
-
-    @RequestMapping(method = RequestMethod.GET, path = "/registration")
-    public ModelAndView registration() {
-
-        return new ModelAndView("registration");
-    }
-
-    @RequestMapping(method = RequestMethod.POST, path = "/registration", params = {"username", "passwd"})
-    public String linkUser(@RequestParam("username") String username, @RequestParam("passwd") String passwd,
-        @AuthenticationPrincipal AuctionUser user) {
-
-        return "redirect:/";
-    }
-
+    
     @RequestMapping(method = RequestMethod.POST, path = "/registration")
     public String registerNewUser(@RequestParam("openIdToken") String token) {
 
