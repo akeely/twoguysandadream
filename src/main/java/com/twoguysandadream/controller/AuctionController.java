@@ -56,7 +56,7 @@ public class AuctionController {
 
         return "login";
     }
-    
+
     @RequestMapping(method = RequestMethod.POST, path = "/registration")
     public String registerNewUser(@RequestParam("openIdToken") String token) {
 
