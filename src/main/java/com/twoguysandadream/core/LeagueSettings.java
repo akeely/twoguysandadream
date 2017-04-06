@@ -63,7 +63,7 @@ public class LeagueSettings {
         return System.currentTimeMillis() + auctionLength;
     }
 
-    private long toMillis(long seconds) {
-        return TimeUnit.MILLISECONDS.convert(seconds, TimeUnit.SECONDS);
+    private long toMillis(long minutes) {
+        return TimeUnit.MILLISECONDS.convert(minutes, TimeUnit.MINUTES);
     }
 }
