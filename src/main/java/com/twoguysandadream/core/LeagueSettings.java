@@ -64,6 +64,6 @@ public class LeagueSettings {
     }
 
     private long toMillis(long minutes) {
-        return TimeUnit.MILLISECONDS.convert(minutes, TimeUnit.MINUTES);
+        return TimeUnit.MILLISECONDS.convert(minutes, TimeUnit.SECONDS);
     }
 }

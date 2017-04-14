@@ -12,5 +12,7 @@ public interface TeamRepository {
 
     Optional<Team> findOne(long leagueId, long teamId);
 
+    Optional<Team> findByOwner(long leagueId, long ownerId);
+
     void update(long leagueId, Team team);
 }
