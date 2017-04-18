@@ -51,7 +51,7 @@ public class TeamResource {
 
         return user.getId()
                 .flatMap(id -> teamRepository.findByOwner(leagueId, id))
-                .map(t -> new TeamDto(t, null));
+                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds())));
     }
 
     public static class TeamDto {
