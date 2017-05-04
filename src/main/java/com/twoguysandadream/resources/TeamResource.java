@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -46,12 +45,13 @@ public class TeamResource {
     }
 
     @GetMapping("/me")
-    public Optional<TeamDto> findActive(@PathVariable("leagueId") long leagueId,
-            @AuthenticationPrincipal AuctionUser user) {
+    public TeamDto findActive(@PathVariable("leagueId") long leagueId,
+            @AuthenticationPrincipal AuctionUser user) throws MissingResourceException {
 
         return user.getId()
                 .flatMap(id -> teamRepository.findByOwner(leagueId, id))
-                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds())));
+                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds())))
+                .orElseThrow(() -> new MissingResourceException("No team found for current user in league " + leagueId));
     }
 
     public static class TeamDto {

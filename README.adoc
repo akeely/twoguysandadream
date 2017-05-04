@@ -8,7 +8,7 @@ Database Setup
 ==============
 
  - Install MySQL 5.7.
- - Create the schema `auction_prod2`.
+ - Create the schema `auction`.
  - Update `src/main/resources/application.yml` with the appropriate username/password.
  - Update the Flyway configuration in `build.gradle` with the appropriate username/password.
  - Apply the database script `src/test/resources/database_dump.sql` to `auction_prod2`.
