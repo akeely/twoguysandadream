@@ -13,3 +13,6 @@ spring:
 server:
   tomcat:
     access-log-enabled: true
+
+javascript:
+  url: http://localhost:3000/static/js/bundle.js

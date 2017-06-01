@@ -1,37 +1,29 @@
 package com.twoguysandadream.controller;
 
-
-import com.twoguysandadream.core.*;
-import com.twoguysandadream.resources.AuthorizationException;
-import com.twoguysandadream.resources.MissingResourceException;
-import com.twoguysandadream.security.AuctionUser;
-import com.twoguysandadream.security.AuctionUserRepository;
-import com.twoguysandadream.security.NotRegisteredException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import com.twoguysandadream.core.LeagueRepository;
+import com.twoguysandadream.core.PlayerRepository;
+import com.twoguysandadream.core.TeamRepository;
+import com.twoguysandadream.security.AuctionUserRepository;
 
 @Controller
 public class AuctionController {
-
+    
     private final LeagueRepository leagueRepository;
     private final PlayerRepository playerRepository;
     private final AuctionUserRepository auctionUserRepository;
     private final TeamRepository teamRepository;
+
+    @Value("${javascript.url}")
+    private String javascriptUrl;
 
     @Autowired
     public AuctionController(LeagueRepository leagueRepository, PlayerRepository playerRepository,
@@ -47,7 +39,10 @@ public class AuctionController {
      * API requests and logon requests.
      */
     @GetMapping({"/", "/league/**"})
-    public String home() {
+    public String home(Model model) {
+
+        model.addAttribute("javascriptUrl", javascriptUrl);
+
         return "index";
     }
 
