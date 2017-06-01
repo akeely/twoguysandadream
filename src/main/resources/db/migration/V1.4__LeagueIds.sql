@@ -35,6 +35,8 @@ UPDATE players_won AS p
   INNER JOIN leagues AS l
   ON p.league=l.name
 SET p.leagueid=l.id;
+-- Remove corrupt data
+DELETE FROM `positions` WHERE `leagueid` IS NULL;
 ALTER TABLE `players_won` DROP PRIMARY KEY, ADD PRIMARY KEY (`leagueid`, `playerid`);
 ALTER TABLE `players_won` DROP `league`;
 ALTER TABLE `players_won` MODIFY `leagueid` INT NOT NULL;
