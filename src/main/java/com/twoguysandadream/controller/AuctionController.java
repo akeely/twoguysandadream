@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.google.common.base.Strings;
 import com.twoguysandadream.core.LeagueRepository;
 import com.twoguysandadream.core.PlayerRepository;
 import com.twoguysandadream.core.TeamRepository;
@@ -16,7 +17,7 @@ import com.twoguysandadream.security.AuctionUserRepository;
 
 @Controller
 public class AuctionController {
-    
+
     private final LeagueRepository leagueRepository;
     private final PlayerRepository playerRepository;
     private final AuctionUserRepository auctionUserRepository;
@@ -24,6 +25,9 @@ public class AuctionController {
 
     @Value("${javascript.url}")
     private String javascriptUrl;
+
+    @Value("${css.url:}")
+    private String cssUrl;
 
     @Autowired
     public AuctionController(LeagueRepository leagueRepository, PlayerRepository playerRepository,
@@ -42,6 +46,9 @@ public class AuctionController {
     public String home(Model model) {
 
         model.addAttribute("javascriptUrl", javascriptUrl);
+        if (!Strings.isNullOrEmpty(cssUrl)) {
+            model.addAttribute("cssUrl", cssUrl);
+        }
 
         return "index";
     }
