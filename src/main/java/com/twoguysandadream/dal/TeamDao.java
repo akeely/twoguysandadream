@@ -142,7 +142,8 @@ public class TeamDao implements TeamRepository {
             Collection<RosteredPlayer> roster = rosters.getOrDefault(id, Collections.emptyList());
             BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
             int adds = rs.getInt("num_adds");
-            return new Team(id,name,roster,budgetAdjustment,adds);
+            boolean isCommissioner = rs.getBoolean("is_commissioner");
+            return new Team(id,name,roster,budgetAdjustment,adds, isCommissioner);
         }
     }
 

@@ -40,7 +40,7 @@ public class TeamResource {
             .orElseThrow(() -> new MissingResourceException("league [" + leagueId + "]"));
 
         return league.getTeams().stream()
-            .map(t -> new TeamDto(t, league.getTeamStatistics().get(t.getId())))
+            .map(t -> new TeamDto(t, league.getTeamStatistics().get(t.getId()), t.isCommissioner()))
             .collect(Collectors.toList());
     }
 
@@ -50,7 +50,7 @@ public class TeamResource {
 
         return user.getId()
                 .flatMap(id -> teamRepository.findByOwner(leagueId, id))
-                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds())))
+                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds()), t.isCommissioner()))
                 .orElseThrow(() -> new MissingResourceException("No team found for current user in league " + leagueId));
     }
 
@@ -60,13 +60,14 @@ public class TeamResource {
         private final String name;
         private final Collection<RosteredPlayer> roster;
         private final TeamStatistics statistics;
+        private final boolean isCommissioner;
 
-
-        public TeamDto(Team team, TeamStatistics statistics) {
+        public TeamDto(Team team, TeamStatistics statistics, boolean isCommissioner) {
             this.id = team.getId();
             this.name = team.getName();
             this.roster = team.getRoster();
             this.statistics = statistics;
+            this.isCommissioner = isCommissioner;
         }
 
         public long getId() {
@@ -83,6 +84,10 @@ public class TeamResource {
 
         public TeamStatistics getStatistics() {
             return statistics;
+        }
+
+        public boolean isCommissioner() {
+            return isCommissioner;
         }
     }
 }

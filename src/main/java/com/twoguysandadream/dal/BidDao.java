@@ -147,7 +147,7 @@ public class BidDao implements BidRepository {
             bids.put(leagueId, bid);
         }
 
-        public Map<Long, Collection<Bid>> complete() {
+        Map<Long, Collection<Bid>> complete() {
             return bids.build().asMap();
         }
     }

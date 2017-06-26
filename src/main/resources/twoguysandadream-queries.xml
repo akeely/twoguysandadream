@@ -14,20 +14,29 @@
     <entry key="league.rosterSpots"><![CDATA[
        SELECT COUNT(*) FROM positions WHERE leagueid = :leagueId
     ]]></entry>
+    <entry key="league.updateDraftStatus"><![CDATA[
+       UPDATE leagues SET draft_status = :draftStatus WHERE id = :leagueId
+    ]]></entry>
     <entry key="team.findAll"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
        FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
        WHERE t.leagueid = :leagueId
     ]]></entry>
     <entry key="team.findOne"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
        FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
        WHERE t.leagueid = :leagueId
          AND t.id = :teamId
     ]]></entry>
     <entry key="team.findByOwner"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
        FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
        WHERE t.leagueid = :leagueId
          AND t.ownerid = :ownerId
     ]]></entry>

@@ -5,6 +5,8 @@ import com.twoguysandadream.core.exception.BidException;
 import com.twoguysandadream.core.exception.InsufficientBidException;
 import com.twoguysandadream.core.exception.InsufficientFundsException;
 import com.twoguysandadream.core.exception.RosterFullException;
+import com.twoguysandadream.resources.AuthorizationException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,9 +92,20 @@ public class BidService {
         Map<Long, Collection<Bid>> openBids = bidRepository.findAll();
         for (Long leagueId : openBids.keySet()) {
 
-            openBids.get(leagueId).stream()
-                    .filter(this::isExpired)
-                    .forEach(b -> clearExpired(leagueId, b));
+            Optional<League> league = leagueRepository.findOne(leagueId);
+
+            if (league
+                    .filter(l -> l.getDraftStatus().equals(League.DraftStatus.OPEN))
+                    .isPresent()) {
+
+                openBids.get(leagueId).stream()
+                        .filter(this::isExpired)
+                        .forEach(b -> clearExpired(leagueId, b));
+            }
+            else {
+                LOG.warn("Skipping expiration for league {} because draft status is {}.", leagueId,
+                        league.map(League::getDraftStatusDescription).orElse("unknown."));
+            }
         }
     }
 
@@ -102,7 +115,8 @@ public class BidService {
         teamId.flatMap(t -> teamRepository.findOne(leagueId, t)).ifPresent(t -> {
             LOG.info("{} won by {} for ${}.", bid.getPlayer().getName(), t.getName(), bid.getAmount());
             rosteredPlayerRepository.save(leagueId, t.getId(), toRosteredPlayer(bid));
-            Team updated = new Team(t.getId(), t.getName(), t.getRoster(), t.getBudgetAdjustment(), t.getAdds() + 1);
+            Team updated = new Team(t.getId(), t.getName(), t.getRoster(), t.getBudgetAdjustment(), t.getAdds() + 1,
+                    t.isCommissioner());
             teamRepository.update(leagueId, updated);
         });
 
@@ -122,12 +136,16 @@ public class BidService {
     private void removeAdd(long leagueId, Team team) {
 
         int adds = team.getAdds() - 1;
-        Team updated = new Team(team.getId(), team.getName(), team.getRoster(), team.getBudgetAdjustment(), adds);
+        Team updated = new Team(team.getId(), team.getName(), team.getRoster(), team.getBudgetAdjustment(), adds,
+                team.isCommissioner());
         teamRepository.update(leagueId, updated);
     }
 
     public void addPlayerAsCommisioner(long leagueId, long teamId, long playerId) throws BidException {
-        // TODO: is commissioner?
+
+        teamRepository.findOne(leagueId, teamId)
+                .filter(Team::isCommissioner)
+                .orElseThrow(() -> new AuthorizationException("Must be commissioner to add player as commissioner."));
 
         League league = leagueRepository.findOne(leagueId).orElseThrow(
             () -> new IllegalArgumentException("No league with id " + leagueId));

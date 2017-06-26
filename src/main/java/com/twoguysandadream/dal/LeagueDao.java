@@ -1,5 +1,6 @@
 package com.twoguysandadream.dal;
 
+import com.google.common.collect.ImmutableMap;
 import com.twoguysandadream.core.Bid;
 import com.twoguysandadream.core.BidRepository;
 import com.twoguysandadream.core.League;
@@ -7,6 +8,8 @@ import com.twoguysandadream.core.LeagueRepository;
 import com.twoguysandadream.core.LeagueSettings;
 import com.twoguysandadream.core.Team;
 import com.twoguysandadream.core.TeamRepository;
+import com.twoguysandadream.resources.MissingResourceException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -17,6 +20,7 @@ import org.springframework.stereotype.Repository;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Repository
@@ -32,6 +36,8 @@ public class LeagueDao implements LeagueRepository {
     private String findOneByNameQuery;
     @Value("${league.rosterSpots}")
     private String rosterSpotsQuery;
+    @Value("${league.updateDraftStatus}")
+    private String updateDraftStatusQuery;
 
     @Autowired
     public LeagueDao(NamedParameterJdbcTemplate jdbcTemplate, BidRepository bidRepository,
@@ -49,11 +55,37 @@ public class LeagueDao implements LeagueRepository {
         return metadata.map(this::getLeagueData);
     }
 
-    @Override public Optional<League> findOneByName(String name) {
+    @Override
+    public Optional<League> findOneByName(String name) {
 
         Optional<LeagueMetadata> metadata = getMetadata(name);
 
         return metadata.map(this::getLeagueData);
+    }
+
+    @Override
+    public void updateDraftStatus(long id, League.DraftStatus newStatus) throws MissingResourceException {
+
+        League league = findOne(id).orElseThrow(() -> new MissingResourceException("league=" + id));
+
+        Map<String, Object> params = ImmutableMap.<String, Object>builder()
+                .put("leagueId", id)
+                .put("draftStatus", newStatus.getDescription())
+                .build();
+
+        jdbcTemplate.update(updateDraftStatusQuery, params);
+
+        if (league.getDraftStatus().equals(League.DraftStatus.PAUSED) && newStatus.equals(League.DraftStatus.OPEN)) {
+
+            bidRepository.findAll(id).stream()
+                    .map(bid -> updateExpirationTime(bid, league.getSettings().getExpirationTime()))
+                    .forEach(bid -> bidRepository.save(id, bid));
+        }
+    }
+
+    private Bid updateExpirationTime(Bid bid, long expirationTime) {
+
+        return new Bid(bid.getTeamId(), bid.getTeam(), bid.getPlayer(), bid.getAmount(), expirationTime);
     }
 
     private League getLeagueData(LeagueMetadata metadata) {
@@ -61,12 +93,12 @@ public class LeagueDao implements LeagueRepository {
         List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
         List<Team> teams = getTeams(metadata.getId());
         LeagueSettings settings = getSettings(metadata);
-        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, isPaused(metadata));
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, getDraftStatus(metadata));
     }
 
-    private boolean isPaused(LeagueMetadata metadata) {
+    private League.DraftStatus getDraftStatus(LeagueMetadata metadata) {
 
-        return metadata.getDraft_status().equalsIgnoreCase("paused");
+        return League.DraftStatus.fromDescription(metadata.getDraft_status());
     }
 
     private LeagueSettings getSettings(LeagueMetadata metadata) {
