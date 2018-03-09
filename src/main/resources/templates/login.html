@@ -12,6 +12,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" />
+    <script th:src="@{/js/openid-jquery.js}" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg=="
@@ -44,7 +45,6 @@
                         <i class="fa fa-yahoo"></i> Sign in with Yahoo!
                     </a>
                 </form>
-                <script type="text/javascript" th:src="@{/js/openid-jquery.js}"><!-- --></script>
                 <script type="text/javascript">
                 $(document).ready(function() {
                     openid.init('openid_identifier');
