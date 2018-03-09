@@ -93,12 +93,17 @@ public class LeagueDao implements LeagueRepository {
         List<Bid> auctionBoard = bidRepository.findAll(metadata.getId());
         List<Team> teams = getTeams(metadata.getId());
         LeagueSettings settings = getSettings(metadata);
-        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, getDraftStatus(metadata));
+        return new League(metadata.getId(), metadata.getName(), settings, auctionBoard, teams, getDraftStatus(metadata),
+                getDraftType(metadata));
     }
 
     private League.DraftStatus getDraftStatus(LeagueMetadata metadata) {
 
         return League.DraftStatus.fromDescription(metadata.getDraft_status());
+    }
+
+    private League.DraftType getDraftType(LeagueMetadata metadata) {
+        return League.DraftType.fromDescription(metadata.getDraft_type());
     }
 
     private LeagueSettings getSettings(LeagueMetadata metadata) {
@@ -154,6 +159,7 @@ public class LeagueDao implements LeagueRepository {
         private String sport;
         private long auction_length, bid_time_ext, bid_time_buff;
         private String draft_status;
+        private String draft_type;
 
         public long getId() {
             return id;
@@ -218,6 +224,14 @@ public class LeagueDao implements LeagueRepository {
         public void setBid_time_buff(long bid_time_buff) {
             this.bid_time_buff = bid_time_buff;
         }
+
+        public String getDraft_type() {
+            return draft_type;
+        }
+
+        public void setDraft_type(String draft_type) {
+            this.draft_type = draft_type;
+        }
     }
 
     private enum Sport {
@@ -226,7 +240,7 @@ public class LeagueDao implements LeagueRepository {
         FOOTBALL(6);
 
         private final int baseRosterSize;
-        private Sport(int baseRosterSize) {
+        Sport(int baseRosterSize) {
             this.baseRosterSize = baseRosterSize;
         }
 

@@ -96,6 +96,7 @@ public class BidService {
 
             if (league
                     .filter(l -> l.getDraftStatus().equals(League.DraftStatus.OPEN))
+                    .filter(l -> l.getDraftType().equals(League.DraftType.AUCTION))
                     .isPresent()) {
 
                 openBids.get(leagueId).stream()

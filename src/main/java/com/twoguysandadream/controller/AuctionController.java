@@ -18,10 +18,7 @@ import com.twoguysandadream.security.AuctionUserRepository;
 @Controller
 public class AuctionController {
 
-    private final LeagueRepository leagueRepository;
-    private final PlayerRepository playerRepository;
     private final AuctionUserRepository auctionUserRepository;
-    private final TeamRepository teamRepository;
 
     @Value("${javascript.url}")
     private String javascriptUrl;
@@ -30,12 +27,8 @@ public class AuctionController {
     private String cssUrl;
 
     @Autowired
-    public AuctionController(LeagueRepository leagueRepository, PlayerRepository playerRepository,
-        AuctionUserRepository auctionUserRepository, TeamRepository teamRepository) {
-        this.leagueRepository = leagueRepository;
-        this.playerRepository = playerRepository;
+    public AuctionController(AuctionUserRepository auctionUserRepository) {
         this.auctionUserRepository = auctionUserRepository;
-        this.teamRepository = teamRepository;
     }
 
     /**

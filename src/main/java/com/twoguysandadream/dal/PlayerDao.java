@@ -1,9 +1,13 @@
 package com.twoguysandadream.dal;
 
-import com.twoguysandadream.core.Bid;
-import com.twoguysandadream.core.Player;
-import com.twoguysandadream.core.PlayerRepository;
-import com.twoguysandadream.core.Position;
+import java.io.UnsupportedEncodingException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -13,14 +17,9 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
-import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import com.twoguysandadream.core.Player;
+import com.twoguysandadream.core.PlayerRepository;
+import com.twoguysandadream.core.Position;
 
 @Repository
 public class PlayerDao implements PlayerRepository {

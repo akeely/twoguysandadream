@@ -85,7 +85,7 @@ public class BidResource {
     private List<Bid> getActiveBids(League league) {
 
         return league.getAuctionBoard().stream()
-            .filter(b -> b.getSecondsRemaining() > 0)
+            .filter(b -> b.getSecondsRemaining() > 0 || league.isPaused())
             .collect(Collectors.toList());
     }
 

@@ -9,9 +9,6 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.ImmutableList;
 
-/**
- * Created by andrew_keely on 2/20/15.
- */
 public class League {
 
     private static final Logger LOG = LoggerFactory.getLogger(League.class);
@@ -23,9 +20,10 @@ public class League {
     private final List<Bid> auctionBoard;
     private final List<Team> teams;
     private final DraftStatus draftStatus;
+    private final DraftType draftType;
 
     public League(long id, String name, LeagueSettings settings, List<Bid> auctionBoard, List<Team> teams,
-        DraftStatus draftStatus) {
+        DraftStatus draftStatus, DraftType draftType) {
 
         this.id = id;
         this.name = name;
@@ -33,6 +31,7 @@ public class League {
         this.auctionBoard = auctionBoard;
         this.teams = teams;
         this.draftStatus = draftStatus;
+        this.draftType = draftType;
     }
 
     public Map<Long,TeamStatistics> getTeamStatistics() {
@@ -75,14 +74,47 @@ public class League {
         return draftStatus;
     }
 
+    public DraftType getDraftType() {
+        return draftType;
+    }
+
+    public String getDraftTypeDescription() {
+        return draftType.getDescription();
+    }
+
     private TeamStatistics toStatistics(Team team) {
         return new TeamStatistics(team, settings);
     }
 
+    public enum DraftType {
+
+        AUCTION("auction"),
+        RFA("rfa");
+
+        private final String description;
+
+        DraftType(String description) {
+            this.description = description;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public static DraftType fromDescription(String description) {
+
+            return ImmutableList.copyOf(DraftType.values()).stream()
+                    .filter(t -> t.description.equalsIgnoreCase(description))
+                    .findAny()
+                    .orElseGet(() -> {
+                        LOG.warn("Unknown draft type description: {}.", description);
+                        return AUCTION;
+                    });
+        }
+    }
+
     public enum DraftStatus {
 
-        READY("ready"),
-        RFA("rfa"),
         OPEN("open"),
         PAUSED("paused"),
         CLOSED("closed");
