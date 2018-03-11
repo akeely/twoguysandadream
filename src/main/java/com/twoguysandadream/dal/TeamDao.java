@@ -35,6 +35,8 @@ public class TeamDao implements TeamRepository {
     private String findAllQuery;
     @Value("${team.findOne}")
     private String findOneQuery;
+    @Value("${team.findByOwner}")
+    private String findByOwnerQuery;
     @Value("${team.save}")
     private String saveQuery;
     @Value("${team.findRosters}")
@@ -65,6 +67,23 @@ public class TeamDao implements TeamRepository {
 
         try {
             return Optional.of(jdbcTemplate.queryForObject(findOneQuery, params, new TeamRowMapper(rosters)));
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Optional<Team> findByOwner(long leagueId, long ownerId) {
+
+        Map<Long,List<RosteredPlayer>> rosters = getRosters(leagueId);
+
+        Map<String, Long> params = ImmutableMap.<String, Long>builder()
+                .put("leagueId", leagueId)
+                .put("ownerId", ownerId)
+                .build();
+
+        try {
+            return Optional.of(jdbcTemplate.queryForObject(findByOwnerQuery, params, new TeamRowMapper(rosters)));
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
@@ -123,7 +142,8 @@ public class TeamDao implements TeamRepository {
             Collection<RosteredPlayer> roster = rosters.getOrDefault(id, Collections.emptyList());
             BigDecimal budgetAdjustment = rs.getBigDecimal("money_plusminus");
             int adds = rs.getInt("num_adds");
-            return new Team(id,name,roster,budgetAdjustment,adds);
+            boolean isCommissioner = rs.getBoolean("is_commissioner");
+            return new Team(id,name,roster,budgetAdjustment,adds, isCommissioner);
         }
     }
 

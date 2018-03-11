@@ -2,7 +2,6 @@ package com.twoguysandadream.core;
 
 import java.math.BigDecimal;
 import java.util.Collection;
-import java.util.Map;
 
 /**
  * Created by andrew_keely on 2/20/15.
@@ -14,23 +13,25 @@ public class Team {
     private final Collection<RosteredPlayer> roster;
     private final BigDecimal budgetAdjustment;
     private final int adds;
+    private final boolean isCommissioner;
 
     /**
-     *
-     * @param id
+     *  @param id
      * @param name
      * @param roster The players on this team, with the cost of the player.
      * @param budgetAdjustment
      * @param adds
+     * @param isCommissioner
      */
-    public Team(long id, String name, Collection<RosteredPlayer> roster, BigDecimal budgetAdjustment,
-            int adds) {
+    public Team(long id, String name, Collection<RosteredPlayer> roster, BigDecimal budgetAdjustment, int adds,
+            boolean isCommissioner) {
 
         this.id = id;
         this.name = name;
         this.roster = roster;
         this.budgetAdjustment = budgetAdjustment;
         this.adds = adds;
+        this.isCommissioner = isCommissioner;
     }
 
     public long getId() {
@@ -51,5 +52,9 @@ public class Team {
 
     public int getAdds() {
         return adds;
+    }
+
+    public boolean isCommissioner() {
+        return isCommissioner;
     }
 }

@@ -6,7 +6,7 @@ import com.twoguysandadream.core.exception.AuctionExpiredException;
 import com.twoguysandadream.core.exception.InsufficientBidException;
 import com.twoguysandadream.core.exception.InsufficientFundsException;
 import com.twoguysandadream.core.exception.RosterFullException;
-import org.junit.Before;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -296,7 +296,8 @@ public class BidServiceTest {
 
         LeagueSettings settings = createSettings();
         List<Team> teams = createTeams(roster);
-        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams, false);
+        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams, League.DraftStatus.OPEN,
+                League.DraftType.AUCTION);
         when(leagueRepository.findOne(LEAGUE_ID)).thenReturn(Optional.of(league));
         return league;
     }
@@ -311,7 +312,7 @@ public class BidServiceTest {
     }
 
     private List<Team> createTeams(Collection<RosteredPlayer> roster) {
-        Team team = new Team(TEAM_ID, "teamName", roster, BigDecimal.ZERO, 3);
+        Team team = new Team(TEAM_ID, "teamName", roster, BigDecimal.ZERO, 3, false);
         return Collections.singletonList(team);
     }
 

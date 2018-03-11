@@ -5,10 +5,14 @@ import com.twoguysandadream.core.exception.BidException;
 import com.twoguysandadream.core.exception.InsufficientBidException;
 import com.twoguysandadream.core.exception.InsufficientFundsException;
 import com.twoguysandadream.core.exception.RosterFullException;
+import com.twoguysandadream.resources.AuthorizationException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -26,15 +30,17 @@ public class BidService {
     private final BidRepository bidRepository;
     private final PlayerRepository playerRepository;
     private final TeamRepository teamRepository;
+    private final RosteredPlayerRepository rosteredPlayerRepository;
 
     @Autowired
     public BidService(LeagueRepository leagueRepository, BidRepository bidRepository, PlayerRepository playerRepository,
-        TeamRepository teamRepository) {
+        TeamRepository teamRepository, RosteredPlayerRepository rosteredPlayerRepository) {
 
         this.leagueRepository = leagueRepository;
         this.bidRepository = bidRepository;
         this.playerRepository = playerRepository;
         this.teamRepository = teamRepository;
+        this.rosteredPlayerRepository = rosteredPlayerRepository;
     }
 
     public void acceptBid(long leagueId, long teamId, long playerId, BigDecimal amount) throws BidException {
@@ -79,15 +85,68 @@ public class BidService {
         removeAdd(leagueId, team);
     }
 
+    @Scheduled(fixedRate = 100L)
+    @Transactional
+    public void clearExpired() {
+
+        Map<Long, Collection<Bid>> openBids = bidRepository.findAll();
+        for (Long leagueId : openBids.keySet()) {
+
+            Optional<League> league = leagueRepository.findOne(leagueId);
+
+            if (league
+                    .filter(l -> l.getDraftStatus().equals(League.DraftStatus.OPEN))
+                    .filter(l -> l.getDraftType().equals(League.DraftType.AUCTION))
+                    .isPresent()) {
+
+                openBids.get(leagueId).stream()
+                        .filter(this::isExpired)
+                        .forEach(b -> clearExpired(leagueId, b));
+            }
+            else {
+                LOG.warn("Skipping expiration for league {} because draft status is {}.", leagueId,
+                        league.map(League::getDraftStatusDescription).orElse("unknown."));
+            }
+        }
+    }
+
+    private void clearExpired(long leagueId, Bid bid) {
+
+        Optional<Long> teamId = Optional.ofNullable(bid.getTeamId());
+        teamId.flatMap(t -> teamRepository.findOne(leagueId, t)).ifPresent(t -> {
+            LOG.info("{} won by {} for ${}.", bid.getPlayer().getName(), t.getName(), bid.getAmount());
+            rosteredPlayerRepository.save(leagueId, t.getId(), toRosteredPlayer(bid));
+            Team updated = new Team(t.getId(), t.getName(), t.getRoster(), t.getBudgetAdjustment(), t.getAdds() + 1,
+                    t.isCommissioner());
+            teamRepository.update(leagueId, updated);
+        });
+
+        bidRepository.remove(leagueId, bid.getPlayer().getId());
+    }
+
+    private boolean isExpired(Bid bid) {
+
+        return bid.getExpirationTime() < System.currentTimeMillis();
+    }
+
+    private RosteredPlayer toRosteredPlayer(Bid bid) {
+
+        return new RosteredPlayer(bid.getPlayer(), bid.getAmount());
+    }
+
     private void removeAdd(long leagueId, Team team) {
 
         int adds = team.getAdds() - 1;
-        Team updated = new Team(team.getId(), team.getName(), team.getRoster(), team.getBudgetAdjustment(), adds);
+        Team updated = new Team(team.getId(), team.getName(), team.getRoster(), team.getBudgetAdjustment(), adds,
+                team.isCommissioner());
         teamRepository.update(leagueId, updated);
     }
 
     public void addPlayerAsCommisioner(long leagueId, long teamId, long playerId) throws BidException {
-        // TODO: is commissioner?
+
+        teamRepository.findOne(leagueId, teamId)
+                .filter(Team::isCommissioner)
+                .orElseThrow(() -> new AuthorizationException("Must be commissioner to add player as commissioner."));
 
         League league = leagueRepository.findOne(leagueId).orElseThrow(
             () -> new IllegalArgumentException("No league with id " + leagueId));
@@ -138,7 +197,7 @@ public class BidService {
 
     private void checkExpired(Bid existingBid) throws AuctionExpiredException {
 
-        if (existingBid.getExpirationTime() < System.currentTimeMillis()) {
+        if (isExpired(existingBid)) {
             throw new AuctionExpiredException(existingBid.getPlayer().getId());
         }
     }

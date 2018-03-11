@@ -1,13 +1,16 @@
 package com.twoguysandadream.resources;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.twoguysandadream.core.League;
 import com.twoguysandadream.core.LeagueRepository;
 import com.twoguysandadream.core.RosteredPlayer;
 import com.twoguysandadream.core.Team;
+import com.twoguysandadream.core.TeamRepository;
 import com.twoguysandadream.core.TeamStatistics;
+import com.twoguysandadream.security.AuctionUser;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,13 +24,15 @@ import java.util.stream.Collectors;
 public class TeamResource {
 
     private final LeagueRepository leagueRepository;
+    private final TeamRepository teamRepository;
 
     @Autowired
-    public TeamResource(LeagueRepository leagueRepository) {
+    public TeamResource(LeagueRepository leagueRepository, TeamRepository teamRepository) {
         this.leagueRepository = leagueRepository;
+        this.teamRepository = teamRepository;
     }
 
-    @RequestMapping
+    @GetMapping
     public List<TeamDto> findAll(@PathVariable("leagueId") long leagueId)
         throws MissingResourceException {
 
@@ -35,8 +40,18 @@ public class TeamResource {
             .orElseThrow(() -> new MissingResourceException("league [" + leagueId + "]"));
 
         return league.getTeams().stream()
-            .map(t -> new TeamDto(t, league.getTeamStatistics().get(t.getId())))
+            .map(t -> new TeamDto(t, league.getTeamStatistics().get(t.getId()), t.isCommissioner()))
             .collect(Collectors.toList());
+    }
+
+    @GetMapping("/me")
+    public TeamDto findActive(@PathVariable("leagueId") long leagueId,
+            @AuthenticationPrincipal AuctionUser user) throws MissingResourceException {
+
+        return user.getId()
+                .flatMap(id -> teamRepository.findByOwner(leagueId, id))
+                .map(t -> new TeamDto(t, new TeamStatistics(null, null, 0, t.getAdds()), t.isCommissioner()))
+                .orElseThrow(() -> new MissingResourceException("No team found for current user in league " + leagueId));
     }
 
     public static class TeamDto {
@@ -45,13 +60,14 @@ public class TeamResource {
         private final String name;
         private final Collection<RosteredPlayer> roster;
         private final TeamStatistics statistics;
+        private final boolean isCommissioner;
 
-
-        public TeamDto(Team team, TeamStatistics statistics) {
+        public TeamDto(Team team, TeamStatistics statistics, boolean isCommissioner) {
             this.id = team.getId();
             this.name = team.getName();
             this.roster = team.getRoster();
             this.statistics = statistics;
+            this.isCommissioner = isCommissioner;
         }
 
         public long getId() {
@@ -68,6 +84,10 @@ public class TeamResource {
 
         public TeamStatistics getStatistics() {
             return statistics;
+        }
+
+        public boolean isCommissioner() {
+            return isCommissioner;
         }
     }
 }

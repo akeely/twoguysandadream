@@ -2,28 +2,43 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="league.findOne"><![CDATA[
-       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status, draft_type
        FROM leagues
        WHERE id = :leagueId
     ]]></entry>
     <entry key="league.findOneByName"><![CDATA[
-       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status
+       SELECT id, name, salary_cap, sport, auction_length, bid_time_ext, bid_time_buff, draft_status, draft_type
        FROM leagues
        WHERE name = :leagueName
     ]]></entry>
     <entry key="league.rosterSpots"><![CDATA[
        SELECT COUNT(*) FROM positions WHERE leagueid = :leagueId
     ]]></entry>
+    <entry key="league.updateDraftStatus"><![CDATA[
+       UPDATE leagues SET draft_status = :draftStatus WHERE id = :leagueId
+    ]]></entry>
     <entry key="team.findAll"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
        FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
        WHERE t.leagueid = :leagueId
     ]]></entry>
     <entry key="team.findOne"><![CDATA[
-       SELECT t.id,t.name,t.num_adds,t.money_plusminus
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
        FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
        WHERE t.leagueid = :leagueId
          AND t.id = :teamId
+    ]]></entry>
+    <entry key="team.findByOwner"><![CDATA[
+       SELECT t.id,t.name,t.num_adds,t.money_plusminus,(l.ownerid = t.ownerid) AS is_commissioner
+       FROM teams t
+	   LEFT JOIN leagues l
+           ON t.leagueid=l.id
+       WHERE t.leagueid = :leagueId
+         AND t.ownerid = :ownerId
     ]]></entry>
     <entry key="team.save"><![CDATA[
        UPDATE teams
@@ -50,6 +65,14 @@
        SELECT id FROM teams WHERE ownerid=:userId AND leagueid=:leagueId
     ]]></entry>
     <entry key="bid.findAll"><![CDATA[
+       SELECT ap.leagueId,p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
+       FROM auction_players ap
+       JOIN players p
+         ON ap.playerid=p.playerid
+       JOIN teams t
+         ON ap.teamid=t.id
+    ]]></entry>
+    <entry key="bid.findAllByLeague"><![CDATA[
        SELECT p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
        FROM auction_players ap
        JOIN players p
@@ -70,6 +93,11 @@
        VALUES
            (:playerId, :amount, :expirationTime,'NA', :teamId, :leagueId);
     ]]></entry>
+    <entry key="bid.remove"><![CDATA[
+       DELETE FROM auction_players
+       WHERE playerid=:playerId
+         AND leagueid=:leagueId
+    ]]></entry>
     <entry key="player.findOne"><![CDATA[
        SELECT playerid,name,position,team,rank FROM players WHERE playerid=:playerId AND active=1
     ]]></entry>
@@ -89,5 +117,10 @@
           AND pw.playerid IS NULL
           AND p.active = 1
           ORDER BY rank
+    ]]></entry>
+    <entry key="rosteredPlayer.save"><![CDATA[
+        INSERT INTO players_won
+            (leagueId, teamId, playerId, price, time)
+        VALUES (:leagueId, :teamId, :playerId, :price, :time)
     ]]></entry>
 </properties>
