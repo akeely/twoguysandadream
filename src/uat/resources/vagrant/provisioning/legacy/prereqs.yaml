@@ -1,7 +1,0 @@
----
-- hosts: default
-  sudo: yes
-  tasks:
-
-  - name: ansible prereq | install python-mysqldb
-    apt: name=python-mysqldb state=latest
