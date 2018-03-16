@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -232,6 +232,37 @@ public class BidServiceTest {
         bidService.acceptBid(LEAGUE_ID, TEAM_ID, PLAYER_ID, BUDGET.subtract(reservedBudget));
     }
 
+    /**
+     * Test that a bid cannot be made if the budget is used on other open bids.
+     */
+    @Test(expected = InsufficientFundsException.class)
+    public void testAcceptBid_insufficientFundsOtherBids() throws Exception {
+
+        BigDecimal halfBudget = BUDGET.divide(BigDecimal.valueOf(2));
+
+        Bid bid = createBid(PLAYER_ID, 1, BigDecimal.ONE, future(60));
+        Bid otherBid = createBid(PLAYER_ID + 1, TEAM_ID, halfBudget, future(60));
+
+        createLeague(Collections.emptyList(), ImmutableList.of(bid, otherBid));
+
+        bidService.acceptBid(LEAGUE_ID, TEAM_ID, PLAYER_ID, halfBudget.add(BigDecimal.ONE));
+    }
+
+    /**
+     * Test that increasing an existing bid does not cause insufficient funds.
+     */
+    @Test
+    public void testAcceptBid_updateBid() throws Exception {
+
+        BigDecimal halfBudget = BUDGET.divide(BigDecimal.valueOf(2));
+
+        Bid bid = createBid(PLAYER_ID, TEAM_ID, halfBudget, future(60));
+
+        createLeague(Collections.emptyList(), ImmutableList.of(bid));
+
+        bidService.acceptBid(LEAGUE_ID, TEAM_ID, PLAYER_ID, halfBudget.add(BigDecimal.ONE));
+    }
+
     @Test
     public void testAcceptBid_noExtension() throws Exception {
 
@@ -274,7 +305,7 @@ public class BidServiceTest {
     @Test(expected = AuctionExpiredException.class)
     public void testAcceptBid_expired() throws Exception {
 
-        long expirationTime = future(-1);
+        long expirationTime = past(1);
 
         Bid bid = createBid(PLAYER_ID, 1, BigDecimal.ONE, expirationTime);
 
@@ -292,11 +323,34 @@ public class BidServiceTest {
         bidService.acceptBid(LEAGUE_ID, TEAM_ID, PLAYER_ID, BigDecimal.TEN);
     }
 
+    /**
+     * Test that a bid can be made on an expired player if the draft is paused.
+     *
+     * @see #testAcceptBid_expired()
+     */
+    @Test
+    public void testAcceptBid_paused() throws Exception {
+
+        long expirationTime = past(1);
+
+        Bid bid = createBid(PLAYER_ID, 1, BigDecimal.ONE, expirationTime);
+
+        createLeague(Collections.emptyList(), ImmutableList.of(bid), League.DraftStatus.PAUSED);
+
+        bidService.acceptBid(LEAGUE_ID, TEAM_ID, PLAYER_ID, BigDecimal.TEN);
+
+    }
+
     private League createLeague(Collection<RosteredPlayer> roster, List<Bid> openBids) {
+
+        return createLeague(roster, openBids, League.DraftStatus.OPEN);
+    }
+
+    private League createLeague(Collection<RosteredPlayer> roster, List<Bid> openBids, League.DraftStatus status) {
 
         LeagueSettings settings = createSettings();
         List<Team> teams = createTeams(roster);
-        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams, League.DraftStatus.OPEN,
+        League league = new League(LEAGUE_ID, "leagueName", settings, openBids, teams, status,
                 League.DraftType.AUCTION);
         when(leagueRepository.findOne(LEAGUE_ID)).thenReturn(Optional.of(league));
         return league;
@@ -324,5 +378,10 @@ public class BidServiceTest {
     private long future(int seconds) {
 
         return System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(seconds, TimeUnit.SECONDS);
+    }
+
+    private long past(int seconds) {
+
+        return System.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(seconds, TimeUnit.SECONDS);
     }
 }

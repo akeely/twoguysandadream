@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -57,7 +58,7 @@ public class BidService {
         checkExpired(existingBid, league.getDraftStatus());
         validateRosterSpace(team, existingBid, league);
         validateBid(existingBid, amount);
-        validateFunds(league, team, existingBid, amount);
+        validateFunds(league, team, existingBid, league.getAuctionBoard(), amount);
 
         long expirationTime = getExpirationTime(league, existingBid);
         Bid newBid = new Bid(teamId, team.getName(), existingBid.getPlayer(), amount, expirationTime);
@@ -202,15 +203,16 @@ public class BidService {
         }
     }
 
-    private void validateFunds(League league, Team team, Bid existingBid, BigDecimal amount)
+    private void validateFunds(League league, Team team, Bid existingBid, List<Bid> allOpenBids, BigDecimal amount)
         throws InsufficientFundsException {
 
         Map<Long, TeamStatistics> map = league.getTeamStatistics();
         TeamStatistics statistics = map.get(team.getId());
-        BigDecimal adjustment = Optional.ofNullable(existingBid)
+        BigDecimal adjustment = allOpenBids.stream()
             .filter((b) -> b.getTeamId() == team.getId())
+            .filter(b -> existingBid == null || b.getPlayer().getId() != existingBid.getPlayer().getId())
             .map(Bid::getAmount)
-            .orElse(BigDecimal.ZERO);
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
 
         if (amount.compareTo(statistics.getMaxBid().subtract(adjustment)) > 0) {
             throw new InsufficientFundsException(amount, statistics.getMaxBid().subtract(adjustment));
@@ -227,6 +229,7 @@ public class BidService {
         if (existingBid.getAmount().add(minBid).compareTo(amount) > 0) {
             throw new InsufficientBidException(amount, existingBid.getAmount().add(minBid));
         }
+
     }
 
     private Player getPlayer(long playerId) {
