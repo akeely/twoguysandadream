@@ -54,7 +54,7 @@ public class BidService {
         Bid existingBid = league.getAuctionBoard().stream().filter((b) -> b.getPlayer().getId() == playerId)
             .findAny().orElseThrow(() -> new AuctionExpiredException(playerId));
 
-        checkExpired(existingBid);
+        checkExpired(existingBid, league.getDraftStatus());
         validateRosterSpace(team, existingBid, league);
         validateBid(existingBid, amount);
         validateFunds(league, team, existingBid, amount);
@@ -100,7 +100,7 @@ public class BidService {
                     .isPresent()) {
 
                 openBids.get(leagueId).stream()
-                        .filter(this::isExpired)
+                        .filter(b -> isExpired(b, League.DraftStatus.OPEN))
                         .forEach(b -> clearExpired(leagueId, b));
             }
             else {
@@ -124,9 +124,9 @@ public class BidService {
         bidRepository.remove(leagueId, bid.getPlayer().getId());
     }
 
-    private boolean isExpired(Bid bid) {
+    private boolean isExpired(Bid bid, League.DraftStatus status) {
 
-        return bid.getExpirationTime() < System.currentTimeMillis();
+        return bid.getExpirationTime() < System.currentTimeMillis() && status != League.DraftStatus.PAUSED;
     }
 
     private RosteredPlayer toRosteredPlayer(Bid bid) {
@@ -195,9 +195,9 @@ public class BidService {
         }
     }
 
-    private void checkExpired(Bid existingBid) throws AuctionExpiredException {
+    private void checkExpired(Bid existingBid, League.DraftStatus status) throws AuctionExpiredException {
 
-        if (isExpired(existingBid)) {
+        if (isExpired(existingBid, status)) {
             throw new AuctionExpiredException(existingBid.getPlayer().getId());
         }
     }
