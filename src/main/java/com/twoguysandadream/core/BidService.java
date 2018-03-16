@@ -44,6 +44,7 @@ public class BidService {
         this.rosteredPlayerRepository = rosteredPlayerRepository;
     }
 
+    @Transactional
     public void acceptBid(long leagueId, long teamId, long playerId, BigDecimal amount) throws BidException {
 
         League league = leagueRepository.findOne(leagueId).orElseThrow(
@@ -67,6 +68,7 @@ public class BidService {
         bidRepository.save(leagueId, newBid);
     }
 
+    @Transactional
     public void addPlayer(long leagueId, long teamId, long playerId) throws BidException {
 
         League league = leagueRepository.findOne(leagueId).orElseThrow(
