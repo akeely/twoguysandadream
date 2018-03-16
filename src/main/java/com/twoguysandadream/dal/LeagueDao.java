@@ -16,6 +16,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Collections;
@@ -63,6 +64,7 @@ public class LeagueDao implements LeagueRepository {
         return metadata.map(this::getLeagueData);
     }
 
+    @Transactional
     @Override
     public void updateDraftStatus(long id, League.DraftStatus newStatus) throws MissingResourceException {
 
