@@ -1,7 +1,5 @@
 = Two Guys and a Dream
 
-image:https://snap-ci.com/akeely/twoguysandadream/branch/master/build_image["Build Status", link="https://snap-ci.com/akeely/twoguysandadream/branch/master"]
-
 A fantasy sports auction website.
 
 Database Setup
@@ -11,7 +9,7 @@ Database Setup
  - Create the schema `auction`.
  - Update `src/main/resources/application.yml` with the appropriate username/password.
  - Update the Flyway configuration in `build.gradle` with the appropriate username/password.
- - Apply the database script `src/test/resources/database_dump.sql` to `auction_prod2`.
+ - Apply the database script `src/test/resources/database_dump.sql` to `auction`.
  - Run `gradle flywayBaseline`.
  - Build and run the application: `gradle bootRun`.
 
