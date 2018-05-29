@@ -34,6 +34,8 @@ public class AuctionUserDao implements AuctionUserRepository {
     private String createQuery;
     @Value("${user.findTeam}")
     private String findTeamQuery;
+    @Value("${user.findOwner}")
+    private String findOwnerQuery;
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -65,6 +67,18 @@ public class AuctionUserDao implements AuctionUserRepository {
             return OptionalLong.of(id);
         } catch (EmptyResultDataAccessException e) {
             return OptionalLong.empty();
+        }
+    }
+
+    @Override
+    public Optional<String> findOwner(long userId) {
+        try {
+            String name = jdbcTemplate.queryForObject(findOwnerQuery, Collections.singletonMap("userId", userId),
+                    String.class);
+            return Optional.of(name);
+        }
+        catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
         }
     }
 

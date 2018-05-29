@@ -32,4 +32,11 @@ public interface AuctionUserRepository {
      * @return The identifier of the team.
      */
     OptionalLong findTeamId(long userId, long leagueId);
+
+    /**
+     * Find the name of the owner for the given ID.
+     * @param userId
+     * @return
+     */
+    Optional<String> findOwner(long userId);
 }

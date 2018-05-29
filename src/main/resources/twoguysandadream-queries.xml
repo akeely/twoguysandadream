@@ -64,6 +64,9 @@
     <entry key="user.findTeam"><![CDATA[
        SELECT id FROM teams WHERE ownerid=:userId AND leagueid=:leagueId
     ]]></entry>
+    <entry key="user.findOwner"><![CDATA[
+       SELECT name FROM passwd WHERE id=:userId
+    ]]></entry>
     <entry key="bid.findAll"><![CDATA[
        SELECT ap.leagueId,p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
        FROM auction_players ap
