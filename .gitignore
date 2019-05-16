@@ -2,3 +2,5 @@ build
 *.iml
 .*
 *.log
+out
+target
