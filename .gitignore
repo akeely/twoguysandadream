@@ -4,3 +4,4 @@ build
 *.log
 out
 target
+application.yml.auction*
