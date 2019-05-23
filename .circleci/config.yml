@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    
+    working_directory: ~/twoguysandadream
+
+    docker:
+      - image: circleci/openjdk:11-jdk
+
+    steps:
+
+      - checkout
+
+      - restore_cache:
+          key: twoguysandadream-{{ checksum "pom.xml" }}
+      
+      - run: mvn dependency:go-offline
+      
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: twoguysandadream-{{ checksum "pom.xml" }}
+      
+            - run: mvn package spring-boot:repackage
+      
+      - store_test_results:
+          path: target/surefire-reports
+      
+      - store_artifacts:
+          path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
