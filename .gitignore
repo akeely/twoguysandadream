@@ -2,3 +2,6 @@ build
 *.iml
 .*
 *.log
+out
+target
+application.yml.auction*
