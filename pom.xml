@@ -15,6 +15,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:akeely/twoguysandadream.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -134,6 +139,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
         </plugins>
