@@ -52,7 +52,7 @@ public class AuctionController {
 
     @GetMapping("/me")
     @ResponseBody
-    public String me(@AuthenticationPrincipal User user) {
+    public String me(@AuthenticationPrincipal AuctionUser user) {
 
         if (user == null) {
             return "not found";

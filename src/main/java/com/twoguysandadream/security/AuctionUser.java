@@ -15,13 +15,12 @@ public class AuctionUser extends User {
     private final Long userId;
 
     public AuctionUser(long userId, String username) {
-
-        super(username, "", AuthorityUtils.createAuthorityList("ROLE_USER"));
+        super(username, "junk", AuthorityUtils.createAuthorityList("ROLE_USER"));
         this.userId = userId;
     }
 
     public AuctionUser(String username) {
-        super(username, "", AuthorityUtils.createAuthorityList("ROLE_USER"));
+        super(username, "junk", AuthorityUtils.createAuthorityList("ROLE_USER"));
         this.userId = null;
     }
 

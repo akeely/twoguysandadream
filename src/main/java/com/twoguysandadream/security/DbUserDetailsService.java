@@ -22,6 +22,8 @@ public class DbUserDetailsService implements UserDetailsService {
     @Override
     public AuctionUser loadUserByUsername(String s) throws UsernameNotFoundException {
         LOG.info("Finding user {}", s);
-        return userRepository.findByEmail(s).orElseThrow(() -> new UsernameNotFoundException(s));
+        AuctionUser user = userRepository.findByEmail(s).orElseThrow(() -> new UsernameNotFoundException(s));
+        LOG.info("Found user {}", user.getUsername());
+        return user;
     }
 }
