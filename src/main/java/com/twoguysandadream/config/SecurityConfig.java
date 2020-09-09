@@ -17,7 +17,6 @@ import org.springframework.security.web.authentication.ExceptionMappingAuthentic
 
 @Configuration
 @EnableWebSecurity
-@Profile("!uat")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     static final String LOGIN_PAGE = "/login";
