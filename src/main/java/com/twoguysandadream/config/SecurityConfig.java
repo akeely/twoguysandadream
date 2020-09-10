@@ -29,6 +29,8 @@ import org.springframework.security.web.authentication.ExceptionMappingAuthentic
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    public static final PasswordEncoder ENCODER = new BCryptPasswordEncoder();
+
     static final String LOGIN_PAGE = "/login";
 
     @Autowired
@@ -69,14 +71,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new StandardPasswordEncoder();
+        return ENCODER;
     }
 
     @Bean
     public AuthenticationProvider authProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService);
-        provider.setPasswordEncoder(passwordEncoder());
+        provider.setPasswordEncoder(ENCODER);
         return provider;
     }
     
