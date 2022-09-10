@@ -1,8 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
 <head>
     <title tiles:fragment="title">Messages : Login</title>
-    <!-- /Simple OpenID Selector -->
-    <link rel="stylesheet" th:href="@{/css/openid.css}" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
@@ -12,13 +10,10 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script th:src="@{/js/openid-jquery.js}"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg=="
           crossorigin="anonymous" />
-
-    <link rel="stylesheet" th:href="@{/css/bootstrap-social.css}" />
 
 </head>
 <body>
@@ -30,26 +25,29 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div tiles:fragment="content" class="panel panel-success text-center">
-                <h4>Sign-in or Create New Account:</h4>
+                <h4>Sign-in:</h4>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                <form name="f" th:action="@{/login/openid}" method="post" id="openid_form">
-                    <input type="hidden" name="action" value="verify" />
-                    <div th:if="${param.error}" class="alert alert-error">
-                        Invalid username and password.
-                    </div>
-                    <div th:if="${param.logout}" class="alert alert-success">
-                        You have been logged out.
-                    </div>
-                    <a title="Yahoo!" href="javascript: openid.signin('yahoo');" class="btn btn-lg btn-block btn-social btn-yahoo">
-                        <i class="fa fa-yahoo"></i> Sign in with Yahoo!
-                    </a>
-                </form>
-                <script type="text/javascript">
-                $(document).ready(function() {
-                    openid.init('openid_identifier');
-                });
-                </script>
+                        <form name="f" action="/login" method="post" id="login_form">
+                            <input type="hidden" name="action" value="verify" />
+                            <div th:if="${param.error}" class="alert alert-error">
+                                Invalid username and password.
+                            </div>
+                            <div th:if="${param.logout}" class="alert alert-success">
+                                You have been logged out.
+                            </div>
+                            <p>
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username"/>
+                            </p>
+                            <p>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password"/>
+                            </p>
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+                            <button type="submit" class="btn">Log in</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -25,6 +25,14 @@ public interface AuctionUserRepository {
     Optional<AuctionUser> findOne(String openIdToken);
 
     /**
+     * Find the user associated with the given email address.
+     *
+     * @param email The email address
+     * @return The user.
+     */
+    Optional<AuctionUser> findByEmail(String email);
+
+    /**
      * Find the team associated with the current user in the given league.
      *
      * @param userId The user to find the team for.

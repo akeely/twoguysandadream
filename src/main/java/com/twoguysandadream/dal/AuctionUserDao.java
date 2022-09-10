@@ -56,6 +56,21 @@ public class AuctionUserDao implements AuctionUserRepository {
     }
 
     @Override
+    public Optional<AuctionUser> findByEmail(String email) {
+
+        String query = "SELECT id FROM passwd WHERE email=:email";
+
+        SqlParameterSource params = new MapSqlParameterSource("email", email);
+
+        try {
+            long id = jdbcTemplate.queryForObject(query, params, Long.class);
+            return Optional.of(new AuctionUser(id, email));
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
     public OptionalLong findTeamId(long userId, long leagueId) {
 
         Map<String, Object> params = new HashMap<>(2);
