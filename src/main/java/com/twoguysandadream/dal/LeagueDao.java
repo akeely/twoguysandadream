@@ -23,9 +23,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 @Repository
 public class LeagueDao implements LeagueRepository {
+
+    private static final long DAY_IN_MILLIS = TimeUnit.DAYS.toMillis(30L);
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
     private final BidRepository bidRepository;
@@ -78,11 +81,21 @@ public class LeagueDao implements LeagueRepository {
         jdbcTemplate.update(updateDraftStatusQuery, params);
 
         if (league.getDraftStatus().equals(League.DraftStatus.PAUSED) && newStatus.equals(League.DraftStatus.OPEN)) {
-
-            bidRepository.findAll(id).stream()
-                    .map(bid -> updateExpirationTime(bid, league.getSettings().getExpirationTime()))
-                    .forEach(bid -> bidRepository.save(id, bid));
+            updateAllExpirationTimes(id, league.getSettings().getExpirationTime());
         }
+
+        if (newStatus.equals(League.DraftStatus.PAUSED)) {
+            // When pausing the draft, set all expiration times to the future. Unpausing it will reset, but there is
+            // a race condition where the bids can be won before the unpause finishes resetting the expiration
+            // timestamps.
+            updateAllExpirationTimes(id, System.currentTimeMillis() + DAY_IN_MILLIS);
+        }
+    }
+
+    private void updateAllExpirationTimes(long id, long expirationTime) {
+        bidRepository.findAll(id).stream()
+                .map(bid -> updateExpirationTime(bid, expirationTime))
+                .forEach(bid -> bidRepository.save(id, bid));
     }
 
     private Bid updateExpirationTime(Bid bid, long expirationTime) {
