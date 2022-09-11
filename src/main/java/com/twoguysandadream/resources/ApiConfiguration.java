@@ -5,7 +5,7 @@ package com.twoguysandadream.resources;
  */
 public class ApiConfiguration {
 
-    public static final String ROOT_PATH = "/api/";
+    public static final String ROOT_PATH = "/api";
 
     private ApiConfiguration() {}
 }
