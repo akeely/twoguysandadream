@@ -52,7 +52,7 @@ print <<HEADER;
    var rosters = new Object()
    var current_display_team='$head_team'
 
-   var ourInterval = setInterval("table_loop('$head_user')", 1000);
+   var ourInterval = setInterval("table_loop('$head_user')", 500);
 -->
 </script>
 
@@ -376,7 +376,6 @@ if ($user eq $owner)
 }
 
 print <<EOM;
-<script src="http://repository.chatwee.com/scripts/62942a3152b372f52757af51e1a52e73.js" type="text/javascript" charset="UTF-8"></script>
 </BODY>
 </HTML>
 EOM

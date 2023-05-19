@@ -207,7 +207,7 @@ $dbh = dbConnect();
 ###################
 
 if($id){
-  $sth = $dbh->prepare("SELECT owner, IP FROM sessions WHERE sess_id = '$id'")
+  $sth = $dbh->prepare("SELECT p.name, s.IP FROM sessions s JOIN passwd p on p.id=s.ownerid WHERE sess_id = '$id'")
         or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
    ($user,$ip) = $sth->fetchrow_array();
@@ -224,7 +224,7 @@ if($ip eq $ENV{REMOTE_ADDR})
 else
 {
 
-  $sth = $dbh->prepare("SELECT owner FROM sessions WHERE ip = '$ENV{REMOTE_ADDR}'")
+  $sth = $dbh->prepare("SELECT p.name FROM sessions s JOIN passwd p on p.id=s.ownerid WHERE ip = '$ENV{REMOTE_ADDR}'")
         or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
    $user = $sth->fetchrow();
@@ -238,12 +238,11 @@ else
   PrintOwner("Select Your Team","");
   ## Connect to password database
   my $sth_names = $dbh->prepare("SELECT name FROM passwd");
-#  my $sth_names = $dbh->prepare("SELECT name from players");
   $sth_names->execute();
   while ($owner = $sth_names->fetchrow())
   {
   
-print "OWNER: $owner<br>";
+#print "OWNER: $owner<br>";
     if ($owner eq $def)
     {
       $check = "selected";

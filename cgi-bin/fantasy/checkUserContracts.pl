@@ -7,7 +7,7 @@ $log = 'check_contracts.log';
 ($string1, $string2) = split('=',$ENV{'QUERY_STRING'});
 $string2 =~ s/%20/ /g;
 
-($team_t, $league_t) = split(';',$string2);
+($ownerid, $leagueid) = split(';',$string2);
 $players_won_file = "players_won";
 $contract_table = "contracts";
 my $return_string = "";
@@ -15,7 +15,7 @@ my $return_string = "";
 ## Contracts
 $dbh = dbConnect();
 
-my $sth_contracts = $dbh->prepare("SELECT player,team,total_years,years_left,current_cost,league,locked,broken FROM $contract_table WHERE team = '$team_t' AND league = '$league_t'");
+my $sth_contracts = $dbh->prepare("SELECT playerid,ownerid,total_years,years_left,current_cost,leagueid,locked,broken FROM $contract_table WHERE ownerid = $ownerid AND leagueid = $leagueid");
 $sth_contracts->execute() or die "Cannot execute: " . $sth_contracts->errstr();
 while (($id,$team,$years,$years_left,$cost,$league,$locked_status,$is_broken) = $sth_contracts->fetchrow_array())
 {
@@ -32,7 +32,7 @@ while (($id,$team,$years,$years_left,$cost,$league,$locked_status,$is_broken) = 
 $sth_contracts->finish();
 
 ## Get contract info for players that were under contract to other teams (either current contract of just expired)
-my $sth_contracts2 =  $dbh->prepare("SELECT c.player,c.team,c.total_years,c.years_left,c.current_cost,c.league,c.locked,c.broken FROM contracts c, final_rosters r, teams t WHERE c.league='$league_t' and r.league=c.league and t.league=r.league and c.player=r.name and t.name=r.team and c.team <> t.owner and t.owner='$team_t'");
+my $sth_contracts2 =  $dbh->prepare("SELECT c.playerid,c.ownerid,c.total_years,c.years_left,c.current_cost,c.leagueid,c.locked,c.broken FROM contracts c, final_rosters r, teams t WHERE c.leagueid=$leagueid and r.leagueid=c.leagueid and t.leagueid=r.leagueid and c.playerid=r.playerid and t.id=r.teamid and c.ownerid <> t.ownerid and t.ownerid=$ownerid");
 $sth_contracts2->execute();
 while (($id,$team,$years,$years_left,$cost,$league,$locked_status,$is_broken) = $sth_contracts2->fetchrow_array())
 {
@@ -50,7 +50,7 @@ $sth_contracts2->finish();
 
 ## Tag info
 ## Do not include team in query, since any player franchised last year cannot be tagged again this year
-my $sth = $dbh->prepare("SELECT player,team,type,locked FROM tags WHERE league = '$league_t'");
+my $sth = $dbh->prepare("SELECT playerid,ownerid,type,locked FROM tags WHERE leagueid = $leagueid");
 $sth->execute() or die "Cannot execute: " . $sth->errstr();
 while (($id,$team,$type,$locked_status) = $sth->fetchrow_array())
 {
@@ -60,10 +60,6 @@ while (($id,$team,$type,$locked_status) = $sth->fetchrow_array())
 $sth->finish();
 dbDisconnect($dbh);
 
-
-#open(LOG, ">>$log");
-#print LOG "$return_string>>$ENV{'QUERY_STRING'}\n";
-#close(LOG);
 
 print "Content-type: text/html\n\n";
 print "$return_string";

@@ -53,6 +53,14 @@ var rem_row = -1
 function fetchPlayers(ev) {
   ev.preventDefault();
 
+  if (\$("#player_form :submit").get(0).disabled == true) {
+    return;
+  }
+  
+  // disable input button while loading
+  \$("#player_form :submit").get(0).disabled=true;
+  \$("#fetchStatus").show();
+
   \$.ajax({
            type: "POST",
            url: "/cgi-bin/fantasy/parsePlayers.pl",
@@ -75,11 +83,17 @@ function fetchPlayers(ev) {
              } else {
                \$('#add_table tr:last').after('<tr><td colspan=5 align="center"><b>NO RESULTS FOUND</b></td></tr>');
              }
+
+             \$("#player_form :submit").get(0).disabled=false;
+             \$("#fetchStatus").hide();
            },
            error: function(a,b,c) {
              alert("Well shit");
+             \$("#player_form :submit").get(0).disabled=false;
+             \$("#fetchStatus").hide();
            }
   });
+
 }
 
 
@@ -127,7 +141,7 @@ function printMessage()
 <LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" MEDIA=screen>
 
 </HEAD>
-<BODY>
+<BODY onLoad="fetchPlayers(event)">
 
 <p align=center>
 
@@ -308,6 +322,7 @@ print <<EOM;
  </table>
 <center>
 <br><input type="submit" value="Sort Players" onClick="fetchPlayers(event)">
+<div id="fetchStatus" style="display:none; font-weight: 700">Fetching Results ...</div>
 </center>
 </form>
 <br>

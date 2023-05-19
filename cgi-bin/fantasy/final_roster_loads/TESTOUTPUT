@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/346.l.39209/teams" time="101.31192207336ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="31" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">
+<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/370.l.91996/teams" time="106.938123703ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">
  <league>
-  <league_key>346.l.39209</league_key>
-  <league_id>39209</league_id>
-  <name>Auction League 2015</name>
-  <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209</url>
-  <league_chat_id>2xw7kr5ych82umhx4yx1azixtfdrxfb</league_chat_id>
+  <league_key>370.l.91996</league_key>
+  <league_id>91996</league_id>
+  <name>Auction League</name>
+  <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996</url>
+  <password/>
   <draft_status>postdraft</draft_status>
   <num_teams>12</num_teams>
-  <edit_key>2016-03-05</edit_key>
+  <edit_key>2018-02-27</edit_key>
   <weekly_deadline/>
-  <league_update_timestamp>1444032346</league_update_timestamp>
+  <league_update_timestamp>1506928992</league_update_timestamp>
   <scoring_type>roto</scoring_type>
   <league_type>private</league_type>
-  <renew>328_101127</renew>
-  <renewed>357_58360</renewed>
-  <short_invitation_url>https://yho.com/mlb?l=39209&amp;ikey=97278070c7dbce0a</short_invitation_url>
+  <renew>357_58360</renew>
+  <renewed>378_64092</renewed>
+  <short_invitation_url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/invitation?key=934a780fa73f9654&amp;ikey=976ce95c998d5864</short_invitation_url>
+  <allow_add_to_dl_extra_pos>0</allow_add_to_dl_extra_pos>
   <is_pro_league>0</is_pro_league>
   <is_cash_league>0</is_cash_league>
-  <start_date>2015-04-05</start_date>
-  <end_date>2015-10-04</end_date>
+  <start_date>2017-04-02</start_date>
+  <end_date>2017-10-01</end_date>
   <is_finished>1</is_finished>
   <game_code>mlb</game_code>
-  <season>2015</season>
+  <season>2017</season>
   <teams count="12">
    <team>
-    <team_key>346.l.39209.t.1</team_key>
+    <team_key>370.l.91996.t.1</team_key>
     <team_id>1</team_id>
     <name>Salt Bandits</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/1</url>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/1</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
      </team_logo>
     </team_logos>
     <waiver_priority>11</waiver_priority>
-    <faab_balance>97</faab_balance>
-    <number_of_moves>27</number_of_moves>
+    <faab_balance>100</faab_balance>
+    <number_of_moves>4</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
      <coverage_value>25</coverage_value>
-     <value>3</value>
+     <value>0</value>
     </roster_adds>
     <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>193</auction_budget_spent>
     <managers>
      <manager>
       <manager_id>1</manager_id>
@@ -52,336 +56,375 @@
       <guid>TUWQRVL4DEI2HQO6773KKSNRGM</guid>
       <is_commissioner>1</is_commissioner>
       <email>andrew.keely@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>346.l.39209.t.2</team_key>
+    <team_key>370.l.91996.t.2</team_key>
     <team_id>2</team_id>
-    <name>BASSLAYER</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/2</url>
+    <name>84's</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/2</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>https://ct.yimg.com/cy/1477/24950016369_81bbbe2e38_192sq.jpg</url>
+      <url>https://ct.yimg.com/cy/1712/24669523044_37a5ced4ee_192sq.jpg?ct=fantasy</url>
      </team_logo>
     </team_logos>
     <waiver_priority>10</waiver_priority>
-    <faab_balance>13</faab_balance>
-    <number_of_moves>101</number_of_moves>
-    <number_of_trades>0</number_of_trades>
+    <faab_balance>20</faab_balance>
+    <number_of_moves>47</number_of_moves>
+    <number_of_trades>1</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
      <coverage_value>25</coverage_value>
-     <value>15</value>
+     <value>1</value>
     </roster_adds>
     <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>245</auction_budget_spent>
     <managers>
      <manager>
       <manager_id>2</manager_id>
-      <nickname>MH</nickname>
-      <guid>QXGPDYJJXPPNFUAGWZX74ALNZM</guid>
-      <email>eye9d@eye9d.com</email>
-      <image_url>https://s.yimg.com/wv/images/523534865a8f28c782d037cd66ca2a88_64.jpg</image_url>
+      <nickname>Joey T</nickname>
+      <guid>W63ORBSZMSUOARG47DJV6JUIBI</guid>
+      <email>joeytomaino@gmail.com</email>
+      <image_url>https://ct.yimg.com/cy/4542/38764436786_909eed_64sq.jpg</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>346.l.39209.t.3</team_key>
+    <team_key>370.l.91996.t.3</team_key>
     <team_id>3</team_id>
-    <name>Beantown Demons</name>
-    <is_owned_by_current_login>1</is_owned_by_current_login>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/3</url>
+    <name>Al-Hammertime</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/3</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
+      <url>https://ct.yimg.com/cy/1617/24662141754_5a90f8919c_192sq.jpg?ct=fantasy</url>
      </team_logo>
     </team_logos>
     <waiver_priority>9</waiver_priority>
-    <faab_balance>88</faab_balance>
-    <number_of_moves>48</number_of_moves>
-    <number_of_trades>1</number_of_trades>
+    <faab_balance>0</faab_balance>
+    <number_of_moves>43</number_of_moves>
+    <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
      <coverage_value>25</coverage_value>
-     <value>12</value>
+     <value>0</value>
     </roster_adds>
     <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>251</auction_budget_spent>
     <managers>
      <manager>
       <manager_id>3</manager_id>
-      <nickname>Erik</nickname>
-      <guid>5CUYBDUX66CS6UBA3XLBSWJRPI</guid>
-      <is_current_login>1</is_current_login>
-      <email>erik.woulfe@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.4</team_key>
-    <team_id>4</team_id>
-    <name>Puig Power</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/4</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>https://ct.yimg.com/cy/1451/25327875325_ac541d452f_192sq.jpg</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>8</waiver_priority>
-    <faab_balance>89</faab_balance>
-    <number_of_moves>58</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>4</manager_id>
-      <nickname>ACW</nickname>
-      <guid>KG6B4RYR4RQXSNNQASEI5NBI3I</guid>
-      <email>andrew@awframing.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.5</team_key>
-    <team_id>5</team_id>
-    <name>Steely Don</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/5</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>7</waiver_priority>
-    <faab_balance>80</faab_balance>
-    <number_of_moves>36</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>5</manager_id>
-      <nickname>Donald</nickname>
-      <guid>TW2BUOG3YX2LRLM5ZVADSKV5DM</guid>
-      <email>mistercote@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.6</team_key>
-    <team_id>6</team_id>
-    <name>Al-Hammertime</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/6</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>https://ct.yimg.com/cy/1617/24662141754_5a90f8919c_192sq.jpg</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>6</waiver_priority>
-    <faab_balance>32</faab_balance>
-    <number_of_moves>62</number_of_moves>
-    <number_of_trades>1</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>6</manager_id>
       <nickname>Al-Hammertime</nickname>
       <guid>6BXYTZOKJVJ3VKZL73ZNJOQLSU</guid>
       <email>bloggingtarek@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>346.l.39209.t.7</team_key>
-    <team_id>7</team_id>
-    <name>Kramerica</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/7</url>
+    <team_key>370.l.91996.t.4</team_key>
+    <team_id>4</team_id>
+    <name>Barksdale Crew</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/4</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>https://ct.yimg.com/cy/1538/25322462245_06ffe6a1b3_192sq.jpg</url>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
      </team_logo>
     </team_logos>
-    <waiver_priority>5</waiver_priority>
-    <faab_balance>74</faab_balance>
+    <waiver_priority>8</waiver_priority>
+    <faab_balance>0</faab_balance>
+    <number_of_moves>29</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>192</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>4</manager_id>
+      <nickname>Stephen C</nickname>
+      <guid>6LFBOPBDFNW2MF6AXCO5GY6DB4</guid>
+      <email>scc13tru@hotmail.com</email>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.5</team_key>
+    <team_id>5</team_id>
+    <name>BASSLAYER</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/5</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://ct.yimg.com/cy/1477/24950016369_81bbbe2e38_192sq.jpg?ct=fantasy</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>12</waiver_priority>
+    <faab_balance>30</faab_balance>
+    <number_of_moves>132</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>8</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>225</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>5</manager_id>
+      <nickname>MH</nickname>
+      <guid>QXGPDYJJXPPNFUAGWZX74ALNZM</guid>
+      <email>eye9d@eye9d.com</email>
+      <image_url>https://ct.yimg.com/cy/4565/37928205950_28b25f_64sq.jpg</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.6</team_key>
+    <team_id>6</team_id>
+    <name>Beantown Demons</name>
+    <is_owned_by_current_login>1</is_owned_by_current_login>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/6</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>7</waiver_priority>
+    <faab_balance>100</faab_balance>
+    <number_of_moves>29</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>246</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>6</manager_id>
+      <nickname>Erik</nickname>
+      <guid>5CUYBDUX66CS6UBA3XLBSWJRPI</guid>
+      <is_commissioner>1</is_commissioner>
+      <is_current_login>1</is_current_login>
+      <email>erik.woulfe@gmail.com</email>
+      <image_url>https://ct.yimg.com/cy/4592/39213869531_68ceae_64sq.jpg</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.7</team_key>
+    <team_id>7</team_id>
+    <name>Hindu Hammers</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/7</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/mlb/icon_3_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>6</waiver_priority>
+    <faab_balance>67</faab_balance>
     <number_of_moves>35</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
      <coverage_value>25</coverage_value>
-     <value>2</value>
+     <value>0</value>
     </roster_adds>
     <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>184</auction_budget_spent>
     <managers>
      <manager>
       <manager_id>7</manager_id>
-      <nickname>Cale</nickname>
-      <guid>JWTXHCRP2MMNNI472DRGBFG6IY</guid>
-      <email>dublover73@gmail.com</email>
-      <image_url>https://s.yimg.com/wv/images/82e71b845dea7e80b44d2c899817b508_64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.8</team_key>
-    <team_id>8</team_id>
-    <name>La Flama Blanca</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/8</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_4_lg.gif</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>4</waiver_priority>
-    <faab_balance>100</faab_balance>
-    <number_of_moves>8</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>8</manager_id>
-      <nickname>Cameron</nickname>
-      <guid>VPZ4K3SQCXAYZDCXSIGS33GVNU</guid>
-      <email>camerongarrison@gmail.com</email>
-      <image_url>https://s.yimg.com/wv/images/15909c33b39fd9a1489eaf357d183532_64.jpg</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.9</team_key>
-    <team_id>9</team_id>
-    <name>The Underdog</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/9</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>12</waiver_priority>
-    <faab_balance>83</faab_balance>
-    <number_of_moves>14</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>9</manager_id>
-      <nickname>Dirrrty D</nickname>
-      <guid>FWK4CFFWYI5VAKFHNVWHNT5IXM</guid>
-      <email>dana.woulfe@gmail.com</email>
-      <image_url>https://s.yimg.com/dg/users/13RjPpCG-AAECWKF3oKbqpM6MnboD.64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.10</team_key>
-    <team_id>10</team_id>
-    <name>Barksdale Crew</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/10</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_1_lg.gif</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>3</waiver_priority>
-    <faab_balance>70</faab_balance>
-    <number_of_moves>39</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>10</manager_id>
-      <nickname>Stephen C</nickname>
-      <guid>6LFBOPBDFNW2MF6AXCO5GY6DB4</guid>
-      <email>scc13tru@hotmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
-     </manager>
-    </managers>
-   </team>
-   <team>
-    <team_key>346.l.39209.t.11</team_key>
-    <team_id>11</team_id>
-    <name>Hindu Hammers</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/11</url>
-    <team_logos>
-     <team_logo>
-      <size>large</size>
-      <url>http://l.yimg.com/dh/ap/fantasy/img/mlb/icon_3_lg.gif</url>
-     </team_logo>
-    </team_logos>
-    <waiver_priority>2</waiver_priority>
-    <faab_balance>53</faab_balance>
-    <number_of_moves>61</number_of_moves>
-    <number_of_trades>0</number_of_trades>
-    <roster_adds>
-     <coverage_type>week</coverage_type>
-     <coverage_value>25</coverage_value>
-     <value>0</value>
-    </roster_adds>
-    <league_scoring_type>roto</league_scoring_type>
-    <managers>
-     <manager>
-      <manager_id>11</manager_id>
       <nickname>Kishore</nickname>
       <guid>OSPCE6GJCEYZA3X46HN5JJETPY</guid>
       <email>kishoresparmar@gmail.com</email>
-      <image_url>https://s.yimg.com/dh/ap/social/profile/profile_b64.png</image_url>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
      </manager>
     </managers>
    </team>
    <team>
-    <team_key>346.l.39209.t.12</team_key>
-    <team_id>12</team_id>
-    <name>84's</name>
-    <url>http://baseball.fantasysports.yahoo.com/archive/mlb/2015/39209/12</url>
+    <team_key>370.l.91996.t.8</team_key>
+    <team_id>8</team_id>
+    <name>Kramerica</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/8</url>
     <team_logos>
      <team_logo>
       <size>large</size>
-      <url>https://ct.yimg.com/cy/1712/24669523044_37a5ced4ee_192sq.jpg</url>
+      <url>https://ct.yimg.com/cy/1538/25322462245_06ffe6a1b3_192sq.jpg?ct=fantasy</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>5</waiver_priority>
+    <faab_balance>95</faab_balance>
+    <number_of_moves>31</number_of_moves>
+    <number_of_trades>1</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>153</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>8</manager_id>
+      <nickname>Cale</nickname>
+      <guid>JWTXHCRP2MMNNI472DRGBFG6IY</guid>
+      <email>dublover73@gmail.com</email>
+      <image_url>https://ct.yimg.com/cy/4550/25152276088_789c2b_64sq.jpg</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.9</team_key>
+    <team_id>9</team_id>
+    <name>Puig Power</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/9</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://ct.yimg.com/cy/1451/25327875325_ac541d452f_192sq.jpg?ct=fantasy</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>4</waiver_priority>
+    <faab_balance>47</faab_balance>
+    <number_of_moves>85</number_of_moves>
+    <number_of_trades>0</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>224</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>9</manager_id>
+      <nickname>ACW</nickname>
+      <guid>KG6B4RYR4RQXSNNQASEI5NBI3I</guid>
+      <email>andrew@awframing.com</email>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
+     </manager>
+     <manager>
+      <manager_id>13</manager_id>
+      <nickname>Matt</nickname>
+      <guid>ZE2LF72REAARYTETZI3BXL2KVY</guid>
+      <is_comanager>1</is_comanager>
+      <email>matthew.paolucci@gmail.com</email>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.10</team_key>
+    <team_id>10</team_id>
+    <name>Jerry Smith</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/10</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/mlb/icon_4_lg.gif</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>3</waiver_priority>
+    <faab_balance>90</faab_balance>
+    <number_of_moves>35</number_of_moves>
+    <number_of_trades>1</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>264</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>10</manager_id>
+      <nickname>Steve</nickname>
+      <guid>JTY3RPJFOYCJDKDMICRX6N64UY</guid>
+      <email>steve.haroutunian@gmail.com</email>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.11</team_key>
+    <team_id>11</team_id>
+    <name>Steely Don</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/11</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
+     </team_logo>
+    </team_logos>
+    <waiver_priority>2</waiver_priority>
+    <faab_balance>6</faab_balance>
+    <number_of_moves>46</number_of_moves>
+    <number_of_trades>1</number_of_trades>
+    <roster_adds>
+     <coverage_type>week</coverage_type>
+     <coverage_value>25</coverage_value>
+     <value>0</value>
+    </roster_adds>
+    <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>210</auction_budget_spent>
+    <managers>
+     <manager>
+      <manager_id>11</manager_id>
+      <nickname>Donald</nickname>
+      <guid>TW2BUOG3YX2LRLM5ZVADSKV5DM</guid>
+      <email>mistercote@gmail.com</email>
+      <image_url>https://s.yimg.com/wm/modern/images/default_user_profile_pic_64.png</image_url>
+     </manager>
+    </managers>
+   </team>
+   <team>
+    <team_key>370.l.91996.t.12</team_key>
+    <team_id>12</team_id>
+    <name>The Underdog</name>
+    <url>https://baseball.fantasysports.yahoo.com/archive/mlb/2017/91996/12</url>
+    <team_logos>
+     <team_logo>
+      <size>large</size>
+      <url>https://s.yimg.com/dh/ap/fantasy/img/profile_96.png</url>
      </team_logo>
     </team_logos>
     <waiver_priority>1</waiver_priority>
-    <faab_balance>100</faab_balance>
-    <number_of_moves>23</number_of_moves>
+    <faab_balance>95</faab_balance>
+    <number_of_moves>40</number_of_moves>
     <number_of_trades>0</number_of_trades>
     <roster_adds>
      <coverage_type>week</coverage_type>
@@ -389,18 +432,23 @@
      <value>2</value>
     </roster_adds>
     <league_scoring_type>roto</league_scoring_type>
+    <has_draft_grade>0</has_draft_grade>
+    <auction_budget_total>260</auction_budget_total>
+    <auction_budget_spent>223</auction_budget_spent>
     <managers>
      <manager>
       <manager_id>12</manager_id>
-      <nickname>Joey T</nickname>
-      <guid>W63ORBSZMSUOARG47DJV6JUIBI</guid>
-      <email>joeytomaino@gmail.com</email>
-      <image_url>https://s.yimg.com/wv/images/6c54282f323b06142e5f65fc42ff9051_64.jpg</image_url>
+      <nickname>Dirrrty D</nickname>
+      <guid>FWK4CFFWYI5VAKFHNVWHNT5IXM</guid>
+      <email>dana.woulfe@gmail.com</email>
+      <image_url>https://ct.yimg.com/cy/4574/37392160303_5a908f_64sq.jpg</image_url>
      </manager>
     </managers>
    </team>
   </teams>
  </league>
 </fantasy_content>
+
+<!-- fanos33.sports.bf1.yahoo.com Mon Feb 26 15:45:00 UTC 2018 -->
 
 

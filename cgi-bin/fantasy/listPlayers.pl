@@ -64,7 +64,7 @@ print <<EOM;
              });
            },
            error: function(a,b,c) {
-             alert("Well shit");
+             alert("Well shit: " + a + ", " + b + ", " + c);
            }
         });
       }
@@ -72,7 +72,7 @@ print <<EOM;
 
       <LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" MEDIA=screen>
    </HEAD>
-   <BODY>
+   <BODY onload="fetchPlayers(event)">
 
 <p align=center>
 

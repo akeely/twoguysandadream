@@ -27,51 +27,55 @@ my $enc = 'unicode';
 ##  2013 nfl auction - 548917
 ##  2013 mlb auction - 39507
 ##  2014 nfl auction - 339579
+##  2015 mlb auction - 39209
+##  2015 nfl auction - 375085
+##  2016 nfl auction - 477231
+##  2016 mlb auction - 87994
+##  2017 mlb auction - 85305
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
-my $dbh = dbConnect();
 
 
 ## TODO - confirm / change below before running each time
-my $sport = 'baseball';
-my $game_key = 'mlb';
 #my $sport = 'football';
 #my $game_key = 'nfl';
-my $league_key = $game_key . ".l.58360";
+my $sport = 'baseball';
+my $game_key = 'mlb';
+my $league_key = $game_key . ".l.91572";
 
 ## Translation for Yahoo team defenses to ESPN/TGaaD storage (football only)
 my %team_lut = (
-                 'Arizona' => 'Cardinals',,
-                 'Atlanta' => 'Falcons',,
-                 'Baltimore' => 'Ravens',
-                 'Buffalo' => 'Bills',
-                 'Carolina' => 'Panthers',
-                 'Chicago' => 'Bears',
-                 'Cincinnati' => 'Bengals',
-                 'Cleveland' => 'Browns',
-                 'Dallas' => 'Cowboys',
-                 'Denver' => 'Broncos',
-                 'Detroit' => 'Lions',
-                 'Green Bay' => 'Packers',
-                 'Houston' => 'Texans',
-                 'Indianapolis' => 'Colts',
-                 'Jacksonville' => 'Jaguars',
-                 'Kansas City' => 'Chiefs',
-                 'Miami' => 'Dolphins',
-                 'Minnesota' => 'Vikings',
-                 'New England' => 'Patriots',
-                 'New Orleans' => 'Saints',
+                 'Arizona Cardinals' => 'Cardinals',,
+                 'Atlanta Falcons' => 'Falcons',,
+                 'Baltimore Ravens' => 'Ravens',
+                 'Buffalo Bills' => 'Bills',
+                 'Carolina Panthers' => 'Panthers',
+                 'Chicago Bears' => 'Bears',
+                 'Cincinnati Bengals' => 'Bengals',
+                 'Cleveland Browns' => 'Browns',
+                 'Dallas Cowboys' => 'Cowboys',
+                 'Denver Broncos' => 'Broncos',
+                 'Detroit Lions' => 'Lions',
+                 'Green Bay Packers' => 'Packers',
+                 'Houston Texans' => 'Texans',
+                 'Indianapolis Colts' => 'Colts',
+                 'Jacksonville Jaguars' => 'Jaguars',
+                 'Kansas City Chiefs' => 'Chiefs',
+                 'Miami Dolphins' => 'Dolphins',
+                 'Minnesota Vikings' => 'Vikings',
+                 'New England Patriots' => 'Patriots',
+                 'New Orleans Saints' => 'Saints',
                  'New York Giants' => 'Giants',
                  'New York Jets' => 'Jets',
-                 'Oakland' => 'Raiders',
-                 'Philadelphia' => 'Eagles',
-                 'Pittsburgh' => 'Steelers',
-                 'San Diego' => 'Chargers',
-                 'San Francisco' => '49ers',
-                 'Seattle' => 'Seahawks',
-                 'St. Louis' => 'Rams',
-                 'Tampa Bay' => 'Buccaneers',
-                 'Tennessee' => 'Titans',
-                 'Washington' => 'Redskins'
+                 'Las Vegas Raiders' => 'Raiders',
+                 'Philadelphia Eagles' => 'Eagles',
+                 'Pittsburgh Steelers' => 'Steelers',
+                 'Los Angeles Chargers' => 'Chargers',
+                 'San Francisco 49ers' => '49ers',
+                 'Seattle Seahawks' => 'Seahawks',
+                 'Los Angeles Rams' => 'Rams',
+                 'Tampa Bay Buccaneers' => 'Buccaneers',
+                 'Tennessee Titans' => 'Titans',
+                 'Washington Commanders' => 'Washington'
                      );
 
 
@@ -97,16 +101,17 @@ if (1)
   open (TMP,">TEST_CONTENT");
   while ($count < 2500)
   {
-    my $url = "http://fantasysports.yahooapis.com/fantasy/v2/league/$league_key/players;start=$count;sort=OR";
+    my $url = "https://fantasysports.yahooapis.com/fantasy/v2/league/$league_key/players;start=$count;sort=OR";
+print "$url\n";
     my $data = $oauth->view_restricted_resource("$url");
 
     
 if (1)
 {
-  ##foreach my $k (keys %$data)
-  ##{
-    ##print TMP "$k => " . $data->{$k} . "\n";
-  ##}
+  foreach my $k (keys %$data)
+  {
+    print TMP "$k => " . $data->{$k} . "\n";
+  }
   print TMP "$data->{_content}\n";
 }
 
@@ -127,7 +132,7 @@ if (1)
 
       if ($player->{display_position} eq 'DEF')
       {
-        $player->{name}->{full} = $team_lut{$player->{name}->{full}} || $team_lut{$player->{editorial_team_full_name}};
+        $player->{name}->{full} = $team_lut{$player->{editorial_team_full_name}};
       }
       $player->{name}->{full} =~ s/\'//g;
       $yahoo_players{$player->{player_id}}->{NAME} = $player->{name}->{full};
@@ -168,7 +173,7 @@ else
 
       if ($player->{display_position} eq 'DEF')
       {
-        $player->{name}->{full} = $team_lut{$player->{name}->{full}} || $team_lut{$player->{editorial_team_full_name}};
+        $player->{name}->{full} = $team_lut{$player->{editorial_team_full_name}};
       }
       $player->{name}->{full} =~ s/\'//g;
       $yahoo_players{$player->{player_id}}->{NAME} = $player->{name}->{full};
@@ -249,6 +254,7 @@ foreach my $auctionid (keys %$auction_ref)
         $ans = <STDIN>;
         chomp($ans);
         last if (($ans eq 'R') || ($ans eq 'N'));
+	print "$ans";
       }
 
       if ($ans eq 'N')

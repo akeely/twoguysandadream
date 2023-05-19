@@ -1,3 +1,18 @@
 update_playerlist.pl - syncs player database with Yahoo list; handles deactivating 'retired' players, renaming
 
 
+NOTE on RFA draft:
+
+Run this query to get the list (need to update the league ID)
+select p.name, t.name AS "team", g.cost  from contracts c 
+JOIN players p on p.playerid=c.playerid
+JOIN final_rosters r on r.playerid=p.playerid and r.leagueid=c.leagueid
+JOIN teams t on t.id=r.teamid
+LEFT JOIN tags g ON g.playerid=p.playerid and g.leagueid=c.leagueid
+WHERE c.leagueid=45 and c.years_left=-1 and c.broken='N' 
+AND (g.type='T' OR g.type is null)
+ORDER by team;
+
+ALSO - check the list for any players that may have been dropped during the season - the owner forfeited RFA rights in that scenario
+
+

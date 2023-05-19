@@ -40,7 +40,7 @@ sub Header($$$$$)
 my $global_lock = shift;
 my $head_user = shift;
 my $head_team = shift;
-my $league_owner = shift;
+my $is_commish = shift;
 my $draft_status = shift;
 
 print "Cache-Control: no-cache\n";
@@ -546,7 +546,6 @@ function printRoster()
 
 HEADER
 
-  my $is_commish = ($league_owner eq $head_user) ? 1 : 0;
   my $nav = Nav_Bar->new('Contracts',"$head_user",$is_commish,$draft_status,"$head_team");
   $nav->print();
 
@@ -661,17 +660,16 @@ EOM
 ######################
 
 
-sub PrintPlayer($$$$$$$$$$)
+sub PrintPlayer($$$$$$$$$)
 {
 my $name = shift;
 my $id = shift;
+my $rank = shift;
 my $count = shift;
 my $type = shift;
 my $cost = shift;
 my $years_left = shift;
 my $pos = shift;
-my $c_owner=shift;
-my $owner=shift;
 my $is_broken=shift;
 
 
@@ -684,8 +682,9 @@ my $last_cost = $cost; ## Overwritten if FA/Waiver player
 ## for his position, stored in the hash
 if ($cost == 0)
 {
-  $pos = $1 if ($pos =~ m/(.*)\|.*/);
-  $pos = $1 if ($pos =~ m/(.*)\/.*/);
+  $pos = $1 if ($pos =~ m/(.*?)\|.*/);
+  $pos = $1 if ($pos =~ m/(.*?)\/.*/);
+  $pos = $1 if ($pos =~ m/(.*?),.*/);
   $last_cost = $pos_costs{uc($pos)};
 
   ## Error flagging
@@ -700,14 +699,6 @@ if ($cost == 0)
   {
     $cost_calcs = $years_left;
   }
-
-  ## Account for contracts that were not made by this owner
-##  if ($owner ne $c_owner)
-##  {
-##    
-##    $years_left = 'N/A';
-##    $cost_calcs = 1;
-##  }
 
   ## If $0.50 bidding is available (i.e. cost is under 10 dollars), round to nearest 50 cents
   for (my $x=$start_year; $x<$cost_calcs; $x++)
@@ -786,6 +777,7 @@ print <<EOM;
   <td id=cost$count align=center>$cost</td>
   <td id=next_cost$count align=center>$cost2</td>
   <td id=years_left$count align=center>$years_left</td>
+  <td id=rank$count align=center>$rank</td>
  </tr>
 
 EOM
@@ -809,15 +801,15 @@ my $name;
 ######################
 ############################################
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my $dbh = dbConnect();
   #Get League Data
-   $league = Leagues->new($league_t,$dbh);
+   $league = Leagues->new($leagueid,$dbh);
   if (! defined $league)
   {
-    die "ERROR - league object not found!\n";
+    die "ERROR - league object not found $leagueid!\n";
   }
-  $owner = $league->owner();
+  $league_owner = $league->owner();
   $draftStatus = $league->draft_status();
   $contractStatus = $league->keepers_locked();
   $sport = $league->sport();
@@ -857,9 +849,9 @@ my $dbh = dbConnect();
     $pos_costs{$pos}  = $league->keeper_fa_price($pos);
   }
 
-  Header($contractStatus,$user,$team_t,$owner,$draftStatus);
+  Header($contractStatus,$ownername,$teamname,$league_owner == $ownerid,$draftStatus);
 
-  $sth = $dbh->prepare("SELECT count(*) from contracts where team='$user' and locked='yes' and league='$league_t' and years_left>0");
+  $sth = $dbh->prepare("SELECT count(*) from contracts where ownerid=$ownerid and locked='yes' and leagueid=$leagueid and years_left>0");
   $sth->execute();
   $locked_count = $sth->fetchrow_array();
   $sth->finish();
@@ -878,7 +870,7 @@ print <<EOM;
   <table frame=box class=none id=contracts>
    <tr>
     <td colspan=6 align=center class=none>
-     <b>$team_t</b>
+     <b>$teamname</b>
     </td>
    </tr>
    <tr>
@@ -900,24 +892,27 @@ print <<EOM;
     <td>
      <b>Years Left on Contract </b>
     </td>
+    <td>
+     <b>Player Rank</b>
+    </td>
    </tr>
 
 EOM
 
   $playerswon = "final_rosters";
-  $sth = $dbh->prepare("SELECT w.name,w.price,w.team,w.time,p.position,p.name FROM final_rosters w, players p WHERE w.team='$team_t' AND w.league='$league_t' and w.name=p.playerid")
+  $sth = $dbh->prepare("SELECT w.playerid,w.price,w.teamid,w.time,p.position,p.name,p.rank FROM final_rosters w, players p WHERE w.teamid=$teamid AND w.leagueid=$leagueid and w.playerid=p.playerid")
            or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
-  $sth2 = $dbh->prepare("SELECT current_cost,total_years,years_left,team,locked,broken from contracts where player=? and league='$league_t'");
-  $sth3 = $dbh->prepare("SELECT active from tags where player=? and league='$league_t'");
+  $sth2 = $dbh->prepare("SELECT current_cost,total_years,years_left,ownerid,locked,broken from contracts where playerid=? and leagueid=$leagueid");
+  $sth3 = $dbh->prepare("SELECT active from tags where playerid=? and leagueid=$leagueid");
 
   $count = 0;
   my $player_years_left;
   my $cost_if_kept;
-  while (($id,$bid,$bidder,$ez_time,$pos,$name) = $sth->fetchrow_array())
+  while (($id,$bid,$bidder,$ez_time,$pos,$name,$rank) = $sth->fetchrow_array())
   { 
     $sth2->execute($id);
-    ($contract_cost, $player_total_years, $player_years_left, $contract_owner, $is_locked, $is_broken) = $sth2->fetchrow_array();
+    ($contract_cost, $player_total_years, $player_years_left, $contract_ownerid, $is_locked, $is_broken) = $sth2->fetchrow_array();
     if (!defined $player_years_left)
     {
       $player_years_left = 'N/A';
@@ -929,12 +924,12 @@ EOM
     $active = $sth3->fetchrow();
     $player_years_left = -1 if ($active eq 'no');
 
-    PrintPlayer($name,$id,$count,'out',$bid,$player_years_left,$pos,$contract_owner,$user,$is_broken);
+    PrintPlayer($name,$id,$rank,$count,'out',$bid,$player_years_left,$pos,$is_broken);
     $count++;
   }   
   $sth->finish();
   $sth2->finish();
-  $sth->finish();
+  $sth3->finish();
 
 print <<FOOTER;
 
@@ -947,7 +942,7 @@ print <<FOOTER;
 <input type="hidden" id=total name="total_players" value=$count>
 <input type="hidden" id=global_lock name="global_lock" value="$contractStatus">
 <input type="hidden" id=ip_flag name="ip_flag" value="$use_IP_flag">
-<input type="hidden" id=league name="league" value="$league_t">
+<input type="hidden" id=league name="league" value="$leagueid">
 
 FOOTER
 
@@ -956,10 +951,10 @@ if ($use_IP_flag eq 'yes')
 print <<FOOTER1;
 
 <p align=center>
-<a name="BIDDING"><b>Enter Contracts(s) for Team $team_t</b></a>
+<a name="BIDDING"><b>Enter Contracts(s) for Team $teamname</b></a>
 
 <br>
-    <input type=hidden name="TEAMS" value="$user">
+    <input type=hidden name="TEAMS" value="$ownerid">
     <input type=checkbox name='LOCK_ME' value='true'>$keeper_text<br>
     <input type=submit name="submit_contract" value="Assign Contract(s)" style="margin-left: auto; margin-right: auto; text-align: center;">
     <input type="reset" value="Clear The Form" id=reset1 name=reset1> 
@@ -986,29 +981,25 @@ print <<FOOTER2;
      <tr>
       <td align=middle> 
        <input type="hidden" id=ip_flag name="ip_flag" value=$use_IP_flag>
-       <select name="TEAMS" onChange="sndReq($league_t)">
+       <select name="TEAMS" onChange="sndReq($leagueid)">
 
 FOOTER2
    
    ## Output each owner name as an option in the pull-down - UPDATE: change to team name?
 
-   # default to current user (by IP check)
-   $def = $user;
-
-
    #Get Team List
-   $sth = $dbh->prepare("SELECT * FROM teams WHERE league = '$league_t'")
+   $sth = $dbh->prepare("SELECT * FROM teams WHERE leagueid = $leagueid")
         or die "Cannot prepare: " . $dbh->errstr();
    $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
-   while (($tf_owner, $tf_name, $tf_league, $tf_adds, $tf_sport, $tf_plusminus) = $sth->fetchrow_array())
+   while (($tf_name, $tf_adds, $tf_adds, $tf_sport, $tf_plusminus, $tf_ownerid, $tf_teamid, $tf_leagueid) = $sth->fetchrow_array())
    {
-     if ($tf_name eq $team_t)
+     if ($tf_teamid eq $teamid)
      {
         $check = "selected";
      }
 
-     PrintOwner($tf_owner,$tf_name,$check);
+     PrintOwner($tf_ownerid,$tf_name,$check);
    }
    
    $sth->finish();
@@ -1031,7 +1022,7 @@ print <<FOOTER2;
     <input type=submit name="submit_contract" value="Assign Contract(s)" style="margin-left: auto; margin-right: auto; text-align: center;">
     <br>
     <input type="hidden" id=total name="total_players" value=$count>
-    <input type="hidden" id=league name="league" value="$league_t">
+    <input type="hidden" id=league name="league" value="$leagueid">
 
 FOOTER2
   } # end else

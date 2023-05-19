@@ -24,19 +24,19 @@ $team_error_file = "/var/log/fantasy/team_errors.txt";
 
 # variable for error
 my $owner;
-my $password;
 my $name;
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my $dbh = dbConnect();
 
 #Get League Data
-$league = Leagues->new($league_t,$dbh);
+$league = Leagues->new($leagueid,$dbh);
 if (! defined $league)
 {
   die "ERROR - league object not found!\n";
 }
 $league_owner = $league->owner();
+$league_name = $league->name();
 $draftStatus = $league->draft_status();
 $contractStatus = $league->keepers_locked();
 $use_IP_flag = $league->sessions_flag();
@@ -49,7 +49,8 @@ $TZ_offset = $league->tz_offset();
 $login_extend_time = $league->login_ext();
 dbDisconnect($dbh);
 
-if ($user ne "$league_owner")
+my $is_commish = ($league_owner eq $ownerid) ? 1 : 0;
+if (!$is_commish)
 {
   open(FILE, ">$team_error_file");
    flock(FILE,2);
@@ -91,8 +92,7 @@ print <<WELCOME;
 
 WELCOME
 
-  my $is_commish = ($league_owner eq $user) ? 1 : 0;
-  my $nav = Nav_Bar->new('Tools',"$user",$is_commish,$draftStatus,"$team_t");
+  my $nav = Nav_Bar->new('Tools',$ownername,$is_commish,$draftStatus,$teamname);
   $nav->print();
 
 print <<WELCOME;
@@ -133,7 +133,7 @@ print <<WELCOME;
   <td align=middle><input type="checkbox" name="ip_flag" value="true" $ip_flag></td>
  </tr>
  <tr>
-  <td align=middle>League $league_t Contract Signing Lock</td>
+  <td align=middle>League $league_name Contract Signing Lock</td>
   <td align=middle><input type="checkbox" name="contract_flag" value="true" $contract_flag></td>
  </tr>
  <tr>

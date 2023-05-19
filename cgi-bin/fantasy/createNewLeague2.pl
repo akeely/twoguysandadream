@@ -6,21 +6,16 @@ use POSIX qw(ceil floor);
 use DBTools;
 use Session;
 use Data::Dumper;
+use strict;
 
 my $cgi = new CGI;
 
 #variables that will be used later.
 
-$errors = "/var/log/fantasy/create_league_errors2.txt";
-$log = "/var/log/fantasy/LOG.txt";
+my $log = "/var/log/fantasy/LOG.txt";
 
-$return = "/fantasy/fantasy_main_index.htm";
-$errorflag = 0;
-
-open (FILE, ">$errors");
- flock(FILE,2);
- print FILE "\n";
-close(FILE);
+my $return = "/fantasy/fantasy_main_index.htm";
+my $errorflag = 0;
 
 open(LOG,">$log");
 print LOG Dumper($cgi);
@@ -42,26 +37,27 @@ $pos_offered{football} = ['RB2','RB3','WR2','WR3','OFF1','OFF2',
              
 
 ## Input Variables
-$in_leagueName = $cgi->param('leagueName');
-$in_leaguePassword = $cgi->param('leaguePassword');
-$in_teamName = $cgi->param('teamName');
-$in_max_members = $cgi->param('max_members');
-$in_draftType = $cgi->param('draftType');
-$in_keeper = $cgi->param('Keeper');
-$in_keeper_leagueName = $cgi->param('keeper_leagueName');
-$in_keeper_leaguePassword = $cgi->param('keeper_leaguePassword');
-$in_keeper_name_persist = $cgi->param('keeper_name_persist');
-$in_salary_cap = $cgi->param('salary_cap');
-$in_sport = $cgi->param('sport');
+my $in_leagueName = $cgi->param('leagueName');
+my $in_leaguePassword = $cgi->param('leaguePassword');
+my $in_teamName = $cgi->param('teamName');
+my $in_max_members = $cgi->param('max_members');
+my $in_draftType = $cgi->param('draftType');
+my $in_keeper = $cgi->param('Keeper');
+my $in_keeper_leagueName = $cgi->param('keeper_leagueName') || '';
+my $in_keeper_leaguePassword = $cgi->param('keeper_leaguePassword');
+my $in_keeper_name_persist = $cgi->param('keeper_name_persist');
+my $in_salary_cap = $cgi->param('salary_cap');
+my $in_sport = $cgi->param('sport');
+
 
 # Keeper parameters
+my $contract_count = $cgi->param('contract_count');
+my $keeper_increase = $cgi->param('keeper_increase');
 my %fa_costs;
 my %contracts;
-$import_contracts = $cgi->param('import_contracts');
+my $import_contracts = $cgi->param('import_contracts');
 if ($import_contracts eq 'yes')
 {
-  $contract_count = $cgi->param('contract_count');
-  $keeper_increase = $cgi->param('keeper_increase');
   if ($in_sport eq 'baseball')
   {
     $fa_costs{'C'} = $cgi->param('C_price');
@@ -70,7 +66,7 @@ if ($import_contracts eq 'yes')
     $fa_costs{'3B'} = $cgi->param('3B_price');
     $fa_costs{'SS'} = $cgi->param('SS_price');
     $fa_costs{'OF'} = $cgi->param('OF_price');
-    $fa_costs{'Util'} = $cgi->param('DH_price');
+    $fa_costs{'DH'} = $cgi->param('DH_price');
     $fa_costs{'SP'} = $cgi->param('SP_price');
     $fa_costs{'RP'} = $cgi->param('RP_price');
   }
@@ -92,164 +88,158 @@ if ($import_contracts eq 'yes')
   }
 }
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t) = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 
 my $dbh = dbConnect();
 
-## Make sure that the owner has filled out all fields
-if ($in_max_members =~ /^$/)
-{
-  open (FILE,">>$errors");
-  flock(FILE,2);
-  print FILE "$userAddr;$user;<b>Please enter a value for Maximum League Members!</b>\n";
-  close(FILE);
-  $errorflag = 1;
-}
-
-if (($in_draftType eq "auction") && ($in_salary_cap =~ /^$/))
-{
-   open (FILE, ">>$errors");
-   flock(FILE,2);
-   print FILE "$userAddr;$user;<b>Please provide a salary cap!</b>\n";
-   close(FILE);
-   $errorflag = 1;
-}
 
 if ($in_keeper eq "yes")
 {
   if (keys(%contracts) < 1)
   {
-     open (FILE, ">>$errors");
-     flock(FILE,2);
-     print FILE "$userAddr;$user;<b>You must enter keeper contract parameters!</b>\n";
-     close(FILE);
-     $errorflag = 1;
-   }
-   if ($keeper_increase =~ /^$/)
-   {
-     open (FILE, ">>$errors");
-     flock(FILE,2);
-     print FILE "$userAddr;$user;<b>You must enter keeper increase percentage!</b>\n";
-     close(FILE);
-     $errorflag = 1;
-   }
-   elsif (($keeper_increase < 0) || ($keeper_increase > 100))
-   {
-     open (FILE, ">>$errors");
-     flock(FILE,2);
-     print FILE "$userAddr;$user;<b>You must enter a valid keeper increase percentage (0-100)!</b>\n";
-     close(FILE);
-     $errorflag = 1;
-   }
-   foreach my $pos (%fa_prices)
-   {
-     if (! defined $fa_prices{$pos})
-     {
-       open (FILE, ">>$errors");
-       flock(FILE,2);
-       print FILE "$userAddr;$user;<b>You must enter FA/Waiver prices for all positions! ($pos is empty)</b>\n";
-       close(FILE);
-       $errorflag = 1;
-     }
-   }
+    $errorflag = 1;
+  }
+  if ($keeper_increase =~ /^$/)
+  {
+    $errorflag = 1;
+  }
+  elsif (($keeper_increase < 0) || ($keeper_increase > 100))
+  {
+    $errorflag = 1;
+  }
+  foreach my $pos (keys %fa_costs)
+  {
+    if (! defined $fa_costs{$pos})
+    {
+      $errorflag = 1;
+    }
+  }
+
+  my $sth_league_check = $dbh->prepare("select id from leagues where name='$in_keeper_leagueName'");
+  $sth_league_check->execute();
+  $leagueid = $sth_league_check->fetchrow();
+  
+  if (!defined $leagueid) {
+    $errorflag = 1;
+  }
 }
 
 if ($errorflag != 1)
 {
 
+
   $in_salary_cap = 0 if ($in_draftType ne 'Auction');
   $keeper_increase = 1 + ($keeper_increase/100);
 
   # update leagues database
-  $sth = $dbh->prepare("INSERT INTO leagues (name,password,owner,draft_type,draft_status,keepers_locked,sport,max_teams,salary_cap,auction_length,bid_time_ext,bid_time_buff,tz_offset,login_ext,sessions_flag,keeper_increase) VALUES('$in_leagueName','$in_leaguePassword','$user','$in_draftType','open','no','$in_sport','$in_max_members','$in_salary_cap','20','5','8','0','180','yes','$keeper_increase')") or die "Cannot prepare: " . $dbh->errstr();
-  $sth->execute() or die "Cannot execute: " . $sth->errstr();
-  $sth->finish();
-  
+  my $sth_insert_league = $dbh->prepare("INSERT INTO leagues (name,password,ownerid,draft_type,draft_status,keepers_locked,sport,max_teams,salary_cap,auction_length,bid_time_ext,bid_time_buff,tz_offset,login_ext,sessions_flag,keeper_increase, previous_league) VALUES('$in_leagueName','$in_leaguePassword',$ownerid,'$in_draftType','open','no','$in_sport','$in_max_members','$in_salary_cap','20','5','8','0','180','yes','$keeper_increase','$in_keeper_leagueName')") or die "Cannot prepare: " . $dbh->errstr();
+  $sth_insert_league->execute() or die "Cannot execute: " . $sth_insert_league->errstr();
+  $sth_insert_league->finish();
+
+  my $new_leagueid = $dbh->last_insert_id(undef, undef, 'leagues', 'id');
 
   ##update categories
-  $sth_inserts=$dbh->prepare("insert into categories VALUES ('$in_leagueName',?)");
+  my $sth_insert_cats=$dbh->prepare("insert into categories (category, leagueid) VALUES (?, $new_leagueid)");
   foreach my $cat (@{$categories_offered{$in_sport}})
   {
     if (defined $cgi->param("$cat"))
     {
-      $sth_inserts->execute($cat);
+      $sth_insert_cats->execute($cat);
     }
   }
-  $sth_inserts->finish();
+  $sth_insert_cats->finish();
 
 
   ##update positions
-  $sth_inserts=$dbh->prepare("insert into positions VALUES ('$in_leagueName',?)");
+  my $sth_insert_positions=$dbh->prepare("insert into positions (position, leagueid) VALUES (?, $new_leagueid)");
   foreach my $pos (@{$pos_offered{$in_sport}})
   {
     if (defined $cgi->param("$pos"))
     {
-      $sth_inserts->execute($pos);
+      $sth_insert_positions->execute($pos);
     }
   }
-  $sth_inserts->finish();
+  $sth_insert_positions->finish();
 
 
   if ($in_keeper eq 'yes')
   {
     ##update fa_keeper prices
-    $sth_inserts=$dbh->prepare("insert into fa_keepers VALUES ('$in_leagueName',?,?)");
+    my $sth_insert_fa_prices=$dbh->prepare("insert into fa_keepers (position, price, leagueid) VALUES (?,?, $new_leagueid)");
     foreach my $pos (keys %fa_costs)
     {
-      $sth_inserts->execute($pos, $fa_costs{$pos});
+      $sth_insert_fa_prices->execute($pos, $fa_costs{$pos});
     }
-    $sth_inserts->finish();
+    $sth_insert_fa_prices->finish();
 
 
     ##update keeper slots (contracts available)
-    $sth_inserts=$dbh->prepare("insert into keeper_slots VALUES ('$in_leagueName',?,?,?)");
+    my $sth_insert_keeper_slots=$dbh->prepare("insert into keeper_slots (min, max, number, leagueid) VALUES (?,?,?,$new_leagueid)");
     foreach my $type (keys %contracts)
     {
-      $sth_inserts->execute($contracts{$type}->{MIN},$contracts{$type}->{MAX},$contracts{$type}->{NUM});
+      $sth_insert_keeper_slots->execute($contracts{$type}->{MIN},$contracts{$type}->{MAX},$contracts{$type}->{NUM});
     }
-    $sth_inserts->finish();
+    $sth_insert_keeper_slots->finish();
   }
 
   # If the new league is a keeper-continuation, import the same teams into teams table, and the kept players into players_won
   if ($import_contracts eq 'yes')
   {
-    my %owner_penalties;
-    
-    ## ECW - known bug! If a player in a multi-year contract is dropped during the season, from the queries below he will still be imported into the next season. We need to have them break the contract ... maybe in the import-rosters script?
-    $sth1 = $dbh->prepare("Select c.player,c.team,c.total_years,c.years_left,c.current_cost,c.league,c.locked,c.broken,c.penalty,t.name,p.position from contracts c, teams t, players p where c.league = '$in_keeper_leagueName' and c.years_left>0 and c.league=t.league and t.owner=c.team and p.playerid=c.player") or die "Cannot prepare: " . $dbh->errstr();
-    $sth5 = $dbh->prepare("Select g.player,g.team,g.type,g.league,g.cost,g.locked,g.active,t.name from tags g, teams t, players p where g.league = '$in_keeper_leagueName' and g.league=t.league and t.owner=g.team and p.playerid=g.player and g.type='F' and g.active='yes'") or die "Cannot prepare: " . $dbh->errstr();
-    $sth2 = $dbh->prepare("INSERT INTO players_won (name, price, team, league) VALUES (?,?,?,'$in_leagueName')") or die "Cannot prepare: " . $dbh->errstr();    
-    $sth3 = $dbh->prepare("insert into contracts (player,team,total_years,years_left,current_cost,league,locked) values (?,?,?,?,?,?,?)");
-    $sth4 = $dbh->prepare("update contracts set locked='yes' where league='$in_leagueName'");
-    $sth6 = $dbh->prepare("insert into tags (player,team,type,league,cost,locked,active) values (?,?,?,?,?,?,?)");
-    $sth7 = $dbh->prepare("update tags set locked='yes' where league='$in_leagueName'");
 
-    ## Assure that all contracts & tags for this league are now locked. Officially, it won't matter ... but cheers to consistency
-    $sth4->execute();
-    $sth7->execute();
-    $sth4->finish();
-    $sth7->finish();
-
-    ## ECW TODO
-    ## Franchise Tag insertions - TBD needs work!
-    $sth5->execute() or die "Cannot execute: " . $sth5->errstr();
-    while (($t_player,$t_owner,$t_type,$t_league,$t_cost,$t_locked,$t_active,$team_name) = $sth5->fetchrow_array())
+    ## get a mapping of existing teamIds to new teamIds
+    my %owner_team_map;
+    my $sth_team_select = $dbh->prepare("Select ownerid, name from teams where leagueid = $leagueid") or die "Cannot prepare: " . $dbh->errstr();
+    my $sth_insert_new_team = $dbh->prepare("INSERT INTO teams (name, num_adds, sport, money_plusminus, ownerid, leagueid) VALUES(?,0,'$in_sport',0, ?, $new_leagueid)");
+    $sth_team_select->execute() or die "Cannot execute: " . $sth_team_select->errstr();
+    while (my ($t_owner, $t_name) = $sth_team_select->fetchrow_array())
     {
-      ## Insert this player into the players_won table for the new season
-      if (($t_owner eq $user) & ($in_keeper_name_persist ne 'yes'))
+      
+      if (($t_owner eq $ownerid) && ($in_keeper_name_persist ne 'yes'))
       {
-        $sth2->execute($t_player,$t_cost,$in_teamName) or die "Cannot execute: " . $sth2->errstr();
+        $sth_insert_new_team->execute($in_teamName,$t_owner);
       }
       else
       {
-        $sth2->execute($c_player,$t_cost,$t_team) or die "Cannot execute: " . $sth2->errstr();
+        $sth_insert_new_team->execute($t_name,$t_owner) or die "Cannot execute: " . $sth_insert_new_team->errstr();
       }
 
-      $sth6->execute($t_player,$t_owner,$t_type,$in_leagueName,$t_cost,$t_locked,'no');
+      my $new_teamid = $dbh->last_insert_id(undef, undef, 'teams', 'id');
+      $owner_team_map{$t_owner} = $new_teamid;
+
+
+    }
+    $sth_team_select->finish();
+    $sth_insert_new_team->finish();
+
+
+    ## ECW - known bug! If a player in a multi-year contract is dropped during the season, from the queries below he will still be imported into the next season. We need to have them break the contract ... maybe in the import-rosters script?
+    my $sth_select_contracts = $dbh->prepare("Select c.playerid,c.ownerid,c.total_years,c.years_left,c.current_cost,c.leagueid,c.locked,c.broken,c.penalty,p.position from contracts c, teams t, players p where c.leagueid = $leagueid and c.years_left>0 and c.leagueid=t.leagueid and t.ownerid=c.ownerid and p.playerid=c.playerid") or die "Cannot prepare: " . $dbh->errstr();
+    my $sth_select_tags = $dbh->prepare("Select g.playerid,g.ownerid,g.type,g.leagueid,g.cost,g.locked,g.active from tags g, teams t, players p where g.leagueid = $leagueid and g.leagueid=t.leagueid and t.ownerid=g.ownerid and p.playerid=g.playerid and g.type='F' and g.active='yes'") or die "Cannot prepare: " . $dbh->errstr();
+    my $sth_insert_new_league_players = $dbh->prepare("INSERT INTO players_won (playerid, price, teamid, leagueid, time) VALUES (?,?,?,$new_leagueid, ?)") or die "Cannot prepare: " . $dbh->errstr();    
+    my $sth_insert_new_league_contracts = $dbh->prepare("insert into contracts (playerid,ownerid,total_years,years_left,current_cost,leagueid,locked) values (?,?,?,?,?,?,?)");
+    my $sth_lock_old_contracts = $dbh->prepare("update contracts set locked='yes' where leagueid=$new_leagueid");
+    my $sth_insert_new_league_tags = $dbh->prepare("insert into tags (playerid,ownerid,type,leagueid,cost,locked,active) values (?,?,?,?,?,?,?)");
+    my $sth_lock_old_tags = $dbh->prepare("update tags set locked='yes' where leagueid=$new_leagueid");
+
+    ## Assure that all contracts & tags for this league are now locked. Officially, it won't matter ... but cheers to consistency
+    $sth_lock_old_contracts->execute();
+    $sth_lock_old_tags->execute();
+    $sth_lock_old_contracts->finish();
+    $sth_lock_old_tags->finish();
+
+    $sth_select_tags->execute() or die "Cannot execute: " . $sth_select_tags->errstr();
+    while (my ($t_player,$t_owner,$t_type,$t_league,$t_cost,$t_locked,$t_active) = $sth_select_tags->fetchrow_array())
+    {
+      ## Insert this player into the players_won table for the new season
+      $sth_insert_new_league_players->execute($t_player,$t_cost,$owner_team_map{$t_owner}, 'FRANCHISE TAG') or die "Cannot execute: " . $sth_insert_new_league_players->errstr();
+
+      ## Insert row into the tags table for the new season
+      $sth_insert_new_league_tags->execute($t_player,$t_owner,$t_type,$new_leagueid,$t_cost,$t_locked,'no');
     }
     
-    $sth1->execute() or die "Cannot execute: " . $sth1->errstr();
-    while (($c_player,$c_owner,$c_total_years,$c_years_left,$c_cost,$c_league,$c_locked,$c_broken,$c_penalty,$t_team,$p_pos) = $sth1->fetchrow_array())
+    my %owner_penalties;
+    $sth_select_contracts->execute() or die "Cannot execute: " . $sth_select_contracts->errstr();
+    while (my ($c_player,$c_owner,$c_total_years,$c_years_left,$c_cost,$c_league,$c_locked,$c_broken,$c_penalty,$p_pos) = $sth_select_contracts->fetchrow_array())
     {
       ## If this is a broken contract, record the penalty amount to reflect against the owner's cap, then skip it (not importing to new league)
       if ($c_broken eq 'Y')
@@ -264,8 +254,8 @@ if ($errorflag != 1)
       if ($new_price == 0)
       {
         ## Only use a single position - remove multiples if they exist
-        my $p_pos = $1 if ($p_pos =~ m/(.*)\|.*/);
-        $p_pos = $1 if ($p_pos =~ m/(.*)\/.*/);
+        $p_pos = $1 if ($p_pos =~ m/(.*?)\|.*/);
+        $p_pos = $1 if ($p_pos =~ m/(.*?)\/.*/);
 
         $new_price = -99; ## Error catching code for bad positions
         $new_price = $fa_costs{$p_pos} if (defined $fa_costs{$p_pos});
@@ -278,9 +268,10 @@ if ($errorflag != 1)
         ## If this is an existing keeper, make sure to bump up the price per league specs
         $new_price *= $keeper_increase;
 
+        my $cost2;
         if ($new_price < 10)
         {
-          ($main, $dec) = split(/\./,$new_price);
+          my ($main, $dec) = split(/\./,$new_price);
           my $dec2 = substr($dec, 0, 1);
           $cost2 = ceil($new_price);
           if (($dec2 <= 5) && (($dec2 > 0) || (($dec2 == 0) && (length($dec) == 2))))
@@ -301,78 +292,36 @@ if ($errorflag != 1)
       }
 
       ## Insert this player into the players_won table for the new season
-      if (($c_owner eq $user) & ($in_keeper_name_persist ne 'yes'))
-      {
-        $sth2->execute($c_player,$new_price,$in_teamName) or die "Cannot execute: " . $sth2->errstr();
-      }
-      else
-      {
-        $sth2->execute($c_player,$new_price,$t_team) or die "Cannot execute: " . $sth2->errstr();
-      }
+      $sth_insert_new_league_players->execute($c_player,$new_price,$owner_team_map{$c_owner},'KEEPER CONTRACT') or die "Cannot execute: " . $sth_insert_new_league_players->errstr();
 
       ## Insert a new contract entry for this player
       $c_years_left--;
       $c_years_left = -1 if ($c_years_left == 0);
-      $sth3->execute($c_player,$c_owner,$c_total_years,$c_years_left,$new_price,$in_leagueName,'yes');
+      $sth_insert_new_league_contracts->execute($c_player,$c_owner,$c_total_years,$c_years_left,$new_price,$new_leagueid,'yes');
     }
-    $sth1->finish();
-    $sth2->finish();
-    $sth3->finish();
-    
-    
-    $sth1 = $dbh->prepare("Select owner, name, sport from teams where league = '$in_keeper_leagueName'") or die "Cannot prepare: " . $dbh->errstr();
-    $sth2 = $dbh->prepare("INSERT INTO teams VALUES (?,?,'$in_leagueName',0,'$in_sport',?)") or die "Cannot prepare: " . $dbh->errstr();
-    $sth1->execute() or die "Cannot execute: " . $sth1->errstr();
-    while (($t_owner,$t_name,$t_sport) = $sth1->fetchrow_array())
-    {
-      ## Get any broken-contract penalties, if applicable
-      my $penalty = $owner_penalties{$t_owner} * -1;
-      $penalty = 0 if (! defined $penalty);
-      
-      if (($t_owner eq $user) & ($in_keeper_name_persist ne 'yes'))
-      {
-        $sth2->execute($t_owner,$in_teamName,$penalty);
-      }
-      else
-      {
-        $sth2->execute($t_owner,$t_name,$penalty) or die "Cannot execute: " . $sth2->errstr();
-      }
-    }
-    $sth1->finish();
-    $sth2->finish();
+    $sth_select_contracts->finish();
+    $sth_select_tags->finish();
+    $sth_insert_new_league_players->finish();
+    $sth_insert_new_league_contracts->finish();
+    $sth_insert_new_league_tags->finish();
 
+    ## update penalty amounts for new teams
+    my $sth_update_team_penalties = $dbh->prepare("update teams set money_plusminus=? where id=?");
+    foreach my $p_owner (keys %owner_penalties) {
+      my $penalty = $owner_penalties{$p_owner} * -1;
+      $sth_update_team_penalties->execute($penalty, $owner_team_map{$p_owner});
+    }
+    $sth_update_team_penalties->finish();
 
   }
+
   else
   {
     # Add this team/league pairing to the teams db
-    $sth = $dbh->prepare("INSERT INTO teams VALUES('$user','$in_teamName','$in_leagueName','0','$in_sport',0)") or die "Cannot prepare: " . $dbh->errstr();
+    my $sth = $dbh->prepare("INSERT INTO teams (name, num_adds, sport, money_plusminus, ownerid, leagueid) VALUES('$in_teamName',0,'$in_sport',0, $ownerid, $new_leagueid)") or die "Cannot prepare: " . $dbh->errstr();
     $sth->execute() or die "Cannot execute: " . $sth->errstr();
     $sth->finish();
   }
-
-  open (FILE, ">>$errors");
-  flock(FILE,1);
-  print FILE "$userAddr;$user;<b>League <i>$in_leagueName</i> has been created!</b>\n";
-  close(FILE);  
-
-  #
-  #create data files for the new league
-  #
-  open(FILE,"/var/log/fantasy/trades_$in_leagueName.txt");
-  flock(FILE,1);
-  print FILE "";
-  close(FILE);
-
-  open(FILE,"/var/log/fantasy/trade_messages_$in_leagueName.txt");
-  flock(FILE,1);
-  print FILE "";
-  close(FILE);
-
-  open(FILE,"/var/log/fantasy/player_targets_$in_leagueName.txt");
-  flock(FILE,1);
-  print FILE "";
-  close(FILE);
 
   $return = "/fantasy/fantasy_main_index.htm";
 }

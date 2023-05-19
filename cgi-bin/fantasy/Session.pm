@@ -26,7 +26,7 @@ sub checkSession() {
     # If the cookie is valid, get the IP that the session is for
     if($id){
       my $dbh = dbConnect();
-      my $sth = $dbh->prepare("SELECT * FROM sessions WHERE sess_id = '$id'")
+      my $sth = $dbh->prepare("SELECT s.ip, s.sess_id, s.sport, s.leagueid, s.teamid, s.ownerid, p.name, t.name FROM sessions s JOIN passwd p ON p.id=s.ownerid LEFT JOIN teams t ON t.id=s.teamid WHERE sess_id = '$id'")
             or die "Cannot prepare: " . $dbh->errstr();
       $sth->execute() or die "Cannot execute: " . $sth->errstr();
       @values = $sth->fetchrow_array();

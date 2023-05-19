@@ -27,6 +27,7 @@ $team_error_file = "/var/log/fantasy/team_errors.txt";
 $in_player_id = $cgi->param('player_id');
 $in_commish_flag = $cgi->param('commish_flag');
 
+
 my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
 my $dbh = dbConnect();
 
