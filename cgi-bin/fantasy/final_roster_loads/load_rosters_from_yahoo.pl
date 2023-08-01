@@ -4,13 +4,19 @@ use strict;
 
 use lib qw(. ..);
 use Net::MyOAuthApp;
+#use Net::MyOAuthApp_Oauth1;
 use XML::Simple;
 use DBI;
 use Time::Local;
 use DBTools;
+use Data::Dumper;
 
 ## game_key = number representing sport / year (http://developer.yahoo.com/fantasysports/guide/game-resource.html)
 ##            - for current year per sport, just use 'mlb' or 'nfl'
+## ALSO - can use the YQL console to check IDs and eventually find our match: https://developer.yahoo.com/yql/console/
+#
+# NOTE - stay on top of these game ids each year, getting the current game_key id via fetch_yahoo_game_ids.pl
+#
 ##  2010 nfl = 242
 ##  2011 nfl = 257
 ##  2010 mlb = 238
@@ -23,6 +29,22 @@ use DBTools;
 ##  2014 nfl = 331
 ##  2015 mlb = 346
 ##  2015 nfl = 348
+##  2016 nfl = 359
+##  2016 mlb = 357
+##  2017 mlb = 370 
+##  2017 nfl = 371
+##  2018 mlb = 378
+##  2018 nfl = 380
+##  2019 mlb = 388
+##  2019 nfl = 390
+##  2020 mlb = 398
+##  2020 nfl = 399
+##  2021 mlb = 404
+##  2021 nfl = 406
+##  2022 mlb = 412
+##  2022 nfl = 414
+##  2023 mlb = 422
+##  2023 nfl = 
 
 ## league_key = {game_key}.l.{league_id}
 ##  2010 nfl auction - league ID 513310
@@ -33,10 +55,21 @@ use DBTools;
 ##  2012 mlb auction - 80930
 ##  2013 nfl auction - 548917
 ##  2013 mlb auction - 39507
-###  2014 nfl auction - 339579
+##  2014 nfl auction - 339579
+##  2014 mlb auction - 101127
+##  2019 mlb auction - 124666
+##  2019 nfl auction - 384517
+##  2020 mlb auction - 34523
+##  2020 nfl auction - 822779
+##  2021 mlb auction - 91804
+##  2021 nfl auction - 386369
+##  2022 mlb auction - 82250
+##  2022 nfl auction - 261882
+##  2023 mlb auction - 91572
+##  2023 nfl auction - 
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
-my $game_key = 346;
-my $league_key = 39209;
+my $game_key = 412;
+my $league_key = 82250;
 
 my $sport = '';
 print "Enter the sport [(b)aseball|(f)ootball]: ";
@@ -52,6 +85,7 @@ $sport = 'football' if ($sport eq 'f');
 
 ## Connect to Yahoo Oauth
 my $oauth = Net::MyOAuthApp->new();
+#my $oauth = Net::MyOAuthApp_Oauth1->new();
 
 print "\n\n\nOK\n\n\n";
 
@@ -68,12 +102,14 @@ if (1)
 
 print "CONNECTED\n\n";
 
+$oauth->view_restricted_resource("https://fantasysports.yahooapis.com/fantasy/v2/game/mlb");
+
   ## Access the teams list?
-  my $url = "http://fantasysports.yahooapis.com/fantasy/v2/league/${game_key}.l.${league_key}";
+  my $url = "https://fantasysports.yahooapis.com/fantasy/v2/league/${game_key}.l.${league_key}";
   $data = $oauth->view_restricted_resource("${url}/teams");
 
 print "TEAMS??\n\n";
-open(TEST,">TESTOUTPUT");
+open(TEST,">TEAMS_REQUEST_RESPONSE");
 print TEST "$data->{_content}\n\n";
 close(TEST);
 
@@ -114,6 +150,14 @@ my $dbh = dbConnect();
 ## Matchup files for yahoo teams => auction teams
 my %ateams;
 my $aleague;
+my $yleagueid;
+print "Which auction site league are you importing to? ";
+$aleague = <STDIN>;
+chomp($aleague);
+my $sth_fetch_league_id = $dbh->prepare("select id from leagues where name='$aleague'");
+$sth_fetch_league_id->execute();
+$yleagueid = $sth_fetch_league_id->fetchrow();
+
 my %matchups;
 my $matchup_file = "owner_matchup.$game_key.$league_key";
 if (-f "$matchup_file")
@@ -134,18 +178,18 @@ if (-f "$matchup_file")
 }
 else
 {
-  print "Which auction site league are you importing to? ";
-  $aleague = <STDIN>;
-  chomp($aleague);
-  my $sth_fetch_auction_teams = $dbh->prepare("select name from teams where league = '$aleague'");
+
+  my $sth_fetch_auction_teams = $dbh->prepare("select id,name from teams where leagueid = $yleagueid");
   $sth_fetch_auction_teams->execute();
   my $count = 1;
-  while (my $ateam = $sth_fetch_auction_teams->fetchrow())
+  while (my ($ateamid,$ateam) = $sth_fetch_auction_teams->fetchrow_array())
   {
-    $ateams{$count++} = $ateam;
+    $ateams{$count++} = $ateam . '||' . $ateamid;
   }
   $sth_fetch_auction_teams->finish();
+  $sth_fetch_league_id->finish();
 }
+
 
   
 
@@ -183,11 +227,11 @@ if ($prompt_input)
   close(MATCHUP);
 }
 
-my $sth_fetch_id = $dbh->prepare("select playerid from players where yahooid=? and sport='$sport'");
-my $sth_clear = $dbh->prepare("update final_rosters set team='NONE' where league='$aleague'");
-my $sth_select = $dbh->prepare("SELECT * FROM final_rosters WHERE name=? and league='$aleague'");
-my $sth_replace = $dbh->prepare("update final_rosters set team=? where name=? and league='$aleague'");
-my $sth_insert = $dbh->prepare("insert into final_rosters (name,price,team,league) values (?,0,?,'$aleague')");
+my $sth_fetch_player_id = $dbh->prepare("select playerid from players where yahooid=? and sport='$sport'");
+my $sth_clear = $dbh->prepare("update final_rosters set teamid=-1 where leagueid=$yleagueid");
+my $sth_select = $dbh->prepare("SELECT * FROM final_rosters WHERE playerid=? and leagueid=$yleagueid");
+my $sth_replace = $dbh->prepare("update final_rosters set teamid=? where playerid=? and leagueid=$yleagueid");
+my $sth_insert = $dbh->prepare("insert into final_rosters (playerid,price,teamid,leagueid) values (?,0,?,$yleagueid)");
 
 
 ## Assign all players from this draft to 'NONE' owner. Real (current) owner will be assigned below
@@ -201,6 +245,7 @@ print "Trade End: $trade_end_date\n";
 my %invalid_adds;
 my ($year,$month,$day) = split(/\-/,$trade_end_date);
 $month--;
+$day++; # players added day-of are legit keeper options
 my $trade_end_epoch = timelocal(59,59,23,$day,$month,$year);
 foreach my $t (@transactions)
 {
@@ -219,7 +264,7 @@ my %rosters;
 foreach my $team (keys %$teams)
 {
   my $team_key = $teams->{$team}->{team_key};
-  my $url = "http://fantasysports.yahooapis.com/fantasy/v2/team/$team_key/roster";
+  my $url = "https://fantasysports.yahooapis.com/fantasy/v2/team/$team_key/roster";
 
   eval { $data = $oauth->view_restricted_resource("$url"); };
   if ($@)
@@ -231,8 +276,14 @@ foreach my $team (keys %$teams)
   }
 
   print "Loading $matchups{$team} ($team)\n";
-  my $roster_data = XMLin($data->{_content}, forcearray => [ 'team' ]);
-  my @players = @{$roster_data->{team}->{$team}->{roster}->{players}->{player}};
+  my @ateam = split(/\|\|/,$matchups{$team});
+  my $ateamid = $ateam[1];
+
+  my $roster_data = XMLin($data->{_content});
+  ##my $roster_data = XMLin($data->{_content}, forcearray => [ 'team' ]);
+##print LOG Dumper($data);
+
+  my @players = @{$roster_data->{team}->{roster}->{players}->{player}};
   foreach my $player (@players)
   {
     print "Player ID: $player->{player_id}\n";
@@ -251,8 +302,8 @@ foreach my $team (keys %$teams)
 
 
     ## Get auction-specific playerID, if one exists
-    $sth_fetch_id->execute($player->{player_id});
-    my $auctionid = $sth_fetch_id->fetchrow();
+    $sth_fetch_player_id->execute($player->{player_id});
+    my $auctionid = $sth_fetch_player_id->fetchrow();
     if (! defined $auctionid)
     {
       print "NO 'PLAYERS' RECORD FOR YAHOO ID $player->{player_id} ($player->{name}->{full})\n";
@@ -261,12 +312,13 @@ foreach my $team (keys %$teams)
     }
 
     ## If there is row for the player in the DB, update to the correct owner data
+## TODO check for FA status first - was player dropped?
     $sth_select->execute($auctionid);
     if (my @player_row = $sth_select->fetchrow_array())
     {
 print "Update record for player '$player->{name}->{full}' ($auctionid), team '$team'\n";
 print LOG "Update record for player '$player->{name}->{full}' ($auctionid), team '$team'\n";
-      $sth_replace->execute($matchups{$team}, $auctionid);
+      $sth_replace->execute($ateamid, $auctionid);
     }
 
     ## Else, add new row for this player - who was undrafted at start of season
@@ -274,7 +326,7 @@ print LOG "Update record for player '$player->{name}->{full}' ($auctionid), team
     {
 print "Insert new record for player '$player->{name}->{full}', team '$team'\n";
 print LOG "Insert new record for player '$player->{name}->{full}', team '$team'\n";
-      $sth_insert->execute($auctionid,$matchups{$team});
+      $sth_insert->execute($auctionid,$ateamid);
     }
   }
   print "\n";
@@ -282,7 +334,7 @@ print LOG "Insert new record for player '$player->{name}->{full}', team '$team'\
 }
 
 
-$sth_fetch_id->finish();
+$sth_fetch_player_id->finish();
 $sth_select->finish();
 $sth_replace->finish();
 $sth_insert->finish();

@@ -52,12 +52,10 @@ if ($errorflag != 1)
  {
    $dbh = dbConnect();
 
-   ## Connect to password database
-   my $table = "passwd";
-   my $sth = $dbh->prepare("SELECT * FROM $table WHERE name = '$user'")
+   my $sth = $dbh->prepare("SELECT * FROM passwd WHERE name = '$user'")
           or die "Cannot prepare: " . $dbh->errstr();
    $sth->execute() or die "Cannot execute: " . $sth->errstr();
-   ($owner,$pwd_check,$mail) = $sth->fetchrow_array();
+   ($owner,$pwd_check,$mail,$ownerid) = $sth->fetchrow_array();
 
    $sth->finish();
 
@@ -76,7 +74,7 @@ if ($errorflag != 1)
      while(!$id)
      {
        $id = int(rand(10000));
-       $sth = $dbh->prepare("SELECT owner, IP FROM sessions WHERE sess_id = '$id'")
+       $sth = $dbh->prepare("SELECT ownerid, IP FROM sessions WHERE sess_id = '$id'")
             or die "Cannot prepare: " . $dbh->errstr();
        $sth->execute() or die "Cannot execute: " . $sth->errstr();
        my ($user, $ip) = $sth->fetchrow_array();
@@ -84,7 +82,7 @@ if ($errorflag != 1)
        $id = '' if($user);
      }
 
-     $sth = $dbh->prepare("REPLACE INTO sessions (IP,password,owner,sess_id) VALUES ('$ENV{REMOTE_ADDR}','$passwd','$user','$id')")
+     $sth = $dbh->prepare("REPLACE INTO sessions (IP,ownerid,sess_id) VALUES ('$ENV{REMOTE_ADDR}','$ownerid','$id')")
             or die "Cannot prepare: " . $dbh->errstr();
      $sth->execute() or die "Cannot execute: " . $sth->errstr();
      $sth->finish();   

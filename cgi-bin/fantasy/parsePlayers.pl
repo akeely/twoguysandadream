@@ -11,11 +11,15 @@ use JSON;
 use Data::Dumper;
 my $cgi = new CGI;
 
+open(LOG,">/var/log/fantasy/parsePlayers_log.out") or die("$!");
+print LOG Dumper($cgi);
+
 # find out the name of the session user
 ## Connect to sessions database
-
 my ($my_ip,$namer,$pswd,$my_id,$team_t,$sport_t,$league_t) = checkSession();
 my $dbh = dbConnect();
+
+print LOG "league: $league_t\n";
 
 #Get League Data
 $league = Leagues->new($league_t,$dbh);
@@ -25,6 +29,8 @@ if (! defined $league)
 }
 my $draft_type = $league->draft_type();
 my $prev_league = $league->prev_league();
+
+print LOG Dumper($league);
 
 $temp_players = "/var/log/fantasy/temp_" . $sport_t . "_players.txt";
 
@@ -43,8 +49,6 @@ else
   $return = "/cgi-bin/fantasy/getTeam.pl";
 }
 
-open(LOG,">/var/log/fantasy/parsePlayers_log.out") or die("$!");
-print LOG Dumper($cgi);
 
 $in_position = $cgi->param('position');
 $in_name = $cgi->param('name');
@@ -97,12 +101,14 @@ $SORT = "order by rank" if ($in_ranked eq 'on');
 my $FROM = 'players p';
 if ($in_rfa eq 'on')
 {
-  $FROM .= ', contracts c';
-  $WHERE .= " and c.league='$prev_league' and c.player=p.playerid and c.years_left <= 0 and c.broken = 'N'";
+## Query to pull data for emailing league
+#  select c.league,p.playerid,p.name,p.position,p.team,r.team 'current team',c.team 'original owner',p.rank from players p, contracts c, final_rosters r, teams t where active=1 and p.sport='football' and c.league='2014 Football Auction' and c.player=p.playerid and c.years_left <= 0 and c.broken = 'N' and r.team=t.name and t.league=c.league and r.league=c.league and r.name=c.player and r.team <> 'NONE' and not exists (select 'x' from tags t where t.player=p.playerid and t.league=c.league and t.active='yes');
+  $FROM .= ', contracts c, final_rosters r';
+  $WHERE .= " and c.league='$prev_league' and c.player=p.playerid and c.years_left <= 0 and c.broken = 'N' and r.name=c.player and r.league=c.league and r.name=c.player and r.team <> 'NONE' and not exists (select 'x' from tags t where t.player=p.playerid and t.league=c.league and t.active='yes')";
   $SORT = "order by rand()";
 }
 
-print LOG "$FROM $WHERE $SORT\n";
+print LOG "select p.playerid,p.name,p.position,p.team,p.rank from $FROM where $WHERE $SORT\n";
 
 ## Get Players currently in auction
 my %auction_players;

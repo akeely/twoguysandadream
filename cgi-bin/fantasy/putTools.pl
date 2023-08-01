@@ -5,6 +5,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use CGI::Cookie;
 use Session;
 use DBTools;
+use Leagues;
 
 my $cgi = new CGI;
 
@@ -25,15 +26,23 @@ $in_bid_buffer = $cgi->param('bid_buffer');
 $in_tz_offset = $cgi->param('tz_offset');
 $in_login_extension = $cgi->param('login_extension');
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my $dbh = dbConnect();
 
 #Get League Data
-$sth = $dbh->prepare("SELECT * FROM leagues WHERE name = '$league_t'")
-         or die "Cannot prepare: " . $dbh->errstr();
-$sth->execute() or die "Cannot execute: " . $sth->errstr();
-($league_name,$password,$owner,$draftType,$draftStatus,$contractStatus,$sport,$categories,$positions,$max_members,$cap,$auction_length,$bid_time_extension,$bid_time_buffer,$TZ_offset,$login_extend_time,$use_IP_flag,$contractA,$contractB,$contractC,$keeper_increase,$keeper_prices) = $sth->fetchrow_array();
-$sth->finish();
+$league = Leagues->new($leagueid,$dbh);
+if (! defined $league)
+{
+  die "ERROR - league object not found!\n";
+}
+$league_owner = $league->owner();
+$draftStatus = $league->draft_status();
+$contractStatus = $league->keepers_locked();
+$sport = $league->sport();
+$use_IP_flag = $league->sessions_flag();
+$keeper_increase = $league->keeper_increase();
+$keeper_slots_raw = $league->keeper_slots();
+$league_name = $league->name();
 
 $new_ip_flag = 'no';
 if ("$in_ip_flag" eq 'true')
@@ -48,7 +57,7 @@ if ("$in_contract_flag" eq 'true')
 }
 
 #Rewrite Appropriate League File
-$sth = $dbh->prepare("UPDATE leagues SET keepers_locked = '$new_contract_flag', auction_length = '$in_auction_length', bid_time_ext = '$in_bid_extension', bid_time_buff = '$in_bid_buffer', tz_offset = '$in_tz_offset', login_ext = '$in_login_extension', sessions_flag = '$new_ip_flag' WHERE name = '$league_t'") or die "Cannot prepare: " . $dbh->errstr();
+$sth = $dbh->prepare("UPDATE leagues SET keepers_locked = '$new_contract_flag', auction_length = '$in_auction_length', bid_time_ext = '$in_bid_extension', bid_time_buff = '$in_bid_buffer', tz_offset = '$in_tz_offset', login_ext = '$in_login_extension', sessions_flag = '$new_ip_flag' WHERE id = $leagueid") or die "Cannot prepare: " . $dbh->errstr();
 $sth->execute() or die "Cannot execute: " . $sth->errstr();
 $sth->finish();
 

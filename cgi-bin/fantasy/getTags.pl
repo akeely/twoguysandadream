@@ -37,7 +37,7 @@ sub Header($$$$$$$)
   my $head_user = shift;
   my $head_team = shift;
   my $sport = shift;
-  my $league_owner = shift;
+  my $is_commish = shift;
   my $draft_status = shift;
   my $league = shift;
 
@@ -202,11 +202,11 @@ function table_update(submitted)
     var answer = confirm("This will LOCK your tagged player for this offseason. Continue?")
     if (!answer)
     {
-      return(true);
+      return(false);
     }
     else
     {
-      return(false);
+      return(true);
     }
   } // end if ((tag_form.LOCK_ME.checked) && (submitted == 1))
 
@@ -305,7 +305,6 @@ function check_tags()
 
 HEADER
 
-  my $is_commish = ($league_owner eq $head_user) ? 1 : 0;
   my $nav = Nav_Bar->new('Keeper Tags',$head_user,$is_commish,$draft_status,$head_team);
   $nav->print();
 
@@ -444,18 +443,18 @@ my $name;
 ######################
 ############################################
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t) =checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my $dbh = dbConnect();
   
 #Get League Data
-  my $league = Leagues->new($league_t,$dbh);
+  my $league = Leagues->new($leagueid,$dbh);
   if (! defined $league)
   {
-    die "ERROR - league object not found ($league_t)!\n";
+    die "ERROR - league object not found ($leagueid)!\n";
   }
 
 
-  my $sth = $dbh->prepare("select w.price from players_won w, players p where w.league='$league_t' and w.name=p.playerid and p.position=? order by w.price desc");
+  my $sth = $dbh->prepare("select w.price from players_won w, players p where w.leagueid=$leagueid and w.playerid=p.playerid and p.position=? order by w.price desc");
 
   ## Get Franchise & Transition costs
   if ($sport_t eq 'baseball')
@@ -486,7 +485,7 @@ my $dbh = dbConnect();
   $sth->finish();
 
 
-  my $sth_prices = $dbh->prepare("SELECT w.price FROM final_rosters w WHERE w.team='$team_t' AND w.league='$league_t' and not exists (select 'x' from contracts where league=w.league and player=w.name and years_left != -1) and not exists (select 'x' from tags where league=w.league and player=w.name and active='no') order by w.name");
+  my $sth_prices = $dbh->prepare("SELECT w.price FROM final_rosters w WHERE w.teamid=$teamid AND w.leagueid=$leagueid and not exists (select 'x' from contracts where leagueid=w.leagueid and playerid=w.playerid and years_left != -1) and not exists (select 'x' from tags where leagueid=w.leagueid and playerid=w.playerid and active='no') order by w.playerid");
   $sth_prices->execute();
   while (defined(my $bid = $sth_prices->fetchrow()))  ## need the 'defined' here for zero-values
   {
@@ -499,9 +498,9 @@ my $dbh = dbConnect();
   my $contractStatus = $league->keepers_locked();
   my $draftStatus = $league->draft_status();
   my $use_IP_flag = $league->sessions_flag();
-  Header($contractStatus,$user,$team_t,$league->{_SPORT},$league->{_OWNER},$draftStatus,$league_t);
+  Header($contractStatus,$ownername,$teamname,$sport_t,$league->owner() == $ownerid,$draftStatus,$league->name());
 
-  $sth = $dbh->prepare("SELECT player,locked from tags where league='$league_t' and team='$user' and active='yes'");
+  $sth = $dbh->prepare("SELECT playerid,locked from tags where leagueid=$leagueid and ownerid=$ownerid and active='yes'");
   $sth->execute();
    my ($curr_name, $locked_status) = $sth->fetchrow_array();
   $sth->finish();
@@ -521,7 +520,7 @@ print <<EOM;
   <table frame=box class=none id=tags>
    <tr>
     <td colspan=6 align=center class=none>
-     <b>$team_t</b>
+     <b>$teamname</b>
     </td>
    </tr>
    <tr>
@@ -540,7 +539,7 @@ print <<EOM;
      <select name="player_select" id="player_select" size="5" onChange='table_update(0)'>
 EOM
 
-  $sth = $dbh->prepare("SELECT p.name,p.playerid,w.price,p.position FROM final_rosters w, players p WHERE w.team='$team_t' AND w.league='$league_t' and w.name=p.playerid and not exists (select 'x' from contracts where league=w.league and player=w.name and years_left != -1) and not exists (select 'x' from tags where league=w.league and player=w.name and active='no') order by w.name");
+  $sth = $dbh->prepare("SELECT p.name,p.playerid,w.price,p.position FROM final_rosters w, players p WHERE w.teamid=$teamid AND w.leagueid=$leagueid and w.playerid=p.playerid and not exists (select 'x' from contracts where leagueid=w.leagueid and playerid=w.playerid and years_left != -1) and not exists (select 'x' from tags where leagueid=w.leagueid and playerid=w.playerid and active='no') order by w.playerid");
   $sth->execute();
 
 open(LOG,">$log");
@@ -587,15 +586,15 @@ if ($use_IP_flag eq 'yes')
 print <<FOOTER1;
 
 <p align=center>
-<a name="BIDDING"><b>Assign Tag for Team $team_t</b></a>
+<a name="BIDDING"><b>Assign Tag for Team $teamname</b></a>
 
 <br>
-    <input type=hidden name="TEAMS" value="$user">
+    <input type=hidden name="TEAMS" value="$ownerid">
     <input type=checkbox name='LOCK_ME' value='true'>$tag_text<br>
-    <input type=submit name="submit_tag" id="submit1" value="Assign Tag" style="margin-left: auto; margin-right: auto; text-align: center;">
+    <input type=submit name="submit_tag" value="Assign Tag" style="margin-left: auto; margin-right: auto; text-align: center;">
     <input type="reset" value="Clear The Form" id=reset1 name=reset1> 
 <br>
-    <input type="hidden" id=league name="league" value="$league_t">
+    <input type="hidden" id=league name="league" value="$leagueid">
     <input type="hidden" id=global_lock name="global_lock" value=$contractStatus>
     <input type="hidden" id="ip_flag" name="ip_flag" value=$use_IP_flag>
     <input type="hidden" id="player_name" name="player_name" value="">
@@ -605,75 +604,6 @@ print <<FOOTER1;
 
 FOOTER1
   }
-
-##########################################################
-#########User must provide team name and password#########
-##########################################################
-  else 
-  {
-print <<FOOTER2;
-
-
-    <br>
-    <table>
-     <tr>
-      <td align=middle>User Name</td>
-      <td align=middle>Password</td>
-     </tr>
-     <tr>
-      <td align=middle> 
-       <select name="TEAMS" onChange="sndReq($league_t)">
-
-FOOTER2
-   
-   ## Output each owner name as an option in the pull-down - UPDATE: change to team name?
-
-   # default to current user (by IP check)
-   my $def = $user;
-   my $check = '';
-
-
-   #Get Team List
-   $sth = $dbh->prepare("SELECT * FROM teams WHERE league = '$league_t'")
-        or die "Cannot prepare: " . $dbh->errstr();
-   $sth->execute() or die "Cannot execute: " . $sth->errstr();
-   while (my ($tf_owner, $tf_name, $tf_league, $tf_adds, $tf_sport, $tf_plusminus) = $sth->fetchrow_array())
-   {
-     if ($tf_name eq $team_t)
-     {
-        $check = "selected";
-     }
-
-     PrintOwner($tf_owner,$tf_name,$check);
-   }
-$sth->finish();
-
-dbDisconnect($dbh);
-
-
-print <<FOOTER2;
-
-        </select>
-      </td>
-      <td align=middle>
-        <input type="password" name="TEAM_PASSWORD">
-      </td>
-     </tr>
-    </table>
-    <br>
-    <input type=checkbox name='LOCK_ME' value='true'>$tag_text
-    <br>
-    <input type=submit name="submit_tag" value="Assign Tag" style="margin-left: auto; margin-right: auto; text-align: center;">
-    <br>
-    <input type="hidden" id=league name="league" value="$league_t">
-    <input type="hidden" id=global_lock name="global_lock" value=$contractStatus>
-    <input type="hidden" id="ip_flag" name="ip_flag" value=$use_IP_flag>
-    <input type="hidden" id="player_name" value="">
-    <input type="hidden" id="player_cost" value="">
-    <input type="hidden" id="player_pos" name="player_pos" value="">
-
-FOOTER2
-  } # end else
 
 print <<EOM;
 

@@ -2,29 +2,25 @@ package Leagues;
 
 use CGI::Carp qw(fatalsToBrowser);
 use strict;
-##use Globals;
 use DBI;
 
 sub new {
   my $class = shift;
   my $self = {};
 
-  my $league_name = shift;
+  my $leagueid = shift;
   $self->{_DB_HANDLE} = shift;
 
   if (! defined $self->{_DB_HANDLE}){
     return undef;
   }
-  if (! defined $league_name){
-    return undef;
-  }
-  if (! defined $league_name){
+  if (! defined $leagueid){
     return undef;
   }
 
   ## Fetch all data for this league
-  my $leagueH = $self->{_DB_HANDLE}->prepare("select name,password,owner,draft_type,draft_status,keepers_locked,sport,max_teams,salary_cap,auction_length,bid_time_ext,bid_time_buff,tz_offset,login_ext,sessions_flag,keeper_increase, previous_league
-                        from leagues where name='$league_name'") or die $self->{_DB_HANDLE}->errstr;
+  my $leagueH = $self->{_DB_HANDLE}->prepare("select name,password,ownerid,draft_type,draft_status,keepers_locked,sport,max_teams,salary_cap,auction_length,bid_time_ext,bid_time_buff,tz_offset,login_ext,sessions_flag,keeper_increase, previous_league
+                        from leagues where id=$leagueid") or die $self->{_DB_HANDLE}->errstr;
   $leagueH->execute();
   my @vals = $leagueH->fetchrow_array();
 
@@ -49,7 +45,7 @@ sub new {
 
 
   ## Get multi-value items
-  my $catsH = $self->{_DB_HANDLE}->prepare("select category from categories where league='$league_name'");
+  my $catsH = $self->{_DB_HANDLE}->prepare("select category from categories where leagueid=$leagueid");
   $catsH->execute();
   while (my $cat = $catsH->fetchrow())
   {
@@ -57,7 +53,7 @@ sub new {
   }
   $catsH->finish();
 
-  my $positionsH = $self->{_DB_HANDLE}->prepare("select position from positions where league='$league_name'");
+  my $positionsH = $self->{_DB_HANDLE}->prepare("select position from positions where leagueid=$leagueid");
   $positionsH->execute();
   while (my $pos = $positionsH->fetchrow())
   {
@@ -65,7 +61,7 @@ sub new {
   }
   $positionsH->finish();
 
-  my $fa_priceH = $self->{_DB_HANDLE}->prepare("select position, price from fa_keepers where league='$league_name'");
+  my $fa_priceH = $self->{_DB_HANDLE}->prepare("select position, price from fa_keepers where leagueid=$leagueid");
   $fa_priceH->execute();
   while (my ($pos,$price) = $fa_priceH->fetchrow())
   {
@@ -73,7 +69,7 @@ sub new {
   }
   $fa_priceH->finish();
 
-  my $contractsH = $self->{_DB_HANDLE}->prepare("select min, max, number from keeper_slots where league='$league_name'");
+  my $contractsH = $self->{_DB_HANDLE}->prepare("select min, max, number from keeper_slots where leagueid=$leagueid");
   $contractsH->execute();
   while (my ($min,$max,$num) = $contractsH->fetchrow_array())
   {

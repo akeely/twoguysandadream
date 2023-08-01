@@ -102,8 +102,12 @@ $namer = "a";
 $pswd = "p";
 $time = "1:1:1";
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
+my ($ip, $sess_id, $sport_t, $league_t, $team_t, $ownerid)  = checkSession();
 my $dbh = dbConnect();
+  open(TEAM,">$team_error_file");
+  flock(TEAM,2);
+  print TEAM "$ip, $sess_id, $sport_t, $league_t, $team_t, $ownerid";
+  close(TEAM);
 
 # If the session is from a different IP, force the user to sign in
 if ((!$id) | ($ENV{HTTP_REFERER} ne "/fantasy/fantasy_main_index.htm"))
@@ -147,40 +151,40 @@ else
   Header();
 
   ## Get any teams currently drafting
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.draft_status in ('open','paused') and t.league=l.name")
+  $sth = $dbh->prepare("SELECT t.id, t.name, t.leagueid, t.sport FROM teams t, leagues l WHERE t.ownerid = '$ownerid' and l.draft_status in ('open','paused') and t.leagueid=l.id")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
   $teams_count = 0;
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while (($tf_id, $tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
   {
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $drafting_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $drafting_color'>$tf_name - $tf_league</option>";
     $teams_count++;
   }
   $sth->finish();
 
   ## Get any teams that can select keepers
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.keepers_locked='no' and l.draft_status='closed' and t.league=l.name")
+  $sth = $dbh->prepare("SELECT t.id, t.name, t.leagueid, t.sport FROM teams t, leagues l WHERE t.ownerid = '$ownerid' and l.keepers_locked='no' and l.draft_status='closed' and t.leagueid=l.id")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
   $teams_count = 0;
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while ($tf_id, ($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
   {  
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $keeping_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $keeping_color'>$tf_name - $tf_league</option>";
     $teams_count++;
   }
   $sth->finish();
 
   ## Get any remaining (dormant) teams
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.keepers_locked='yes' and l.draft_status='closed' and t.league=l.name order by l.name")
+  $sth = $dbh->prepare("SELECT t.id, t.name, t.leagueid, t.sport FROM teams t, leagues l WHERE t.ownerid = '$ownerid' and l.keepers_locked='yes' and l.draft_status='closed' and t.leagueid=l.id order by l.id desc")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
   $teams_count = 0;
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while (($tf_id, $tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
   {  
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $stagnant_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $stagnant_color'>$tf_name - $tf_league</option>";
     $teams_count++;
   }
   $sth->finish();

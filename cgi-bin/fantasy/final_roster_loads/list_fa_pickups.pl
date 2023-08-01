@@ -1,8 +1,4 @@
 #!/usr/bin/perl
-#
-# This script will scan all FA pickups throughout the season and update player draft prices to match the FA pickup positional minimum if the draft price is less than that value.
-#
-
 
 use strict;
 
@@ -28,9 +24,10 @@ my $dbh = dbConnect();
 ##  2011 nfl auction - 503339
 ##  2012 nfl auction - 540994
 ## team_key = {league_key}.t.{team_id} = {game_key}.l.{league_id}.t.{team_id}
-my $game_key = 346;
-my $league_id = 39209;
-my $auction_league_name = '2015 Baseball Auction';
+my $game_key = 406;
+my $league_id = 386369;
+#my $auction_league_name = '2020 Baseball Auction';
+my $auction_league_name = '2022 Football Auction';
 my $team_id = 2; 
 my $league_key = "${game_key}.l.${league_id}";
 my $team_key = "${game_key}.l.${league_id}.t.${team_id}";
@@ -41,12 +38,20 @@ my $oauth = Net::MyOAuthApp->new();
 $oauth->ConnectToYahoo();
 
 ## Get league data to see trade deadline
-my $url = "http://fantasysports.yahooapis.com/fantasy/v2/league/$league_key";
+my $url = "https://fantasysports.yahooapis.com/fantasy/v2/league/$league_key";
 
 my $data = $oauth->view_restricted_resource("$url/settings");
 
 my $league_data = XMLin($data->{_content});
-open(ROSTER,">./fa_pickups_$league_id.log");
+my $trade_end_date = $league_data->{league}->{settings}->{trade_end_date};
+print "Trade End: $trade_end_date\n";  ##2010-11-12
+my ($year,$month,$day) = split(/\-/,$trade_end_date);  
+$month--;
+my $trade_end_epoch = timelocal(0,0,0,$day,$month,$year);
+print LOG "Epoch: $trade_end_epoch\n";
+print "Epoch: $trade_end_epoch\n";
+
+open(ROSTER,">./roster_check.log");
 
 ## Fetch transaction data
 $data = $oauth->view_restricted_resource("$url/transactions");
@@ -63,6 +68,8 @@ foreach my $t (@transactions)
     next if ($player->{transaction_data}->{type} ne 'add');
     $players{$player->{player_id}}->{NAME} = $player->{name}->{full};
     $players{$player->{player_id}}->{POS} = $player->{display_position};
+    #push(@players,$player->{player_id});
+    #push(@players,$player->{name}->{full});
   }
 }
 
@@ -75,7 +82,7 @@ while (my($pos,$price) = $sth_fetch_fa_values->fetchrow_array()) {
 }
 $sth_fetch_fa_values->finish();
 
-my $sth_check_fa = $dbh->prepare("select r.name, r.price, r.team from final_rosters r, players p where p.yahooid=? and p.playerid=r.name and r.league='$auction_league_name'");
+my $sth_check_fa = $dbh->prepare("select p.name, r.price, r.team from final_rosters r, players p where p.yahooid=? and p.playerid=r.name and r.league='$auction_league_name'");
 my $sth_update_fa = $dbh->prepare("update final_rosters set price=0 where name=? and league='$auction_league_name'");
 foreach my $check_player (keys %players) {
   my $fa_price = 0;
@@ -88,7 +95,7 @@ foreach my $check_player (keys %players) {
         print "\tUsing $pos price $fa_values{$pos} for $players{$check_player}->{NAME}\n";
         $fa_price = $fa_values{$pos};
       } else {
-        print "\t\tSkipping position $pos ($fa_values{$pos} !> $fa_price)\n";
+        print "\tNo thanks, $pos\n";
       }
     }
   }

@@ -45,7 +45,7 @@ my %fa_prices;
 my $con_count=0;
 
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t) = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 
 my $dbh = dbConnect();
 
@@ -54,7 +54,7 @@ if (($in_leagueName =~ /^$/) || (length($in_leagueName) > 25))
 {
   open (FILE,">>$errors");
   flock(FILE,2);
-  print FILE "$userAddr;$id;<b>Please enter a valid League Name (25 character limit)!</b>\n";
+  print FILE "<b>Please enter a valid League Name (25 character limit)!</b>\n";
   close(FILE);
   $errorflag = 1;
 }
@@ -72,7 +72,7 @@ else
   {
     open (FILE,">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>League Name <i>$in_leagueName</i> is already taken!</b>\n";
+    print FILE "<b>League Name <i>$in_leagueName</i> is already taken!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -82,7 +82,7 @@ if (($in_leaguePassword =~ /^$/) || (length($in_leaguePassword) < 4))
 {
    open (FILE, ">>$errors");
    flock(FILE,2);
-   print FILE "$userAddr;$id;<b>Please enter a League Password of at least four characters!</b>\n";
+   print FILE "<b>Please enter a League Password of at least four characters!</b>\n";
    close(FILE);
    $errorflag = 1;
 }
@@ -91,7 +91,7 @@ if ((($in_teamName =~ /^$/) || (length($in_teamName) > 18)) && ($in_keeper_name_
 {
    open (FILE, ">>$errors");
    flock(FILE,2);
-   print FILE "$userAddr;$id;<b>Please enter a valid name for your new team (18 character max)!</b>\n";
+   print FILE "<b>Please enter a valid name for your new team (18 character max)!</b>\n";
    close(FILE);
    $errorflag = 1;
 }
@@ -100,7 +100,7 @@ if(($in_draftType ne "Auction") && ($in_draftType ne "Snake"))
 {
    open (FILE, ">>$errors");
    flock(FILE,2);
-   print FILE "$userAddr;$id;<b>Please select a draft type!</b>\n";
+   print FILE "<b>Please select a draft type!</b>\n";
    close(FILE);
    $errorflag = 1;
 }
@@ -109,7 +109,7 @@ if(($in_sport ne "baseball") && ($in_sport ne "football") && ($in_sport ne "bask
 {
    open (FILE, ">>$errors");
    flock(FILE,2);
-   print FILE "$userAddr;$id;<b>Please select a sport!</b>\n";
+   print FILE "<b>Please select a sport!</b>\n";
    close(FILE);
    $errorflag = 1;
 }
@@ -117,14 +117,19 @@ if(($in_sport ne "baseball") && ($in_sport ne "football") && ($in_sport ne "bask
 if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
 {
   #Get League Data
-  $league = Leagues->new($in_keeper_leagueName,$dbh);
+  my $sth_fetch_leagueid = $dbh->prepare("select id from leagues where name='$in_keeper_leagueName'");
+  $sth_fetch_leagueid->execute();
+  $prev_leagueid = $sth_fetch_leagueid->fetchrow();
+  $sth_fetch_leagueid->finish();
+
+  $league = Leagues->new($prev_leagueid,$dbh);
   if (! defined $league)
   {
     die "ERROR - league object not found!\n";
   }
 
   ## Check if this owner was in the keeper league being imported
-  $sth_team_check = $dbh->prepare("Select count(1) from teams where league='$in_keeper_leagueName' and owner='$user'");
+  $sth_team_check = $dbh->prepare("Select count(1) from teams where leagueid=$prev_leagueid and ownerid=$ownerid");
   $sth_team_check->execute();
   $team_conf = $sth_team_check->fetchrow();
   $sth_team_check->finish();
@@ -133,7 +138,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - League does not exist!</b>\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - League does not exist!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -141,7 +146,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - League password is incorrect!</b>($league->{_PASSWORD} vs $in_keeper_leaguePassword)\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - League password is incorrect!</b>($league->{_PASSWORD} vs $in_keeper_leaguePassword)\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -149,7 +154,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - This league is not yet closed!</b>\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - This league is not yet closed!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -157,7 +162,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - Incompatible sports!</b>\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - Incompatible sports!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -165,7 +170,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - The league's keepers are not locked!</b>\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - The league's keepers are not locked!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -174,7 +179,7 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
   {
     open (FILE, ">>$errors");
     flock(FILE,2);
-    print FILE "$userAddr;$id;<b>Cannot import from league $in_keeper_leagueName - You did not have a team in this league!</b>\n";
+    print FILE "<b>Cannot import from league $in_keeper_leagueName - You did not have a team in this league!</b>\n";
     close(FILE);
     $errorflag = 1;
   }
@@ -190,12 +195,13 @@ if (($in_keeper eq 'yes') && ($in_keeper_leagueName !~ /^$/))
     $defaults{'keeper_increase'} *= 10;
     
     ## Get fa prices for keeper possibilities
-    $sth = $dbh->prepare("select position, price from fa_keepers where league='$in_keeper_leagueName'");
+    $sth = $dbh->prepare("select position, price from fa_keepers where leagueid=$prev_leagueid");
     $sth->execute();
     while (my ($fa_pos, $fa_price) = $sth->fetchrow_array() )
     {
       $fa_prices{$fa_pos} = $fa_price;
     }
+    $sth->finish();
   }
 }
 
@@ -555,12 +561,7 @@ print <<HEADER;
 
 HEADER
 
-##       <td>Contract Name</td>
-##       <td>Min Years</td>
-##       <td>Max Years</td>
-##       <td>Number of Contracts</td>
-
-    $sth_contracts = $dbh->prepare("select min, max, number from keeper_slots where league='$in_keeper_leagueName'");
+    my $sth_contracts = $dbh->prepare("select min, max, number from keeper_slots where leagueid=$prev_leagueid");
     $sth_contracts->execute();
     while (my ($min,$max,$num) = $sth_contracts->fetchrow_array() )
     {
@@ -585,6 +586,7 @@ print <<HEADER;
 HEADER
 
     }
+    $sth_contracts->finish();
 
 
 print <<HEADER;

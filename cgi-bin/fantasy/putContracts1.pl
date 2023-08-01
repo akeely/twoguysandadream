@@ -12,7 +12,6 @@ $cgi = new CGI;
 #variables that will be used later.
 $return = "/cgi-bin/fantasy/getContracts.pl"; 
 $error_file = "/var/log/fantasy/contract_errors.txt";
-$errorflag=0;
 $log = "./putContracts_log.txt";
 
 open (FILE,">$error_file"); 
@@ -23,7 +22,6 @@ open (FILE,">$error_file");
 
 ## Input variables
 $team = $cgi->param('TEAMS');
-$in_TEAM_PASSWORD = $cgi->Param('TEAM_PASSWORD');
 $in_total_players = $cgi->param('total_players');
 $in_lock_status = $cgi->param('LOCK_ME');
 
@@ -32,43 +30,16 @@ open (LOG,">./$log");
 # find out the name of the session user
 ## Connect to sessions database
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 $dbh = dbConnect();
 
 #Get League Data
-$league = Leagues->new($league_t,$dbh);
+$league = Leagues->new($leagueid,$dbh);
 if (! defined $league)
 {
   die "ERROR - league object not found!\n";
 }
 
-## If we are not tracking the user by Session, check the input password
-if (! $league->{_SESSIONS_FLAG})
-{
-  ## Connect to password database
-
-  my $table = "passwd";
-  $owner = '';
-  $sth = $dbh->prepare("SELECT * FROM $table WHERE name = '$team' AND passwd = '$in_TEAM_PASSWORD'")
-          or die "Cannot prepare: " . $dbh->errstr();
-  $sth->execute() or die "Cannot execute: " . $sth->errstr();
-  ($owner,$password,$email) = $sth->fetchrow_array();
-  $sth->finish();
-
-  if($owner ne $in_TEAMS)
-  {
-    $errorflag=1;
-    $return = "/cgi-bin/fantasy/getBids.pl";
-    open (FILE,">>$error_file"); 
-     flock(FILE,2);
-     print FILE "$team_t;$league_t;<b>Your Password is Incorrect!</b>\n";
-    close(FILE);
-  }
-}
-
-
-if ($errorflag == 0)
-{
   $contract_table = "contracts";
 
 print LOG "Total players - $in_total_players\n\n";
@@ -85,11 +56,11 @@ print LOG "id - $id\ncost - $cost\nyears - $years\n\n";
      {
        if ($in_lock_status eq 'true')
        {
-          $sth = $dbh->prepare("REPLACE INTO $contract_table (player,team,total_years,years_left,current_cost,league,locked) VALUES ('$id','$team','$years','$years_left','$cost','$league_t','yes')");
+          $sth = $dbh->prepare("REPLACE INTO $contract_table (playerid,ownerid,total_years,years_left,current_cost,leagueid,locked) VALUES ('$id',$ownerid,'$years','$years_left','$cost',$leagueid,'yes')");
        }
        else
        {
-          $sth = $dbh->prepare("REPLACE INTO $contract_table (player,team,total_years,years_left,current_cost,league) VALUES ('$id','$team','$years','$years_left','$cost','$league_t')");
+          $sth = $dbh->prepare("REPLACE INTO $contract_table (playerid,ownerid,total_years,years_left,current_cost,leagueid) VALUES ($id,$ownerid,'$years','$years_left','$cost',$leagueid)");
        }
       
        $sth->execute() or die "Cannot execute: " . $sth->errstr();
@@ -97,13 +68,11 @@ print LOG "id - $id\ncost - $cost\nyears - $years\n\n";
      }
      else
      {
-       $sth = $dbh->prepare("DELETE FROM $contract_table WHERE player = '$id' AND league = '$league_t' and locked = 'no'");
+       $sth = $dbh->prepare("DELETE FROM $contract_table WHERE playerid = $id AND leagueid = $leagueid and locked = 'no'");
        $sth->execute() or die "Cannot execute: " . $sth->errstr();
        $sth->finish();
      }
   }
-
-}
 
 close(LOG);
 dbDisconnect($dbh);

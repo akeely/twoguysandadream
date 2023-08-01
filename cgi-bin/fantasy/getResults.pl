@@ -49,10 +49,11 @@ EOM
 }
 
 
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t)  = checkSession();
 
   #Get League Data
-  $league = Leagues->new($league_t,$dbh);
+  $league = Leagues->new($leagueid,$dbh);
   if (! defined $league)
   {
     die "ERROR - league object not found!\n";
@@ -179,7 +180,7 @@ function change_text(cell_num, flag)
 
 <LINK REL=StyleSheet HREF="/fantasy/style.css" TYPE="text/css" 
 MEDIA=screen>
-<TITLE>Draft Results - League $league_t</TITLE>
+<TITLE>Draft Results - League $league->name()</TITLE>
 </HEAD>
 <BODY>
 <p align="center">
@@ -187,14 +188,15 @@ MEDIA=screen>
 
 HEADER
 
-  my $is_commish = ($league->owner() eq $user) ? 1 : 0;
-  my $nav = Nav_Bar->new('Draft Results',"$user",$is_commish,$league->draft_status(),"$team_t");
+  my $league_name = $league->name();
+  my $is_commish = ($league->owner() eq $ownerid) ? 1 : 0;
+  my $nav = Nav_Bar->new('Draft Results',$ownername,$is_commish,$league->draft_status(),$teamname);
   $nav->print();
 
 print <<HEADER;
 
 <br>
-<h3>Draft Results - League $league_t</h3>
+<h3>Draft Results - League $league_name</h3>
 
 The draft results for your league are shown below. 
 <br>Each column is sortable - simply click header of the column by which you would like to sort.
@@ -202,23 +204,23 @@ The draft results for your league are shown below.
 
 <table id="auction_table">
  <tr align=center>
-  <td onclick="sort_list('name', '$league_t')" onMouseOver="change_text(0,1)" onMouseOut="change_text(0,0)"><b>Player</b></td>
-  <td onclick="sort_list('team', '$league_t')" onMouseOver="change_text(1,1)" onMouseOut="change_text(1,0)"><b>Owner</b></td>
-  <td onclick="sort_list('position', '$league_t')" onMouseOver="change_text(2,1)" onMouseOut="change_text(2,0)"><b>Position</b></td>
-  <td onclick="sort_list('price', '$league_t')" onMouseOver="change_text(3,1)" onMouseOut="change_text(3,0)"><b>Cost</b></td>
-  <td onclick="sort_list('time', '$league_t')" onMouseOver="change_text(4,1)" onMouseOut="change_text(4,0)"><b>Time</b></td>
+  <td onclick="sort_list('p.name', $leagueid)" onMouseOver="change_text(0,1)" onMouseOut="change_text(0,0)"><b>Player</b></td>
+  <td onclick="sort_list('t.name', $leagueid)" onMouseOver="change_text(1,1)" onMouseOut="change_text(1,0)"><b>Owner</b></td>
+  <td onclick="sort_list('p.position', $leagueid)" onMouseOver="change_text(2,1)" onMouseOut="change_text(2,0)"><b>Position</b></td>
+  <td onclick="sort_list('w.price', $leagueid)" onMouseOver="change_text(3,1)" onMouseOut="change_text(3,0)"><b>Cost</b></td>
+  <td onclick="sort_list('w.time', $leagueid)" onMouseOver="change_text(4,1)" onMouseOut="change_text(4,0)"><b>Time</b></td>
  </tr>
 
 HEADER
 
 
-  $sth = $dbh->prepare("SELECT p.name,w.price,w.team,w.time,p.position FROM players_won w, players p WHERE league = '$league_t' and w.name=p.playerid ORDER BY w.time, p.position");
+  $sth = $dbh->prepare("SELECT p.name,w.price,t.name,w.time,p.position FROM players_won w, players p, teams t WHERE w.leagueid = $leagueid AND w.playerid=p.playerid AND t.id=w.teamid ORDER BY w.time, p.position");
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
  
   while( ($player,$cost,$owner,$time,$position) = $sth->fetchrow_array())
   {
     $time_string = '';
-    if (($time ne '') && ($time ne 'RFA'))
+    if (($time ne '') && ($time !~ /\D/))
     {
       ($Second, $Minute, $Hour, $Day, $Month, $Year, $WeekDay, $DayOfYear, $IsDST) = localtime($time);
       $Year += 1900;

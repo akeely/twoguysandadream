@@ -40,7 +40,7 @@ sub Header($$$$$)
 my $global_lock = shift;
 my $head_user = shift;
 my $head_team = shift;
-my $league_owner = shift;
+my $is_commish = shift;
 my $draft_status = shift;
 
 print "Cache-Control: no-cache\n";
@@ -58,7 +58,6 @@ print <<HEADER;
 
 HEADER
 
-  my $is_commish = ($league_owner eq $head_user) ? 1 : 0;
   my $nav = Nav_Bar->new('LContracts',"$head_user",$is_commish,$draft_status,"$head_team");
   $nav->print();
   
@@ -159,7 +158,9 @@ my $last_cost = $cost; ## Overwritten if FA/Waiver player
 ## for his position, stored in the hash
 if ($cost == 0)
 {
-  $pos = $1 if ($pos =~ m/(.*)\|.*/);
+  $pos = $1 if ($pos =~ m/(.*?)\|.*/);
+  $pos = $1 if ($pos =~ m/(.*?)\/.*/);
+  $pos = $1 if ($pos =~ m/(.*?),.*/);
   $last_cost = $pos_costs{uc($pos)};
 
   ## Error flagging
@@ -233,6 +234,7 @@ $style = "font-weight:bold" if ($style =~ /^$/);
 $style .= "; font-size: 85\%";
 $style = "style= \"$style\"";
 
+
 print <<EOM;
  <tr $style>
   <td id="origTeam">$o_tag $team $c_tag</td>
@@ -266,23 +268,24 @@ my $name;
 ######################
 ############################################
 
-my ($ip, $user, $password, $sess_id, $team_t, $sport_t, $league_t) = checkSession();
+my ($ip,$sess_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 
 my $dbh = dbConnect();
   
 #Get League Data
-$league = Leagues->new($league_t,$dbh);
+$league = Leagues->new($leagueid,$dbh);
 if (! defined $league)
 {
   die "ERROR - league object not found!\n";
 }
-$owner = $league->owner();
+$league_owner = $league->owner();
 $draftStatus = $league->draft_status();
 $contractStatus = $league->keepers_locked();
 $sport = $league->sport();
 $use_IP_flag = $league->sessions_flag();
 $keeper_increase = $league->keeper_increase();
 $keeper_slots_raw = $league->keeper_slots();
+$league_name = $league->name();
 
  
 ## Get keeper prices for free-agent pickups (varies by league)
@@ -294,7 +297,7 @@ foreach my $pos (@fa_positions)
   $pos_costs{$pos}  = $league->keeper_fa_price($pos);
 }
 
-Header($contractStatus,$user,$team_t,$owner,$draftStatus);
+Header($contractStatus,$ownername,$teamname,$league_owner == $ownerid,$draftStatus);
 
 
 print <<EOM;
@@ -302,7 +305,7 @@ print <<EOM;
   <table frame=box class=none id=contracts>
    <tr>
     <td colspan=6 align=center class=none>
-     <b>$league_t</b>
+     <b>$league_name</b>
     </td>
    </tr>
    <tr>
@@ -328,35 +331,55 @@ print <<EOM;
 
 EOM
 
-##  $sth = $dbh->prepare("SELECT w.name,w.price,w.team,w.time,p.position,p.name FROM final_rosters w, players p WHERE w.league='$league_t' and w.name=p.playerid")
-##           or die "Cannot prepare: " . $dbh->errstr();
-##  $sth->execute() or die "Cannot execute: " . $sth->errstr();
-##  $sth2 = $dbh->prepare("SELECT current_cost,total_years,years_left,team,locked from contracts where player=? and league='$league_t'");
-  
-my $sth;
+my $sth_contracts, $sth_tags;
 if ($draftStatus eq 'open')
 {
-  $sth = $dbh->prepare("SELECT t.name, w.team, p.name, w.price, c.years_left, p.position, c.type, c.broken, c.penalty from players_won w, players p, contracts c, teams t where w.league='$league_t' and w.name=p.playerid and c.player=w.name and c.league=w.league and c.team=t.owner and t.league=w.league and c.locked='yes' order by w.team, c.years_left");
+  $sth_contracts = $dbh->prepare("SELECT t.name, t2.name, p.name, w.price, c.years_left, p.position, c.type, c.broken, c.penalty 
+FROM players_won w
+JOIN players p ON w.playerid=p.playerid
+JOIN contracts c ON c.playerid=w.playerid AND c.leagueid=w.leagueid
+JOIN teams t ON c.ownerid=t.ownerid AND t.leagueid=w.leagueid
+LEFT JOIN teams t2 ON w.teamid=t2.id
+WHERE w.leagueid=$leagueid and c.locked='yes' and c.ownerid=? order by c.years_left");
+  $sth_tags = $dbh->prepare("SELECT t.name, p.name, w.price, p.position from players_won w, players p, tags c, teams t where w.leagueid=$leagueid and w.playerid=p.playerid and c.playerid=w.playerid and c.leagueid=w.leagueid and c.ownerid=t.ownerid and t.leagueid=w.leagueid and c.active='no' and c.type='F' and c.ownerid=?");
   $exp_text = 'EXPIRING';
 }
 else
 {
-  $sth = $dbh->prepare("SELECT t.name, w.team, p.name, w.price, c.years_left, p.position, c.type, c.broken, c.penalty from final_rosters w, players p, contracts c, teams t where w.league='$league_t' and w.name=p.playerid and c.player=w.name and c.league=w.league and c.team=t.owner and t.league=w.league and c.locked='yes' order by w.team, c.years_left");
+  $sth_contracts = $dbh->prepare("SELECT t.name, t2.name, p.name, w.price, c.years_left, p.position, c.type, c.broken, c.penalty 
+FROM final_rosters w
+JOIN players p ON w.playerid=p.playerid
+JOIN contracts c ON c.playerid=w.playerid AND c.leagueid=w.leagueid
+JOIN teams t ON c.ownerid=t.ownerid AND t.leagueid=w.leagueid
+LEFT JOIN teams t2 ON w.teamid=t2.id
+WHERE w.leagueid=$leagueid and c.locked='yes' and c.ownerid=? order by c.years_left");
+  $sth_tags = $dbh->prepare("SELECT t.name, p.name, w.price, p.position from final_rosters w, players p, tags c, teams t where w.leagueid=$leagueid and w.playerid=p.playerid and c.playerid=w.playerid and c.leagueid=w.leagueid and c.ownerid=t.ownerid and t.leagueid=w.leagueid and c.active='yes' and c.locked='yes' and c.type='F' and c.ownerid=?");
   $exp_text = 'EXPIRED';
 }
 
-my $last_team = '';
-my $player_years_left;
-$sth->execute();
-while (($orig_bidder,$bidder,$name,$bid,$player_years_left,$pos,$type,$broken,$penalty) = $sth->fetchrow_array())
-{ 
-##    next if ($bidder eq 'NONE');
-  $type = '' if ($type =~ /\d/);
-  PrintPlayer ('','','','','','','','','') if (($last_team ne $bidder) && ($last_team !~ /^$/));
-  PrintPlayer($bidder,$orig_bidder,$name,$bid,$player_years_left,$pos,$broken,$penalty,$type);
-  $last_team = $bidder;
-}   
-$sth->finish();
+my $sth_teams = $dbh->prepare("SELECT ownerid from teams where leagueid=$leagueid");
+$sth_teams->execute();
+while (my $owner = $sth_teams->fetchrow())
+{
+  $sth_contracts->execute($owner);
+  while (($orig_bidder,$bidder,$name,$bid,$player_years_left,$pos,$type,$broken,$penalty) = $sth_contracts->fetchrow_array())
+  { 
+    $type = '' if ($type =~ /\d/);
+    $bidder = "NONE" if ($bidder =~ /^$/);
+    PrintPlayer($bidder,$orig_bidder,$name,$bid,$player_years_left,$pos,$broken,$penalty,$type);
+  }
+
+  $sth_tags->execute($owner);
+  while (($bidder,$name,$bid,$pos) = $sth_tags->fetchrow_array())
+  {
+    PrintPlayer($bidder,$bidder,$name,$bid,0,$pos,'N',0,'FRANCHISE');
+  }
+
+  PrintPlayer ('','','','','','','','','');
+}
+$sth_teams->finish();
+$sth_contracts->finish();
+$sth_tags->finish();
 
 print <<EOM;
 

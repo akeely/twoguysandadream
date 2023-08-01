@@ -12,10 +12,10 @@ $stagnant_color = "#F75D59";
 $change_color = "#33FFFF";
 $cancel_color = "#CC0066";
 
-my ($my_ip,$user,$pswd,$my_id,$team_t,$sport_t,$league_t) = checkSession();
+my ($my_ip,$my_id,$sport_t,$leagueid, $teamid, $ownerid, $ownername, $teamname) = checkSession();
 my $dbh = dbConnect();
 
-my $sth = $dbh->prepare("Select name, passwd, email from passwd where name='$user'");
+my $sth = $dbh->prepare("Select name, passwd, email from passwd where id=$ownerid");
 $sth->execute();
 my ($owner_name, $owner_password, $owner_email) = $sth->fetchrow_array();
 $sth->finish();
@@ -178,7 +178,7 @@ function checkChanges()
     varLine += change_fields[i] + '=' + change_values[i]
   }
 
-  varLine += '&real_owner=$user'
+  varLine += '&real_owner=$ownername'
   curr_val_text = change_form.user_sport.options[change_form.user_sport.selectedIndex].text
   curr_vals = curr_val_text.split(' - ')
   curr_val = curr_vals[1]
@@ -262,9 +262,9 @@ function handleResponse()
 <table id='info_table'>
  <tr>
   <td>Owner Name</td>
-  <td>$user</td>
+  <td>$ownername</td>
   <td STYLE='background-color: $change_color' onClick='changeMe(info_table,0,0)'><i>Change</i></td>
-  <td style="display:none"><input type='text' maxlength='50' name='val0' value='$user'><input type='hidden' name='hidden0' value='owner'>
+  <td style="display:none"><input type='text' maxlength='50' name='val0' value='$ownername'><input type='hidden' name='hidden0' value='owner'>
  </tr>
  <tr>
   <td>Owner Email</td>
@@ -300,41 +300,41 @@ function handleResponse()
 EOM
 
 #  ## Get any teams currently drafting
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.draft_status in ('open','paused') and t.league=l.name")
+  $sth = $dbh->prepare("SELECT t.name, t.id, t.leagueid, l.name, t.sport FROM teams t, leagues l WHERE t.ownerid = $ownerid and l.draft_status in ('open','paused') and t.leagueid=l.id")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
   $teams_count = 0;
   my $init_val = '';
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while (($tf_name, $tf_id, $tf_league, $tf_leaguename, $tf_sport) = $sth->fetchrow_array())
   {
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $drafting_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $drafting_color'>$tf_name - $tf_leaguename</option>";
     $init_val = $tf_name if ($teams_count == 0);
     $teams_count++;
   }
   $sth->finish();
 
   ## Get any teams that can select keepers
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.keepers_locked='no' and l.draft_status='closed' and t.league=l.name")
+  $sth = $dbh->prepare("SELECT t.name, t.id, t.leagueid, l.name, t.sport FROM teams t, leagues l WHERE t.ownerid = $ownerid and l.keepers_locked='no' and l.draft_status='closed' and t.leagueid=l.id")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while (($tf_name, $tf_id, $tf_league, $tf_leaguename, $tf_sport) = $sth->fetchrow_array())
   {
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $keeping_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $keeping_color'>$tf_name - $tf_leaguename</option>";
     $init_val = $tf_name if ($teams_count == 0);
     $teams_count++;
   }
   $sth->finish();
 
   ## Get any remaining (dormant) teams
-  $sth = $dbh->prepare("SELECT t.name, t.league, t.sport FROM teams t, leagues l WHERE t.owner = '$user' and l.keepers_locked='yes' and l.draft_status='closed' and t.league=l.name order by l.name")
+  $sth = $dbh->prepare("SELECT t.name, t.id, t.leagueid, l.name, t.sport FROM teams t, leagues l WHERE t.ownerid = $ownerid and l.keepers_locked='yes' and l.draft_status='closed' and t.leagueid=l.id order by l.id desc")
        or die "Cannot prepare: " . $dbh->errstr();
   $sth->execute() or die "Cannot execute: " . $sth->errstr();
 
-  while (($tf_name, $tf_league, $tf_sport) = $sth->fetchrow_array())
+  while (($tf_name, $tf_id, $tf_league, $tf_leaguename, $tf_sport) = $sth->fetchrow_array())
   {
-    print "<option value='$tf_name:$tf_sport:$tf_league' STYLE='background-color: $stagnant_color'>$tf_name - $tf_league</option>";
+    print "<option value='$tf_id:$tf_sport:$tf_league' STYLE='background-color: $stagnant_color'>$tf_name - $tf_leaguename</option>";
     $init_val = $tf_name if ($teams_count == 0);
     $teams_count++;
   }
