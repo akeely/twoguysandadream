@@ -19,7 +19,9 @@ public class OwnerResource {
     }
 
     @GetMapping("/me")
-    public Owner getOwner( @AuthenticationPrincipal AuctionUser user) {
+    public Owner getOwner( @AuthenticationPrincipal Object principal) {
+
+        AuctionUser user = auctionUserRepository.findOrCreate(principal);
 
         return auctionUserRepository.findOwner(user.getId().get())
                 .map(Owner::new)

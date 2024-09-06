@@ -60,6 +60,21 @@ public class AuctionController {
         return user;
     }
 
+    @GetMapping("/myuser")
+    @ResponseBody
+    public AuctionUser myuser(@AuthenticationPrincipal Object user) {
+        return auctionUserRepository.findOrCreate(user);
+    }
+
+    @GetMapping("/principalclass")
+    @ResponseBody
+    public String principalClass(@AuthenticationPrincipal Object user) {
+        if (user == null) {
+            return "not found";
+        }
+        return user.getClass().getCanonicalName();
+    }
+
     @GetMapping("/login")
     public String login() {
 
