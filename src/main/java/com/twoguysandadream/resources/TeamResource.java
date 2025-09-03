@@ -8,6 +8,7 @@ import com.twoguysandadream.core.TeamRepository;
 import com.twoguysandadream.core.TeamStatistics;
 import com.twoguysandadream.security.AuctionUser;
 
+import com.twoguysandadream.security.AuctionUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,11 +26,14 @@ public class TeamResource {
 
     private final LeagueRepository leagueRepository;
     private final TeamRepository teamRepository;
+    private final AuctionUserRepository userRepository;
 
     @Autowired
-    public TeamResource(LeagueRepository leagueRepository, TeamRepository teamRepository) {
+    public TeamResource(LeagueRepository leagueRepository, TeamRepository teamRepository,
+                        AuctionUserRepository userRepository) {
         this.leagueRepository = leagueRepository;
         this.teamRepository = teamRepository;
+        this.userRepository = userRepository;
     }
 
     @GetMapping
@@ -46,7 +50,9 @@ public class TeamResource {
 
     @GetMapping("/me")
     public TeamDto findActive(@PathVariable("leagueId") long leagueId,
-            @AuthenticationPrincipal AuctionUser user) throws MissingResourceException {
+            @AuthenticationPrincipal Object principal) throws MissingResourceException {
+
+        AuctionUser user = userRepository.findOrCreate(principal);
 
         return user.getId()
                 .flatMap(id -> teamRepository.findByOwner(leagueId, id))

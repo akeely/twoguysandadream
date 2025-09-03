@@ -9,20 +9,15 @@ import java.util.OptionalLong;
 public interface AuctionUserRepository {
 
     /**
-     * Find the user associated with the given token, or create a new user if one doesn't exist.
+     * Find a user by the authentication principal. This can be:
+     *  - An OpenId/Oauth2 user (OAuth2User)
+     *  - An email address (String)
+     *  - An AuctionUser object.
      *
-     * @param openIdToken The openId token.
+     * @param principal The authenticated user.
      * @return The user.
      */
-    AuctionUser findOrCreate(String openIdToken);
-
-    /**
-     * Find the user associated with the given token, or create a new user if one doesn't exist.
-     *
-     * @param openIdToken The openId token.
-     * @return The user.
-     */
-    Optional<AuctionUser> findOne(String openIdToken);
+    AuctionUser findOrCreate(Object principal);
 
     /**
      * Find the user associated with the given email address.

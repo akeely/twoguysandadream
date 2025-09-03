@@ -47,7 +47,7 @@
          AND id = :teamId
     ]]></entry>
     <entry key="team.findRosters"><![CDATA[
-       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.rank, pw.price,t.id AS teamId
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam,p.`rank`, pw.price,t.id AS teamId
        FROM players_won pw
        JOIN players p
          ON pw.playerid=p.playerid
@@ -55,11 +55,8 @@
          ON t.id=pw.teamid
        WHERE pw.leagueid = :leagueId
     ]]></entry>
-    <entry key="user.findOne"><![CDATA[
-       SELECT id FROM passwd WHERE openid=:openIdToken
-    ]]></entry>
     <entry key="user.create"><![CDATA[
-       INSERT INTO passwd (openid) VALUES (:openIdToken)
+       INSERT INTO passwd (name, email) VALUES ('Tmp User', :email)
     ]]></entry>
     <entry key="user.findTeam"><![CDATA[
        SELECT id FROM teams WHERE ownerid=:userId AND leagueid=:leagueId
@@ -68,7 +65,7 @@
        SELECT name FROM passwd WHERE id=:userId
     ]]></entry>
     <entry key="bid.findAll"><![CDATA[
-       SELECT ap.leagueId,p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
+       SELECT ap.leagueId,p.playerid,p.name,p.position,p.team AS realTeam, p.`rank`, t.id AS teamId,t.name AS team,ap.price,ap.time
        FROM auction_players ap
        JOIN players p
          ON ap.playerid=p.playerid
@@ -76,7 +73,7 @@
          ON ap.teamid=t.id
     ]]></entry>
     <entry key="bid.findAllByLeague"><![CDATA[
-       SELECT p.playerid,p.name,p.position,p.team AS realTeam, p.rank, t.id AS teamId,t.name AS team,ap.price,ap.time
+       SELECT p.playerid,p.name,p.position,p.team AS realTeam, p.`rank`, t.id AS teamId,t.name AS team,ap.price,ap.time
        FROM auction_players ap
        JOIN players p
          ON ap.playerid=p.playerid
@@ -102,10 +99,10 @@
          AND leagueid=:leagueId
     ]]></entry>
     <entry key="player.findOne"><![CDATA[
-       SELECT playerid,name,position,team,rank FROM players WHERE playerid=:playerId AND active=1
+       SELECT playerid,name,position,team,`rank` FROM players WHERE playerid=:playerId AND active=1
     ]]></entry>
     <entry key="player.findAllAvailable"><![CDATA[
-        SELECT p.playerid, p.name, p.position, p.team, p.rank
+        SELECT p.playerid, p.name, p.position, p.team, p.`rank`
         FROM players p
         JOIN leagues l
           ON p.sport=l.sport
@@ -119,7 +116,7 @@
           AND ap.playerid IS NULL
           AND pw.playerid IS NULL
           AND p.active = 1
-          ORDER BY rank
+          ORDER BY `rank`
     ]]></entry>
     <entry key="rosteredPlayer.save"><![CDATA[
         INSERT INTO players_won

@@ -58,8 +58,10 @@ public class BidResource {
 
     @RequestMapping(method = RequestMethod.PUT, value = "/{playerId}")
     public void updateBid(@PathVariable("leagueId") long leagueId, @PathVariable("playerId") long playerId,
-        @RequestBody NewBid amount, @AuthenticationPrincipal AuctionUser user)
+        @RequestBody NewBid amount, @AuthenticationPrincipal Object principal)
         throws BidException, MissingResourceException {
+
+        AuctionUser user = userRepository.findOrCreate(principal);
 
         LOGGER.info("Submitting bid of ${} for {} by {} ({}).", amount.amount, playerId, user.getUsername(),
             user.getId());
@@ -71,7 +73,9 @@ public class BidResource {
     @RequestMapping(method = RequestMethod.POST)
     public void addPlayer(@PathVariable("leagueId") long leagueId, @RequestBody PlayerAddition addition,
         @RequestParam(name = "commissioner", required = false, defaultValue = "false") boolean isCommisioner,
-        @AuthenticationPrincipal AuctionUser user) throws BidException, MissingResourceException {
+        @AuthenticationPrincipal Object principal) throws BidException, MissingResourceException {
+
+        AuctionUser user = userRepository.findOrCreate(principal);
 
         long teamId = getTeam(user, leagueId);
 

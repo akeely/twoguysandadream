@@ -1,5 +1,6 @@
 package com.twoguysandadream.resources;
 
+import com.twoguysandadream.security.AuctionUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.twoguysandadream.core.League;
@@ -22,11 +22,14 @@ public class LeagueResource {
 
     private final LeagueRepository leagueRepository;
     private final TeamRepository teamRepository;
+    private final AuctionUserRepository userRepository;
 
     @Autowired
-    public LeagueResource(LeagueRepository leagueRepository, TeamRepository teamRepository) {
+    public LeagueResource(LeagueRepository leagueRepository, TeamRepository teamRepository,
+                          AuctionUserRepository userRepository) {
         this.leagueRepository = leagueRepository;
         this.teamRepository = teamRepository;
+        this.userRepository = userRepository;
     }
 
     @GetMapping(path = "/{leagueId}")
@@ -37,7 +40,9 @@ public class LeagueResource {
 
     @PutMapping(path = "/{leagueId}/draftstatus")
     public void updateDraftStatus(@PathVariable long leagueId, @RequestBody DraftStatusDto draftStatus,
-            @AuthenticationPrincipal AuctionUser user) throws MissingResourceException {
+            @AuthenticationPrincipal Object principal) throws MissingResourceException {
+
+        AuctionUser user = userRepository.findOrCreate(principal);
 
         user.getId()
                 .flatMap(id -> teamRepository.findByOwner(leagueId, id))
