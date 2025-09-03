@@ -50,7 +50,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http
-            //.csrf().disable()
             .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl(LOGIN_PAGE)
@@ -64,11 +63,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login();
-//            .formLogin()
-//                .loginPage(LOGIN_PAGE)
-//                .defaultSuccessUrl("/")
-//                .failureUrl(LOGIN_PAGE + "?error")
-//                .permitAll();
     }
 
 
